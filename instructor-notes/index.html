@@ -12,22 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/instructor-notes/">
       
       
+        <link rel="prev" href="../slides/">
       
-      <link rel="icon" href="/prompt-class/assets/images/favicon.png">
+      
+        <link rel="next" href="../glossary/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Prompt Engineering Class</title>
+        <title>Instructor Notes - Prompt Engineering Class</title>
       
     
     
-      <link rel="stylesheet" href="/prompt-class/assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="/prompt-class/assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("/prompt-class/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -80,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instructor-notes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +103,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/prompt-class/." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href=".." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -112,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Instructor Notes
             
           </span>
         </div>
@@ -198,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/prompt-class/." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href=".." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -227,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -246,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -265,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/sample-outline/" class="md-nav__link">
+      <a href="../sample-outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -284,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/slides/" class="md-nav__link">
+      <a href="../slides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -301,9 +312,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/prompt-class/instructor-notes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Instructor Notes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -312,6 +343,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-the-class" class="md-nav__link">
+    Before the class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classroom-checklist" class="md-nav__link">
+    Classroom checklist
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -322,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/glossary/" class="md-nav__link">
+      <a href="../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -341,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/references/" class="md-nav__link">
+      <a href="../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prompt-class/contact/" class="md-nav__link">
+      <a href="../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,6 +455,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-the-class" class="md-nav__link">
+    Before the class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classroom-checklist" class="md-nav__link">
+    Classroom checklist
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -401,8 +490,31 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="instructor-notes">Instructor Notes</h1>
+<h2 id="before-the-class">Before the class</h2>
+<ol>
+<li>Make sure students all have access to a generative AI site such as OpenAI ChatGPT.</li>
+<li>Remind the students they should all bring laptops to the classroom.</li>
+</ol>
+<h2 id="classroom-checklist">Classroom checklist</h2>
+<ol>
+<li>Tables with power and enough power strips for each student</li>
+<li>Projector and connectors</li>
+</ol>
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -419,6 +531,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../slides/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Slides" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Slides
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -442,10 +592,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/prompt-class/", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "/prompt-class/assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/prompt-class/assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

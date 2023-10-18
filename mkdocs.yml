@@ -3,7 +3,7 @@ site_description: 'Resources for teaching a class on prompt engineering. All con
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/prompt-class'
-repo_url: 'https://github.com/dmccreary/prompt-classs'
+repo_url: 'https://github.com/dmccreary/prompt-class'
 
 nav:
   - Home: index.md

@@ -8,6 +8,7 @@ repo_url: 'https://github.com/dmccreary/prompt-classs'
 nav:
   - Home: index.md
   - About: about.md
+  - Sample Outline: sample-outline.md
   - Slides: slides.md
   - References: references.md
   - Contact: contact.md

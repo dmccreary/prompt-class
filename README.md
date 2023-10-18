@@ -4,7 +4,9 @@ This GitHub repo contains materils for my prompt engineering classes.
 
 The website is:
 
-    [https://dmccreary.github.io/prompt-class/](https://dmccreary.github.io/prompt-class/)
+    https://dmccreary.github.io/prompt-class
+
+    [https://dmccreary.github.io/prompt-class](https://dmccreary.github.io/prompt-class)
 
 ## How to Build
 

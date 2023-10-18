@@ -22,11 +22,9 @@ theme:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
   extra_css:
-    - styles/custom.css
-  logo: img/coderdojo-logo.jpg
   palette:
-    primary: '#642580'
-    accent: '#41BAC1'
+    primary: 'blue'
+    accent: 'orange'
   include_sidebar: true
   features:
     - content.code.copy
@@ -52,4 +50,4 @@ extra:
   analytics:
     provider: google
     # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
-    property: G-EKTEBLZ2KP
+    property: G-NVZ3NEY8KG

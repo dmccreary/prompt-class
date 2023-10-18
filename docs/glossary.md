@@ -92,9 +92,7 @@ A technique in deep learning that applies the style of one image to transform th
 
 #### One-Shot Learning
 
-Description: A machine learning paradigm where a model is trained to recognize patterns or make decisions based on only a single example or very few examples of each class or category.
-
-
+A machine learning paradigm where a model is trained to recognize patterns or make decisions based on only a single example or very few examples of each class or category.
 
 
 #### Reinforcement Learning (RL)

@@ -2,13 +2,13 @@
 
 ## Initial Prompt
 
-```linenumbs="0"
+```linenums="0"
 Generate an outline of a one hour course on prompt engineering.
 ```
 
 ## Final Prompt
 
-```linenumbs="0"
+```linenums="0"
 Generate an outline of a two hour course on prompt engineering.
 Assume the audience is business professionals. 
 List the key concepts and the order they should be presented.

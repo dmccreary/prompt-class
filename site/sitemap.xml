@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/prompt-class/labs/01-lists/</loc>
+         <lastmod>2023-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/02-mermaid/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
@@ -77,6 +82,16 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/07-healthcare-costs/</loc>
+         <lastmod>2023-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/labs/08-job-description/</loc>
+         <lastmod>2023-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/labs/09-interview-questions/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>

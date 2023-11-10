@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#mermaid-workflow-lab" class="md-skip">
           Skip to content
         </a>
       
@@ -382,6 +382,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Mermaid
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -391,6 +402,46 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-code" class="md-nav__link">
+    Show Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -539,6 +590,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-code" class="md-nav__link">
+    Show Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -555,13 +635,37 @@
   
 
 
-<h1 id="_1"></h1>
+<h1 id="mermaid-workflow-lab">Mermaid Workflow Lab</h1>
+<h2 id="prompt">Prompt</h2>
 <div class="highlight"><pre><span></span><code>Create a mermaid diagram of a three step workflow on a gray background,
-Make it have three boxes connected with white arrows.
+Make it have three boxes connected with arrows.
 Label the first box &quot;Prompt&quot;.  Make it yellow.
-Label the second box &quot;Large Language Model&quot;. Make it blue.
-Label the third box &quot;Response&quot;. Make it purple.
+Label the second box &quot;Large Language Model&quot;. Make it cyan.
+Label the third box &quot;Response&quot;. Make it pink.
 </code></pre></div>
+<h2 id="response">Response</h2>
+<p><img alt="" src="../../img/mermaid-workflow.png" /></p>
+<h2 id="show-code">Show Code</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+  &quot;diagramLanguage&quot;: &quot;mermaid&quot;,
+  &quot;diagramType&quot;: &quot;graph&quot;,
+  &quot;diagram&quot;: &quot;graph LR
+      A[Prompt] --&gt; B[Large Language Model]
+      B --&gt; C[Response]
+      style A fill:#ffff00
+      style B fill:#00ffff
+      style C fill:#ffc0cb&quot;
+}
+</code></pre></div></td></tr></table></div>
 
 
   

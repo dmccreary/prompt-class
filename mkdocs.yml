@@ -21,6 +21,8 @@ nav:
     - Healthcare Costs: labs/07-healthcare-costs.md
     - Data Science Job Description: labs/08-job-description.md
     - Data Science Interview Questions: labs/09-interview-questions.md
+    - GitHub Repo Analizer: labs/10-github-repo-analyzer.md
+    - Plot Area of Continents: libs/11-plot-continents.md
 
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md

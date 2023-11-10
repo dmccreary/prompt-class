@@ -14,6 +14,9 @@ nav:
     - Licnese Lab: labs/01-license.md
     - Mermaid: labs/02-mermaid.md
     - Markdown Table: labs/03-markdown-table.md
+    - Validate Zipcode: labs/04-validate-zipcode.md
+    - Blue Circle: labs/05-p5-circle.md
+    - Explain Embeddings: labs/06-explain-embeddings.md
 
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md

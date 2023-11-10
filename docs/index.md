@@ -8,7 +8,7 @@ become familier with the role of prompt engineering.
 When people first start using generative AI they are sometimes both
 shocked at the quality of the responses and at they same time
 they become frustrated with their inability to get what they
-want from models.  This cource can help them get the most
+want from models.  This course can help them get the most
 out of large-langauge models as well as help with
 image generation.
 

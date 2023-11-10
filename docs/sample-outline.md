@@ -73,9 +73,9 @@ After this course, business professionals should have a solid understanding of p
 
 #### Part 4: Common Mistakes and Pitfalls (5 minutes)
 
-    - **Overcomplication:** Avoiding unnecessary complexity
-    - **Assumption:** Not presuming knowledge or intent
-    - **Neglecting Diversity:** Importance of considering cultural and linguistic nuances
+1. **Overcomplication:** Avoiding unnecessary complexity
+2. **Assumption:** Not presuming knowledge or intent
+3. **Neglecting Diversity:** Importance of considering cultural and linguistic nuances
 
 #### Part 5: Hands-on Activity: Crafting Effective Prompts (5 minutes)
 

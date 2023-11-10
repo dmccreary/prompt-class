@@ -12,28 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/labs/">
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/labs/06-explain-embeddings/">
       
       
-        <link rel="prev" href="../sample-outline/">
+        <link rel="prev" href="../05-p5-circle/">
       
       
-        <link rel="next" href="01-license/">
+        <link rel="next" href="../../slides/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Intro - Prompt Engineering Class</title>
+        <title>Explain Embeddings - Prompt Engineering Class</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#explain-embeddings" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -118,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Explain Embeddings
             
           </span>
         </div>
@@ -204,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -233,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -252,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -271,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sample-outline/" class="md-nav__link">
+      <a href="../../sample-outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,7 +328,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -333,7 +338,7 @@
 
             </a>
             
-              <label class="md-nav__link md-nav__link--active" for="__nav_4">
+              <label class="md-nav__link " for="__nav_4">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -354,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-license/" class="md-nav__link">
+      <a href="../01-license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -374,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-mermaid/" class="md-nav__link">
+      <a href="../02-mermaid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -394,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03-markdown-table/" class="md-nav__link">
+      <a href="../03-markdown-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04-validate-zipcode/" class="md-nav__link">
+      <a href="../04-validate-zipcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="05-p5-circle/" class="md-nav__link">
+      <a href="../05-p5-circle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,9 +457,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="06-explain-embeddings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Explain Embeddings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -463,6 +488,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-1" class="md-nav__link">
+    Prompt 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-1" class="md-nav__link">
+    Response 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-2" class="md-nav__link">
+    Prompt 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-2" class="md-nav__link">
+    Response 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -481,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slides/" class="md-nav__link">
+      <a href="../../slides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instructor-notes/" class="md-nav__link">
+      <a href="../../instructor-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,6 +660,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-1" class="md-nav__link">
+    Prompt 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-1" class="md-nav__link">
+    Response 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-2" class="md-nav__link">
+    Prompt 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-2" class="md-nav__link">
+    Response 2
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -604,9 +715,25 @@
   
 
 
-  <h1>Intro</h1>
+<h1 id="explain-embeddings">Explain Embeddings</h1>
+<h2 id="prompt-1">Prompt 1</h2>
+<div class="highlight"><pre><span></span><code>In NLP, what is an Embedding?
+</code></pre></div>
+<h2 id="response-1">Response 1</h2>
+<div class="highlight"><pre><span></span><code>In natural language processing (NLP), an embedding refers to a dense vector representation of a word or a textual unit (e.g., sentence, paragraph) in a continuous vector space. The goal of word embeddings is to capture the semantic and syntactic relationships between words, enabling machines to understand and process human language more effectively.
+</code></pre></div>
+<h2 id="prompt-2">Prompt 2</h2>
+<div class="highlight"><pre><span></span><code>Explain Text Embeddings to a 6th-grader
+</code></pre></div>
+<h2 id="response-2">Response 2</h2>
+<div class="highlight"><pre><span></span><code>Hey there! Text embeddings are like secret codes for words and sentences. Imagine you have a special language where every word is represented by a unique set of numbers. These numbers capture the meaning and context of the word.
 
+For example, the word &quot;cat&quot; might be represented by the numbers [0.5, 0.3, 0.8], while &quot;dog&quot; could be represented by [0.7, 0.9, 0.2]. These number codes help a computer understand the words and compare them to find similarities or differences.
 
+Text embeddings are created by teaching a computer using lots of text examples. It learns to find patterns in the words and how they relate to each other. Once it has learned these patterns, it can create these number codes for any word you give it.
+
+The cool thing is that with these text embeddings, you can do all sorts of neat things! You can find words that have similar meanings or even predict what word might come next in a sentence. It helps computers understand and work with words just like we do.
+</code></pre></div>
 
 
   
@@ -636,7 +763,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../sample-outline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sample Outline" rel="prev">
+          <a href="../05-p5-circle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blue Circle" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -646,20 +773,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Sample Outline
+                Blue Circle
               </div>
             </div>
           </a>
         
         
           
-          <a href="01-license/" class="md-footer__link md-footer__link--next" aria-label="Next: Licnese Lab" rel="next">
+          <a href="../../slides/" class="md-footer__link md-footer__link--next" aria-label="Next: Slides" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Licnese Lab
+                Slides
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -692,10 +819,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

@@ -2,9 +2,11 @@
 
 ## Prompt
 
+```linenums="0"
 Create a Python function that validates a 5 or 9-digit zip code.
 Allow a dash to be part of the zipcode separating the five and four digits.
 Provide six sample test cases and run them.
+```
 
 ```python
 def validate_zip_code(zip_code):

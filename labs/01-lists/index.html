@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/labs/04-validate-zipcode/">
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/labs/01-lists/">
       
       
-        <link rel="prev" href="../03-markdown-table/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../05-p5-circle/">
+        <link rel="next" href="../01-license/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Validate Zipcode - Prompt Engineering Class</title>
+        <title>Lists - Prompt Engineering Class</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validating-a-zip-code" class="md-skip">
+        <a href="#basic-lists-of-items" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Validate Zipcode
+              Lists
             
           </span>
         </div>
@@ -365,9 +365,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../01-lists/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lists
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -376,6 +396,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -445,29 +499,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Validate Zipcode
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../04-validate-zipcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,33 +510,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    Prompt
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -743,6 +750,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -761,63 +775,151 @@
   
 
 
-<h1 id="validating-a-zip-code">Validating a Zip Code</h1>
+<h1 id="basic-lists-of-items">Basic Lists of Items</h1>
 <h2 id="prompt">Prompt</h2>
-<p>Create a Python function that validates a 5 or 9-digit zip code.
-Allow a dash to be part of the zipcode separating the five and four digits.
-Provide six sample test cases and run them.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate_zip_code</span><span class="p">(</span><span class="n">zip_code</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Validates if the provided zip code is either a 5-digit, a 9-digit number,</span>
-<span class="sd">    or a 5-digit number followed by a dash and a 4-digit number.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">    zip_code (str): The zip code to validate.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    bool: True if the zip code is valid, False otherwise.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zip_code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">zip_code</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">zip_code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">zip_code</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">zip_code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">zip_code</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">zip_code</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span> <span class="ow">and</span> <span class="n">zip_code</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Create a list of things people get at a grocery store.
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Test Cases and Results
-&quot;12345&quot;: Valid (True)
-&quot;987654321&quot;: Valid (True)
-&quot;1234&quot;: Invalid (False)
-&quot;ABCDE&quot;: Invalid (False)
-&quot;1234567890&quot;: Invalid (False)
-&quot;12345-6789&quot;: Valid (True)
-</code></pre></div></td></tr></table></div>
+<h2 id="response">Response</h2>
+<ul>
+<li>Fresh produce:</li>
+<li>Fruits (apples, bananas, oranges, strawberries, etc.)</li>
+<li>
+<p>Vegetables (lettuce, tomatoes, carrots, broccoli, etc.)</p>
+</li>
+<li>
+<p>Dairy products:</p>
+</li>
+<li>Milk</li>
+<li>Eggs</li>
+<li>Cheese</li>
+<li>
+<p>Yogurt</p>
+</li>
+<li>
+<p>Meat and proteins:</p>
+</li>
+<li>Chicken</li>
+<li>Beef</li>
+<li>Pork</li>
+<li>Fish</li>
+<li>
+<p>Tofu</p>
+</li>
+<li>
+<p>Breads and grains:</p>
+</li>
+<li>Bread</li>
+<li>Rice</li>
+<li>Pasta</li>
+<li>Cereal</li>
+<li>
+<p>Flour</p>
+</li>
+<li>
+<p>Canned and packaged goods:</p>
+</li>
+<li>Canned vegetables and fruits</li>
+<li>Soup</li>
+<li>Pasta sauce</li>
+<li>Canned beans</li>
+<li>
+<p>Snack foods (chips, crackers, etc.)</p>
+</li>
+<li>
+<p>Frozen foods:</p>
+</li>
+<li>Frozen vegetables</li>
+<li>Frozen fruits</li>
+<li>Frozen pizza</li>
+<li>
+<p>Ice cream</p>
+</li>
+<li>
+<p>Beverages:</p>
+</li>
+<li>Bottled water</li>
+<li>Soft drinks</li>
+<li>Juice</li>
+<li>Coffee</li>
+<li>
+<p>Tea</p>
+</li>
+<li>
+<p>Condiments and sauces:</p>
+</li>
+<li>Ketchup</li>
+<li>Mustard</li>
+<li>Mayonnaise</li>
+<li>Salad dressing</li>
+<li>
+<p>Soy sauce</p>
+</li>
+<li>
+<p>Baking supplies:</p>
+</li>
+<li>Sugar</li>
+<li>Flour</li>
+<li>Baking powder</li>
+<li>Chocolate chips</li>
+<li>
+<p>Vanilla extract</p>
+</li>
+<li>
+<p>Household and cleaning products:</p>
+<ul>
+<li>Paper towels</li>
+<li>Toilet paper</li>
+<li>Cleaning supplies</li>
+<li>Laundry detergent</li>
+</ul>
+</li>
+<li>
+<p>Personal care items:</p>
+<ul>
+<li>Shampoo and conditioner</li>
+<li>Soap</li>
+<li>Toothpaste</li>
+<li>Deodorant</li>
+<li>Razors</li>
+</ul>
+</li>
+<li>
+<p>Pet supplies:</p>
+<ul>
+<li>Pet food</li>
+<li>Cat litter</li>
+<li>Pet toys</li>
+<li>Treats</li>
+</ul>
+</li>
+<li>
+<p>Baby and infant products:</p>
+<ul>
+<li>Diapers</li>
+<li>Baby formula</li>
+<li>Baby food</li>
+<li>Baby wipes</li>
+</ul>
+</li>
+<li>
+<p>Health and wellness:</p>
+<ul>
+<li>Vitamins and supplements</li>
+<li>Over-the-counter medications</li>
+<li>First aid supplies</li>
+</ul>
+</li>
+<li>
+<p>Snacks and desserts:</p>
+<ul>
+<li>Cookies</li>
+<li>Chips</li>
+<li>Candy</li>
+<li>Chocolate</li>
+<li>Ice cream</li>
+</ul>
+</li>
+</ul>
 
 
   
@@ -847,7 +949,7 @@ Provide six sample test cases and run them.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../03-markdown-table/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Markdown Table" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -857,20 +959,20 @@ Provide six sample test cases and run them.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Markdown Table
+                Intro
               </div>
             </div>
           </a>
         
         
           
-          <a href="../05-p5-circle/" class="md-footer__link md-footer__link--next" aria-label="Next: Blue Circle" rel="next">
+          <a href="../01-license/" class="md-footer__link md-footer__link--next" aria-label="Next: Licnese Lab" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Blue Circle
+                Licnese Lab
               </div>
             </div>
             <div class="md-footer__button md-icon">

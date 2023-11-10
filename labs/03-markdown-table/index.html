@@ -315,6 +315,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -351,6 +359,26 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-lists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -408,6 +436,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Markdown Table
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -417,6 +456,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grocery-list" class="md-nav__link">
+    Grocery List
+  </a>
+  
+    <nav class="md-nav" aria-label="Grocery List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -474,6 +552,66 @@
   
   <span class="md-ellipsis">
     Explain Embeddings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Healthcare Costs; labs/07-healthcare-costs.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-job-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Science Job Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-interview-questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Science Interview Questions
   </span>
   
 
@@ -605,6 +743,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grocery-list" class="md-nav__link">
+    Grocery List
+  </a>
+  
+    <nav class="md-nav" aria-label="Grocery List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -680,6 +846,198 @@ In the second column, list the population.
 <tr>
 <td>St. Cloud</td>
 <td>68,479</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grocery-list">Grocery List</h2>
+<h3 id="prompt">Prompt</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Create a table of the items that a person typically gets at a grocery store.
+Return the results in a single raw markdown table.
+Make the first column be the category.
+Make the second column be the name of the product
+Make the third column be the typical price.
+Create subtotals and totals.
+Return the result as a single markdown file.
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Product Name</th>
+<th>Typical Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fruits</td>
+<td>Apples (1 lb)</td>
+<td>$1.50</td>
+</tr>
+<tr>
+<td>Fruits</td>
+<td>Bananas (1 lb)</td>
+<td>$0.60</td>
+</tr>
+<tr>
+<td>Fruits</td>
+<td>Oranges (1 lb)</td>
+<td>$1.20</td>
+</tr>
+<tr>
+<td>Vegetables</td>
+<td>Carrots (1 lb)</td>
+<td>$0.90</td>
+</tr>
+<tr>
+<td>Vegetables</td>
+<td>Lettuce (1 head)</td>
+<td>$1.50</td>
+</tr>
+<tr>
+<td>Vegetables</td>
+<td>Tomatoes (1 lb)</td>
+<td>$2.00</td>
+</tr>
+<tr>
+<td>Dairy</td>
+<td>Milk (1 gallon)</td>
+<td>$3.50</td>
+</tr>
+<tr>
+<td>Dairy</td>
+<td>Eggs (dozen)</td>
+<td>$2.50</td>
+</tr>
+<tr>
+<td>Dairy</td>
+<td>Cheese (1 lb)</td>
+<td>$5.00</td>
+</tr>
+<tr>
+<td>Meat</td>
+<td>Chicken breast (1 lb)</td>
+<td>$3.00</td>
+</tr>
+<tr>
+<td>Meat</td>
+<td>Ground beef (1 lb)</td>
+<td>$4.00</td>
+</tr>
+<tr>
+<td>Meat</td>
+<td>Bacon (1 lb)</td>
+<td>$5.00</td>
+</tr>
+<tr>
+<td>Bakery</td>
+<td>Bread (1 loaf)</td>
+<td>$2.50</td>
+</tr>
+<tr>
+<td>Bakery</td>
+<td>Bagels (6 pack)</td>
+<td>$3.00</td>
+</tr>
+<tr>
+<td>Bakery</td>
+<td>Croissants (6 pack)</td>
+<td>$4.50</td>
+</tr>
+<tr>
+<td>Snacks</td>
+<td>Potato chips (bag)</td>
+<td>$3.00</td>
+</tr>
+<tr>
+<td>Snacks</td>
+<td>Cookies (pack)</td>
+<td>$2.50</td>
+</tr>
+<tr>
+<td>Snacks</td>
+<td>Nuts (1 lb)</td>
+<td>$6.00</td>
+</tr>
+<tr>
+<td>Beverages</td>
+<td>Coffee (1 lb)</td>
+<td>$6.00</td>
+</tr>
+<tr>
+<td>Beverages</td>
+<td>Tea (box)</td>
+<td>$4.00</td>
+</tr>
+<tr>
+<td>Beverages</td>
+<td>Soda (12 pack)</td>
+<td>$5.00</td>
+</tr>
+<tr>
+<td>Household</td>
+<td>Paper towels (6 rolls)</td>
+<td>$8.00</td>
+</tr>
+<tr>
+<td>Household</td>
+<td>Toilet paper (12 rolls)</td>
+<td>$10.00</td>
+</tr>
+<tr>
+<td>Household</td>
+<td>Laundry detergent (bottle)</td>
+<td>$15.00</td>
+</tr>
+<tr>
+<td>Fruits</td>
+<td>Subtotal</td>
+<td>$3.30</td>
+</tr>
+<tr>
+<td>Vegetables</td>
+<td>Subtotal</td>
+<td>$4.40</td>
+</tr>
+<tr>
+<td>Dairy</td>
+<td>Subtotal</td>
+<td>$11.00</td>
+</tr>
+<tr>
+<td>Meat</td>
+<td>Subtotal</td>
+<td>$12.00</td>
+</tr>
+<tr>
+<td>Bakery</td>
+<td>Subtotal</td>
+<td>$10.00</td>
+</tr>
+<tr>
+<td>Snacks</td>
+<td>Subtotal</td>
+<td>$11.50</td>
+</tr>
+<tr>
+<td>Beverages</td>
+<td>Subtotal</td>
+<td>$15.00</td>
+</tr>
+<tr>
+<td>Household</td>
+<td>Subtotal</td>
+<td>$33.00</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>$100.20</td>
 </tr>
 </tbody>
 </table>

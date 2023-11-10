@@ -9,6 +9,12 @@ nav:
   - Home: index.md
   - About: about.md
   - Sample Outline: sample-outline.md
+  - Labs:
+    - Intro: labs/index.md
+    - Licnese Lab: labs/01-license.md
+    - Mermaid: labs/02-mermaid.md
+    - Markdown Table: labs/03-markdown-table.md
+
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - Glossary: glossary.md

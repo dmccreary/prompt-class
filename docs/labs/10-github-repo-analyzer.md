@@ -1,7 +1,8 @@
-# GitHub Repository Analizer
+# GitHub Repository Analyzer
 
-This demo uses the "AskTheCode" plugin.
-
+This demo uses the [AskTheCode](https://gptstore.ai/plugins/askthecode-dsomok-online) plugin.  This tool samples files
+within a GitHub repository to find out what the repository
+does.
 
 ```
 Analyze the code in the following GitHub repo:
@@ -48,7 +49,7 @@ The course is divided into several modules, each focusing on different aspects o
 Dan McCreary is the instructor for this course. He has extensive experience in AI and data management.
 
 ### Contact Information
-For more information, please refer to the [Contact](docs/contact.md) page.
+For more information, please refer to the [Contact](./contact.md) page.
 
 ### License
 This course material is licensed under the Creative Commens

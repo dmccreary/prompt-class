@@ -18,4 +18,8 @@ function draw() {
 }
 ```
 
+Copy code here:
+
+[https://editor.p5js.org/](https://editor.p5js.org/)
+
 ![](../img/blue-circle.png)

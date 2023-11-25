@@ -1,11 +1,24 @@
-# License
+# Creative Commons License
 
-This course is licensed under Creative Commons Attribution-NonCommercial (CC BY-NC) license.
+All of the content in this repository is governed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
-[Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+[CC BY-NC-SA 4.0 DEED](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
 
-**Attribution (BY):** This license requires others to give appropriate credit to the author, Dan McCreary.  Users of the content must provide a link to the license, and indicate if changes were made. This aligns with your request for attribution.
+ ## You are free to:
 
-**Non-Commercial (NC):** This aspect of the license prohibits others from using the material for commercial purposes. This means that while other teachers can use your lesson plans for free, they cannot sell them for profit, which is in line with your preference.
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
 
-Under this license, teachers can share, copy, distribute, and transmit the work, as well as adapt it to fit their needs, as long as they attribute the work to the primary author: Dan McCreary.  Teachers can not use the content for commercial purposes or resell the content to others.
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+## Under the following terms:
+
+- **Attribution** - You must give appropriate credit to the author, [Dan McCreary](https://www.linkedin.com/in/danmccreary/),
+provide a link to the license,
+and indicate if changes were made.
+You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+- **NonCommercial** - You may not use the material for commercial purposes.  You may not resell any content in this repository for commercial gain.
+- **ShareAlike** - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+**No additional restrictions** - You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.

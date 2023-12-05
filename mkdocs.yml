@@ -12,7 +12,7 @@ nav:
   - Labs:
     - Intro: labs/index.md
     - Lists: labs/01-lists.md
-    - Licnese Lab: labs/01-license.md
+    - License Lab: labs/01-license.md
     - Mermaid: labs/02-mermaid.md
     - Markdown Table: labs/03-markdown-table.md
     - Validate Zipcode: labs/04-validate-zipcode.md

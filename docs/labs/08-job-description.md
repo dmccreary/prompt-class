@@ -2,7 +2,7 @@
 
 ## Prompt
 
-```
+```linenums="0"
 Write a job description for a data scientist.
 We use Python for all our data science work.
 ```

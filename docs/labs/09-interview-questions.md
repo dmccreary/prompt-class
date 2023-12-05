@@ -2,7 +2,7 @@
 
 ## Prompt
 
-```
+```linenums="0"
 Create a list of interview questions for a data scientist role.
 The role uses extensive use of Python data science libraries.
 Focus on skills using a knowledge graph.
@@ -10,10 +10,7 @@ Ask questions about creating and maintaining a data catalog.
 Ask questions about metadata management.
 Ask questions about using GitHub.
 Ask questions about the Plotly data visualization library.
-```
-
-```
-Return the results as a single raw Markdown file
+Return the results as a single raw Markdown file.
 ```
 
 ## Response

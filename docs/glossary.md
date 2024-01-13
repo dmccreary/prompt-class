@@ -36,6 +36,19 @@ A widely used algorithm in training feedforward neural networks for supervised l
 
 A type of GAN that generates data based on certain conditions or labels, allowing more control over the data it produces.
 
+#### COSTAR Framework
+
+An abbreviation for six things to consider when creating a prompt.
+
+1. Context
+2. Objective
+3. Style
+4. Tone
+5. Audience
+6. Response
+
+* [How I Won Singapore’s GPT-4 Prompt Engineering Competition](https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41#10b2)
+
 
 #### Data Augmentation
 

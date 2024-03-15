@@ -4,8 +4,8 @@
 2. **[License](./01-license.md)** - pick the right license for your GitHub repo
 3. **[Mermaid](./02-mermaid.md)** - create a diagram or chart
 4. **[Table](./03-markdown-table.md)** - generate synthetic test data in a Markdown tables
-4. **Validate** - Generate code to validate data like a Zip Code
-5. **Generate A Circle** - Generate graphic elements
+4. **[Validate](./04-validate-zipcode.md)** - Generate code to validate data like a Zip Code
+5. **[Generate A Circle](./05-p5-circle.md)** - Generate graphic elements
 6. **Generate a Bouncing Ball** - Generate an animation of a bouncing ball
 7. **Generate an Interactive Simulation** - Add a slider to the bouncing ball
 8. **Explaining Embeddings** - Explain embeddings to a 5th-grader

@@ -514,9 +514,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
+  <a href="#javascript-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompt
+      JavaScript Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Response
     </span>
   </a>
   
@@ -875,9 +893,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
+  <a href="#javascript-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompt
+      JavaScript Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Response
     </span>
   </a>
   
@@ -902,10 +938,64 @@
 
 
 <h1 id="validating-a-zip-code">Validating a Zip Code</h1>
-<h2 id="prompt">Prompt</h2>
-<p>Create a Python function that validates a 5 or 9-digit zip code.
-Allow a dash to be part of the zipcode separating the five and four digits.
-Provide six sample test cases and run them.</p>
+<p>Many form developers are under pressure to get a new form written
+in a short timeframe.  As a result, they tend to overlook
+adding simple checks to a field.  Or worse, they don't
+think about the different combinations of valid ways
+that a user can enter data.  Here is a simple example
+of a prompt that checks a field using both JavaScript and Python.</p>
+<h2 id="javascript-prompt">JavaScript Prompt</h2>
+<div class="highlight"><pre><span></span><code>Create a JavaScript function that validates 
+a 5 or 9-digit zip code.
+Allow a dash to be part of the zipcode
+separating the five and four digits.
+Provide six sample test cases and run them.
+</code></pre></div>
+<p>Note this result uses a regular expression and it includes both positive and negative tests.
+The first two tests are positive tests of a valid format and the last four are negative tests.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="nx">zipCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Regular expression to match a 5-digit or 9-digit zip code with an optional dash</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/^(\d{5})(-\d{4})?$/</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">regex</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">zipCode</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Test cases</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="s2">&quot;12345&quot;</span><span class="p">));</span><span class="w">       </span><span class="c1">// Expected: true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="s2">&quot;12345-6789&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// Expected: true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">));</span><span class="w">   </span><span class="c1">// Expected: false (no dash)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">));</span><span class="w">        </span><span class="c1">// Expected: false (too short)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="s2">&quot;12345-678&quot;</span><span class="p">));</span><span class="w">   </span><span class="c1">// Expected: false (last part too short)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValidZipCode</span><span class="p">(</span><span class="s2">&quot;12-3456789&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// Expected: false (incorrect dash position)</span>
+</code></pre></div></td></tr></table></div>
+<p>The regular expression <code>^(\d{5})(-\d{4})?$</code> explained:</p>
+<ul>
+<li><code>^</code> asserts the start of the string.</li>
+<li><code>(\d{5})</code> matches exactly 5 digits.</li>
+<li><code>(-\d{4})?</code> is an optional group that matches a dash followed by exactly 4 digits. The <code>?</code> makes this group optional.</li>
+<li><code>$</code> asserts the end of the string.</li>
+</ul>
+<p>This way, the regex matches a string that either consists of exactly 5 digits or exactly 5 digits, a dash, and then exactly 4 more digits.</p>
+<p>To run the JavaScript code including the test cases, you would typically do so in a JavaScript environment like a web browser's developer console or a Node.js environment. Since I can't execute JavaScript code directly in this environment, please try running the provided code snippet in your preferred JavaScript runtime to see the test cases in action.</p>
+<h2 id="python-example">Python Example</h2>
+<div class="highlight"><pre><span></span><code>Create a Python function that validates 
+a 5 or 9-digit zip code.
+Allow a dash to be part of the zipcode
+separating the five and four digits.
+Provide six sample test cases and run them.
+</code></pre></div>
+<h2 id="sample-response">Sample Response</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

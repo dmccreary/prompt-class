@@ -71,6 +71,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/prompt-class/labs/05-boucing-ball/</loc>
+         <lastmod>2024-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/labs/05-bouncing-ball-slider/</loc>
+         <lastmod>2024-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/05-p5-circle/</loc>
          <lastmod>2024-03-15</lastmod>
          <changefreq>daily</changefreq>

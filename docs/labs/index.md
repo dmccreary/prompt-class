@@ -1,6 +1,6 @@
 # List of Labs
 
-1. License
+1. License - pick the right license for your GitHub repo
 2. Mermaid
 3. Table
 4. Validate Zip Code

@@ -106,7 +106,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/prompt-class/labs/12-acceptence-test-plan/</loc>
+         <loc>https://dmccreary.github.io/prompt-class/labs/12-acceptance-test-plan/</loc>
+         <lastmod>2024-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/labs/13-decomposition/</loc>
          <lastmod>2024-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>

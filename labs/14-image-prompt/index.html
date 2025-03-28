@@ -12,7 +12,7 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/concepts/xml/">
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/labs/14-image-prompt/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Adding XML Tags to Your Prompts - Prompt Engineering</title>
+        <title>14 image prompt - Prompt Engineering Class</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-xml-tags-to-your-prompts" class="md-skip">
+        <a href="#scene-description" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Prompt Engineering" class="md-header__button md-logo" aria-label="Prompt Engineering" data-md-component="logo">
+    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,13 +112,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Prompt Engineering
+            Prompt Engineering Class
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding XML Tags to Your Prompts
+              14 image prompt
             
           </span>
         </div>
@@ -205,13 +205,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Prompt Engineering" class="md-nav__button md-logo" aria-label="Prompt Engineering" data-md-component="logo">
+    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Prompt Engineering
+    Prompt Engineering Class
   </label>
   
     <div class="md-nav__source">
@@ -327,6 +327,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -340,7 +344,7 @@
         
   
   
-    <a href="../../labs/" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -476,8 +480,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scene-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scene Description:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -495,28 +514,24 @@
   
 
 
-<h1 id="adding-xml-tags-to-your-prompts">Adding XML Tags to Your Prompts</h1>
-<p>XML tags are inline elements in your text
-that you can use to precisely define
-regions of text with start and end elements.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;instructions&gt;</span>
-Create<span class="w"> </span>a<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>concepts<span class="w"> </span>geometry<span class="w"> </span>course.
-<span class="nt">&lt;/instructions&gt;</span>
-<span class="nt">&lt;examples&gt;</span>
-<span class="w">   </span><span class="nt">&lt;example&gt;</span>triangle<span class="nt">&lt;example&gt;</span>
-<span class="w">   </span><span class="nt">&lt;example&gt;</span>square<span class="nt">&lt;example&gt;</span>
-<span class="w">   </span><span class="nt">&lt;example&gt;</span>circle<span class="nt">&lt;example&gt;</span>
-<span class="nt">&lt;/examples&gt;</span>
-</code></pre></div></td></tr></table></div>
-<p><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags#why-use-xml-tags">Anthropic Guide to Using XML Tags</a></p>
-<p><a href="https://github.com/anthropics/prompt-eng-interactive-tutorial">Anthropic GitHub Repo</a></p>
+  <h1>14 image prompt</h1>
+
+<p>Please generate an image.</p>
+<h2 id="scene-description">Scene Description:</h2>
+<p><strong>Setting:</strong><br />
+A young girl, <strong>Nell</strong>, sits cross-legged on her neatly made bed in a dimly lit, cozy room. Soft, warm light spills from a small, intricately designed lantern on the nightstand, casting a gentle glow over the space. The walls are adorned with hand-drawn sketches, colorful stickers, and faded posters of fantastical landscapes and imaginary creatures. The bed has a patchwork quilt with vibrant colors—shades of lavender, teal, and rose—with a subtle sheen suggesting nanofabric technology.</p>
+<p><strong>Nell's Appearance:</strong><br />
+Nell is about six or seven years old, with wide, curious eyes full of wonder and imagination. Her straight, dark hair falls to her shoulders, slightly tousled from a long day of exploring. She is wearing a slightly oversized, long-sleeved nightshirt decorated with faint images of constellations and tiny, glowing circuits embroidered into the fabric. Her small hands gently cradle <strong>the Primer</strong>, a sleek, tablet-like device that looks both ancient and futuristic, with an organic, leather-like texture on its cover and luminescent symbols swirling softly on the edges.</p>
+<p><strong>The Primer:</strong><br />
+The <strong>Young Lady’s Illustrated Primer</strong> rests on her lap, its surface alive with vibrant, ever-shifting images that seem to breathe and respond to her touch. The device is narrating a story, its AI tailoring the tale in real-time based on Nell's emotions, environment, and developmental needs. The screen shows a mesmerizing scene of a brave heroine navigating a dense forest filled with bioluminescent plants and mysterious creatures, her actions reflecting Nell's recent thoughts and challenges.</p>
+<p><strong>Plush Dinosaur:</strong><br />
+Beside her, propped up against a fluffy pillow, is a well-loved <strong>plush dinosaur</strong>—a bright green stegosaurus with slightly frayed fabric and a few uneven stitches where it has been repaired. The dinosaur’s large, kind eyes seem to watch over Nell protectively, reflecting her sense of security. One of its stubby arms is gently leaning toward Nell, almost as if it's listening to the story with her. </p>
+<p><strong>Ambient Details:</strong><br />
+The air in the room is filled with a faint hum, the sound of countless nanobots working invisibly in the background, maintaining and adapting the environment to suit Nell’s comfort. Tiny motes of light occasionally flicker in the air, adjusting the room’s warmth and brightness to match her mood. </p>
+<p><strong>Nell's Expression:</strong><br />
+Nell’s expression is one of deep concentration, her brows slightly furrowed as she listens intently. Her lips move ever so slightly as she echoes parts of the story, and her fingers absentmindedly stroke the plush dinosaur’s back, reinforcing the emotional connection between the imaginary world unfolding before her and the real world where she sits.</p>
+<p><strong>Mood and Atmosphere:</strong><br />
+The atmosphere is one of safety, imagination, and boundless learning—a perfect fusion of technology and storytelling designed to nurture Nell’s growth. The room feels timeless, where past and future blend seamlessly, allowing a young mind to explore endless possibilities.</p>
 
 
 

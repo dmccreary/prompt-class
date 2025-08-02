@@ -1,4 +1,7 @@
-Please generate an image.
+## Detailed Image Prompt
+
+!!! prompt
+    Please generate a detailed image of the following setting.
 
 ## Scene Description:  
 **Setting:**  

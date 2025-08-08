@@ -4,12 +4,13 @@ Building on the last p5.js ball, lets now add some animation.
 
 ## Prompt
 
-```linenums="0"
-Generate a p5.js sketch on a 400x400 canvas.
-Draw a green ball that bounces around the canvas.
-```
+!!! prompt
+  Generate a p5.js sketch on a 400x400 canvas.
+  Draw a green ball that bounces around the canvas.
 
 [Run the Simulation on P5.js Editor](https://editor.p5js.org/dmccrearytg/sketches/llAbyJ5-G)
+
+## Sample Code
 
 ```javascript
 let x, y;

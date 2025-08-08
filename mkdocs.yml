@@ -26,6 +26,10 @@ nav:
     - Plot Area of Continents: labs/11-plot-continents.md
     - Acceptance Test Plan: labs/12-acceptance-test-plan.md
     - Decomposition: labs/13-decomposition.md
+    - Nell Image Prompt: labs/14-nell-image-prompt.md
+    - Veiled-prime-prompt: labs/15-veiled-prime-prompt.md
+    - Tutor: labs/16-tutor.md
+    - Meta Prompt: labs/17-meta-prompt.md
 
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md

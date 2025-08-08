@@ -5,6 +5,8 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Website](https://img.shields.io/badge/website-live-brightgreen)](https://dmccreary.github.io/prompt-class)
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue)](https://pages.github.com/)
+[![MkDocs](https://img.shields.io/badge/Built%20with-MkDocs-blue)](https://www.mkdocs.org/)
+[![Material for MkDocs](https://img.shields.io/badge/Material%20for-MkDocs-526CFE)](https://squidfunk.github.io/mkdocs-material/)
 
 > A comprehensive course on prompt engineering for large language models, covering fundamentals, best practices, and hands-on labs.
 

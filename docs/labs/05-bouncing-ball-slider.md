@@ -2,14 +2,18 @@
 
 ## Prompt
 
-```linenums="0"
-Generate a p5.js sketch on a 400x400 canvas.
-Draw a green ball that bounces around the canvas, but only in the upper drawing region.
-Add a slider below the drawing region that allows the user to change the speed of the ball.
-Make the drawing region be 300 high.  Place the slider below the drawing region.
-Add both a label and value to the left of the slider.
-Make the slider span the region to the right of the label and value.
-```
+!!! prompt
+  Generate a p5.js sketch with controls below a drawing region.
+
+  Draw a green ball that bounces around the upper drawing region.
+
+  Add a slider below the drawing region that allows the user to change the speed of the ball.
+
+  Make the drawing region be 300 high.  Place the slider below the drawing region in a 50 high control region.
+
+  Add both a label and value to the left of the slider.
+
+  Make the slider span the region to the right of the label and value.
 
 ## Response
 

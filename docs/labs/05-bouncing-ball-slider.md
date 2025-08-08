@@ -19,6 +19,8 @@
 
 [Bouncing Ball With Slider](https://editor.p5js.org/dmccreary/sketches/et2sWNXZb)
 
+[Responsive Rules](https://editor.p5js.org/dmccreary/sketches/icpiK4UjE)
+
 ```javascript
 // bouncing ball with speed slider
 // with radius added to edge check and drawing region above controls

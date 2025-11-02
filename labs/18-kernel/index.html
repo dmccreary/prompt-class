@@ -582,6 +582,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -603,57 +621,72 @@
 
 <h1 id="kernel">KERNEL</h1>
 <h2 id="k-keep-it-simple">K - Keep it simple</h2>
-<p>Bad: 500 words of context</p>
-<p>Good: One clear goal</p>
+<ul>
+<li>Bad: 500 words of context</li>
+<li>Good: One clear goal</li>
+</ul>
 <p>Example: Instead of "I need help writing something about Redis," use "Write a technical tutorial on Redis caching"</p>
 <p>Result: 70% less token usage, 3x faster responses</p>
 <h2 id="e-easy-to-verify">E - Easy to verify</h2>
 <p>Your prompt needs clear success criteria</p>
-<p>Replace "make it engaging" with "include 3 code examples"</p>
-<p>If you can't verify success, AI can't deliver it</p>
-<p>My testing: 85% success rate with clear criteria vs 41% without</p>
+<ul>
+<li>Replace "make it engaging" with "include 3 code examples"</li>
+<li>If you can't verify success, AI can't deliver it</li>
+<li>My testing: 85% success rate with clear criteria vs 41% without</li>
+</ul>
 <h2 id="r-reproducible-results">R - Reproducible results</h2>
-<p>Avoid temporal references ("current trends", "latest best practices")</p>
-<p>Use specific versions and exact requirements</p>
-<p>Same prompt should work next week, next month</p>
-<p>94% consistency across 30 days in my tests</p>
+<ul>
+<li>Avoid temporal references ("current trends", "latest best practices")</li>
+<li>Use specific versions and exact requirements</li>
+<li>Same prompt should work next week, next month</li>
+<li>94% consistency across 30 days in my tests</li>
+</ul>
 <h2 id="n-narrow-scope">N - Narrow scope</h2>
 <p>One prompt = one goal</p>
-<p>Don't combine code + docs + tests in one request</p>
-<p>Split complex tasks</p>
-<p>Single-goal prompts: 89% satisfaction vs 41% for multi-goal</p>
+<ul>
+<li>Don't combine code + docs + tests in one request</li>
+<li>Split complex tasks</li>
+<li>Single-goal prompts: 89% satisfaction vs 41% for multi-goal</li>
+</ul>
 <h2 id="e-explicit-constraints">E - Explicit constraints</h2>
-<p>Tell AI what NOT to do</p>
-<p>"Python code" → "Python code. No external libraries. No functions over 20 lines."</p>
-<p>Constraints reduce unwanted outputs by 91%</p>
+<ul>
+<li>Tell AI what NOT to do</li>
+<li>"Python code" → "Python code. No external libraries. No functions over 20 lines."</li>
+<li>Constraints reduce unwanted outputs by 91%</li>
+</ul>
 <h2 id="l-logical-structure-format-every-prompt-like">L - Logical structure Format every prompt like:</h2>
-<p>Context (input)</p>
-<p>Task (function)</p>
-<p>Constraints (parameters)</p>
-<p>Format (output)</p>
-<hr />
+<ul>
+<li>Context (input)</li>
+<li>Task (function)</li>
+<li>Constraints (parameters)</li>
+<li>Format (output)</li>
+</ul>
+<h2 id="examples">Examples</h2>
 <p>Real example from my work last week:</p>
 <p>Before KERNEL: "Help me write a script to process some data files and make them more efficient"</p>
 <p>Result: 200 lines of generic, unusable code</p>
 <p>After KERNEL:</p>
-<p>Task: Python script to merge CSVs
-Input: Multiple CSVs, same columns
-Constraints: Pandas only, &lt;50 lines
-Output: Single merged.csv
-Verify: Run on test_data/</p>
+<ul>
+<li>Task: Python script to merge CSVs</li>
+<li>Input: Multiple CSVs, same columns</li>
+<li>Constraints: Pandas only, &lt;50 lines</li>
+<li>Output: Single merged.csv</li>
+<li>Verify: Run on test_data/</li>
+</ul>
 <p>Result: 37 lines, worked on first try</p>
-<hr />
 <p>Actual metrics from applying KERNEL to 1000 prompts:</p>
-<p>First-try success: 72% → 94%
-Time to useful result: -67%
-Token usage: -58%</p>
-<p>Accuracy improvement: +340%</p>
-<p>Revisions needed: 3.2 → 0.4</p>
-<hr />
+<ul>
+<li>First-try success: 72% → 94%</li>
+<li>Time to useful result: -67%</li>
+<li>Token usage: -58%</li>
+<li>Accuracy improvement: +340%</li>
+<li>Revisions needed: 3.2 → 0.4</li>
+</ul>
 <p>Advanced tip from this user:</p>
 <p>Chain multiple KERNEL prompts instead of writing complex ones.</p>
 <p>Each prompt does one thing well, feeds into the next.</p>
-<hr />
+<h2 id="references">References</h2>
+<p><a href="https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/">Reddit Prompt Engineering by volodith</a></p>
 
 
 

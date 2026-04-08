@@ -1,0 +1,2247 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/lectures/meta-skills/">
+      
+      
+        <link rel="prev" href="../../labs/17-meta-prompts/">
+      
+      
+        <link rel="next" href="../../slides/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Meta-Skills - Prompt Engineering Class</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NVZ3NEY8KG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NVZ3NEY8KG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NVZ3NEY8KG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#meta-skills-using-the-skill-creator-to-build-new-skills" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompt Engineering Class
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Meta-Skills
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Prompt Engineering Class
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sample-outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Outline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../labs/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Labs
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Lectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Meta-Skills
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meta-Skills
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-what-are-skills-and-why-they-matter-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: What Are Skills and Why They Matter (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: What Are Skills and Why They Matter (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-skills-solve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem Skills Solve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-skills-so-powerful" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes Skills So Powerful
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Impact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-how-ai-harnesses-match-intent-to-skills-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: How AI Harnesses Match Intent to Skills (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: How AI Harnesses Match Intent to Skills (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-intent-matching-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Intent-Matching Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-a-skill-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a Skill File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-description-is-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Description is Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-context-window-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Context Window Challenge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progressive-disclosure-the-three-level-loading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Disclosure: The Three-Level Loading System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-the-anthropic-skill-creator-15-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: The Anthropic Skill Creator (15 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: The Anthropic Skill Creator (15 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-skill-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Skill Creator?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-invoke-the-skill-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Invoke the Skill Creator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-6-step-skill-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 6-Step Skill Creation Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-the-skill-creator-enforces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules the Skill Creator Enforces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-skill-creator-has-evolved" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Skill Creator Has Evolved
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-the-surprising-simplicity-of-skill-creation-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: The Surprising Simplicity of Skill Creation (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: The Surprising Simplicity of Skill Creation (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#it-is-easier-than-you-think" class="md-nav__link">
+    <span class="md-ellipsis">
+      It Is Easier Than You Think
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-progression-from-simple-to-sophisticated" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Progression from Simple to Sophisticated
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-multi-task-skills-and-complex-workflows-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 5: Multi-Task Skills and Complex Workflows (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Multi-Task Skills and Complex Workflows (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-skill-many-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Skill, Many Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-the-book-installer-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: The Book Installer Skill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-and-quality-scoring-within-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules and Quality Scoring Within Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequential-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequential Workflows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-skills-calling-skills-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 6: Skills Calling Skills (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 6: Skills Calling Skills (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#composability-the-power-of-skill-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Composability: The Power of Skill Chains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-skill-invocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Skill Invocation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-standardization-installation-and-the-ecosystem-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 7: Standardization, Installation, and the Ecosystem (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 7: Standardization, Installation, and the Ecosystem (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-skills-are-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Skills Are Installed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropics-role-in-the-skill-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anthropic's Role in the Skill Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-compliance-gap-in-other-harnesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Compliance Gap in Other Harnesses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-8-the-future-of-skills-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 8: The Future of Skills (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 8: The Future of Skills (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-state-82000-skills-and-growing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current State: 82,000+ Skills and Growing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sharing-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sharing Challenge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictions-for-the-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predictions for the Future
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-skills-that-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Skills That Last
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Exercise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructor Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-what-are-skills-and-why-they-matter-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: What Are Skills and Why They Matter (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: What Are Skills and Why They Matter (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-skills-solve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem Skills Solve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-skills-so-powerful" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes Skills So Powerful
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Impact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-how-ai-harnesses-match-intent-to-skills-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: How AI Harnesses Match Intent to Skills (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: How AI Harnesses Match Intent to Skills (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-intent-matching-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Intent-Matching Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-a-skill-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a Skill File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-description-is-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Description is Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-context-window-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Context Window Challenge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progressive-disclosure-the-three-level-loading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Disclosure: The Three-Level Loading System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-the-anthropic-skill-creator-15-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: The Anthropic Skill Creator (15 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: The Anthropic Skill Creator (15 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-skill-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Skill Creator?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-invoke-the-skill-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Invoke the Skill Creator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-6-step-skill-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 6-Step Skill Creation Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-the-skill-creator-enforces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules the Skill Creator Enforces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-skill-creator-has-evolved" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Skill Creator Has Evolved
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-the-surprising-simplicity-of-skill-creation-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: The Surprising Simplicity of Skill Creation (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: The Surprising Simplicity of Skill Creation (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#it-is-easier-than-you-think" class="md-nav__link">
+    <span class="md-ellipsis">
+      It Is Easier Than You Think
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-progression-from-simple-to-sophisticated" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Progression from Simple to Sophisticated
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-multi-task-skills-and-complex-workflows-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 5: Multi-Task Skills and Complex Workflows (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Multi-Task Skills and Complex Workflows (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-skill-many-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Skill, Many Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-the-book-installer-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: The Book Installer Skill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-and-quality-scoring-within-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules and Quality Scoring Within Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequential-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequential Workflows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-skills-calling-skills-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 6: Skills Calling Skills (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 6: Skills Calling Skills (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#composability-the-power-of-skill-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Composability: The Power of Skill Chains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-skill-invocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Skill Invocation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-standardization-installation-and-the-ecosystem-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 7: Standardization, Installation, and the Ecosystem (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 7: Standardization, Installation, and the Ecosystem (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-skills-are-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Skills Are Installed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropics-role-in-the-skill-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anthropic's Role in the Skill Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-compliance-gap-in-other-harnesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Compliance Gap in Other Harnesses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-8-the-future-of-skills-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 8: The Future of Skills (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 8: The Future of Skills (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-state-82000-skills-and-growing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current State: 82,000+ Skills and Growing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sharing-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sharing Challenge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictions-for-the-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predictions for the Future
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-skills-that-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Skills That Last
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-On Exercise
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="meta-skills-using-the-skill-creator-to-build-new-skills">Meta-Skills: Using the Skill Creator to Build New Skills</h1>
+<h2 id="lecture-overview">Lecture Overview</h2>
+<p><strong>Duration:</strong> 60 minutes
+<strong>Level:</strong> Intermediate to Advanced
+<strong>Prerequisites:</strong> Basic familiarity with Claude Code, prompt engineering fundamentals, understanding of AI agent harnesses</p>
+<hr />
+<h2 id="part-1-what-are-skills-and-why-they-matter-10-minutes">Part 1: What Are Skills and Why They Matter (10 minutes)</h2>
+<h3 id="the-problem-skills-solve">The Problem Skills Solve</h3>
+<p>Every time you ask an AI agent to perform a complex task, you face the same challenge: the agent needs precise instructions to do the job consistently well. Without skills, you would need to re-type detailed instructions every single time. Skills solve this by packaging expert knowledge into reusable, triggerable instruction sets that any user can invoke.</p>
+<p>Think of skills as <strong>reusable recipes for AI agents</strong>. Just as a cookbook gives a chef precise steps for making a souffl&eacute;, a skill gives an AI agent precise rules for completing a complex task.</p>
+<h3 id="what-makes-skills-so-powerful">What Makes Skills So Powerful</h3>
+<p>Skills are not just saved prompts. They are structured instruction packages that include:</p>
+<ol>
+<li><strong>Metadata for intent matching</strong> - The agent knows <em>when</em> to use the skill</li>
+<li><strong>Step-by-step workflows</strong> - Precise sequences of actions</li>
+<li><strong>Decision trees and rules</strong> - Conditional logic for handling variations</li>
+<li><strong>Reference materials</strong> - Domain knowledge loaded on demand</li>
+<li><strong>Executable scripts</strong> - Code that runs deterministically when needed</li>
+<li><strong>Quality validation</strong> - Built-in checks to ensure output meets standards</li>
+</ol>
+<p><strong>Key insight:</strong> Skills transform AI agents from general-purpose assistants into domain experts that follow precise, battle-tested procedures. A skill for generating quiz questions does not just "write some questions" - it checks content readiness scores, distributes questions across Bloom's Taxonomy levels, validates against learning objectives, and formats everything consistently.</p>
+<h3 id="real-world-impact">Real-World Impact</h3>
+<p>Without skills, users get inconsistent results. One day the agent generates a glossary with circular definitions; the next day it produces definitions that reference undefined terms. With a well-crafted glossary-generator skill, every glossary follows the same quality standards: definitions are concise, non-circular, distinct from each other, and free of business rules.</p>
+<hr />
+<h2 id="part-2-how-ai-harnesses-match-intent-to-skills-10-minutes">Part 2: How AI Harnesses Match Intent to Skills (10 minutes)</h2>
+<h3 id="the-intent-matching-pipeline">The Intent-Matching Pipeline</h3>
+<p>When you type a message into Claude Code (or any AI harness that supports skills), the system goes through a critical matching process before the agent even begins working:</p>
+<!-- ASCII original:
+User types prompt
+    ↓
+Harness loads skill index (name + description for each skill)
+    ↓
+Agent evaluates: "Does this prompt match any skill's trigger criteria?"
+    ↓
+If YES → Load the full SKILL.md body into context
+    ↓
+Agent follows the skill's instructions
+-->
+
+<pre class="mermaid"><code>flowchart TD
+    A[User types prompt] --&gt; B[Harness loads skill index\nname + description for each skill]
+    B --&gt; C{Does prompt match\nany skill's trigger?}
+    C -- YES --&gt; D[Load full SKILL.md\nbody into context]
+    C -- NO --&gt; E[Use general agent behavior]
+    D --&gt; F[Agent follows the\nskill's instructions]</code></pre>
+<p>The <strong>description field</strong> in a skill's metadata is the single most important piece of text in the entire skill. It is the <em>only</em> information the agent sees when deciding whether to trigger the skill. The full body of the skill is not loaded until after the match is made.</p>
+<h3 id="anatomy-of-a-skill-file">Anatomy of a Skill File</h3>
+<p>Every skill lives in a directory with a required <code>SKILL.md</code> file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>skill-name/
+├── SKILL.md           ← Required: metadata + instructions
+├── references/        ← Optional: domain knowledge files
+├── scripts/           ← Optional: executable code
+└── assets/            ← Optional: templates, images
+</code></pre></div></td></tr></table></div>
+<p>The <code>SKILL.md</code> file has two parts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+name: glossary-generator
+description: &gt;
+  This skill automatically generates a comprehensive glossary
+  of terms from a learning graph&#39;s concept list. Use this skill
+<span class="gu">  when creating a glossary for an intelligent textbook.</span>
+<span class="gu">---</span>
+
+<span class="gu">## Instructions</span>
+
+Step 1: Read the learning graph...
+Step 2: For each concept, generate a definition...
+</code></pre></div></td></tr></table></div>
+<h3 id="the-description-is-everything">The Description is Everything</h3>
+<p>A poorly written description means the skill never gets triggered - or gets triggered at the wrong time. Compare these:</p>
+<p><strong>Bad description:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>description: Generates glossaries
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Good description:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>description: &gt;
+  This skill automatically generates a comprehensive glossary
+  of terms from a learning graph&#39;s concept list, ensuring each
+  definition is precise, concise, distinct, non-circular, and
+  free of business rules. Use this skill when creating a glossary
+  for an intelligent textbook after the learning graph exists.
+</code></pre></div></td></tr></table></div></p>
+<p>The good description tells the agent:</p>
+<ul>
+<li><strong>What</strong> it does (generates glossary from concept list)</li>
+<li><strong>How</strong> it does it (with specific quality criteria)</li>
+<li><strong>When</strong> to use it (after learning graph exists)</li>
+<li><strong>Context</strong> (intelligent textbook projects)</li>
+</ul>
+<h3 id="the-context-window-challenge">The Context Window Challenge</h3>
+<p>Here is where things get interesting - and where understanding the technical constraints matters.</p>
+<p>Every skill's name and description gets loaded into the agent's context window at the start of every conversation. If you have 50 skills, each with a 200-word description, that is 10,000 tokens of skill metadata consuming context space before the user even types their first message.</p>
+<p><strong>The old 200K context window limitation:</strong> With the earlier 200K token context windows, Claude Code could practically only evaluate the first ~30 skills. Skills beyond that limit were effectively invisible - they existed on disk but never got matched.</p>
+<p><strong>The new 1M context window:</strong> With 1 million token context windows now available, the system can evaluate significantly more skills. This is a game-changer for power users who maintain large skill libraries. However, more skills still means more tokens consumed by metadata, so there is always a practical upper bound.</p>
+<p><strong>Best practice:</strong> Keep descriptions under 1,024 characters. Be precise about triggers. Do not pad descriptions with marketing language - every word should help the agent make a better matching decision.</p>
+<h3 id="progressive-disclosure-the-three-level-loading-system">Progressive Disclosure: The Three-Level Loading System</h3>
+<p>Skills use a clever three-level system to manage context efficiently:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What Loads</th>
+<th>When</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level 1: Metadata</strong></td>
+<td>Name + description</td>
+<td>Always in context</td>
+<td>~100 words</td>
+</tr>
+<tr>
+<td><strong>Level 2: SKILL.md body</strong></td>
+<td>Full instructions</td>
+<td>When skill triggers</td>
+<td>&lt; 5,000 words</td>
+</tr>
+<tr>
+<td><strong>Level 3: References</strong></td>
+<td>Domain knowledge files</td>
+<td>When needed during execution</td>
+<td>Unlimited</td>
+</tr>
+</tbody>
+</table>
+<p>This means a skill can contain thousands of lines of reference material without consuming any context until the agent actually needs it. The book-installer skill, for example, has 11 detailed reference guides totaling tens of thousands of words, but only the relevant guide gets loaded based on what the user asks for.</p>
+<hr />
+<h2 id="part-3-the-anthropic-skill-creator-15-minutes">Part 3: The Anthropic Skill Creator (15 minutes)</h2>
+<h3 id="what-is-the-skill-creator">What is the Skill Creator?</h3>
+<p>The skill creator is itself a skill - a meta-skill that generates new skills. It is invoked with <code>/skill-creator</code> in Claude Code and guides you through a structured process for designing, building, and validating a new skill.</p>
+<p>This is one of the most elegant examples of bootstrapping in AI tooling: <strong>the skill that teaches the agent how to build skills was itself built as a skill.</strong></p>
+<h3 id="how-to-invoke-the-skill-creator">How to Invoke the Skill Creator</h3>
+<p>There are several ways to trigger the skill creator:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code># Direct invocation
+/skill-creator
+
+# Natural language (intent matching)
+&quot;I want to create a new skill for generating API documentation&quot;
+
+# With specific parameters
+&quot;Create a skill that converts CSV files to formatted markdown tables&quot;
+</code></pre></div></td></tr></table></div>
+<p>When you invoke <code>/skill-creator</code>, Claude loads the full skill creator instructions - a comprehensive 17,800-character guide that includes:</p>
+<ul>
+<li>A 6-step creation process</li>
+<li>Rules for naming, descriptions, and structure</li>
+<li>Patterns for progressive disclosure</li>
+<li>Validation requirements</li>
+<li>Reference files for workflows and output patterns</li>
+</ul>
+<h3 id="the-6-step-skill-creation-process">The 6-Step Skill Creation Process</h3>
+<p>The skill creator walks through these steps:</p>
+<p><strong>Step 1: Understand the Need</strong>
+What task does the user perform repeatedly? What goes wrong when the agent does it without a skill? What are the quality criteria?</p>
+<p><strong>Step 2: Design the Trigger</strong>
+Write a description that captures exactly when this skill should fire. Test it mentally: "If a user typed X, would this description cause the right match?"</p>
+<p><strong>Step 3: Write the Instructions</strong>
+Structure the body with clear steps, rules, and decision points. Use progressive disclosure - put core workflow in SKILL.md, put detailed domain knowledge in reference files.</p>
+<p><strong>Step 4: Add Resources</strong>
+Do you need reference files for domain knowledge? Scripts for deterministic operations? Assets for output templates?</p>
+<p><strong>Step 5: Validate</strong>
+Run the validation script to check naming conventions, description length, and structural requirements:</p>
+<ul>
+<li>Name must be kebab-case (lowercase, hyphens)</li>
+<li>Name maximum: 64 characters</li>
+<li>Description maximum: 1,024 characters</li>
+<li>No angle brackets in descriptions</li>
+<li>Valid YAML frontmatter</li>
+</ul>
+<p><strong>Step 6: Test and Iterate</strong>
+Try the skill with real prompts. Does it trigger correctly? Does it produce consistent, high-quality output? Refine based on results.</p>
+<h3 id="rules-the-skill-creator-enforces">Rules the Skill Creator Enforces</h3>
+<p>The skill creator has learned - through extensive iteration - a set of rules that produce better skills:</p>
+<p><strong>Naming Rules:</strong></p>
+<ul>
+<li>Kebab-case only: <code>my-skill-name</code> not <code>mySkillName</code></li>
+<li>No leading or trailing hyphens</li>
+<li>No consecutive hyphens</li>
+<li>Maximum 64 characters</li>
+<li>Names should be descriptive but concise</li>
+</ul>
+<p><strong>Description Rules:</strong></p>
+<ul>
+<li>Must include what the skill does AND when to trigger it</li>
+<li>Maximum 1,024 characters</li>
+<li>No HTML angle brackets</li>
+<li>Should list specific trigger phrases or contexts</li>
+</ul>
+<p><strong>Body Rules:</strong></p>
+<ul>
+<li>Keep under 500 lines to minimize context bloat</li>
+<li>Use headers and numbered steps for clarity</li>
+<li>Put detailed knowledge in reference files, not in the body</li>
+<li>Include validation criteria so the agent knows what "done well" looks like</li>
+</ul>
+<p><strong>What NOT to Include:</strong></p>
+<ul>
+<li>No README.md files</li>
+<li>No CHANGELOG files</li>
+<li>No installation guides</li>
+<li>No auxiliary documentation</li>
+<li>Only files the agent needs to do the job</li>
+</ul>
+<h3 id="how-the-skill-creator-has-evolved">How the Skill Creator Has Evolved</h3>
+<p>The skill creator has gone through significant evolution as the community learned what makes skills effective:</p>
+<p><strong>Early days:</strong> Skills were essentially long prompts saved to files. They had no structure, no metadata, and no progressive disclosure. Every skill loaded its entire content into context regardless of relevance.</p>
+<p><strong>The metadata revolution:</strong> Adding YAML frontmatter with name and description fields enabled intent matching. Now skills could be triggered automatically instead of requiring explicit invocation.</p>
+<p><strong>Progressive disclosure:</strong> The three-level loading system (metadata → body → references) dramatically improved context efficiency. Skills could grow much larger without penalizing every conversation.</p>
+<p><strong>Validation tooling:</strong> Scripts like <code>validate.py</code> and <code>quick_validate.py</code> enforce structural rules automatically, catching common mistakes before they cause problems.</p>
+<p><strong>Pattern libraries:</strong> Reference files like <code>workflows.md</code> and <code>output-patterns.md</code> codify best practices, so new skill authors do not have to rediscover what works.</p>
+<p><strong>Today:</strong> The skill creator produces skills that are structurally sound, context-efficient, and well-documented from the first draft. It represents years of collective learning about what makes AI instructions effective.</p>
+<hr />
+<h2 id="part-4-the-surprising-simplicity-of-skill-creation-5-minutes">Part 4: The Surprising Simplicity of Skill Creation (5 minutes)</h2>
+<h3 id="it-is-easier-than-you-think">It Is Easier Than You Think</h3>
+<p>One of the biggest barriers to skill adoption is that novice users assume creating a skill requires programming expertise. They imagine they need to understand YAML schemas, write complex scripts, and configure build systems.</p>
+<p>The reality? Creating a basic skill takes about 2 minutes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>User: &quot;I want to create a skill that generates meeting agendas 
+       from a list of topics&quot;
+
+Claude: [Creates the skill directory, writes SKILL.md with proper 
+         frontmatter, structures the instructions, validates the 
+         output]
+
+Done. The skill is ready to use.
+</code></pre></div></td></tr></table></div>
+<p>Here is a complete, functional skill that took seconds to create:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+name: meeting-agenda
+description: &gt;
+  Generates structured meeting agendas from a list of topics
+  with time allocations, discussion leaders, and action items.
+<span class="gu">  Use when the user needs to create a meeting agenda.</span>
+<span class="gu">---</span>
+
+<span class="gu">## Instructions</span>
+
+<span class="k">1.</span> Ask for the meeting duration and list of topics
+<span class="k">2.</span> Allocate time proportionally based on topic complexity
+<span class="k">3.</span> For each topic, include:
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Time allocation (minutes)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Discussion leader (if specified)
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Key questions to address
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Expected outcome or decision needed
+<span class="k">4.</span> Add a 5-minute buffer for opening and closing
+<span class="k">5.</span> Format as a clean markdown table
+</code></pre></div></td></tr></table></div>
+<p>That is it. That is a working skill. It will trigger when someone asks for a meeting agenda, and it will produce consistent, well-structured output every time.</p>
+<h3 id="the-progression-from-simple-to-sophisticated">The Progression from Simple to Sophisticated</h3>
+<p>Most users should start simple and add complexity only when needed:</p>
+<table>
+<thead>
+<tr>
+<th>Complexity Level</th>
+<th>What You Add</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic</strong></td>
+<td>SKILL.md with frontmatter + simple steps</td>
+<td>Meeting agenda generator</td>
+</tr>
+<tr>
+<td><strong>Intermediate</strong></td>
+<td>Decision trees, validation rules</td>
+<td>Quiz generator with Bloom's Taxonomy</td>
+</tr>
+<tr>
+<td><strong>Advanced</strong></td>
+<td>Reference files, scripts, quality scoring</td>
+<td>Learning graph generator with DAG validation</td>
+</tr>
+<tr>
+<td><strong>Expert</strong></td>
+<td>Cross-skill dependencies, routing tables</td>
+<td>Book installer with 11 reference guides</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-5-multi-task-skills-and-complex-workflows-10-minutes">Part 5: Multi-Task Skills and Complex Workflows (10 minutes)</h2>
+<h3 id="one-skill-many-actions">One Skill, Many Actions</h3>
+<p>A single skill can orchestrate dozens of distinct actions. The key is using <strong>routing tables</strong> and <strong>decision trees</strong> to direct the agent to the right action based on user intent.</p>
+<h3 id="example-the-book-installer-skill">Example: The Book Installer Skill</h3>
+<p>The <code>/book-installer</code> skill is one of the most sophisticated examples of a multi-task skill. It serves as a <strong>routing hub</strong> for installing features into intelligent textbooks built with MkDocs Material.</p>
+<p>When invoked, it does not perform a single action. Instead, it evaluates what the user needs and routes to the appropriate sub-workflow:</p>
+<!-- ASCII original:
+User: "/book-installer"
+    ↓
+"What would you like to install?"
+    ↓
+Evaluates user response against routing table
+    ↓
+Routes to one of 11+ specialized reference guides
+-->
+
+<pre class="mermaid"><code>flowchart TD
+    A["User invokes /book-installer"] --&gt; B["What would you like to install?"]
+    B --&gt; C[Evaluate response\nagainst routing table]
+    C --&gt; D[Route to 1 of 11+\nspecialized reference guides]
+    D --&gt; E[Execute sub-workflow\nfrom selected guide]</code></pre>
+<p><strong>The Routing Table Pattern:</strong></p>
+<table>
+<thead>
+<tr>
+<th>User Says</th>
+<th>Routes To</th>
+<th>What Happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Set up a new textbook"</td>
+<td>mkdocs-template.md</td>
+<td>Creates full MkDocs project structure</td>
+</tr>
+<tr>
+<td>"Add a learning graph viewer"</td>
+<td>learning-graph-viewer.md</td>
+<td>Installs vis.js-based graph visualization</td>
+</tr>
+<tr>
+<td>"I need a mascot"</td>
+<td>learning-mascot.md</td>
+<td>Guides character design with CSS integration</td>
+</tr>
+<tr>
+<td>"Add skill tracking"</td>
+<td>skill-tracker.md</td>
+<td>Installs student progress tracking system</td>
+</tr>
+<tr>
+<td>"Set up feedback system"</td>
+<td>feedback-micro-ui.md</td>
+<td>Adds like/dislike buttons to pages</td>
+</tr>
+<tr>
+<td>"Help" or "What can you do?"</td>
+<td>Displays feature list</td>
+<td>Shows numbered menu of all capabilities</td>
+</tr>
+</tbody>
+</table>
+<p>Each reference guide is itself a detailed workflow - the learning mascot guide alone is 400+ lines with character design questions, subject-area suggestions, pose variants, and CSS templates.</p>
+<p><strong>The Decision Tree Pattern:</strong></p>
+<!-- ASCII original:
+Is the user asking for help or listing features?
+  → YES: Display numbered feature list
+  → NO: Continue evaluation
+Is this a new project from scratch?
+  → YES: Route to mkdocs-template.md
+  → NO: Continue evaluation
+Does the user want visualization features?
+  → Learning graph? → learning-graph-viewer.md
+  → Timeline? → timeline-viewer.md
+  → Concept map? → concept-map.md
+Does the user want interactive content?
+  → Quizzes? → quiz-system.md
+  → MicroSims? → microsim-template.md
+-->
+
+<pre class="mermaid"><code>flowchart TD
+    A{Asking for help\nor features?} -- YES --&gt; B[Display numbered\nfeature list]
+    A -- NO --&gt; C{New project\nfrom scratch?}
+    C -- YES --&gt; D[mkdocs-template.md]
+    C -- NO --&gt; E{Visualization\nfeatures?}
+    E -- Learning graph --&gt; F[learning-graph-viewer.md]
+    E -- Timeline --&gt; G[timeline-viewer.md]
+    E -- Concept map --&gt; H[concept-map.md]
+    E -- NO --&gt; I{Interactive\ncontent?}
+    I -- Quizzes --&gt; J[quiz-system.md]
+    I -- MicroSims --&gt; K[microsim-template.md]</code></pre>
+<h3 id="rules-and-quality-scoring-within-skills">Rules and Quality Scoring Within Skills</h3>
+<p>Advanced skills embed explicit quality criteria that the agent must evaluate. The quiz-generator skill, for example, includes a <strong>Content Readiness Score</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Before generating quiz questions, evaluate the chapter:
+
+Score 90-100 (Rich):    Full content, examples, diagrams → Generate 15 questions
+Score 70-89  (Good):    Solid content, some gaps → Generate 12 questions  
+Score 50-69  (Basic):   Outline-level content → Generate 8 questions
+Score below 50:         Insufficient content → Warn user, suggest running 
+                        chapter-content-generator first
+</code></pre></div></td></tr></table></div>
+<p>The learning-graph-generator skill includes <strong>DAG validation rules</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>After generating the dependency graph:
+1. Check for cycles (dependencies must form a DAG)
+2. Verify all referenced concepts exist in the concept list
+3. Ensure foundational concepts have no prerequisites
+4. Validate that advanced concepts depend on intermediate ones
+5. Check that no concept depends on itself
+</code></pre></div></td></tr></table></div>
+<p>These embedded rules are what separate skills from simple prompt templates. They encode expert judgment that would otherwise require a human reviewer.</p>
+<h3 id="sequential-workflows">Sequential Workflows</h3>
+<p>The learning-graph-generator demonstrates an 8-step sequential workflow where each step builds on the previous:</p>
+<!-- ASCII original:
+Step 0: Setup - Read course description
+Step 1: Assess course description quality (score it)
+Step 2: Generate 200 concept labels
+Step 3: Categorize concepts by taxonomy level
+Step 4: Generate dependency edges
+Step 5: Validate the DAG structure
+Step 6: Create visualization files
+Step 7: Generate quality report
+Step 8: Summary and next steps
+-->
+
+<pre class="mermaid"><code>flowchart TD
+    S0["Step 0: Setup\nRead course description"] --&gt; S1["Step 1: Assess course\ndescription quality"]
+    S1 --&gt; S2["Step 2: Generate\n200 concept labels"]
+    S2 --&gt; S3["Step 3: Categorize concepts\nby taxonomy level"]
+    S3 --&gt; S4["Step 4: Generate\ndependency edges"]
+    S4 --&gt; S5{"Step 5: Validate\nDAG structure"}
+    S5 -- PASS --&gt; S6["Step 6: Create\nvisualization files"]
+    S5 -- FAIL --&gt; S2
+    S6 --&gt; S7["Step 7: Generate\nquality report"]
+    S7 --&gt; S8["Step 8: Summary\nand next steps"]</code></pre>
+<p>The agent cannot skip steps - Step 5 validates the output of Steps 2-4, and if validation fails, the agent loops back to fix issues before proceeding.</p>
+<hr />
+<h2 id="part-6-skills-calling-skills-5-minutes">Part 6: Skills Calling Skills (5 minutes)</h2>
+<h3 id="composability-the-power-of-skill-chains">Composability: The Power of Skill Chains</h3>
+<p>One of the most powerful features of the skill ecosystem is that <strong>skills can reference and invoke other skills</strong>. This creates composable workflows where complex processes are broken into manageable, reusable pieces.</p>
+<p><strong>Example chain for building an intelligent textbook:</strong></p>
+<!-- ASCII original:
+/learning-graph-generator → /book-chapter-generator → /chapter-content-generator
+→ /glossary-generator → /quiz-generator → /faq-generator → /book-metrics-generator
+-->
+
+<pre class="mermaid"><code>flowchart TD
+    A["/learning-graph-generator\nProduces learning graph"] --&gt; B["/book-chapter-generator\nCreates chapter structure"]
+    B --&gt; C["/chapter-content-generator\nFills in chapter content"]
+    C --&gt; D["/glossary-generator\nGenerates glossary from concepts"]
+    C --&gt; E["/quiz-generator\nCreates aligned quizzes"]
+    C --&gt; F["/faq-generator\nGenerates FAQs from content"]
+    D --&gt; G["/book-metrics-generator\nProduces quality report"]
+    E --&gt; G
+    F --&gt; G</code></pre>
+<p>Each skill in this chain explicitly states its prerequisites in its description:</p>
+<ul>
+<li>The quiz-generator says: <em>"Use this skill after chapter content has been generated (use chapter-content-generator first)"</em></li>
+<li>The chapter-content-generator says: <em>"Use this skill when the book-chapter-generator skill has created chapter directories"</em></li>
+<li>The glossary-generator says: <em>"Use this skill when creating a glossary for an intelligent textbook after the learning graph exists"</em></li>
+</ul>
+<p>This creates a <strong>dependency graph of skills</strong> - the agent understands the correct order and can warn users if prerequisites are not met.</p>
+<h3 id="recursive-skill-invocation">Recursive Skill Invocation</h3>
+<p>In principle, skills can call skills that call other skills, creating deep invocation chains. The book-installer skill might trigger the mkdocs-template skill, which sets up a project structure, and then the user immediately invokes the learning-graph-generator, which produces output consumed by the chapter-content-generator.</p>
+<p>The practical limit is context window size - each skill invocation loads instructions into context, and deep chains can consume significant tokens. This is why progressive disclosure and concise skill bodies matter so much.</p>
+<hr />
+<h2 id="part-7-standardization-installation-and-the-ecosystem-5-minutes">Part 7: Standardization, Installation, and the Ecosystem (5 minutes)</h2>
+<h3 id="how-skills-are-installed">How Skills Are Installed</h3>
+<p>Skills are installed through a surprisingly simple mechanism: <strong>symbolic links</strong>. A skill lives in a source directory (like a shared skills repository) and gets linked into the user's <code>~/.claude/skills/</code> directory:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Installing a skill is just creating a symlink</span>
+ln<span class="w"> </span>-s<span class="w"> </span>/path/to/shared-skills/quiz-generator<span class="w"> </span>~/.claude/skills/quiz-generator
+</code></pre></div></td></tr></table></div>
+<p>This approach has several advantages:</p>
+<ul>
+<li><strong>No copying</strong> - Updates to the source propagate automatically</li>
+<li><strong>Easy removal</strong> - Delete the symlink, keep the source</li>
+<li><strong>Shared libraries</strong> - Teams can maintain a central skills repository</li>
+<li><strong>Version control</strong> - The source skills live in git repositories</li>
+</ul>
+<p>Installers automate this process, scanning a skills repository and creating the appropriate symlinks for tools like Claude Code.</p>
+<h3 id="anthropics-role-in-the-skill-movement">Anthropic's Role in the Skill Movement</h3>
+<p>Anthropic was a founding force behind the skill movement. By building skill support directly into Claude Code, they established the patterns and standards that the broader ecosystem now follows. The SKILL.md format, the YAML frontmatter convention, the progressive disclosure architecture - these all originated from Anthropic's work on Claude Code.</p>
+<p><strong>Today, Claude Code follows skill rules more faithfully than any other harness.</strong> When a skill says "do not create README files," Claude Code respects that instruction. When a skill specifies a 6-step sequential workflow, Claude Code follows each step in order. This reliability is what makes skills genuinely useful rather than merely suggestive.</p>
+<h3 id="the-compliance-gap-in-other-harnesses">The Compliance Gap in Other Harnesses</h3>
+<p>Other AI harnesses have begun claiming skill support, but there is a significant gap between "supports skills" and "faithfully follows skill rules." Common issues include:</p>
+<ul>
+<li><strong>Ignoring negative instructions</strong> - Skills that say "do NOT do X" get ignored</li>
+<li><strong>Skipping validation steps</strong> - Agents skip quality checks to save time</li>
+<li><strong>Flattening progressive disclosure</strong> - Loading all reference files at once instead of on demand</li>
+<li><strong>Incomplete metadata matching</strong> - Only matching on skill name, not the full description</li>
+<li><strong>Breaking sequential workflows</strong> - Parallelizing steps that must be sequential</li>
+</ul>
+<p>When evaluating a harness for skill support, the test is simple: create a skill with explicit rules, including negative rules ("do not create auxiliary files"), and see if the harness follows all of them. Claude Code consistently passes this test. Many competitors do not.</p>
+<hr />
+<h2 id="part-8-the-future-of-skills-5-minutes">Part 8: The Future of Skills (5 minutes)</h2>
+<h3 id="current-state-82000-skills-and-growing">Current State: 82,000+ Skills and Growing</h3>
+<p>Skill search engines are already tracking over 82,000 skills across the ecosystem. This explosive growth brings both opportunity and challenges:</p>
+<p><strong>Opportunities:</strong></p>
+<ul>
+<li>Vast library of pre-built expertise covering nearly every domain</li>
+<li>Community-driven quality improvement through usage and feedback</li>
+<li>Cross-pollination of patterns between domains</li>
+</ul>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><strong>Discovery</strong> - How do you find the right skill among 82,000 options?</li>
+<li><strong>Quality variance</strong> - Not all skills are well-crafted; many are just saved prompts with metadata</li>
+<li><strong>Rating and trust</strong> - No universal system for rating skill quality or trustworthiness</li>
+<li><strong>Version compatibility</strong> - Skills written for one context window size may not work well in another</li>
+<li><strong>Naming conflicts</strong> - Multiple skills claiming the same name or trigger phrases</li>
+</ul>
+<h3 id="the-sharing-challenge">The Sharing Challenge</h3>
+<p>Sharing skills between users and teams raises important questions:</p>
+<ul>
+<li><strong>Portability</strong> - Skills that reference specific file paths or tools may not work in other environments</li>
+<li><strong>Security</strong> - Skills with embedded scripts need trust verification</li>
+<li><strong>Customization vs. standardization</strong> - How much should a shared skill be customizable?</li>
+<li><strong>Attribution</strong> - Who maintains a shared skill? Who is responsible for bugs?</li>
+</ul>
+<h3 id="predictions-for-the-future">Predictions for the Future</h3>
+<ol>
+<li><strong>Skill marketplaces</strong> will emerge with ratings, reviews, and verified publishers - similar to browser extension stores or package managers</li>
+<li><strong>Skill composition tools</strong> will make it easier to chain skills together visually, like connecting nodes in a workflow editor</li>
+<li><strong>Automated skill generation</strong> will improve - AI agents will observe user patterns and suggest new skills automatically</li>
+<li><strong>Cross-harness standards</strong> will develop, though adoption will be uneven and contentious</li>
+<li><strong>Skill testing frameworks</strong> will become standard, allowing automated verification that a skill produces correct output across a range of inputs</li>
+<li><strong>Context window growth</strong> will continue to expand what is practical - skills that are impractical today due to size constraints will become viable</li>
+<li><strong>Skill specialization</strong> will accelerate as domains develop their own skill ecosystems (education skills, DevOps skills, legal skills, medical documentation skills)</li>
+</ol>
+<h3 id="building-skills-that-last">Building Skills That Last</h3>
+<p>To create skills that stand the test of time:</p>
+<ul>
+<li><strong>Make them general</strong> - Test with multiple users, not just yourself</li>
+<li><strong>Include validation</strong> - Build in quality checks so the skill self-corrects</li>
+<li><strong>Document triggers clearly</strong> - Future users need to know exactly when to use the skill</li>
+<li><strong>Keep the body concise</strong> - Resist the urge to over-specify; trust the agent's judgment for non-critical decisions</li>
+<li><strong>Use progressive disclosure</strong> - Put detailed knowledge in reference files</li>
+<li><strong>Version thoughtfully</strong> - When updating skills, consider backward compatibility for users who depend on current behavior</li>
+</ul>
+<hr />
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Key Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What skills are</strong></td>
+<td>Reusable, structured instruction packages that make AI agents into domain experts</td>
+</tr>
+<tr>
+<td><strong>Intent matching</strong></td>
+<td>The description field is everything - it is the only thing the agent sees when deciding to trigger</td>
+</tr>
+<tr>
+<td><strong>Context management</strong></td>
+<td>Progressive disclosure (3 levels) keeps context efficient</td>
+</tr>
+<tr>
+<td><strong>Skill creator</strong></td>
+<td>A meta-skill that guides you through a 6-step process for building new skills</td>
+</tr>
+<tr>
+<td><strong>Simplicity</strong></td>
+<td>A basic skill takes 2 minutes to create - most users overestimate the difficulty</td>
+</tr>
+<tr>
+<td><strong>Multi-task skills</strong></td>
+<td>Routing tables and decision trees let one skill handle many actions</td>
+</tr>
+<tr>
+<td><strong>Composability</strong></td>
+<td>Skills can call skills, creating powerful workflow chains</td>
+</tr>
+<tr>
+<td><strong>Installation</strong></td>
+<td>Symbolic links make skills easy to install, share, and update</td>
+</tr>
+<tr>
+<td><strong>Anthropic's role</strong></td>
+<td>Founded the skill movement; Claude Code remains the gold standard for skill compliance</td>
+</tr>
+<tr>
+<td><strong>Future</strong></td>
+<td>82,000+ skills tracked; marketplaces, ratings, and cross-harness standards coming</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="discussion-questions">Discussion Questions</h2>
+<ol>
+<li>What repetitive task in your workflow would benefit most from a skill?</li>
+<li>How would you write the description field to ensure accurate intent matching?</li>
+<li>What quality validation rules would you embed in your skill?</li>
+<li>When should a skill use reference files versus putting everything in the body?</li>
+<li>How would you test a skill to ensure it works for users beyond yourself?</li>
+</ol>
+<hr />
+<h2 id="hands-on-exercise">Hands-On Exercise</h2>
+<p><strong>Create your first skill in class (15 minutes if time permits):</strong></p>
+<ol>
+<li>Identify a task you perform at least weekly with an AI agent</li>
+<li>Invoke <code>/skill-creator</code> and describe the task</li>
+<li>Review the generated SKILL.md - check the description, steps, and rules</li>
+<li>Test the skill with a real prompt</li>
+<li>Refine based on the output quality</li>
+<li>Share your skill with a classmate and see if it works for them too</li>
+</ol>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../labs/17-meta-prompts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Meta Prompts">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Meta Prompts
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../slides/" class="md-footer__link md-footer__link--next" aria-label="Next: Slides">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Slides
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

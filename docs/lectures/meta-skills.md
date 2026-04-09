@@ -8,7 +8,7 @@
 
 ---
 
-## Part 1: What Are Skills and Why They Matter (10 minutes)
+## Part 1: What Are Agent Skills and Why They Matter (10 minutes)
 
 ### The Problem Skills Solve
 
@@ -18,7 +18,7 @@ Think of skills as **reusable recipes for AI agents**. Just as a cookbook gives 
 
 ### What Makes Skills So Powerful
 
-Skills are not just saved prompts. They are structured instruction packages that include:
+Ageny Skills are not just saved prompts. They are structured instruction packages that include:
 
 1. **Metadata for intent matching** - The agent knows *when* to use the skill
 2. **Step-by-step workflows** - Precise sequences of actions

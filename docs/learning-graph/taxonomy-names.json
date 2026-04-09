@@ -1,0 +1,19 @@
+{
+  "FOUND": "Foundation Concepts",
+  "PFUND": "Prompt Fundamentals",
+  "PTYPE": "Prompt Types",
+  "PTECH": "Prompt Techniques",
+  "PARAM": "Model Parameters",
+  "OUTFMT": "Output Format Control",
+  "CTXMEM": "Context and Memory",
+  "RAG": "Retrieval-Augmented Generation",
+  "MULTI": "Multimodal Prompting",
+  "AGENT": "Agentic AI",
+  "SECUR": "Prompt Security",
+  "ETHIC": "Ethics and Responsible AI",
+  "BIZAP": "Business Applications",
+  "EDUAP": "Educational Applications",
+  "EVAL": "Evaluation and Optimization",
+  "USAGE": "Usage Limits and Token Economics",
+  "CAP": "Capstone Projects"
+}

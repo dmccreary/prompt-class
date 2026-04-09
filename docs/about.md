@@ -1,8 +1,8 @@
 # About This Website
 
-I have always been facinated with languge.  I got my first exposure
+I have always been fascinated with language.  I got my first exposure
 to language tools when I discovered [WordNet](https://wordnet.princeton.edu/)
-in the late 1990s.  It was amazing to see a formal database represnetation
+in the late 1990s.  It was amazing to see a formal database representations
 of words I used every day.  Leveraging WordNet for writing and search was
 opened a new door for me.  This helped me formalize my ability to visualize how to
 represent concepts in a graph.

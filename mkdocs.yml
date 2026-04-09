@@ -68,6 +68,7 @@ nav:
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Mascot Style Guide: learning-graph/mascot-test.md
   
   - MicroSims:
@@ -75,7 +76,9 @@ nav:
     - Embedding Space Explorer: sims/embedding-space/index.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
+  - FAQ: faq.md
   - Glossary: glossary.md
+  - License: license.md
   - References: references.md
   - Contact: contact.md
 

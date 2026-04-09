@@ -8,6 +8,7 @@ repo_url: 'https://github.com/dmccreary/prompt-class'
 nav:
   - Home: index.md
   - About: about.md
+  - Course Description: course-description.md
   - Sample Outline: sample-outline.md
   - Labs:
     - Intro: labs/index.md
@@ -35,6 +36,37 @@ nav:
     - Meta Prompts: labs/17-meta-prompts.md
     - KERNEL: labs/18-kernel.md`
 
+  - Chapters:
+    - List of Chapters: chapters/index.md
+    - 1. AI and ML Foundations: chapters/01-ai-ml-foundations/index.md
+    - 2. Prompt Fundamentals: chapters/02-prompt-fundamentals/index.md
+    - 3. Prompt Types and Parameters: chapters/03-prompt-types-parameters/index.md
+    - 4. Core Prompt Techniques: chapters/04-core-prompt-techniques/index.md
+    - 5. Advanced Prompt Techniques: chapters/05-advanced-prompt-techniques/index.md
+    - 6. Output Format Control: chapters/06-output-format-control/index.md
+    - 7. Context, Memory, and Info Management: chapters/07-context-memory-management/index.md
+    - 8. Retrieval-Augmented Generation: chapters/08-retrieval-augmented-generation/index.md
+    - 9. Multimodal Prompting: chapters/09-multimodal-prompting/index.md
+    - 10. Ethics and Responsible AI: chapters/10-ethics-responsible-ai/index.md
+    - 11. Prompt Security: chapters/11-prompt-security/index.md
+    - 12. Agentic AI: chapters/12-agentic-ai/index.md
+    - 13. Evaluation and Optimization: chapters/13-evaluation-optimization/index.md
+    - 14. Usage Limits and Token Economics: chapters/14-usage-limits-token-economics/index.md
+    - 15. Business Applications: chapters/15-business-applications/index.md
+    - 16. Educational Applications: chapters/16-educational-applications/index.md
+    - 17. Capstone Projects: chapters/17-capstone-projects/index.md
+  - Lectures:
+    - Meta-Skills: lectures/meta-skills.md
+  - Learning Graph:
+    - Introduction: learning-graph/index.md
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+    - Concept Enumeration: learning-graph/concept-list.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Mascot Style Guide: learning-graph/mascot-test.md
+  - MicroSims:
+    - Learning Graph Viewer: sims/graph-viewer/index.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - Glossary: glossary.md
@@ -45,10 +77,10 @@ nav:
 edit_uri: 'blob/master/docs'
 theme:
   name: material
+  logo: img/mascot/neutral.png
   icon:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
-  extra_css:
   palette:
     primary: 'blue'
     accent: 'orange'
@@ -68,11 +100,21 @@ plugins:
 #  - social
 markdown_extensions:
   - admonition
+  - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - pymdownx.highlight:
       linenums: true
+extra_css:
+  - css/extra.css
+  - css/mascot.css
+extra_javascript:
+  - js/extra.js
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1

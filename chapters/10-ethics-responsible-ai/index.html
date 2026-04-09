@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="A thorough exploration of the ethical dimensions of AI, covering bias, fairness, transparency, accountability, privacy, intellectual property, and misinformation risks that every prompt engineer must understand.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>10. Ethics and Responsible AI - Prompt Engineering Class</title>
+        <title>Ethics and Responsible AI - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. Ethics and Responsible AI
+              Ethics and Responsible AI
             
           </span>
         </div>
@@ -684,7 +684,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -775,9 +775,147 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-ethics-matters-in-prompt-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Ethics Matters in Prompt Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ethical-landscape-a-framework-for-responsible-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ethical Landscape: A Framework for Responsible AI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ethical Landscape: A Framework for Responsible AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pillars-of-responsible-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pillars of Responsible AI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bias-in-ai-the-invisible-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bias in AI: The Invisible Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fairness-more-than-just-treating-everyone-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fairness: More Than Just "Treating Everyone the Same"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transparency-and-explainability-opening-the-black-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transparency and Explainability: Opening the Black Box
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accountability-who-is-responsible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accountability: Who Is Responsible?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-considerations-protecting-whats-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy Considerations: Protecting What's Personal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consent-and-data-use-asking-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consent and Data Use: Asking Permission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intellectual-property-and-copyright-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intellectual Property and Copyright Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intellectual Property and Copyright Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-intellectual-property-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Intellectual Property Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misinformation-risk-when-ai-gets-it-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misinformation Risk: When AI Gets It Wrong
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepfake-awareness-seeing-isnt-believing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deepfake Awareness: Seeing Isn't Believing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-personal-ethical-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your Personal Ethical Framework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -988,6 +1126,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -1004,7 +1148,7 @@
   
   
   
-    <a href="../../lectures/meta-skills/" class="md-nav__link">
+    <a href="../../lectures/" class="md-nav__link">
       
   
   
@@ -1097,6 +1241,8 @@
       
         
           
+        
+      
         
       
     
@@ -1272,9 +1418,147 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-ethics-matters-in-prompt-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Ethics Matters in Prompt Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ethical-landscape-a-framework-for-responsible-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ethical Landscape: A Framework for Responsible AI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ethical Landscape: A Framework for Responsible AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pillars-of-responsible-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pillars of Responsible AI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bias-in-ai-the-invisible-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bias in AI: The Invisible Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fairness-more-than-just-treating-everyone-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fairness: More Than Just "Treating Everyone the Same"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transparency-and-explainability-opening-the-black-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transparency and Explainability: Opening the Black Box
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accountability-who-is-responsible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accountability: Who Is Responsible?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-considerations-protecting-whats-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy Considerations: Protecting What's Personal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consent-and-data-use-asking-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consent and Data Use: Asking Permission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intellectual-property-and-copyright-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intellectual Property and Copyright Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intellectual Property and Copyright Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-intellectual-property-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Intellectual Property Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misinformation-risk-when-ai-gets-it-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      Misinformation Risk: When AI Gets It Wrong
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepfake-awareness-seeing-isnt-believing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deepfake Awareness: Seeing Isn't Believing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-personal-ethical-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your Personal Ethical Framework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1602,331 @@
 
 
 <h1 id="ethics-and-responsible-ai">Ethics and Responsible AI</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter addresses the critical ethical dimensions of working with AI systems. Students will examine bias, fairness, transparency, and accountability in AI-generated content, developing a framework for responsible use. The chapter covers privacy considerations, consent and data use, intellectual property, and copyright issues that arise when using AI tools. Students will also learn to recognize and mitigate misinformation risks and understand the implications of deepfake technology, building the ethical awareness necessary for responsible prompt engineering practice.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Prompt Crafters!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Words matter — let's get them right! And in this chapter, that phrase takes on a whole new weight. The words we use in prompts, the outputs we share, and the decisions we make with AI all carry ethical consequences. Let's explore how to be responsible prompt engineers — because with great prompting power comes great responsibility.</p>
+</div>
+<h2 id="why-ethics-matters-in-prompt-engineering">Why Ethics Matters in Prompt Engineering</h2>
+<p>If you've been following this course, you already know how powerful large language models can be. You can generate essays, write code, analyze data, create images, and summarize complex documents in seconds. That power is exciting. It's also a reason to pause and think carefully.</p>
+<p><strong>AI Ethics</strong> is the branch of applied ethics that examines moral questions raised by the development, deployment, and use of artificial intelligence systems. It covers everything from how training data is collected to how AI-generated content affects real people's lives. For prompt engineers, ethical awareness isn't optional — it's a core professional skill.</p>
+<p>Consider this: a single poorly crafted prompt can generate biased hiring recommendations, produce misleading medical advice, or create convincing fake images of real people. None of these outcomes require malicious intent. They can happen through carelessness, ignorance, or simply not thinking through the consequences.</p>
+<p>That's why this chapter exists. We're going to build a practical ethical framework you can apply every time you sit down to write a prompt.</p>
+<h2 id="the-ethical-landscape-a-framework-for-responsible-ai">The Ethical Landscape: A Framework for Responsible AI</h2>
+<p>Before we dive into specific topics, it helps to see how the major ethical concepts relate to one another. Think of responsible AI as a building with several interconnected pillars. Each pillar supports the others, and if one is weak, the whole structure is at risk.</p>
+<details>
+<summary>Show/Hide Diagram</summary>
+<h4 id="diagram-pillars-of-responsible-ai">Diagram: Pillars of Responsible AI</h4>
+<p>This diagram should be rendered as a Mermaid block diagram or conceptual architecture. At the top sits "Responsible AI" as the roof. Below it, six pillars stand side by side on a shared foundation:</p>
+<ul>
+<li><strong>Pillar 1: Fairness</strong> — Ensuring equitable treatment across groups</li>
+<li><strong>Pillar 2: Transparency</strong> — Making AI processes understandable</li>
+<li><strong>Pillar 3: Accountability</strong> — Assigning responsibility for outcomes</li>
+<li><strong>Pillar 4: Privacy</strong> — Protecting personal information</li>
+<li><strong>Pillar 5: Safety</strong> — Preventing harm from AI outputs</li>
+<li><strong>Pillar 6: Integrity</strong> — Honest use without deception</li>
+</ul>
+<p>The foundation is labeled "Ethical Awareness and Education." Arrows connect the pillars to show interdependence — for example, transparency enables accountability, and fairness depends on addressing bias.</p>
+<pre class="mermaid"><code>graph TD
+    RA["Responsible AI"] --- F["Fairness"]
+    RA --- T["Transparency"]
+    RA --- AC["Accountability"]
+    RA --- P["Privacy"]
+    RA --- S["Safety"]
+    RA --- I["Integrity"]
+    F --- FD["Ethical Awareness &amp; Education"]
+    T --- FD
+    AC --- FD
+    P --- FD
+    S --- FD
+    I --- FD
+    T -.-&gt;|"enables"| AC
+    F -.-&gt;|"requires addressing"| BIAS["Bias Detection"]
+    S -.-&gt;|"includes"| MIS["Misinformation Prevention"]</code></pre>
+</details>
+<h2 id="bias-in-ai-the-invisible-problem">Bias in AI: The Invisible Problem</h2>
+<p><strong>Bias in AI</strong> refers to systematic errors in AI outputs that produce unfair or prejudiced results for particular groups of people. Bias doesn't always look like overt discrimination. Often, it's subtle — baked into the training data in ways that reflect the historical inequalities of the real world.</p>
+<p>Here are the most common sources of bias in AI systems:</p>
+<ul>
+<li><strong>Training data bias</strong> — If the data used to train a model over-represents certain demographics, viewpoints, or cultures, the model's outputs will reflect those imbalances. A model trained mostly on English-language internet text will have a Western-centric worldview.</li>
+<li><strong>Selection bias</strong> — The choices about what data to include or exclude shape the model's understanding. If medical training data primarily includes studies conducted on men, the model may give less accurate health information for women.</li>
+<li><strong>Measurement bias</strong> — The way information is categorized and labeled in training data can embed biased assumptions. Job performance ratings influenced by a manager's prejudice become "ground truth" for an AI learning what "good performance" looks like.</li>
+<li><strong>Confirmation bias in prompting</strong> — Even you, the prompt engineer, can introduce bias by framing prompts in ways that steer the model toward confirming existing beliefs.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type of Bias</th>
+<th>Where It Originates</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training data bias</td>
+<td>Data collection</td>
+<td>Model associates "nurse" with female pronouns</td>
+</tr>
+<tr>
+<td>Selection bias</td>
+<td>Data curation</td>
+<td>Underrepresentation of non-English medical literature</td>
+</tr>
+<tr>
+<td>Measurement bias</td>
+<td>Labeling process</td>
+<td>Biased performance reviews used as training targets</td>
+</tr>
+<tr>
+<td>Confirmation bias</td>
+<td>Prompt design</td>
+<td>"Why is technology X better?" assumes X is better</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Insight</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking deeply">
+Here's a brain-teaser for you: an AI model can be biased even when nobody involved intended it. Bias can sneak in through the data, and nobody notices until the model is out in the world making decisions. That's why we test, audit, and question AI outputs — especially when those outputs affect people's lives.</p>
+</div>
+<h2 id="fairness-more-than-just-treating-everyone-the-same">Fairness: More Than Just "Treating Everyone the Same"</h2>
+<p><strong>Fairness</strong> in AI means ensuring that AI systems do not create or reinforce unjust outcomes for individuals or groups. It sounds simple, but defining fairness turns out to be surprisingly tricky.</p>
+<p>Computer scientists have identified multiple mathematical definitions of fairness, and here's the kicker — some of them are mutually exclusive. You literally cannot satisfy all fairness criteria simultaneously in some situations. That's not a reason to give up. It's a reason to think carefully about which fairness criteria matter most for your specific use case.</p>
+<p>As a prompt engineer, you can promote fairness by:</p>
+<ul>
+<li>Testing prompts with diverse scenarios and personas</li>
+<li>Asking the model to consider multiple perspectives explicitly</li>
+<li>Reviewing outputs for patterns of differential treatment</li>
+<li>Specifying inclusive language requirements in your prompts</li>
+<li>Using counter-examples to check whether the model's reasoning holds up across different groups</li>
+</ul>
+<p>For example, if you're building a prompt to help draft job descriptions, test it by asking for descriptions in multiple fields. Check whether the language skews masculine or feminine. Ask the model to flag potentially exclusionary terms. These small steps compound into meaningfully fairer outcomes.</p>
+<h2 id="transparency-and-explainability-opening-the-black-box">Transparency and Explainability: Opening the Black Box</h2>
+<p><strong>Transparency</strong> means being open and honest about how AI systems work, what data they were trained on, and what their limitations are. <strong>Explainability</strong> is the related concept of making AI decisions understandable to humans — being able to answer the question "Why did the AI say that?"</p>
+<p>These two concepts matter enormously for trust. If someone receives a loan denial based partly on AI analysis, they deserve to understand why. If a student gets feedback from an AI tutor, the teacher should be able to verify the reasoning.</p>
+<p>Large language models present a special transparency challenge. Unlike a simple decision tree where you can trace each branching point, an LLM with billions of parameters doesn't produce easily traceable reasoning. The model doesn't "know" why it said what it said — it generated the most probable next tokens based on patterns in its training data.</p>
+<p>What can prompt engineers do about this? Quite a lot, actually:</p>
+<ul>
+<li><strong>Request reasoning chains</strong> — Use chain-of-thought prompting (from Chapter 4) to make the model show its work</li>
+<li><strong>Ask for confidence levels</strong> — Prompt the model to indicate how certain it is about its answers</li>
+<li><strong>Demand source attribution</strong> — Ask the model to cite where its information comes from</li>
+<li><strong>Disclose AI involvement</strong> — When sharing AI-generated content, be upfront that AI was involved in creating it</li>
+</ul>
+<p>Being transparent isn't just ethically good — it's practically useful. When you can see the model's reasoning, you can spot errors faster and improve your prompts more effectively.</p>
+<h2 id="accountability-who-is-responsible">Accountability: Who Is Responsible?</h2>
+<p><strong>Accountability</strong> means establishing clear responsibility for AI-generated outcomes. When an AI system produces harmful content, who bears responsibility — the company that built the model, the developer who integrated it, the prompt engineer who crafted the instructions, or the user who deployed the output?</p>
+<p>The honest answer is that accountability in AI is shared across many parties, and the legal and regulatory frameworks are still catching up. But here's what we know for certain: <em>you</em> are accountable for the prompts you write and the outputs you choose to use.</p>
+<p>Consider this accountability chain:</p>
+<ul>
+<li><strong>Model developers</strong> are responsible for training choices, safety guardrails, and known limitations</li>
+<li><strong>Platform operators</strong> are responsible for usage policies and monitoring</li>
+<li><strong>Prompt engineers</strong> are responsible for crafting prompts that promote helpful, honest, and harmless outputs</li>
+<li><strong>End users</strong> are responsible for how they apply and distribute AI-generated content</li>
+</ul>
+<p>As a prompt engineer, your accountability includes verifying outputs before sharing them, refusing to craft prompts designed to cause harm, and flagging problems when you discover them. "The AI did it" is never a complete defense — you pressed the button.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Important Warning</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a warning">
+Never assume that because an AI model generated something, the content must be acceptable to use. You are the human in the loop. You are the quality check. Always review AI outputs critically, especially when they could affect other people's lives, livelihoods, or reputations.</p>
+</div>
+<h2 id="privacy-considerations-protecting-whats-personal">Privacy Considerations: Protecting What's Personal</h2>
+<p><strong>Privacy considerations</strong> in AI encompass the protection of personal, sensitive, and confidential information throughout the AI interaction lifecycle. This means thinking about privacy before, during, and after your prompts.</p>
+<p>Here's what many people don't realize: when you type information into an AI system, that information may be used to train future versions of the model (depending on the platform's policies). Pasting a colleague's private email into a chatbot to help you draft a response might mean that email content becomes part of the model's training data.</p>
+<p>Key privacy principles for prompt engineers include:</p>
+<ul>
+<li><strong>Data minimization</strong> — Share only the information the model needs to complete the task. Don't paste entire databases when a summary will do.</li>
+<li><strong>Anonymization</strong> — Remove or replace personally identifiable information (PII) before including real data in prompts. Swap real names for placeholders. Replace actual addresses with fictional ones.</li>
+<li><strong>Awareness of retention policies</strong> — Understand whether the platform stores your conversations and for how long. Enterprise AI deployments often have different data handling than free consumer tools.</li>
+<li><strong>Sensitivity classification</strong> — Before prompting, ask yourself: "If this prompt and response were made public, would anyone be harmed?" If the answer is yes, reconsider your approach.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Privacy Risk</th>
+<th>Scenario</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PII exposure</td>
+<td>Pasting customer data into a prompt</td>
+<td>Anonymize or use synthetic data</td>
+</tr>
+<tr>
+<td>Confidential leakage</td>
+<td>Sharing proprietary business strategies</td>
+<td>Use enterprise AI tools with data protections</td>
+</tr>
+<tr>
+<td>Third-party data</td>
+<td>Including someone else's private communication</td>
+<td>Get consent or remove identifying details</td>
+</tr>
+<tr>
+<td>Aggregation risk</td>
+<td>Combining multiple data points that reveal identity</td>
+<td>Limit the granularity of information shared</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consent-and-data-use-asking-permission">Consent and Data Use: Asking Permission</h2>
+<p><strong>Consent and data use</strong> concerns whether individuals have knowingly agreed to have their information used in AI systems. This concept extends beyond just privacy — it gets to the fundamental question of whether people had a meaningful choice in how their data is being used.</p>
+<p>Most large language models were trained on vast amounts of internet text. The authors of that text — bloggers, journalists, forum participants, researchers — largely did not consent to their words being used to train AI. This raises profound ethical questions that the technology industry, legal systems, and society are still wrestling with.</p>
+<p>As a prompt engineer, you can't fix the consent issues in how models were trained. But you <em>can</em> make ethical choices about consent in your own work:</p>
+<ul>
+<li>Get explicit permission before using someone's data, writing, or likeness in prompts</li>
+<li>Inform people when AI will be involved in processing their information</li>
+<li>Respect opt-out requests — if someone doesn't want their content used with AI tools, honor that</li>
+<li>Be especially careful with data from vulnerable populations (children, patients, students)</li>
+</ul>
+<h2 id="intellectual-property-and-copyright-considerations">Intellectual Property and Copyright Considerations</h2>
+<p><strong>Intellectual property</strong> (IP) refers to creations of the mind — inventions, literary and artistic works, designs, and symbols — that are protected by law. <strong>Copyright considerations</strong> in the AI context involve determining who owns AI-generated content and whether AI outputs might infringe on existing copyrighted works.</p>
+<p>These questions are genuinely unsettled. Courts around the world are actively ruling on cases that will shape the legal landscape for years to come. Here's what we know as of today:</p>
+<ul>
+<li><strong>AI-generated content ownership</strong> — In most jurisdictions, copyright requires a human author. Purely AI-generated content with no meaningful human creative input may not be copyrightable. However, content where a human made substantial creative choices through prompt engineering may qualify for protection.</li>
+<li><strong>Training data copyright</strong> — Multiple lawsuits are challenging whether training AI on copyrighted material constitutes fair use. The outcomes will significantly affect how future models are built.</li>
+<li><strong>Output similarity</strong> — AI models can sometimes produce outputs that closely resemble specific copyrighted works from their training data. Using such outputs could expose you to copyright infringement claims.</li>
+</ul>
+<p><strong>Attribution</strong> is the practice of giving proper credit to the sources, creators, and tools that contributed to a work. Even when attribution isn't legally required, it's ethically good practice and professionally expected.</p>
+<p>Practical guidelines for prompt engineers:</p>
+<ul>
+<li>Don't claim AI-generated content as entirely your own original work without disclosure</li>
+<li>When AI helps you create content, acknowledge that assistance appropriately</li>
+<li>If an AI output closely resembles an existing work, don't use it without checking</li>
+<li>Understand your organization's policies on AI-generated intellectual property</li>
+<li>When in doubt, add attribution — it costs nothing and builds trust</li>
+</ul>
+<details>
+<summary>Show/Hide Diagram</summary>
+<h4 id="diagram-the-intellectual-property-decision-tree">Diagram: The Intellectual Property Decision Tree</h4>
+<p>This diagram should be rendered as a Mermaid flowchart showing a decision process for handling AI-generated content and IP concerns. The flow goes:</p>
+<ol>
+<li><strong>Start</strong>: "You have AI-generated content"</li>
+<li><strong>Decision 1</strong>: "Does the content closely resemble a specific existing work?" — If Yes, go to "Do not use without permission or legal review." If No, continue.</li>
+<li><strong>Decision 2</strong>: "Did you provide substantial creative direction via prompts?" — If Yes, go to "May have copyright claim (jurisdiction dependent)." If No, go to "Likely not copyrightable."</li>
+<li><strong>Decision 3</strong>: "Will you share this content publicly?" — If Yes, go to "Add attribution and disclose AI involvement." If No, go to "Follow organizational policies."</li>
+<li><strong>End</strong>: All paths converge on "Document your process for future reference."</li>
+</ol>
+<pre class="mermaid"><code>flowchart TD
+    A["You have AI-generated content"] --&gt; B{"Does it closely resemble\nan existing work?"}
+    B --&gt;|Yes| C["Do not use without\npermission or legal review"]
+    B --&gt;|No| D{"Did you provide substantial\ncreative direction?"}
+    D --&gt;|Yes| E["May have copyright claim\n(jurisdiction dependent)"]
+    D --&gt;|No| F["Likely not copyrightable"]
+    E --&gt; G{"Will you share\nthis publicly?"}
+    F --&gt; G
+    G --&gt;|Yes| H["Add attribution and\ndisclose AI involvement"]
+    G --&gt;|No| I["Follow organizational\npolicies"]
+    H --&gt; J["Document your process\nfor future reference"]
+    I --&gt; J
+    C --&gt; J</code></pre>
+</details>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Use your words! When you use AI to help create something, keep a log of your prompts, the model's outputs, and your edits. This "prompt provenance" documentation can protect you if questions arise about authorship, and it helps you refine your techniques over time. Think of it as a lab notebook for prompt engineering.</p>
+</div>
+<h2 id="misinformation-risk-when-ai-gets-it-wrong">Misinformation Risk: When AI Gets It Wrong</h2>
+<p><strong>Misinformation risk</strong> refers to the danger that AI systems will generate false, misleading, or unverifiable information that is then treated as fact. This is one of the most pressing ethical concerns in AI today.</p>
+<p>Large language models are pattern-matching engines, not truth engines. They generate text that <em>sounds</em> plausible based on statistical patterns in their training data. They don't fact-check themselves. They don't consult databases of verified information (unless connected to RAG systems, as you learned in Chapter 8). They can state completely false things with perfect confidence and impeccable grammar.</p>
+<p>Common misinformation scenarios include:</p>
+<ul>
+<li><strong>Hallucinations</strong> — The model invents facts, citations, statistics, or quotes that don't exist. It might cite a paper by a real author with a plausible-sounding title that was never written.</li>
+<li><strong>Outdated information</strong> — Models have training cutoff dates and may present obsolete information as current.</li>
+<li><strong>Confident errors</strong> — The model states incorrect information with the same confident tone as correct information, making errors hard to detect.</li>
+<li><strong>Plausible but false narratives</strong> — The model can weave together real and invented details into a coherent-sounding story that's partially or entirely wrong.</li>
+</ul>
+<p>Prompt engineers have a responsibility to mitigate misinformation risk. Your strategies should include:</p>
+<ul>
+<li>Always verify factual claims in AI outputs through independent sources</li>
+<li>Use RAG (Retrieval-Augmented Generation) to ground responses in verified information</li>
+<li>Include instructions in prompts like "If you're unsure, say so" or "Only include information you can cite"</li>
+<li>Be especially cautious with AI outputs related to health, law, finance, and safety</li>
+<li>Never distribute AI-generated content as verified fact without checking it first</li>
+</ul>
+<h2 id="deepfake-awareness-seeing-isnt-believing">Deepfake Awareness: Seeing Isn't Believing</h2>
+<p><strong>Deepfake awareness</strong> is the understanding that AI can create highly convincing synthetic media — including fake images, videos, and audio — that can be nearly impossible to distinguish from authentic content. As you learned in Chapter 9 on multimodal prompting, modern AI systems can generate and manipulate images, audio, and video with remarkable fidelity.</p>
+<p>Deepfakes present serious ethical challenges:</p>
+<ul>
+<li><strong>Impersonation</strong> — AI can generate realistic video or audio of real people saying things they never said</li>
+<li><strong>Evidence fabrication</strong> — Fake images or documents can be used to manufacture false evidence</li>
+<li><strong>Erosion of trust</strong> — As deepfakes proliferate, people begin to distrust <em>all</em> media, including authentic content</li>
+<li><strong>Emotional manipulation</strong> — Fake content can be designed to provoke outrage, fear, or other strong emotional responses</li>
+</ul>
+<p>As a prompt engineer, your responsibilities around deepfakes include:</p>
+<ul>
+<li>Never creating synthetic media intended to deceive people about real events or real individuals</li>
+<li>Clearly labeling AI-generated images, audio, or video as synthetic</li>
+<li>Understanding the capabilities and limitations of multimodal AI tools</li>
+<li>Being a critical consumer of media — questioning the provenance of striking or inflammatory content</li>
+<li>Educating others about the existence and capabilities of deepfake technology</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Deepfake Type</th>
+<th>Technology</th>
+<th>Risk Level</th>
+<th>Detection Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Face swap video</td>
+<td>GAN-based generation</td>
+<td>High</td>
+<td>Moderate to difficult</td>
+</tr>
+<tr>
+<td>Voice cloning</td>
+<td>Text-to-speech synthesis</td>
+<td>High</td>
+<td>Difficult</td>
+</tr>
+<tr>
+<td>AI-generated images</td>
+<td>Diffusion models</td>
+<td>Medium to High</td>
+<td>Increasingly difficult</td>
+</tr>
+<tr>
+<td>Text impersonation</td>
+<td>Large language models</td>
+<td>Medium</td>
+<td>Very difficult</td>
+</tr>
+</tbody>
+</table>
+<h2 id="building-your-personal-ethical-framework">Building Your Personal Ethical Framework</h2>
+<p>Now that we've covered the major ethical concepts, let's bring it all together into a practical framework you can use in your daily work. Ethics isn't about memorizing rules — it's about developing the habit of thinking critically about consequences before you act.</p>
+<p>Ask yourself these five questions before writing any high-stakes prompt:</p>
+<ol>
+<li><strong>Who could be affected?</strong> Think beyond the immediate user. Consider third parties, communities, and future users.</li>
+<li><strong>Could this cause harm?</strong> Imagine the worst-case scenario for your output. If it's serious, add safeguards.</li>
+<li><strong>Am I being transparent?</strong> Would you be comfortable if your prompts and the resulting outputs were made public?</li>
+<li><strong>Have I checked for bias?</strong> Test your prompts across different scenarios, names, demographics, and perspectives.</li>
+<li><strong>Am I respecting others' rights?</strong> Consider privacy, consent, intellectual property, and attribution.</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Progress!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Time to talk to AI — responsibly! You now have a solid ethical toolkit for prompt engineering. Remember, being an ethical prompt engineer doesn't mean avoiding AI. It means using AI thoughtfully, questioning outputs, respecting others, and continuously learning as the technology and its ethical implications evolve. That's something to celebrate.</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>AI ethics</strong> is a core skill for prompt engineers, not an optional add-on. Every prompt carries ethical implications.</li>
+<li><strong>Bias in AI</strong> can enter through training data, data curation, labeling, and even through how you frame your prompts. Testing across diverse scenarios helps catch it.</li>
+<li><strong>Fairness</strong> requires active effort and careful thinking about which fairness criteria matter for your specific use case.</li>
+<li><strong>Transparency and explainability</strong> build trust. Use chain-of-thought prompting, request confidence levels, and always disclose AI involvement.</li>
+<li><strong>Accountability</strong> is shared, but you are personally responsible for the prompts you write and the outputs you choose to use.</li>
+<li><strong>Privacy</strong> demands data minimization, anonymization, and awareness of platform data policies before including sensitive information in prompts.</li>
+<li><strong>Consent</strong> means respecting people's choices about how their data and content are used with AI systems.</li>
+<li><strong>Intellectual property and copyright</strong> in AI are evolving legal areas. Document your creative process, attribute AI assistance, and avoid using outputs that closely resemble existing works.</li>
+<li><strong>Misinformation risk</strong> is inherent in language models. Always verify factual claims independently before sharing AI-generated content.</li>
+<li><strong>Deepfake awareness</strong> means understanding that AI-generated media can be convincingly fake, and taking responsibility to label synthetic content and consume media critically.</li>
+</ul>
+<hr />
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>AI Ethics</li>
@@ -1342,14 +1949,15 @@
 <li><a href="../08-retrieval-augmented-generation/">Chapter 8: Retrieval-Augmented Generation</a></li>
 <li><a href="../09-multimodal-prompting/">Chapter 9: Multimodal Prompting</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

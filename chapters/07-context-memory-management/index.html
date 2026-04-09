@@ -748,6 +748,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Memory in AI Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-memory-architecture-in-ai-chat-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Memory Architecture in AI Chat Applications:**
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -936,7 +951,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -1171,6 +1186,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -1187,7 +1208,7 @@
   
   
   
-    <a href="../../lectures/meta-skills/" class="md-nav__link">
+    <a href="../../lectures/" class="md-nav__link">
       
   
   
@@ -1280,6 +1301,8 @@
       
         
           
+        
+      
         
       
     
@@ -1497,6 +1520,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Memory in AI Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-memory-architecture-in-ai-chat-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Memory Architecture in AI Chat Applications:**
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1696,18 +1734,10 @@ Let's craft the perfect prompt! In this chapter, we tackle one of the sneakiest 
 <h2 id="context-window-limits">Context Window Limits</h2>
 <p>A <strong>context window limit</strong> is the maximum number of tokens a model can process in a single interaction, including both input and output. Early models like GPT-3 had context windows of about 4,000 tokens — roughly 3,000 words. Modern models offer windows of 100,000 to 200,000 tokens or more. That sounds like a lot, but it fills up faster than you'd expect.</p>
 <p>Here's a practical way to think about it: a typical novel is about 80,000 words, or roughly 100,000 tokens. A model with a 128K token context window can theoretically hold an entire novel. But remember, the output also consumes tokens from that same window. And if you're having a multi-turn conversation, every previous exchange is using space too.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>Why does my AI seem to &quot;forget&quot; things?
+<!-- ASCII art original:
+Why does my AI seem to "forget" things?
 
-The AI&#39;s context window works like a conveyor belt:
+The AI's context window works like a conveyor belt:
 ┌──────────────────────────────────────────────┐
 │  System    │ Turn 1 │ Turn 2 │ ... │ Turn N  │
 │  Prompt    │ Q + A  │ Q + A  │     │ Q + A   │
@@ -1715,7 +1745,22 @@ The AI&#39;s context window works like a conveyor belt:
                                     ▲
                             Window limit reached!
                             Oldest turns drop off.
-</code></pre></div></td></tr></table></div>
+-->
+
+<p><em>Why does my AI seem to "forget" things?</em></p>
+<p>The AI's context window works like a conveyor belt:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph window["Context Window (fixed size)"]
+        direction LR
+        A["System\nPrompt"] --&gt; B["Turn 1\nQ + A"]
+        B --&gt; C["Turn 2\nQ + A"]
+        C --&gt; D["..."]
+        D --&gt; E["Turn N\nQ + A"]
+    end
+    E --&gt;|"Window limit\nreached!"| F["⚠️ Oldest turns\ndrop off"]
+
+    style window fill:#e8f4fd,stroke:#1976d2
+    style F fill:#fff3e0,stroke:#e65100</code></pre>
 <p>The practical implication: you must treat context space as a precious resource. Every unnecessary word in your prompt is a word that could have been used for something more valuable.</p>
 <h2 id="token-counting">Token Counting</h2>
 <p><strong>Token counting</strong> is the practice of estimating or measuring how many tokens a piece of text consumes within a model's context window. Tokens are the fundamental units that language models use to process text. A token is not the same as a word — it's a chunk of text that the model's tokenizer has learned to treat as a single unit.</p>
@@ -1775,25 +1820,11 @@ Here's something that trips people up: the word "unbelievable" is one word but m
 <p><strong>Conversation-level memory</strong> is the simplest form. The application stores the current conversation and resends it with each new message. This is what most chat interfaces do by default. It works well for short conversations but degrades as the conversation exceeds the context window.</p>
 <p><strong>Session persistence</strong> extends memory beyond a single conversation. Session persistence means saving conversation state so that a user can return later and continue where they left off. Some applications store session data in databases and reload relevant portions when you return. This is how ChatGPT's "memory" feature and Claude's project knowledge work.</p>
 <p><strong>Long-term memory systems</strong> use external storage (databases, vector stores, or files) to maintain information indefinitely. When you start a new conversation, the system retrieves relevant stored information and injects it into the prompt. This approach is the foundation of many enterprise AI applications.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>Memory Architecture in AI Chat Applications:
+<!-- ASCII art original:
+Memory Architecture in AI Chat Applications:
 
 ┌─────────────┐    ┌──────────────────┐    ┌────────────┐
-│   User&#39;s    │───▶│  Application     │───▶│  AI Model  │
+│   User's    │───▶│  Application     │───▶│  AI Model  │
 │   Message   │    │  Layer           │    │  (Stateless│
 └─────────────┘    │                  │    │   per call)│
                    │ - Loads history  │    └────────────┘
@@ -1806,7 +1837,20 @@ Here's something that trips people up: the word "unbelievable" is one word but m
                    │  Conversation│  │ Response  │
                    │  Database    │  │ to User   │
                    └──────────────┘  └──────────┘
-</code></pre></div></td></tr></table></div>
+-->
+
+<h4 id="diagram-memory-architecture-in-ai-chat-applications">Diagram: Memory Architecture in AI Chat Applications:**</h4>
+<pre class="mermaid"><code>flowchart LR
+    A["User's\nMessage"] --&gt; B["Application Layer\n• Loads history\n• Retrieves memory\n• Manages tokens"]
+    B --&gt; C["AI Model\n(Stateless\nper call)"]
+    C --&gt; D["Response\nto User"]
+    B &lt;--&gt; E[("Conversation\nDatabase")]
+
+    style A fill:#e3f2fd,stroke:#1565c0
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#e8f5e9,stroke:#2e7d32
+    style D fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#f3e5f5,stroke:#7b1fa2</code></pre>
 <p>The key insight is that "memory" in current AI systems is really an engineering solution built <em>around</em> a stateless model. The model itself doesn't remember anything — the surrounding system manages memory on its behalf.</p>
 <h2 id="context-management">Context Management</h2>
 <p><strong>Context management</strong> is the overarching discipline of deciding what information to include in a prompt, how to structure it, and when to add or remove content as a conversation evolves. It's the strategic skill that ties together everything else in this chapter.</p>
@@ -1929,10 +1973,7 @@ Your new question or instruction goes here.
 <p><strong>Chunking.</strong> Break the document into smaller pieces and process each piece separately. Then combine the results. This works well for tasks like summarization where each section can be processed independently.</p>
 <p><strong>Hierarchical processing.</strong> First, ask the model to create an outline or table of contents from the document. Then, use that outline to identify which sections are relevant to your question and only include those sections in your follow-up prompt.</p>
 <p><strong>Progressive refinement.</strong> Start with a high-level pass over the entire document (or a summary of it), then drill down into specific sections that need detailed attention.</p>
-<details>
-<summary>Expand to see diagram specification</summary>
 <h4 id="diagram-long-form-document-processing-strategies">Diagram: Long-Form Document Processing Strategies</h4>
-<p>Create a flowchart using Mermaid syntax that shows decision logic for processing long documents:</p>
 <pre class="mermaid"><code>flowchart TD
     A[Long Document] --&gt; B{Fits in context window?}
     B --&gt;|Yes| C[Process directly]
@@ -1947,7 +1988,10 @@ Your new question or instruction goes here.
     I --&gt; K
     J --&gt; K
     C --&gt; K</code></pre>
-<p>This diagram should help students decide which strategy to use based on their document size and task type.</p>
+<details>
+<summary>Expand to see diagram specification</summary>
+<p>Create a flowchart using Mermaid syntax that shows decision logic for processing long documents:
+This diagram should help students decide which strategy to use based on their document size and task type.</p>
 </details>
 <h2 id="document-summarization-and-summary-generation">Document Summarization and Summary Generation</h2>
 <p><strong>Document summarization</strong> is the process of using AI to condense a longer text into a shorter version that captures the essential information. <strong>Summary generation</strong> is the broader skill of creating summaries at various levels of detail for different audiences and purposes.</p>
@@ -2111,11 +2155,8 @@ LENGTH: 2 pages
 <li>"Include specific version numbers and dates"</li>
 <li>"Cite sources for all factual claims"</li>
 </ul>
-<details>
-<summary>Expand to see diagram specification</summary>
 <h4 id="diagram-context-management-decision-framework">Diagram: Context Management Decision Framework</h4>
-<p>Create a diagram showing how different context management techniques relate to each other and when to use each one:</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TD
     A[New Prompt Task] --&gt; B{How much context needed?}
     B --&gt;|Minimal| C[Prompt Compression]
     B --&gt;|Moderate| D[Relevance Filtering + Context Injection]
@@ -2134,6 +2175,9 @@ LENGTH: 2 pages
     M --&gt;|Yes| N[Summarize + Reset Context]
     M --&gt;|No| L
     N --&gt; L</code></pre>
+<details>
+<summary>Expand to see diagram specification</summary>
+<p>Create a diagram showing how different context management techniques relate to each other and when to use each one:</p>
 <p>This diagram provides students with a practical decision tree for choosing the appropriate context management strategy for any given task.</p>
 </details>
 <h2 id="putting-it-all-together-a-context-management-workflow">Putting It All Together: A Context Management Workflow</h2>
@@ -2251,13 +2295,13 @@ Use your words! You now understand how to pack the right information into every 
         
         
           
-          <a href="../08-retrieval-augmented-generation/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Retrieval-Augmented Generation">
+          <a href="../08-retrieval-augmented-generation/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Retrieval-Augmented Generation and GraphRAG">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                8. Retrieval-Augmented Generation
+                8. Retrieval-Augmented Generation and GraphRAG
               </div>
             </div>
             <div class="md-footer__button md-icon">

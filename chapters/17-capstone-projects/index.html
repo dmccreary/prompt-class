@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="A comprehensive catalog of 32 capstone projects that integrate every skill from the prompt engineering course, spanning customer support, content pipelines, research assistants, code review tools, education, legal analysis, knowledge management, agentic AI, and evaluation frameworks.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../16-educational-applications/">
       
       
-        <link rel="next" href="../../lectures/meta-skills/">
+        <link rel="next" href="../../lectures/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>17. Capstone Projects - Prompt Engineering Class</title>
+        <title>Capstone Projects - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              17. Capstone Projects
+              Capstone Projects
             
           </span>
         </div>
@@ -684,7 +684,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -936,9 +936,468 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-approach-your-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Approach Your Capstone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-management-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Management and Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knowledge Management and Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-knowledge-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Knowledge Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-capstone-project-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Capstone Project Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-communication-and-productivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Communication and Productivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Communication and Productivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-customer-support-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Customer Support Bot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-faq-generator-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. FAQ Generator System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-content-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Content Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-meeting-notes-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Meeting Notes System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-email-triage-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Email Triage System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-and-technical-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research and Technical Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Research and Technical Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8-research-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Research Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-code-review-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Code Review Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-technical-doc-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Technical Doc Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-data-dashboard-narrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Data Dashboard Narrator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#education-and-career-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Education and Career Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Education and Career Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-personalized-tutor-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Personalized Tutor App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quiz-and-test-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Quiz and Test Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-writing-coach-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Writing Coach System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-resume-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Resume Analyzer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-job-description-writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Job Description Writer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-interview-prep-coach" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Interview Prep Coach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marketing-and-brand-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing and Brand Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marketing and Brand Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#18-social-media-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Social Media Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-brand-voice-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Brand Voice System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legal and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legal and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#20-legal-document-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Legal Document Analyzer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-compliance-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. Compliance Checker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-analysis-and-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Analysis and Insights
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Analysis and Insights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22-product-review-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. Product Review Analyzer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-sentiment-analysis-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. Sentiment Analysis System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-translation-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. Translation Assistant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-and-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility and Onboarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility and Onboarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#25-accessibility-auditor" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. Accessibility Auditor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-onboarding-guide-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. Onboarding Guide System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Engineering Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#27-knowledge-base-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. Knowledge Base Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-prompt-library-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. Prompt Library Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-ai-workflow-automator" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. AI Workflow Automator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-multi-agent-task-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. Multi-Agent Task Runner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-rag-pipeline-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      31. RAG Pipeline Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-evaluation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      32. Evaluation Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-your-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing Your Capstone Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-a-great-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Great Capstone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -988,6 +1447,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -1004,7 +1469,7 @@
   
   
   
-    <a href="../../lectures/meta-skills/" class="md-nav__link">
+    <a href="../../lectures/" class="md-nav__link">
       
   
   
@@ -1097,6 +1562,8 @@
       
         
           
+        
+      
         
       
     
@@ -1272,9 +1739,468 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-approach-your-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Approach Your Capstone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-management-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Management and Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knowledge Management and Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-knowledge-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Knowledge Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-capstone-project-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Capstone Project Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-communication-and-productivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Communication and Productivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Communication and Productivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-customer-support-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Customer Support Bot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-faq-generator-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. FAQ Generator System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-content-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Content Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-meeting-notes-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Meeting Notes System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-email-triage-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Email Triage System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-and-technical-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research and Technical Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Research and Technical Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8-research-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Research Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-code-review-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Code Review Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-technical-doc-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Technical Doc Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-data-dashboard-narrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Data Dashboard Narrator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#education-and-career-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Education and Career Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Education and Career Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12-personalized-tutor-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Personalized Tutor App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quiz-and-test-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Quiz and Test Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-writing-coach-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Writing Coach System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-resume-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Resume Analyzer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-job-description-writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Job Description Writer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-interview-prep-coach" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Interview Prep Coach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marketing-and-brand-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing and Brand Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marketing and Brand Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#18-social-media-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Social Media Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-brand-voice-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Brand Voice System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legal and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legal and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#20-legal-document-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Legal Document Analyzer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-compliance-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. Compliance Checker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-analysis-and-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Analysis and Insights
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Analysis and Insights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22-product-review-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. Product Review Analyzer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-sentiment-analysis-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. Sentiment Analysis System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-translation-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. Translation Assistant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-and-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility and Onboarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility and Onboarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#25-accessibility-auditor" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. Accessibility Auditor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-onboarding-guide-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. Onboarding Guide System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Engineering Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#27-knowledge-base-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. Knowledge Base Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-prompt-library-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. Prompt Library Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-ai-workflow-automator" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. AI Workflow Automator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-multi-agent-task-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. Multi-Agent Task Runner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-rag-pipeline-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      31. RAG Pipeline Builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-evaluation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      32. Evaluation Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-your-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing Your Capstone Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-a-great-capstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Great Capstone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +2244,617 @@
 
 
 <h1 id="capstone-projects">Capstone Projects</h1>
-<h2 id="summary">Summary</h2>
-<p>This final chapter brings together every skill and concept from the entire course into comprehensive, real-world capstone projects. Students will design and build complete AI-powered systems spanning customer support bots, content pipelines, research assistants, and code review tools. The chapter includes projects across business, education, legal, and technical domains, from resume analyzers and brand voice systems to RAG pipeline builders and multi-agent task runners. Each project challenges students to integrate prompt engineering, security, ethics, evaluation, and agentic AI into polished, production-quality solutions.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Congratulations, Word Wizards!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+You made it to the final chapter! Every prompt pattern, every technique, every ethical principle you have learned across sixteen chapters has been building toward this moment. Now it is time to put it all together and build something real. Let's craft the perfect prompt — and then craft an entire <em>system</em> of prompts! Polly is so proud of you.</p>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to the capstone. This chapter is different from every chapter that came before it. There are no new techniques to learn here, no unfamiliar vocabulary to memorize. Instead, this chapter is a <strong>project catalog</strong> — a curated collection of 32 real-world projects that challenge you to combine prompt engineering, security, ethics, evaluation, and agentic AI into complete, polished systems.</p>
+<p>Each project description includes a brief overview, the key skills it exercises, a starter prompt or approach hint to help you get going, and a difficulty rating. Think of this chapter as your launchpad. Pick one project that excites you, or pick several. Work alone or with a team. The goal is the same: demonstrate mastery by building something meaningful.</p>
+<p>Why capstone projects? Because prompt engineering is not a spectator sport. Reading about few-shot prompting is one thing. Designing a multi-agent research assistant that retrieves, summarizes, evaluates, and cites sources across multiple domains — that is where the learning really sticks.</p>
+<table>
+<thead>
+<tr>
+<th>Difficulty Level</th>
+<th>What It Means</th>
+<th>Typical Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beginner</td>
+<td>Uses skills from Chapters 1-6 primarily</td>
+<td>Single-purpose prompt system with basic input/output</td>
+</tr>
+<tr>
+<td>Intermediate</td>
+<td>Integrates Chapters 7-11 skills</td>
+<td>Multi-step workflow with context management and safety</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Requires Chapters 12-16 mastery</td>
+<td>Agentic systems, evaluation loops, and production-quality design</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-approach-your-capstone">How to Approach Your Capstone</h2>
+<p>Before diving into the project catalog, here are some guidelines for success. A good capstone project is not just a fancy prompt — it is a <em>system</em> that demonstrates thoughtful design, responsible AI practices, and practical value.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Think Before You Prompt</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Words matter — let's get them right! Before you write a single prompt, sketch out your system on paper. What are the inputs? What are the outputs? Where could things go wrong? The best capstone projects start with a clear plan.</p>
+</div>
+<p><strong>Step 1: Define the problem.</strong> Who is the user? What do they need? What does success look like?</p>
+<p><strong>Step 2: Map the skills.</strong> Which chapters provide the techniques you need? Chain-of-thought reasoning from Chapter 4? RAG from Chapter 8? Security guardrails from Chapter 11?</p>
+<p><strong>Step 3: Design the prompt architecture.</strong> Most capstone projects require multiple prompts working together — a system prompt, processing prompts, and output formatting prompts.</p>
+<p><strong>Step 4: Build iteratively.</strong> Start with the simplest version that works, then add complexity.</p>
+<p><strong>Step 5: Evaluate rigorously.</strong> Use the evaluation techniques from Chapter 13 to measure quality, and the ethical frameworks from Chapter 10 to check for harm.</p>
+<details>
+<summary>#### Diagram: Capstone Project Development Lifecycle</summary>
+<pre class="mermaid"><code>graph LR
+    A[Define Problem] --&gt; B[Map Skills&lt;br/&gt;to Chapters]
+    B --&gt; C[Design Prompt&lt;br/&gt;Architecture]
+    C --&gt; D[Build MVP]
+    D --&gt; E[Test and&lt;br/&gt;Evaluate]
+    E --&gt; F[Iterate and&lt;br/&gt;Improve]
+    F --&gt; D
+    E --&gt; G[Final&lt;br/&gt;Deliverable]
+    style A fill:#1565C0,color:#fff
+    style G fill:#E65100,color:#fff</code></pre>
+<p>This diagram shows the iterative development cycle for any capstone project. Notice the loop between Build, Test, and Iterate — real-world prompt engineering is always an iterative process.</p>
+</details>
+<h2 id="knowledge-management-and-design">Knowledge Management and Design</h2>
+<p>These first two projects establish the foundational skills of organizing knowledge and designing capstone-level systems. They are excellent starting points for students who want to plan before they build.</p>
+<h3 id="1-knowledge-management">1. Knowledge Management</h3>
+<p><strong>Description:</strong> Build a system that captures, organizes, retrieves, and surfaces institutional knowledge using prompt engineering techniques. The system should take unstructured information — meeting notes, emails, documents, chat logs — and transform it into a searchable, structured knowledge base that answers natural language questions.</p>
+<p><strong>Key Skills:</strong> Context management (Chapter 7), RAG fundamentals (Chapter 8), output format control (Chapter 6), prompt fundamentals (Chapter 2)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>You are a knowledge management assistant. Given the following
+unstructured document, extract:
+1. Key facts (as structured JSON)
+2. Named entities (people, projects, dates, decisions)
+3. Action items with owners and deadlines
+4. Relationships between entities
+
+Document:
+[paste document here]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="2-capstone-project-design">2. Capstone Project Design</h3>
+<p><strong>Description:</strong> Create a meta-project — a prompt-powered system that helps other students design their own capstone projects. Given a student's interests, skill level, and available time, the system recommends suitable projects, outlines milestones, and generates starter prompts. This is prompt engineering about prompt engineering!</p>
+<p><strong>Key Skills:</strong> Meta-prompting (Chapter 5), prompt types and parameters (Chapter 3), educational applications (Chapter 16), business context (Chapter 15)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Act as a capstone project advisor for a prompt engineering course.
+Ask the student about their interests, comfort level with AI tools,
+and time commitment. Then recommend 3 suitable projects with:
+- A difficulty rating
+- A 4-week milestone plan
+- The top 3 prompt techniques they will need
+- A starter prompt for week 1
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Beginner</p>
+<hr />
+<h2 id="business-communication-and-productivity">Business Communication and Productivity</h2>
+<p>These projects focus on the everyday business tasks that prompt engineering can dramatically accelerate — from handling customer inquiries to triaging email and summarizing meetings.</p>
+<h3 id="3-customer-support-bot">3. Customer Support Bot</h3>
+<p><strong>Description:</strong> Design a complete customer support chatbot that handles common inquiries, escalates complex issues to human agents, maintains conversation context across multiple turns, and stays within brand guidelines. This project tests your ability to build safe, reliable, production-quality prompt systems.</p>
+<p><strong>Key Skills:</strong> System prompts (Chapter 2), context and memory management (Chapter 7), prompt security (Chapter 11), ethics (Chapter 10), few-shot examples (Chapter 4)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>You are a customer support agent for [Company Name].
+
+Rules:
+- Always greet the customer warmly
+- Never make up information about products or policies
+- If you cannot resolve an issue, say: &quot;Let me connect you with a
+  specialist who can help&quot;
+- Never share internal pricing or discount structures
+- Maintain a friendly, professional tone
+
+Knowledge base:
+[Insert FAQ content here]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="4-faq-generator-system">4. FAQ Generator System</h3>
+<p><strong>Description:</strong> Build a system that analyzes product documentation, support tickets, and user feedback to automatically generate and maintain an FAQ document. The system should identify the most common questions, write clear answers, group them by topic, and flag outdated entries when source material changes.</p>
+<p><strong>Key Skills:</strong> Output format control (Chapter 6), content summarization (Chapter 4), context management (Chapter 7), evaluation (Chapter 13)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>Analyze the following collection of support tickets and identify
+the 20 most frequently asked questions. For each question, provide:
+1. The question in clear, user-friendly language
+2. A concise answer (2-4 sentences)
+3. The category (billing, technical, account, product)
+4. Confidence score (how certain you are this is accurate)
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Beginner</p>
+<hr />
+<h3 id="5-content-pipeline">5. Content Pipeline</h3>
+<p><strong>Description:</strong> Create an end-to-end content production pipeline that takes a topic brief and produces a complete content package — blog post draft, social media snippets, email newsletter section, and SEO metadata. Each output should maintain a consistent voice while adapting format and length for each channel.</p>
+<p><strong>Key Skills:</strong> Output format control (Chapter 6), prompt chaining (Chapter 5), brand voice management (Chapter 15), few-shot examples (Chapter 4)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>You are a content pipeline system. Given a topic brief, produce
+all outputs in sequence. Maintain a consistent brand voice
+throughout. The voice is: [describe voice characteristics].
+
+Topic brief: [topic]
+
+Produce:
+1. Blog post (800-1200 words, SEO-optimized)
+2. Three social media posts (Twitter, LinkedIn, Instagram)
+3. Email newsletter paragraph (150 words)
+4. SEO metadata (title tag, meta description, 5 keywords)
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro Tip from Polly</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Use your words! When building any of these projects, start by writing out what the <em>perfect</em> output looks like. Then work backward to figure out what prompt produced it. This technique — called <strong>output-first design</strong> — is one of the most effective approaches for complex systems.</p>
+</div>
+<h3 id="6-meeting-notes-system">6. Meeting Notes System</h3>
+<p><strong>Description:</strong> Build a system that takes raw meeting transcripts (or even rough notes) and produces structured meeting summaries including decisions made, action items with owners, key discussion points, and follow-up questions. Bonus: generate different summary formats for attendees versus non-attendees.</p>
+<p><strong>Key Skills:</strong> Summarization (Chapter 4), output format control (Chapter 6), context management (Chapter 7), structured output (Chapter 6)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>Summarize the following meeting transcript into a structured format:
+
+## Meeting Summary
+- Date:
+- Attendees:
+- Duration:
+
+## Key Decisions
+[numbered list]
+
+## Action Items
+| Owner | Task | Deadline |
+|---|---|---|
+
+## Discussion Highlights
+[3-5 bullet points]
+
+## Open Questions
+[items needing follow-up]
+
+Transcript:
+[paste transcript]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Beginner</p>
+<hr />
+<h3 id="7-email-triage-system">7. Email Triage System</h3>
+<p><strong>Description:</strong> Design a prompt system that analyzes incoming emails and categorizes them by urgency, topic, required action, and suggested response. The system should draft reply templates for common categories and flag emails that require human judgment — such as complaints, legal matters, or sensitive personnel issues.</p>
+<p><strong>Key Skills:</strong> Classification (Chapter 4), prompt security (Chapter 11), ethics and privacy (Chapter 10), output format control (Chapter 6)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>Analyze the following email and provide:
+1. Urgency: [Critical / High / Medium / Low]
+2. Category: [Sales / Support / Internal / Legal / Personal]
+3. Required action: [Reply / Forward / Archive / Escalate]
+4. Suggested response (draft, 2-3 sentences)
+5. Sensitive content flag: [Yes/No, with explanation if Yes]
+
+Email:
+[paste email]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h2 id="research-and-technical-tools">Research and Technical Tools</h2>
+<p>These projects build sophisticated tools for developers, researchers, and technical writers who need AI assistance with complex analytical tasks.</p>
+<h3 id="8-research-assistant">8. Research Assistant</h3>
+<p><strong>Description:</strong> Build a multi-step research assistant that takes a research question, breaks it into sub-questions, gathers information from provided sources, synthesizes findings, identifies contradictions or gaps, and produces a structured research brief with citations. This project is a natural fit for RAG techniques.</p>
+<p><strong>Key Skills:</strong> RAG (Chapter 8), chain-of-thought reasoning (Chapter 4), advanced prompting (Chapter 5), evaluation (Chapter 13), context management (Chapter 7)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>You are a research assistant. Given a research question, follow
+this process:
+1. Break the question into 3-5 specific sub-questions
+2. For each sub-question, analyze the provided sources
+3. Synthesize findings, noting agreements and contradictions
+4. Rate the evidence quality for each finding
+5. Produce a research brief with inline citations
+
+Research question: [question]
+Sources: [provide sources]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="9-code-review-assistant">9. Code Review Assistant</h3>
+<p><strong>Description:</strong> Create a code review system that analyzes code submissions for bugs, security vulnerabilities, style violations, performance issues, and maintainability concerns. The system should provide specific, actionable feedback with code suggestions and prioritize issues by severity.</p>
+<p><strong>Key Skills:</strong> Structured output (Chapter 6), few-shot examples (Chapter 4), evaluation criteria (Chapter 13), prompt security (Chapter 11)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>Review the following code for:
+1. Bugs and logical errors (Critical)
+2. Security vulnerabilities (Critical)
+3. Performance issues (High)
+4. Style and readability (Medium)
+5. Documentation gaps (Low)
+
+For each issue found, provide:
+- Line number(s)
+- Severity rating
+- Description of the problem
+- Suggested fix with code example
+
+Code:
+[paste code]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="10-technical-doc-generator">10. Technical Doc Generator</h3>
+<p><strong>Description:</strong> Build a system that generates comprehensive technical documentation from code, API endpoints, or system architecture descriptions. The system should produce user guides, API references, getting-started tutorials, and troubleshooting guides — all maintaining consistent terminology and structure.</p>
+<p><strong>Key Skills:</strong> Output format control (Chapter 6), context management (Chapter 7), audience adaptation (Chapter 2), prompt chaining (Chapter 5)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Generate technical documentation for the following API endpoint.
+Write for a developer audience with 2-3 years of experience.
+
+Include:
+1. Endpoint overview (1 paragraph)
+2. Request format (with example)
+3. Response format (with example)
+4. Error codes and handling
+5. Rate limits and best practices
+6. Code examples in Python and JavaScript
+
+API specification:
+[paste spec]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="11-data-dashboard-narrator">11. Data Dashboard Narrator</h3>
+<p><strong>Description:</strong> Create a system that takes data visualizations or raw datasets and generates natural language narratives explaining the data — trends, outliers, comparisons, and actionable insights. The narrator should adjust its language for different audiences (executives, analysts, general public).</p>
+<p><strong>Key Skills:</strong> Multimodal prompting (Chapter 9), audience adaptation (Chapter 2), output format control (Chapter 6), chain-of-thought reasoning (Chapter 4)</p>
+<p><strong>Starter Prompt:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Analyze the following dataset and produce three narrative versions:
+
+1. Executive summary (3-4 sentences, focus on business impact)
+2. Analyst report (detailed, with statistical observations)
+3. Public-facing summary (plain language, no jargon)
+
+For each version, highlight:
+- The most significant trend
+- Any notable outliers
+- One actionable recommendation
+
+Dataset:
+[paste data or describe visualization]
+</code></pre></div></td></tr></table></div>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h2 id="education-and-career-development">Education and Career Development</h2>
+<p>These projects apply prompt engineering to teaching, learning, and career advancement — areas where personalization creates enormous value.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">You've Got This!</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Polly encouraging">
+These education projects are some of the most rewarding to build because you can see the impact immediately. Whether you are helping students learn or helping professionals advance their careers, your prompt engineering skills can genuinely make a difference. Let's craft the perfect prompt!</p>
+</div>
+<h3 id="12-personalized-tutor-app">12. Personalized Tutor App</h3>
+<p><strong>Description:</strong> Design an AI tutoring system that adapts to individual learners. The system should assess the student's current knowledge level, present material at an appropriate difficulty, provide practice problems, give detailed feedback, and track progress over time. Focus on one subject area for your capstone.</p>
+<p><strong>Key Skills:</strong> Educational applications (Chapter 16), context and memory management (Chapter 7), few-shot prompting (Chapter 4), evaluation (Chapter 13)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="13-quiz-and-test-generator">13. Quiz and Test Generator</h3>
+<p><strong>Description:</strong> Build a system that generates quizzes and tests from source material, with questions aligned to specific learning objectives and Bloom's Taxonomy levels. The system should produce multiple question types (multiple choice, short answer, essay prompts), answer keys, and grading rubrics.</p>
+<p><strong>Key Skills:</strong> Educational applications (Chapter 16), output format control (Chapter 6), structured output (Chapter 6), evaluation (Chapter 13)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="14-writing-coach-system">14. Writing Coach System</h3>
+<p><strong>Description:</strong> Create an AI writing coach that analyzes student or professional writing for clarity, structure, tone, grammar, and argumentation. The system should provide constructive feedback — not just corrections — along with explanations and examples of improvement. It should adapt its coaching style to the writer's skill level.</p>
+<p><strong>Key Skills:</strong> Few-shot examples (Chapter 4), audience adaptation (Chapter 2), ethics (Chapter 10), output format control (Chapter 6)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="15-resume-analyzer">15. Resume Analyzer</h3>
+<p><strong>Description:</strong> Design a system that analyzes resumes against job descriptions, identifying strengths, gaps, keyword matches, and improvement opportunities. The system should score the resume-to-job fit, suggest specific rewording, and flag common resume mistakes — all while maintaining ethical boundaries around bias.</p>
+<p><strong>Key Skills:</strong> Classification (Chapter 4), ethics and bias awareness (Chapter 10), structured output (Chapter 6), business applications (Chapter 15)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="16-job-description-writer">16. Job Description Writer</h3>
+<p><strong>Description:</strong> Build a system that generates inclusive, clear, and compelling job descriptions from minimal input. Given a job title, department, and a few key responsibilities, the system should produce a complete job posting with qualifications, benefits framing, and inclusive language — checked for bias and legal compliance.</p>
+<p><strong>Key Skills:</strong> Ethics (Chapter 10), output format control (Chapter 6), business applications (Chapter 15), few-shot prompting (Chapter 4)</p>
+<p><strong>Difficulty:</strong> Beginner</p>
+<hr />
+<h3 id="17-interview-prep-coach">17. Interview Prep Coach</h3>
+<p><strong>Description:</strong> Create an interactive interview preparation system that generates likely interview questions based on a job description, provides frameworks for answering behavioral questions (like the STAR method), conducts mock interviews with follow-up questions, and gives feedback on answer quality.</p>
+<p><strong>Key Skills:</strong> Context management (Chapter 7), few-shot prompting (Chapter 4), educational applications (Chapter 16), prompt types (Chapter 3)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h2 id="marketing-and-brand-management">Marketing and Brand Management</h2>
+<p>These projects focus on creating consistent, engaging content across marketing channels while maintaining brand identity.</p>
+<h3 id="18-social-media-manager">18. Social Media Manager</h3>
+<p><strong>Description:</strong> Build a social media management system that generates platform-specific content from a single content brief. The system should adapt tone and length for each platform (Twitter/X, LinkedIn, Instagram, TikTok), suggest optimal posting times, create hashtag strategies, and generate engagement-driving calls to action.</p>
+<p><strong>Key Skills:</strong> Output format control (Chapter 6), prompt chaining (Chapter 5), audience adaptation (Chapter 2), business applications (Chapter 15)</p>
+<p><strong>Difficulty:</strong> Beginner</p>
+<hr />
+<h3 id="19-brand-voice-system">19. Brand Voice System</h3>
+<p><strong>Description:</strong> Design a system that captures, codifies, and enforces a brand's unique voice across all content. The system should analyze existing brand content to extract voice characteristics, create a brand voice guide, and then review new content for voice consistency — flagging and suggesting corrections for off-brand language.</p>
+<p><strong>Key Skills:</strong> Few-shot prompting (Chapter 4), evaluation (Chapter 13), prompt fundamentals (Chapter 2), business applications (Chapter 15)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<details>
+<summary>#### Diagram: Multi-Project Architecture Pattern</summary>
+<pre class="mermaid"><code>graph TB
+    subgraph Input Layer
+        A[User Input]
+        B[Document Upload]
+        C[API Data]
+    end
+    subgraph Prompt Engine
+        D[System Prompt]
+        E[Processing&lt;br/&gt;Prompts]
+        F[Safety&lt;br/&gt;Guardrails]
+    end
+    subgraph Output Layer
+        G[Formatted&lt;br/&gt;Response]
+        H[Structured&lt;br/&gt;Data]
+        I[Action&lt;br/&gt;Triggers]
+    end
+    A --&gt; D
+    B --&gt; D
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G
+    F --&gt; H
+    F --&gt; I
+    style D fill:#1565C0,color:#fff
+    style F fill:#E65100,color:#fff</code></pre>
+<p>This architecture pattern applies to most capstone projects. Notice how safety guardrails sit between processing and output — a design principle from Chapter 11 that should be present in every production system.</p>
+</details>
+<h2 id="legal-and-compliance">Legal and Compliance</h2>
+<p>These projects tackle high-stakes domains where accuracy, caution, and ethical guardrails are especially critical.</p>
+<h3 id="20-legal-document-analyzer">20. Legal Document Analyzer</h3>
+<p><strong>Description:</strong> Build a system that reads legal documents (contracts, terms of service, lease agreements) and produces plain-language summaries highlighting key obligations, risks, deadlines, and unusual clauses. The system must include prominent disclaimers that it is not providing legal advice and should recommend professional review for important decisions.</p>
+<p><strong>Key Skills:</strong> Ethics (Chapter 10), prompt security (Chapter 11), summarization (Chapter 4), output format control (Chapter 6)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="21-compliance-checker">21. Compliance Checker</h3>
+<p><strong>Description:</strong> Create a system that reviews business documents, marketing materials, or internal policies against a set of compliance rules (industry regulations, company policies, or legal requirements). The system should flag potential violations, explain the relevant rule, and suggest compliant alternatives.</p>
+<p><strong>Key Skills:</strong> Classification (Chapter 4), prompt security (Chapter 11), ethics (Chapter 10), structured output (Chapter 6), few-shot examples (Chapter 4)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h2 id="data-analysis-and-insights">Data Analysis and Insights</h2>
+<p>These projects focus on extracting meaning from data — understanding what customers think, what trends reveal, and what actions to take.</p>
+<h3 id="22-product-review-analyzer">22. Product Review Analyzer</h3>
+<p><strong>Description:</strong> Design a system that analyzes large collections of product reviews to extract themes, common praise, frequent complaints, feature requests, and competitive comparisons. The output should include both quantitative summaries (percentages, ratings distributions) and qualitative insights with representative quotes.</p>
+<p><strong>Key Skills:</strong> Summarization (Chapter 4), output format control (Chapter 6), structured output (Chapter 6), evaluation (Chapter 13)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="23-sentiment-analysis-system">23. Sentiment Analysis System</h3>
+<p><strong>Description:</strong> Build a comprehensive sentiment analysis pipeline that processes text from multiple sources (social media, reviews, surveys, support tickets) and classifies sentiment at both the document and aspect level. The system should detect nuance — sarcasm, mixed feelings, conditional praise — rather than just positive/negative/neutral labels.</p>
+<p><strong>Key Skills:</strong> Classification (Chapter 4), few-shot prompting (Chapter 4), evaluation (Chapter 13), prompt types and parameters (Chapter 3)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="24-translation-assistant">24. Translation Assistant</h3>
+<p><strong>Description:</strong> Create a translation system that goes beyond word-for-word translation to handle cultural context, idiomatic expressions, tone adaptation, and domain-specific terminology. The system should support back-translation for quality checking and allow users to specify formality level, regional dialect, and target audience.</p>
+<p><strong>Key Skills:</strong> Multimodal awareness (Chapter 9), audience adaptation (Chapter 2), evaluation (Chapter 13), few-shot prompting (Chapter 4)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h2 id="accessibility-and-onboarding">Accessibility and Onboarding</h2>
+<p>These projects focus on making systems and content accessible to everyone — an area where prompt engineering can have profound social impact.</p>
+<h3 id="25-accessibility-auditor">25. Accessibility Auditor</h3>
+<p><strong>Description:</strong> Build a system that audits digital content (web pages, documents, presentations) for accessibility issues. The system should check for alt text quality, reading level, color contrast descriptions, heading structure, plain language compliance, and screen reader compatibility — then generate a prioritized remediation report.</p>
+<p><strong>Key Skills:</strong> Ethics (Chapter 10), evaluation (Chapter 13), output format control (Chapter 6), structured output (Chapter 6)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="26-onboarding-guide-system">26. Onboarding Guide System</h3>
+<p><strong>Description:</strong> Design a system that generates personalized onboarding guides for new employees, new users of a software product, or new members of an organization. Given the person's role, experience level, and goals, the system should create a customized learning path with milestones, resources, and check-in points.</p>
+<p><strong>Key Skills:</strong> Educational applications (Chapter 16), context management (Chapter 7), audience adaptation (Chapter 2), output format control (Chapter 6)</p>
+<p><strong>Difficulty:</strong> Beginner</p>
+<hr />
+<div class="admonition mascot-tip">
+<p class="admonition-title">A Note on Project Scope</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Time to talk to AI! Remember, a capstone project does not need to solve every problem. A well-executed system that handles one use case beautifully is far more impressive than a sprawling system that does ten things poorly. Start small, deliver quality, and expand from there.</p>
+</div>
+<h2 id="prompt-engineering-infrastructure">Prompt Engineering Infrastructure</h2>
+<p>These final projects build the tools and frameworks that make all other prompt engineering work more effective. They are the projects for students who want to build tools for <em>other prompt engineers</em>.</p>
+<h3 id="27-knowledge-base-builder">27. Knowledge Base Builder</h3>
+<p><strong>Description:</strong> Create a system that takes raw documents, conversations, or data sources and automatically builds a structured knowledge base suitable for use in RAG pipelines. The system should chunk content intelligently, generate metadata and tags, identify relationships between entries, and maintain a schema that supports efficient retrieval.</p>
+<p><strong>Key Skills:</strong> RAG (Chapter 8), context management (Chapter 7), structured output (Chapter 6), evaluation (Chapter 13)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="28-prompt-library-manager">28. Prompt Library Manager</h3>
+<p><strong>Description:</strong> Build a system for organizing, versioning, testing, and sharing prompt templates. The system should support tagging prompts by use case, tracking performance metrics across versions, A/B testing different prompt variations, and generating documentation for each prompt template.</p>
+<p><strong>Key Skills:</strong> Evaluation and optimization (Chapter 13), prompt fundamentals (Chapter 2), token economics (Chapter 14), output format control (Chapter 6)</p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<hr />
+<h3 id="29-ai-workflow-automator">29. AI Workflow Automator</h3>
+<p><strong>Description:</strong> Design a system that chains multiple AI prompts into automated workflows — where the output of one prompt feeds into the next. The system should support branching logic (if the classification is X, use prompt A; otherwise, use prompt B), error handling, and human-in-the-loop checkpoints for high-stakes decisions.</p>
+<p><strong>Key Skills:</strong> Agentic AI (Chapter 12), prompt chaining (Chapter 5), prompt security (Chapter 11), evaluation (Chapter 13)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="30-multi-agent-task-runner">30. Multi-Agent Task Runner</h3>
+<p><strong>Description:</strong> Build a multi-agent system where specialized AI agents collaborate to complete complex tasks. For example, one agent researches, another writes, a third edits, and a fourth fact-checks. The system needs a coordination layer that manages agent communication, resolves conflicts, and ensures quality.</p>
+<p><strong>Key Skills:</strong> Agentic AI (Chapter 12), context management (Chapter 7), evaluation (Chapter 13), prompt security (Chapter 11), ethics (Chapter 10)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="31-rag-pipeline-builder">31. RAG Pipeline Builder</h3>
+<p><strong>Description:</strong> Create a complete retrieval-augmented generation pipeline that ingests documents, chunks them, stores them in a vector database, retrieves relevant chunks for a query, and generates grounded answers with citations. The system should include relevance scoring and hallucination detection.</p>
+<p><strong>Key Skills:</strong> RAG (Chapter 8), evaluation (Chapter 13), context management (Chapter 7), prompt security (Chapter 11), token economics (Chapter 14)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h3 id="32-evaluation-framework">32. Evaluation Framework</h3>
+<p><strong>Description:</strong> Build a comprehensive evaluation framework for testing and scoring prompt outputs across multiple dimensions — accuracy, relevance, safety, bias, helpfulness, and format compliance. The framework should support automated scoring with rubrics, human evaluation workflows, and statistical comparison of prompt versions.</p>
+<p><strong>Key Skills:</strong> Evaluation and optimization (Chapter 13), ethics (Chapter 10), prompt security (Chapter 11), structured output (Chapter 6), token economics (Chapter 14)</p>
+<p><strong>Difficulty:</strong> Advanced</p>
+<hr />
+<h2 id="choosing-your-capstone-project">Choosing Your Capstone Project</h2>
+<p>With 32 projects to choose from, how do you decide? Here is a decision framework.</p>
+<p><strong>Follow your curiosity.</strong> You will produce your best work on a topic that genuinely interests you. If you are fascinated by education, build the Personalized Tutor App. If you love data, tackle the Sentiment Analysis System. Passion drives quality.</p>
+<p><strong>Match your timeline.</strong> If you have a week, pick a Beginner project and execute it beautifully. If you have a month, aim for Advanced and build something you are proud to put in your portfolio.</p>
+<p><strong>Consider your audience.</strong> The best capstone projects solve a real problem for a real person. If you can identify someone who would actually use your system — a teacher, a manager, a developer — you will get invaluable feedback.</p>
+<table>
+<thead>
+<tr>
+<th>Your Interest</th>
+<th>Recommended Projects</th>
+<th>Difficulty Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business and productivity</td>
+<td>3, 4, 6, 7, 18</td>
+<td>Beginner to Intermediate</td>
+</tr>
+<tr>
+<td>Education and training</td>
+<td>12, 13, 14, 17, 26</td>
+<td>Beginner to Advanced</td>
+</tr>
+<tr>
+<td>Technical and development</td>
+<td>8, 9, 10, 11, 31</td>
+<td>Intermediate to Advanced</td>
+</tr>
+<tr>
+<td>Ethics and compliance</td>
+<td>20, 21, 25, 32</td>
+<td>Intermediate to Advanced</td>
+</tr>
+<tr>
+<td>Infrastructure and tools</td>
+<td>27, 28, 29, 30</td>
+<td>Intermediate to Advanced</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-makes-a-great-capstone">What Makes a Great Capstone</h2>
+<p>The difference between a good capstone project and a great one comes down to a few key qualities.</p>
+<p><strong>Thoughtful system design.</strong> Great projects do not rely on a single magical prompt. They use multiple prompts working together, each with a clear purpose. The system prompt sets the rules. Processing prompts handle the work. Safety prompts catch problems. Output prompts format the results.</p>
+<p><strong>Robust error handling.</strong> What happens when the input is garbage? What happens when the model hallucinates? Great capstones anticipate failure modes and handle them gracefully — with fallback prompts, validation checks, and clear error messages for users.</p>
+<p><strong>Ethical awareness.</strong> Every project in this catalog touches on ethical considerations. The Resume Analyzer must avoid bias. The Legal Document Analyzer must include disclaimers. The Compliance Checker must be accurate. Great capstones do not treat ethics as an afterthought — they build it into the architecture from day one.</p>
+<p><strong>Clear documentation.</strong> Your capstone should include a README that explains what the system does, how to use it, its limitations, and the prompt engineering decisions you made along the way. This documentation is often as valuable as the system itself.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Share Your Work!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Use your words — and share them with the world! Consider publishing your capstone project as a blog post, a GitHub repository, or a conference presentation. The prompt engineering community is growing fast, and your project could help someone else learn.</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Capstone projects integrate skills from across the entire course — prompt fundamentals, advanced techniques, security, ethics, evaluation, and agentic AI — into complete, working systems.</li>
+<li>Every project should include safety guardrails, ethical considerations, and evaluation criteria, not just clever prompts.</li>
+<li>Start with a clear problem definition and build iteratively, testing each component before combining them into a larger system.</li>
+<li>The best capstone projects solve real problems for real users and include clear documentation of design decisions.</li>
+<li>Output-first design — writing the ideal output before designing the prompts — is a powerful technique for complex systems.</li>
+<li>Projects range from beginner single-prompt systems to advanced multi-agent pipelines, so there is a meaningful challenge for every skill level.</li>
+<li>Sharing your work with the community multiplies its value and contributes to the growing field of prompt engineering.</li>
+</ul>
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>Knowledge Management</li>
@@ -1354,10 +2889,6 @@
 <li>Multi-Agent Task Runner</li>
 <li>RAG Pipeline Builder</li>
 <li>Evaluation Framework</li>
-<li>Red Team Test Suite</li>
-<li>AI Ethics Audit Tool</li>
-<li>Course Content Generator</li>
-<li>Intelligent Textbook</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>All previous chapters:</p>
@@ -1380,13 +2911,16 @@
 <li><a href="../16-educational-applications/">Chapter 16: Educational Applications</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p><em>You started this course learning how to write a single clear prompt. Now you can design entire AI-powered systems with multiple agents, evaluation frameworks, safety guardrails, and ethical considerations baked in from the start. That is an extraordinary transformation. The world needs people who can bridge the gap between human intention and AI capability — and that is exactly what you have become. Go build something amazing. Polly and the entire prompt engineering community are cheering you on.</em></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1435,13 +2969,13 @@
         
         
           
-          <a href="../../lectures/meta-skills/" class="md-footer__link md-footer__link--next" aria-label="Next: Meta-Skills">
+          <a href="../../lectures/" class="md-footer__link md-footer__link--next" aria-label="Next: List of Lectures">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Meta-Skills
+                List of Lectures
               </div>
             </div>
             <div class="md-footer__button md-icon">

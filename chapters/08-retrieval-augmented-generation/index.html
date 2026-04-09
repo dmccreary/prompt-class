@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Learn how Retrieval-Augmented Generation (RAG) combines language models with external knowledge sources to produce grounded, accurate responses using vector databases, embeddings, semantic search, document chunking, and source citation practices.">
+        <meta name="description" content="Learn how Retrieval-Augmented Generation (RAG) and GraphRAG combine language models with external knowledge sources — including knowledge graphs — to produce grounded, accurate responses using vector databases, embeddings, semantic search, document chunking, source citation, and graph-based reasoning.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Retrieval-Augmented Generation - Prompt Engineering Class</title>
+        <title>Retrieval-Augmented Generation and GraphRAG - Prompt Engineering Class</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#retrieval-augmented-generation" class="md-skip">
+        <a href="#retrieval-augmented-generation-and-graphrag" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Retrieval-Augmented Generation
+              Retrieval-Augmented Generation and GraphRAG
             
           </span>
         </div>
@@ -693,7 +693,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -706,7 +706,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -761,6 +761,21 @@
       Embeddings: Turning Words Into Numbers
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Embeddings: Turning Words Into Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-embedding-space-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Embedding Space Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -865,6 +880,66 @@
   <a href="#diagram-end-to-end-rag-system-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       Diagram: End-to-End RAG System Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphrag-when-relationships-matter-more-than-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphRAG: When Relationships Matter More Than Keywords
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GraphRAG: When Relationships Matter More Than Keywords">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-knowledge-graphs-differ-from-vector-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Knowledge Graphs Differ from Vector Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-graphrag-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The GraphRAG Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-graphrag-vs-traditional-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use GraphRAG vs. Traditional RAG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphrag-in-practice-a-quick-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphRAG in Practice: A Quick Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-your-first-knowledge-graph-for-graphrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your First Knowledge Graph for GraphRAG
     </span>
   </a>
   
@@ -1153,6 +1228,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -1169,7 +1250,7 @@
   
   
   
-    <a href="../../lectures/meta-skills/" class="md-nav__link">
+    <a href="../../lectures/" class="md-nav__link">
       
   
   
@@ -1262,6 +1343,8 @@
       
         
           
+        
+      
         
       
     
@@ -1470,6 +1553,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Embeddings: Turning Words Into Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-embedding-space-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Embedding Space Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1584,6 +1682,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graphrag-when-relationships-matter-more-than-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphRAG: When Relationships Matter More Than Keywords
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GraphRAG: When Relationships Matter More Than Keywords">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-knowledge-graphs-differ-from-vector-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Knowledge Graphs Differ from Vector Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-graphrag-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The GraphRAG Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-graphrag-vs-traditional-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use GraphRAG vs. Traditional RAG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphrag-in-practice-a-quick-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphRAG in Practice: A Quick Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-your-first-knowledge-graph-for-graphrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your First Knowledge Graph for GraphRAG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-pitfalls-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Common Pitfalls and Best Practices
@@ -1647,7 +1805,7 @@
   
 
 
-<h1 id="retrieval-augmented-generation">Retrieval-Augmented Generation</h1>
+<h1 id="retrieval-augmented-generation-and-graphrag">Retrieval-Augmented Generation and GraphRAG</h1>
 <div class="admonition mascot-welcome">
 <p class="admonition-title">Time to Talk to AI — With Receipts!</p>
 <p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
@@ -1657,20 +1815,24 @@ Let's craft the perfect prompt! In this chapter, we explore one of the most impo
 <p>You've already learned that language models are trained on massive datasets and can generate remarkably fluent text. But here's the uncomfortable truth: a language model's knowledge is frozen in time. Everything it "knows" comes from its training data, which has a hard cutoff date. Ask a model about something that happened last week, and it will either admit ignorance or — more dangerously — make something up with complete confidence.</p>
 <p>This limitation is called the <strong>knowledge cutoff</strong>. A knowledge cutoff is the date beyond which a language model has no training data. If a model was trained on data through January 2025, it has no knowledge of events, publications, or discoveries after that date. It's like asking a friend who has been living on a desert island for a year to give you the latest stock prices. No matter how smart they are, they simply don't have the information.</p>
 <p>But the knowledge cutoff is only part of the problem. Even within its training period, a model may not have encountered specific documents you care about — your company's internal policies, your research papers, your product documentation, or the latest regulatory filings in your industry. The model's training data, however vast, cannot contain everything.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>The Knowledge Gap Problem:
+<!-- ASCII art original:
+The Knowledge Gap Problem:
 
 Training Data          Knowledge Cutoff     Present Day
 ━━━━━━━━━━━━━━━━━━━━━━━━━┫                    │
   ▲ Model knows this     ▲ Nothing beyond     ▲ Your question
   │ (but maybe not        │ this date           │ is about THIS
   │  YOUR documents)      │                     │
-</code></pre></div></td></tr></table></div>
+-->
+
+<p><strong>The Knowledge Gap Problem:</strong></p>
+<pre class="mermaid"><code>flowchart LR
+    A["Training Data\n&lt;em&gt;Model knows this&lt;/em&gt;\n(but maybe not\nYOUR documents)"] --&gt;|"Knowledge\nCutoff"| B["Gap\n&lt;em&gt;Nothing beyond\nthis date&lt;/em&gt;"]
+    B --&gt; C["Present Day\n&lt;em&gt;Your question\nis about THIS&lt;/em&gt;"]
+
+    style A fill:#e8f5e9,stroke:#2e7d32
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#ffebee,stroke:#c62828</code></pre>
 <p>This is where <strong>Retrieval-Augmented Generation</strong> enters the picture.</p>
 <h2 id="what-is-retrieval-augmented-generation">What Is Retrieval-Augmented Generation?</h2>
 <p><strong>Retrieval-Augmented Generation</strong> (RAG) is a technique that enhances a language model's responses by retrieving relevant information from external sources and including it in the prompt before the model generates its answer. Instead of relying solely on what the model learned during training, RAG gives the model access to up-to-date, specific, and verifiable information at the moment you ask your question.</p>
@@ -1733,28 +1895,43 @@ Some people worry that RAG is like "cheating" because the model isn't answering 
 <p>To search a knowledge base effectively, a RAG system needs to understand meaning, not just match keywords. This is where <strong>embeddings</strong> come in. An embedding is a numerical representation of text (or other data) as a vector — a list of numbers that captures the semantic meaning of the content.</p>
 <p>Imagine you could place every sentence ever written on a giant map, where sentences with similar meanings are close together and sentences with different meanings are far apart. That's essentially what an embedding does, except the "map" has hundreds or thousands of dimensions instead of just two.</p>
 <p>For example, the sentences "The cat sat on the mat" and "A feline rested on the rug" would have very similar embeddings — their vectors would be close together in the embedding space — even though they share almost no words in common. Meanwhile, "The stock market crashed today" would be far away from both of them.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Embedding Space (simplified to 2D):
+<!-- ASCII art original:
+Embedding Space (simplified to 2D):
 
-         &quot;machine learning models&quot;
+         "machine learning models"
                  ●
-    &quot;neural networks&quot;          &quot;deep learning algorithms&quot;
+    "neural networks"          "deep learning algorithms"
            ●                          ●
 
-                                           &quot;baking chocolate cake&quot;
+                                           "baking chocolate cake"
                                                     ●
-    &quot;AI training data&quot;                  &quot;sourdough bread recipe&quot;
+    "AI training data"                  "sourdough bread recipe"
            ●                                   ●
-</code></pre></div></td></tr></table></div>
+-->
+
+<iframe src="../../sims/embedding-space/main.html" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+
+<details>
+<summary>Expand to see diagram specification</summary>
+<h4 id="diagram-embedding-space-explorer">Diagram: Embedding Space Explorer</h4>
+<ul>
+<li><strong>sim-id</strong>: embedding-space</li>
+<li><strong>Library</strong>: p5.js</li>
+<li><strong>Bloom Level</strong>: Understand</li>
+<li><strong>Learning Objective</strong>: Students can explain how text embeddings represent semantic meaning as positions in a vector space, where similar phrases cluster together and dissimilar phrases are far apart.</li>
+</ul>
+<p><strong>Specification:</strong></p>
+<p>Create an interactive 2D scatter plot using p5.js that visualizes a simplified embedding space. The MicroSim should include:</p>
+<ol>
+<li><strong>Pre-positioned phrase dots</strong>: ~22 phrases from 5 categories (AI/ML, Cooking, Space, Music, Medicine) placed in 2D so that semantically similar phrases cluster together.</li>
+<li><strong>Color-coded categories</strong>: Each category has a distinct color with a legend.</li>
+<li><strong>Hover interaction</strong>: Hovering over a dot shows the phrase text and category in a tooltip.</li>
+<li><strong>Search/query feature</strong>: A text input where users type a phrase. The system places a query point near the most relevant cluster and draws dashed lines to the 3 nearest neighbors, displaying Euclidean distances.</li>
+<li><strong>Reset button</strong>: Clears the search and returns to the default view.</li>
+<li><strong>Grid and axis labels</strong>: Light grid lines and axis labels ("Embedding Dimension 1" and "Embedding Dimension 2") to reinforce the spatial metaphor.</li>
+</ol>
+<p>The key teaching point is that phrases with similar meanings end up close together in the space, even when they share no words — demonstrating why semantic search outperforms keyword search.</p>
+</details>
 <p>Embedding models — specialized neural networks designed specifically for this task — convert text into these vectors. Popular embedding models include OpenAI's <code>text-embedding-3-small</code>, Cohere's <code>embed-v3</code>, and open-source options like <code>sentence-transformers</code>. The vectors typically have 256 to 3,072 dimensions, though you'll never need to look at the individual numbers. The system handles all the math behind the scenes.</p>
 <p>The key insight is this: embeddings let computers understand <em>meaning</em> rather than just matching exact words. This is what makes modern search so much more powerful than the keyword search of the early internet.</p>
 <h2 id="vector-databases-where-embeddings-live">Vector Databases: Where Embeddings Live</h2>
@@ -1762,25 +1939,8 @@ Some people worry that RAG is like "cheating" because the model isn't answering 
 <p>Traditional databases are great at finding exact matches — "show me all customers named Smith" — but they're terrible at finding <em>similar</em> things. Vector databases are built specifically for similarity search. Given a query vector, they can rapidly find the most similar vectors in a collection of millions or billions, usually in milliseconds.</p>
 <p>Popular vector databases include Pinecone, Weaviate, Chroma, Qdrant, Milvus, and pgvector (a PostgreSQL extension). Cloud providers also offer managed vector search services, like Amazon OpenSearch, Google Vertex AI Vector Search, and Azure AI Search.</p>
 <p>Here's how vector databases fit into the RAG pipeline:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>RAG Pipeline with Vector Database:
+<!-- ASCII art original:
+RAG Pipeline with Vector Database:
 
 ┌──────────┐    ┌────────────┐    ┌──────────────────┐
 │ Documents │───▶│ Embedding  │───▶│  Vector Database  │
@@ -1790,16 +1950,39 @@ Some people worry that RAG is like "cheating" because the model isn't answering 
                                           │ At query time:
                                           ▼
 ┌──────────┐    ┌────────────┐    ┌──────────────────┐
-│  User&#39;s  │───▶│ Embedding  │───▶│ Similarity Search │
+│  User's  │───▶│ Embedding  │───▶│ Similarity Search │
 │  Query   │    │   Model    │    │ (find top matches)│
 └──────────┘    └────────────┘    └──────────────────┘
                                           │
                                           ▼
                                   ┌──────────────────┐
                                   │ Retrieved Passages│
-                                  │ + User&#39;s Query    │──▶ LLM ──▶ Response
+                                  │ + User's Query    │──▶ LLM ──▶ Response
                                   └──────────────────┘
-</code></pre></div></td></tr></table></div>
+-->
+
+<p><strong>RAG Pipeline with Vector Database:</strong></p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph indexing["Indexing Phase (offline)"]
+        direction LR
+        D["Documents\n(raw text)"] --&gt; E1["Embedding\nModel"]
+        E1 --&gt; VDB[("Vector\nDatabase")]
+    end
+
+    subgraph query["Query Phase (real-time)"]
+        direction LR
+        Q["User's\nQuery"] --&gt; E2["Embedding\nModel"]
+        E2 --&gt; SS["Similarity\nSearch"]
+        SS --&gt; RP["Retrieved Passages\n+ User's Query"]
+        RP --&gt; LLM["LLM"]
+        LLM --&gt; R["Response"]
+    end
+
+    VDB --&gt; SS
+
+    style indexing fill:#e3f2fd,stroke:#1565c0
+    style query fill:#e8f5e9,stroke:#2e7d32
+    style VDB fill:#f3e5f5,stroke:#7b1fa2</code></pre>
 <p>The "magic" of vector databases is in their indexing algorithms. They use techniques like Hierarchical Navigable Small World (HNSW) graphs and Inverted File (IVF) indexes to avoid comparing the query vector against every single stored vector. Instead, they navigate through a clever data structure that narrows the search space quickly — like using a table of contents instead of reading every page of a book.</p>
 <h2 id="semantic-search">Semantic Search</h2>
 <p><strong>Semantic search</strong> is the process of finding information based on meaning rather than exact keyword matches. In a RAG system, semantic search is what connects your question to the most relevant passages in the knowledge base.</p>
@@ -2034,6 +2217,163 @@ Here's something cool: if you've ever copied text from a website and pasted it i
 <p>Arrows connect each stage. Label this section "Online Query (happens in real-time)."</p>
 <p>Use blue for the indexing path, green for the query path, and connect the two paths at the vector database with a bidirectional arrow. Include timing annotations: "Indexing: minutes to hours" and "Query: milliseconds to seconds."</p>
 </details>
+<h2 id="graphrag-when-relationships-matter-more-than-keywords">GraphRAG: When Relationships Matter More Than Keywords</h2>
+<p>Standard RAG is brilliant at finding relevant text passages — but it has a blind spot. When the answer to a question depends on <em>relationships</em> between concepts rather than the content of any single document chunk, vector similarity search can struggle. Consider questions like:</p>
+<ul>
+<li>"Which team members have worked on both the billing system and the compliance module?"</li>
+<li>"What are all the downstream effects if we change the authentication API?"</li>
+<li>"How is this drug contraindicated with medications prescribed for patients with heart conditions?"</li>
+</ul>
+<p>These questions require <strong>connecting dots across multiple documents</strong>, not just finding the most relevant passage. This is where <strong>GraphRAG</strong> comes in.</p>
+<p><strong>GraphRAG</strong> is an extension of traditional RAG that augments a language model's context with information retrieved from a <strong>knowledge graph</strong> — a structured representation of entities and the relationships between them — rather than (or in addition to) a flat collection of text chunks.</p>
+<h3 id="how-knowledge-graphs-differ-from-vector-databases">How Knowledge Graphs Differ from Vector Databases</h3>
+<p>In a traditional RAG system, your knowledge base is a collection of text chunks stored as vectors. The system finds chunks that are <em>semantically similar</em> to your query. This works wonderfully when the answer lives inside a single chunk or a few related chunks.</p>
+<p>A knowledge graph, by contrast, stores information as a network of <strong>nodes</strong> (entities like people, products, concepts, or events) and <strong>edges</strong> (relationships like "reports to," "depends on," "is contraindicated with," or "was published in"). This structure preserves the connections between pieces of information — connections that get lost when you chop documents into independent chunks.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Traditional RAG</th>
+<th>GraphRAG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data structure</td>
+<td>Flat text chunks as vectors</td>
+<td>Nodes and edges in a graph</td>
+</tr>
+<tr>
+<td>Search method</td>
+<td>Semantic similarity</td>
+<td>Graph traversal + semantic search</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>Finding relevant passages</td>
+<td>Finding connected information</td>
+</tr>
+<tr>
+<td>Weakness</td>
+<td>Multi-hop reasoning across documents</td>
+<td>Requires upfront graph construction</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>"What does this document say about X?"</td>
+<td>"How are X and Y connected?"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-graphrag-pipeline">The GraphRAG Pipeline</h3>
+<p>A GraphRAG system typically works in two phases, similar to traditional RAG but with a graph construction step:</p>
+<p><strong>Phase 1 — Graph Construction (offline):</strong></p>
+<ol>
+<li><strong>Entity extraction</strong>: An LLM reads through your documents and identifies key entities (people, organizations, concepts, products, events).</li>
+<li><strong>Relationship extraction</strong>: The LLM identifies how these entities relate to each other and labels the relationships.</li>
+<li><strong>Graph storage</strong>: Entities become nodes and relationships become edges in a graph database (like Neo4j, Amazon Neptune, or a lightweight in-memory graph).</li>
+<li><strong>Optional: Community detection</strong>: Algorithms identify clusters of densely connected nodes, creating natural "topic communities" that can be summarized.</li>
+</ol>
+<p><strong>Phase 2 — Query (real-time):</strong></p>
+<ol>
+<li><strong>Query analysis</strong>: The system determines whether the question requires graph traversal, vector search, or both.</li>
+<li><strong>Graph retrieval</strong>: For relationship questions, the system traverses the graph to find relevant paths, neighborhoods, or communities.</li>
+<li><strong>Context assembly</strong>: Retrieved graph information (nodes, edges, paths, community summaries) is formatted as text and injected into the prompt.</li>
+<li><strong>Generation</strong>: The LLM generates a response grounded in the graph-derived context.</li>
+</ol>
+<pre class="mermaid"><code>flowchart TD
+    subgraph construction["Graph Construction (offline)"]
+        direction LR
+        DOCS["Documents"] --&gt; EE["Entity\nExtraction\n(LLM)"]
+        EE --&gt; RE["Relationship\nExtraction\n(LLM)"]
+        RE --&gt; GDB[("Knowledge\nGraph")]
+    end
+
+    subgraph query["Query Phase (real-time)"]
+        direction LR
+        Q["User's\nQuery"] --&gt; QA["Query\nAnalysis"]
+        QA --&gt; GT["Graph\nTraversal"]
+        GT --&gt; CA["Context\nAssembly"]
+        CA --&gt; LLM["LLM"]
+        LLM --&gt; R["Grounded\nResponse"]
+    end
+
+    GDB --&gt; GT
+
+    style construction fill:#e3f2fd,stroke:#1565c0
+    style query fill:#e8f5e9,stroke:#2e7d32
+    style GDB fill:#f3e5f5,stroke:#7b1fa2</code></pre>
+<h3 id="when-to-use-graphrag-vs-traditional-rag">When to Use GraphRAG vs. Traditional RAG</h3>
+<p>GraphRAG is not a replacement for traditional RAG — it's a complement. The best approach depends on the type of questions your users ask:</p>
+<p><strong>Use traditional RAG when:</strong></p>
+<ul>
+<li>Questions are about the content of specific documents ("What does our refund policy say?")</li>
+<li>The answer typically lives in one or a few text passages</li>
+<li>Your knowledge base changes frequently and rebuilding a graph would be expensive</li>
+<li>You need a simpler, faster system to deploy</li>
+</ul>
+<p><strong>Use GraphRAG when:</strong></p>
+<ul>
+<li>Questions involve relationships between entities ("Who approved this change?")</li>
+<li>Answers require synthesizing information across multiple documents</li>
+<li>Your domain has rich, structured relationships (org charts, supply chains, medical ontologies, legal precedent networks)</li>
+<li>Users ask "how" and "why" questions that require tracing chains of cause and effect</li>
+</ul>
+<p><strong>Use both together when:</strong></p>
+<ul>
+<li>You need the best of both worlds — passage-level detail from vector search combined with relationship awareness from graph traversal</li>
+<li>Your application serves diverse question types</li>
+<li>You're building an enterprise knowledge system that must handle everything from simple lookups to complex analytical queries</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Graphs Are Everywhere</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Here's something fun to consider: almost every domain has hidden graph structure. An HR system has people connected by reporting relationships. A codebase has modules connected by dependencies. A medical record has conditions connected to medications connected to side effects. When you start seeing graphs everywhere, you'll start seeing opportunities for GraphRAG everywhere too. That's not paranoia — that's pattern recognition, word wizard!</p>
+</div>
+<h3 id="graphrag-in-practice-a-quick-example">GraphRAG in Practice: A Quick Example</h3>
+<p>Imagine you're building an AI assistant for a hospital's clinical staff. A doctor asks: "What medications should I avoid prescribing to patients already taking warfarin who also have liver disease?"</p>
+<p>With <strong>traditional RAG</strong>, the system would search for chunks about warfarin interactions and chunks about liver disease medications. It might find relevant passages, but it would struggle to connect the specific drug-drug interactions with the liver disease context across separate documents.</p>
+<p>With <strong>GraphRAG</strong>, the knowledge graph contains nodes for drugs, conditions, and interactions. The system traverses from the "warfarin" node along "interacts with" edges, filters the results to drugs that are also connected to "liver disease" via "prescribed for" edges, and returns a precise, structured answer — with the reasoning path visible for verification.</p>
+<p>The graph doesn't just find the answer — it shows <em>how</em> it got there. That transparency is invaluable in high-stakes domains.</p>
+<h3 id="building-your-first-knowledge-graph-for-graphrag">Building Your First Knowledge Graph for GraphRAG</h3>
+<p>You don't need enterprise graph databases to experiment with GraphRAG. Here's a practical starting point:</p>
+<ol>
+<li><strong>Start with a focused domain.</strong> Pick a small, well-defined set of documents — a team wiki, a product manual, or a course syllabus.</li>
+<li><strong>Use an LLM for extraction.</strong> Prompt a language model to extract entities and relationships from your documents. A prompt like "Extract all people, projects, and technologies mentioned in this document, and list how they are related" works surprisingly well.</li>
+<li><strong>Store in a simple format.</strong> You can start with a JSON file or CSV of triples (subject, relationship, object) before investing in a graph database.</li>
+<li><strong>Query with natural language.</strong> Write prompts that include the relevant graph neighborhood as context, just like you would include retrieved passages in traditional RAG.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>Example GraphRAG Prompt:
+
+Based on the following knowledge graph relationships, answer
+the user&#39;s question.
+
+GRAPH CONTEXT:
+- Alice (Engineer) --[works on]--&gt; Billing System
+- Alice (Engineer) --[works on]--&gt; Compliance Module
+- Bob (Engineer) --[works on]--&gt; Billing System
+- Bob (Engineer) --[works on]--&gt; Search API
+- Carol (Manager) --[manages]--&gt; Alice
+- Carol (Manager) --[manages]--&gt; Bob
+
+QUESTION: Which engineers have worked on both the Billing
+System and the Compliance Module?
+</code></pre></div></td></tr></table></div>
+<p>The model can now reason over the explicit relationships rather than hoping to find this information buried in a paragraph somewhere.</p>
 <h2 id="common-pitfalls-and-best-practices">Common Pitfalls and Best Practices</h2>
 <p>RAG is powerful, but it's not magic. Here are common mistakes and how to avoid them:</p>
 <p><strong>Pitfall 1: Poor chunking.</strong> If your chunks are too large, retrieved passages will be diluted with irrelevant text. If too small, they'll lack context. Experiment with chunk sizes and test the results with real queries.</p>
@@ -2087,9 +2427,9 @@ Here's something cool: if you've ever copied text from a website and pasted it i
 </ol>
 <p>These techniques won't achieve perfection, but they dramatically improve reliability. In professional settings, combining RAG with human review creates a workflow where the AI does the heavy lifting of research and drafting while humans verify the final output. (One AI researcher joked that RAG stands for "Really Awesome Guardrails." It doesn't, but the acronym probably should.)</p>
 <div class="admonition mascot-celebration">
-<p class="admonition-title">You've Unlocked RAG Knowledge!</p>
+<p class="admonition-title">You've Unlocked RAG and GraphRAG Knowledge!</p>
 <p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
-Use your words! You now understand how to connect language models to external knowledge, reduce hallucination with grounding techniques, and build evidence-based responses with proper citations. These skills form the foundation of every serious enterprise AI application — and they make your prompts dramatically more reliable. Onward to even greater adventures!</p>
+Use your words! You now understand how to connect language models to external knowledge — whether it's flat documents via traditional RAG or structured relationships via GraphRAG. You can reduce hallucination with grounding techniques, build evidence-based responses with proper citations, and reason over connected knowledge. These skills form the foundation of every serious enterprise AI application. Onward to even greater adventures!</p>
 </div>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
@@ -2101,6 +2441,8 @@ Use your words! You now understand how to connect language models to external kn
 <li><strong>Source citation builds trust.</strong> Requiring the model to cite specific sources makes responses verifiable and transforms blind trust into informed verification.</li>
 <li><strong>You can practice RAG manually.</strong> Search-enhanced prompting — finding information yourself and including it in your prompt — gives you many RAG benefits without any infrastructure.</li>
 <li><strong>RAG quality depends on knowledge base quality.</strong> The best retrieval system in the world can't compensate for outdated, incomplete, or inaccurate source documents. Curate your knowledge base carefully.</li>
+<li><strong>GraphRAG adds relationship awareness.</strong> When answers depend on connections between entities rather than the content of individual passages, knowledge graphs provide the structured context that vector search misses.</li>
+<li><strong>GraphRAG and traditional RAG complement each other.</strong> Use vector search for passage-level questions, graph traversal for relationship questions, and both together for complex enterprise applications.</li>
 </ul>
 <h2 id="concepts">Concepts</h2>
 <ol>
@@ -2119,6 +2461,11 @@ Use your words! You now understand how to connect language models to external kn
 <li>External Data Integration</li>
 <li>Search-Enhanced Prompting</li>
 <li>Evidence-Based Responses</li>
+<li>GraphRAG</li>
+<li>Knowledge Graph</li>
+<li>Entity Extraction</li>
+<li>Relationship Extraction</li>
+<li>Graph Traversal</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>

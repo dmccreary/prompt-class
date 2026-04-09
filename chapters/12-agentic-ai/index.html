@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="A comprehensive guide to agentic AI systems where language models autonomously plan, execute, and monitor complex multi-step tasks using tool use, function calling, skill libraries, multi-agent collaboration, and critical safety mechanisms including human-in-the-loop approval workflows and sandboxed execution.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>12. Agentic AI - Prompt Engineering Class</title>
+        <title>Agentic AI - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. Agentic AI
+              Agentic AI
             
           </span>
         </div>
@@ -684,7 +684,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -821,9 +821,165 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#from-chatbot-to-agent" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      From Chatbot to Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-architecture-the-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Architecture: The Blueprint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Architecture: The Blueprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-core-agent-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Core Agent Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-use-and-function-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Use and Function Calling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-and-goal-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planning and Goal Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-feedback-loop-monitor-evaluate-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Feedback Loop: Monitor, Evaluate, Correct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomous-workflows-and-task-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autonomous Workflows and Task Automation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-orchestration-and-workflow-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Orchestration and Workflow Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills-and-skill-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills and Skill Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-memory-and-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Memory and Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-in-the-loop-and-approval-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human-in-the-Loop and Approval Workflows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxed-execution-safety-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxed Execution: Safety First
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-collaboration-and-multi-agent-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Collaboration and Multi-Agent Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Collaboration and Multi-Agent Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-multi-agent-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Multi-Agent System Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-safety-the-non-negotiable-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Safety: The Non-Negotiable Foundation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-prompt-engineers-role-in-the-agentic-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Prompt Engineer's Role in the Agentic Era
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -988,6 +1144,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -1004,7 +1166,7 @@
   
   
   
-    <a href="../../lectures/meta-skills/" class="md-nav__link">
+    <a href="../../lectures/" class="md-nav__link">
       
   
   
@@ -1097,6 +1259,8 @@
       
         
           
+        
+      
         
       
     
@@ -1272,9 +1436,165 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#from-chatbot-to-agent" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      From Chatbot to Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-architecture-the-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Architecture: The Blueprint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Architecture: The Blueprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-core-agent-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Core Agent Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-use-and-function-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Use and Function Calling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-and-goal-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planning and Goal Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-feedback-loop-monitor-evaluate-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Feedback Loop: Monitor, Evaluate, Correct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autonomous-workflows-and-task-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autonomous Workflows and Task Automation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-orchestration-and-workflow-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Orchestration and Workflow Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills-and-skill-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills and Skill Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-memory-and-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Memory and Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-in-the-loop-and-approval-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human-in-the-Loop and Approval Workflows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxed-execution-safety-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxed Execution: Safety First
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-collaboration-and-multi-agent-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Collaboration and Multi-Agent Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Collaboration and Multi-Agent Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-multi-agent-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Multi-Agent System Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-safety-the-non-negotiable-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Safety: The Non-Negotiable Foundation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-prompt-engineers-role-in-the-agentic-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Prompt Engineer's Role in the Agentic Era
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1638,400 @@
 
 
 <h1 id="agentic-ai">Agentic AI</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter introduces the rapidly evolving field of agentic AI, where language models go beyond simple question-answering to autonomously plan, execute, and monitor complex multi-step tasks. Students will learn about agent architectures, tool use, function calling, and the planning-execution-feedback loop that enables autonomous workflows. The chapter covers agent orchestration, skill libraries, multi-agent systems, and critical safety considerations including human-in-the-loop approval workflows and sandboxed execution. Students will gain practical skills in designing, building, and safely deploying AI agent systems.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Prompt Crafters!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Let's craft the perfect prompt! Actually, in this chapter, we are going to craft prompts that craft <em>other</em> prompts, use tools, make plans, and even check their own work. Welcome to the world of agentic AI — where language models stop waiting for instructions and start <em>doing things</em>. Grab a seat and hold onto your feathers. This one is going to be a ride.</p>
+</div>
+<h2 id="from-chatbot-to-agent">From Chatbot to Agent</h2>
+<p>In the previous chapters, you learned how to write prompts that get great answers from language models. You ask a question, you get a response. You refine your prompt, you get a better response. That pattern — human asks, model answers — has been the foundation of everything so far. But what if the model could do more than just answer?</p>
+<p>An <strong>AI agent</strong> is a software system that uses a language model as its reasoning engine to autonomously plan, decide, and take actions to achieve a goal. Instead of simply responding to a single prompt, an agent receives a high-level objective, breaks it into steps, selects tools to accomplish each step, executes them, evaluates the results, and adjusts its plan as needed. The human sets the destination; the agent figures out how to get there.</p>
+<p>This is a fundamental shift. A chatbot is like a reference librarian — you ask questions and get helpful answers. An AI agent is more like a research assistant — you describe what you need, and it goes off to gather data, write drafts, check facts, and come back with a finished product. The difference is autonomy.</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Chatbot</th>
+<th>AI Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interaction style</td>
+<td>Question and answer</td>
+<td>Goal-driven, autonomous</td>
+</tr>
+<tr>
+<td>Number of steps</td>
+<td>Single turn or multi-turn conversation</td>
+<td>Many steps, often dozens</td>
+</tr>
+<tr>
+<td>Tool use</td>
+<td>None (text only)</td>
+<td>Can call APIs, run code, search the web</td>
+</tr>
+<tr>
+<td>Planning</td>
+<td>None</td>
+<td>Decomposes goals into sub-tasks</td>
+</tr>
+<tr>
+<td>Self-correction</td>
+<td>Only if human asks for revision</td>
+<td>Monitors results and adjusts automatically</td>
+</tr>
+<tr>
+<td>Human involvement</td>
+<td>Every step</td>
+<td>Sets the goal, reviews the outcome</td>
+</tr>
+</tbody>
+</table>
+<p>Why does this matter for prompt engineering? Because the prompts that drive agents are fundamentally different from the prompts you write in a chat window. Agent prompts define <em>roles</em>, <em>capabilities</em>, <em>constraints</em>, and <em>decision-making frameworks</em>. Writing them well is one of the most valuable skills in AI today.</p>
+<h2 id="agent-architecture-the-blueprint">Agent Architecture: The Blueprint</h2>
+<p>An <strong>agent architecture</strong> is the structural design that defines how an AI agent's components — its language model brain, its tools, its memory, and its control logic — are organized and interact with each other. Just as a building needs an architectural plan before construction begins, an agent needs a clear architecture before it can function reliably.</p>
+<p>The simplest agent architecture follows a loop: the model receives a goal, generates a plan, executes one step, observes the result, and then decides what to do next. This is sometimes called the "reason-act-observe" loop, or ReAct for short. More sophisticated architectures add layers of planning, memory management, error handling, and safety checks.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Insight</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking deeply">
+Here is a thought worth perching on: the language model inside an agent is not the whole agent. It is the <em>brain</em> of the agent, but the agent also includes tools, memory systems, safety guardrails, and orchestration logic. Thinking of the model as the entire agent is like thinking the CPU is the entire computer. The architecture around the model is what turns raw intelligence into reliable action.</p>
+</div>
+<p>Most agent architectures include these core components:</p>
+<ul>
+<li><strong>Reasoning engine</strong> — The language model that interprets goals, makes decisions, and generates plans</li>
+<li><strong>Tool interface</strong> — The mechanism that allows the agent to interact with external systems</li>
+<li><strong>Memory system</strong> — Storage for conversation history, task state, and learned information</li>
+<li><strong>Planner</strong> — Logic that decomposes high-level goals into executable steps</li>
+<li><strong>Executor</strong> — The component that carries out individual actions</li>
+<li><strong>Monitor</strong> — Logic that evaluates results and decides whether to continue, retry, or escalate</li>
+</ul>
+<details>
+<summary>Show/Hide Diagram</summary>
+<h4 id="diagram-core-agent-architecture">Diagram: Core Agent Architecture</h4>
+<p>This diagram should be rendered as a Mermaid flowchart showing the fundamental components of an AI agent and how they interact in a loop.</p>
+<p><strong>Structure:</strong>
+A "User Goal" node feeds into a "Planner" node. The Planner connects to an "Action Selection" node. Action Selection connects to an "Executor" node. The Executor connects to "Tools" (with sub-labels: APIs, Code Runner, Search, File System). Tools connect to an "Observation" node representing the result. Observation connects to a "Monitor" node. The Monitor has two paths: one loops back to the Planner (labeled "Adjust plan") and one goes to "Final Output" (labeled "Goal achieved"). An "Agent Memory" node sits to the side, connected bidirectionally to both the Planner and the Monitor. A "Reasoning Engine (LLM)" node sits at the top, connected to Planner, Action Selection, and Monitor to show it powers all three.</p>
+<pre class="mermaid"><code>flowchart TD
+    UG["User Goal"] --&gt; PL["Planner"]
+    LLM["Reasoning Engine\n(Language Model)"] -.-&gt; PL
+    LLM -.-&gt; AS
+    LLM -.-&gt; MON
+    PL --&gt; AS["Action Selection"]
+    AS --&gt; EX["Executor"]
+    EX --&gt; TOOLS["Tools\n(APIs, Code Runner,\nSearch, File System)"]
+    TOOLS --&gt; OBS["Observation\n(Result)"]
+    OBS --&gt; MON["Monitor"]
+    MON --&gt;|"Adjust plan"| PL
+    MON --&gt;|"Goal achieved"| OUT["Final Output"]
+    MEM["Agent Memory"] &lt;--&gt; PL
+    MEM &lt;--&gt; MON</code></pre>
+</details>
+<h2 id="tool-use-and-function-calling">Tool Use and Function Calling</h2>
+<p>An agent that can only generate text is like a carpenter who can only describe furniture. To be truly useful, agents need hands — they need the ability to interact with the world. This is where <strong>tool use</strong> comes in.</p>
+<p><strong>Tool use</strong> is the ability of an AI agent to invoke external tools — such as search engines, calculators, code interpreters, databases, or APIs — to accomplish tasks that go beyond text generation. When an agent needs current weather data, it calls a weather API. When it needs to solve a complex equation, it calls a calculator. When it needs to create a chart, it runs code in a sandbox.</p>
+<p><strong>Function calling</strong> is the specific technical mechanism by which a language model requests the execution of a predefined function. The model generates a structured output (typically JSON) that specifies which function to call and what arguments to pass. The system executes the function and returns the result to the model for further processing.</p>
+<p>Here is what function calling looks like in practice:</p>
+<ol>
+<li>The developer defines available functions with names, descriptions, and parameter schemas</li>
+<li>The user gives the agent a task (e.g., "What is the weather in Minneapolis?")</li>
+<li>The language model decides it needs the <code>get_weather</code> function and outputs: <code>{"function": "get_weather", "arguments": {"city": "Minneapolis"}}</code></li>
+<li>The system executes the function and gets: <code>{"temperature": 72, "condition": "sunny"}</code></li>
+<li>The model receives the result and incorporates it into its response: "It is currently 72 degrees and sunny in Minneapolis."</li>
+</ol>
+<p>The key insight is that the model never actually runs the function itself. It <em>requests</em> that the function be run, and the surrounding system handles the execution. This separation is critical for security — it means you can control exactly which functions the agent can access and add safety checks before any function is executed.</p>
+<p>Common categories of tools include:</p>
+<ul>
+<li><strong>Information retrieval</strong> — Web search, database queries, document lookup</li>
+<li><strong>Computation</strong> — Calculators, code execution, data analysis</li>
+<li><strong>Communication</strong> — Sending emails, posting messages, creating tickets</li>
+<li><strong>File operations</strong> — Reading, writing, and editing files</li>
+<li><strong>System control</strong> — Managing configurations, deploying code, running tests</li>
+</ul>
+<h2 id="planning-and-goal-decomposition">Planning and Goal Decomposition</h2>
+<p>Give a human the task "organize a company retreat for 50 people" and they instinctively break it down: find a venue, set a date, plan activities, arrange catering, send invitations. AI agents need to do the same thing, and the quality of their planning directly determines the quality of their results.</p>
+<p><strong>Planning</strong> is the process by which an AI agent analyzes a high-level goal and creates a structured sequence of steps to achieve it. Good planning considers dependencies (you need a venue before you can send directions), resource constraints (budget limits, time limits), and potential obstacles (what if the first-choice venue is booked?).</p>
+<p><strong>Goal decomposition</strong> is the specific technique of breaking a large, complex goal into smaller, manageable sub-goals. Each sub-goal should be concrete enough that the agent can accomplish it with available tools in a reasonable number of steps.</p>
+<p>Effective goal decomposition follows these principles:</p>
+<ul>
+<li><strong>Completeness</strong> — The sub-goals, taken together, should fully achieve the original goal</li>
+<li><strong>Independence</strong> — Where possible, sub-goals should be independent so they can be executed in parallel</li>
+<li><strong>Measurability</strong> — Each sub-goal should have clear success criteria so the agent knows when it is done</li>
+<li><strong>Feasibility</strong> — Each sub-goal should be achievable with the agent's available tools and capabilities</li>
+</ul>
+<p>After decomposition comes <strong>action selection</strong> — the process by which an agent chooses which specific action to take next from among the available options. At each step, the agent considers the current state of the task, the remaining sub-goals, and the tools available, then selects the action most likely to make progress. This is where the language model's reasoning ability shines, weighing trade-offs and making judgment calls just as a human would.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Use your words — specifically, tell your agent <em>how</em> to plan! Including planning instructions in your agent's system prompt dramatically improves performance. For example: "Before taking any action, write out your plan as a numbered list. After each step, evaluate whether the plan needs adjustment." Explicit planning prompts turn implicit reasoning into visible, debuggable strategy.</p>
+</div>
+<h2 id="the-feedback-loop-monitor-evaluate-correct">The Feedback Loop: Monitor, Evaluate, Correct</h2>
+<p>The difference between a simple script and an intelligent agent is what happens when things go wrong. A script follows its instructions blindly. An agent notices problems and adapts.</p>
+<p><strong>Execution monitoring</strong> is the process by which an agent observes the results of its actions and evaluates whether they are moving toward the goal. After every tool call or action, the agent examines the output: Did the API return valid data? Did the code run without errors? Does the result make sense in context?</p>
+<p>A <strong>feedback loop</strong> is the cyclical process of acting, observing results, evaluating performance, and adjusting future actions based on what was learned. This loop is what makes agents capable of handling real-world complexity, where unexpected situations are the norm rather than the exception.</p>
+<p><strong>Self-correction</strong> is the agent's ability to detect its own errors and take corrective action without human intervention. If a database query returns no results, the agent might reformulate the query. If generated code fails to compile, the agent reads the error message and fixes the bug. If a plan step turns out to be unnecessary, the agent skips it and moves on.</p>
+<p>This ability to self-correct is one of the most powerful aspects of agentic AI. Consider this example of <strong>multi-step reasoning</strong> — the capacity to chain together multiple logical steps, maintaining coherence across a sequence of thoughts and actions that build on each other:</p>
+<ol>
+<li>Agent receives goal: "Find the three most-cited papers on transformer architectures published in 2024"</li>
+<li>Agent searches an academic database — gets 200 results</li>
+<li>Agent sorts by citation count — notices the top result is from 2023, not 2024</li>
+<li>Agent self-corrects: refines the date filter and re-queries</li>
+<li>Agent gets clean results, extracts the top three, and summarizes each one</li>
+<li>Agent verifies that all three are indeed from 2024 and about transformers</li>
+<li>Agent presents the final answer with citations</li>
+</ol>
+<p>Without self-correction, the agent would have returned incorrect results at step 3. The feedback loop caught the error and fixed it automatically. This is the essence of reliable agentic behavior.</p>
+<h2 id="autonomous-workflows-and-task-automation">Autonomous Workflows and Task Automation</h2>
+<p>An <strong>autonomous workflow</strong> is a sequence of tasks that an AI agent executes from start to finish with minimal or no human intervention. Once initiated, the agent manages the entire process — making decisions, handling exceptions, and delivering results.</p>
+<p><strong>Task automation</strong> is the use of AI agents to perform repetitive or complex tasks that would otherwise require human effort. While traditional automation (scripts, macros, RPA bots) follows rigid rules, agent-based automation can handle variability, ambiguity, and novel situations because the language model provides flexible reasoning.</p>
+<p>Here are examples of autonomous workflows that agents can handle today:</p>
+<ul>
+<li><strong>Code review automation</strong> — An agent reads a pull request, checks for bugs, style violations, and security issues, writes review comments, and suggests fixes</li>
+<li><strong>Research synthesis</strong> — An agent searches multiple databases, reads papers, extracts key findings, identifies contradictions, and writes a summary report</li>
+<li><strong>Data pipeline management</strong> — An agent monitors data quality, detects anomalies, diagnoses root causes, and applies corrections</li>
+<li><strong>Customer support triage</strong> — An agent reads incoming tickets, categorizes them, gathers relevant context, drafts responses, and routes complex issues to humans</li>
+</ul>
+<p>The boundary between what agents can and should automate is constantly expanding. The general rule: automate tasks that are repetitive, well-defined, and low-risk first. (Telling an agent to "redesign the entire product strategy" on day one is how you end up in a LinkedIn cautionary tale.)</p>
+<h2 id="agent-orchestration-and-workflow-design">Agent Orchestration and Workflow Design</h2>
+<p>When agents get complex, you need a conductor. <strong>Agent orchestration</strong> is the coordination and management of one or more AI agents as they execute tasks, ensuring proper sequencing, resource allocation, error handling, and communication between components.</p>
+<p><strong>Workflow design</strong> is the process of defining the structure, sequence, and decision points of an automated process before building it. Good workflow design is like good architecture — it makes the complex feel simple and the fragile feel robust.</p>
+<p><strong>Pipeline construction</strong> is the practice of assembling a series of processing stages — where the output of one stage becomes the input of the next — into a coherent automated pipeline. Pipelines are the backbone of most production agent systems.</p>
+<p>A well-designed agent pipeline might look like this:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Purpose</th>
+<th>Tools Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Input Processing</td>
+<td>Parse and validate the user's request</td>
+<td>Text parser, schema validator</td>
+</tr>
+<tr>
+<td>2. Planning</td>
+<td>Decompose the goal into sub-tasks</td>
+<td>Language model reasoning</td>
+</tr>
+<tr>
+<td>3. Information Gathering</td>
+<td>Collect necessary data</td>
+<td>Search APIs, databases, file readers</td>
+</tr>
+<tr>
+<td>4. Processing</td>
+<td>Transform and analyze the data</td>
+<td>Code interpreter, calculators</td>
+</tr>
+<tr>
+<td>5. Quality Check</td>
+<td>Verify results meet requirements</td>
+<td>Validation rules, second model review</td>
+</tr>
+<tr>
+<td>6. Output Generation</td>
+<td>Format and present results</td>
+<td>Template engine, document generator</td>
+</tr>
+<tr>
+<td>7. Logging</td>
+<td>Record the full execution trace</td>
+<td>Logging system, audit trail</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Insight</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking deeply">
+Words matter — let's get them right! When designing agent workflows, resist the temptation to build one giant, do-everything agent. Instead, design specialized agents for specific tasks and orchestrate them together. A focused agent that does one thing well is far more reliable than a generalist agent that tries to do everything. This is the same principle that makes microservices more robust than monolithic applications.</p>
+</div>
+<h2 id="skills-and-skill-libraries">Skills and Skill Libraries</h2>
+<p>A <strong>skill</strong> is a reusable, well-defined capability that an agent can invoke to accomplish a specific type of task. Skills encapsulate both the knowledge of <em>how</em> to do something and the tools needed to do it. Think of a skill as a recipe — it includes the ingredients (tools), the steps (logic), and the expected result (output format).</p>
+<p>Examples of agent skills include:</p>
+<ul>
+<li><strong>Web research</strong> — Search the web, evaluate source credibility, extract key information, and synthesize findings</li>
+<li><strong>Code generation</strong> — Write code in a specified language, test it, and iterate until tests pass</li>
+<li><strong>Data analysis</strong> — Load a dataset, compute statistics, generate visualizations, and write interpretive summaries</li>
+<li><strong>Document drafting</strong> — Create structured documents with proper formatting, citations, and consistent style</li>
+<li><strong>Meeting scheduling</strong> — Check calendars, find available times, propose options, and send invitations</li>
+</ul>
+<p>A <strong>skill library</strong> is a curated collection of skills that an agent can draw from when deciding how to accomplish a task. The skill library defines what the agent <em>can</em> do, just as a toolbox defines what a carpenter <em>can</em> build. A larger, better-organized skill library makes the agent more capable and more flexible.</p>
+<p>Well-designed skill libraries share these characteristics:</p>
+<ul>
+<li><strong>Discoverability</strong> — Skills have clear names and descriptions so the agent can find the right one</li>
+<li><strong>Composability</strong> — Skills can be combined to handle complex tasks (e.g., "web research" + "document drafting" = "write a research report")</li>
+<li><strong>Versioning</strong> — Skills can be updated without breaking existing workflows</li>
+<li><strong>Testing</strong> — Each skill has test cases that verify it works correctly</li>
+</ul>
+<h2 id="agent-memory-and-context">Agent Memory and Context</h2>
+<p>How does an agent remember what it has done, what it has learned, and what it is supposed to be doing? This is the domain of <strong>agent memory</strong> and <strong>agent context</strong>, two concepts that are essential for agents that handle complex, long-running tasks.</p>
+<p><strong>Agent memory</strong> is the system that stores and retrieves information across an agent's actions and sessions. Agent memory typically operates at multiple levels:</p>
+<ul>
+<li><strong>Working memory</strong> — The current context window contents: the active plan, recent tool results, and immediate task state. This is analogous to a human's short-term memory.</li>
+<li><strong>Episodic memory</strong> — Records of past actions and their outcomes, allowing the agent to learn from experience. "Last time I searched this database with broad terms, I got too many results. I should use specific filters."</li>
+<li><strong>Semantic memory</strong> — Long-term knowledge the agent has accumulated, such as user preferences, domain-specific facts, or organizational conventions.</li>
+</ul>
+<p><strong>Agent context</strong> is the complete set of information available to an agent at any given moment — including the current goal, the plan, the conversation history, tool results, and relevant memory. Managing context well is critical because language models have finite context windows. A 200-step task generates far more information than any model can hold at once, so the agent architecture must decide what to keep, what to summarize, and what to discard.</p>
+<p>Effective context management strategies include:</p>
+<ul>
+<li><strong>Summarization</strong> — Periodically compressing long histories into concise summaries</li>
+<li><strong>Relevance filtering</strong> — Only loading memories and context that are relevant to the current step</li>
+<li><strong>External storage</strong> — Offloading detailed records to databases and retrieving them on demand</li>
+<li><strong>Hierarchical context</strong> — Maintaining a high-level summary of the overall task alongside detailed information about the current sub-task</li>
+</ul>
+<h2 id="human-in-the-loop-and-approval-workflows">Human-in-the-Loop and Approval Workflows</h2>
+<p>Not everything should be automated. Some decisions are too important, too sensitive, or too ambiguous for an agent to make alone. This is where <strong>human-in-the-loop</strong> design comes in.</p>
+<p><strong>Human-in-the-loop</strong> (HITL) is a design pattern where an AI agent pauses at critical decision points to request human review, approval, or guidance before proceeding. The human is literally "in the loop" — part of the agent's execution cycle.</p>
+<p>An <strong>approval workflow</strong> is a structured process that requires explicit human authorization before an agent takes certain high-impact actions. Approval workflows define which actions need approval, who can grant it, and what happens if approval is denied.</p>
+<p>Actions that typically require human approval include:</p>
+<ul>
+<li>Sending communications (emails, messages, social media posts)</li>
+<li>Making financial transactions (purchases, payments, transfers)</li>
+<li>Modifying production systems (deploying code, changing configurations)</li>
+<li>Deleting or overwriting data</li>
+<li>Sharing confidential information</li>
+<li>Making commitments on behalf of the organization</li>
+</ul>
+<p>The key design question is: where in the workflow do you place the human? Too early, and the agent cannot accomplish anything without constant hand-holding. Too late, and the agent might take irreversible actions before the human can intervene. The sweet spot is usually at the boundary between planning and execution — let the agent plan freely, but require approval before executing high-impact steps.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Important Warning</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a warning">
+Time to talk to AI — but make sure you stay in the loop! Never deploy an agent with unrestricted authority in a production environment. Even the most capable agents can misinterpret goals, hallucinate facts, or take unexpected actions. Human-in-the-loop is not a sign that your agent is not good enough. It is a sign that your design is mature enough to account for real-world risk.</p>
+</div>
+<h2 id="sandboxed-execution-safety-first">Sandboxed Execution: Safety First</h2>
+<p><strong>Sandboxed execution</strong> is the practice of running an AI agent's actions within a restricted, isolated environment that limits what the agent can access and affect. A sandbox is like a playpen for code — the agent can do whatever it wants inside the sandbox, but it cannot reach anything outside of it.</p>
+<p>Sandboxing is essential for agent safety because agents that can run code, call APIs, and modify files have the potential to cause real damage. A coding agent that runs user-supplied code without a sandbox could delete files, exfiltrate data, or consume unlimited computing resources. A web-browsing agent without restrictions could visit malicious sites or inadvertently trigger harmful actions.</p>
+<p>Effective sandboxing strategies include:</p>
+<ul>
+<li><strong>Container isolation</strong> — Running agent code inside Docker containers or virtual machines with limited permissions</li>
+<li><strong>Network restrictions</strong> — Controlling which external services the agent can communicate with</li>
+<li><strong>File system boundaries</strong> — Restricting which directories the agent can read from and write to</li>
+<li><strong>Resource limits</strong> — Capping CPU, memory, and disk usage to prevent runaway processes</li>
+<li><strong>Time limits</strong> — Automatically terminating actions that run longer than expected</li>
+<li><strong>Permission scoping</strong> — Giving the agent only the minimum permissions needed for its task (principle of least privilege)</li>
+</ul>
+<h2 id="agent-collaboration-and-multi-agent-systems">Agent Collaboration and Multi-Agent Systems</h2>
+<p>Some tasks are too complex or too broad for a single agent. Just as human organizations divide labor across teams, AI systems can divide work across multiple specialized agents.</p>
+<p><strong>Agent collaboration</strong> is the ability of multiple AI agents to work together on a shared task, dividing responsibilities, sharing information, and coordinating their actions. Collaboration can take many forms — agents might work sequentially (one finishes, the next begins), in parallel (multiple agents work simultaneously on different sub-tasks), or in a hierarchical structure (a manager agent delegates to worker agents).</p>
+<p><strong>Multi-agent systems</strong> are architectures in which two or more AI agents interact to accomplish goals that would be difficult or impossible for a single agent. Each agent in the system has its own specialization, tools, and area of responsibility.</p>
+<p>Common multi-agent patterns include:</p>
+<ul>
+<li><strong>Manager-worker</strong> — One agent plans and delegates; worker agents execute specific tasks and report back</li>
+<li><strong>Pipeline</strong> — Agents are arranged in sequence, each one processing and passing along its output</li>
+<li><strong>Debate</strong> — Two agents argue opposing perspectives, and a third agent synthesizes the best answer</li>
+<li><strong>Review</strong> — One agent produces work, another agent critiques it, and the first agent revises based on feedback</li>
+<li><strong>Ensemble</strong> — Multiple agents independently solve the same problem, and their answers are combined (majority vote, best-of-N, etc.)</li>
+</ul>
+<p>Here is a concrete example of a multi-agent research system:</p>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Role</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Research Manager</td>
+<td>Decomposes research question, delegates sub-questions, synthesizes final report</td>
+<td>Planning tools, communication with other agents</td>
+</tr>
+<tr>
+<td>Literature Agent</td>
+<td>Searches academic databases, retrieves and summarizes papers</td>
+<td>Search APIs, PDF reader, citation manager</td>
+</tr>
+<tr>
+<td>Data Agent</td>
+<td>Finds and analyzes relevant datasets</td>
+<td>Database connectors, code interpreter, statistics tools</td>
+</tr>
+<tr>
+<td>Writing Agent</td>
+<td>Drafts sections of the report based on gathered findings</td>
+<td>Document templates, grammar checker, formatting tools</td>
+</tr>
+<tr>
+<td>Review Agent</td>
+<td>Critiques drafts for accuracy, coherence, and completeness</td>
+<td>Fact-checking tools, style guide reference</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Show/Hide Diagram</summary>
+<h4 id="diagram-multi-agent-system-architecture">Diagram: Multi-Agent System Architecture</h4>
+<p>This diagram should be rendered as a Mermaid flowchart showing a manager-worker multi-agent pattern with a feedback review cycle.</p>
+<p><strong>Structure:</strong>
+A "User" node sends a goal to a "Manager Agent" node. The Manager Agent connects to three "Worker Agent" nodes (labeled Worker Agent A, Worker Agent B, Worker Agent C) with arrows labeled "Delegate sub-task." Each Worker Agent has its own "Tools" node attached. All three Worker Agents send their results back to the Manager Agent (arrows labeled "Return results"). The Manager Agent then sends the combined output to a "Review Agent" node. The Review Agent has two paths: one labeled "Approved" goes to "Final Output" and one labeled "Revisions needed" loops back to the Manager Agent. A "Shared Memory" node sits at the bottom, connected to the Manager Agent and all Worker Agents.</p>
+<pre class="mermaid"><code>flowchart TD
+    USER["User"] --&gt;|"Sets goal"| MGR["Manager Agent"]
+    MGR --&gt;|"Delegate sub-task"| WA["Worker Agent A"]
+    MGR --&gt;|"Delegate sub-task"| WB["Worker Agent B"]
+    MGR --&gt;|"Delegate sub-task"| WC["Worker Agent C"]
+    WA --- TA["Tools A\n(Search, APIs)"]
+    WB --- TB["Tools B\n(Code, Data)"]
+    WC --- TC["Tools C\n(Writing, Formatting)"]
+    WA --&gt;|"Return results"| MGR
+    WB --&gt;|"Return results"| MGR
+    WC --&gt;|"Return results"| MGR
+    MGR --&gt; REV["Review Agent"]
+    REV --&gt;|"Approved"| OUT["Final Output"]
+    REV --&gt;|"Revisions needed"| MGR
+    SM["Shared Memory"] &lt;--&gt; MGR
+    SM &lt;--&gt; WA
+    SM &lt;--&gt; WB
+    SM &lt;--&gt; WC</code></pre>
+</details>
+<h2 id="agent-safety-the-non-negotiable-foundation">Agent Safety: The Non-Negotiable Foundation</h2>
+<p>All the capabilities we have discussed in this chapter — tool use, autonomous workflows, multi-agent collaboration — are powerful. And with great power comes... well, you know the rest. <strong>Agent safety</strong> is the comprehensive set of practices, constraints, and design principles that ensure AI agents operate reliably, predictably, and without causing harm.</p>
+<p>Agent safety is not a feature you bolt on at the end. It is a design principle you embed from the beginning. The most common safety failures happen not because agents are malicious but because they are <em>too eager to help</em>. An agent asked to "clean up the test database" might interpret that as "delete everything." An agent told to "reduce costs" might cancel essential services. Agents do what you tell them — the problem is that what you <em>tell</em> them and what you <em>mean</em> often differ.</p>
+<p>Core agent safety principles include:</p>
+<ul>
+<li><strong>Least privilege</strong> — Give agents only the minimum permissions needed for their task. A research agent does not need write access to production databases.</li>
+<li><strong>Reversibility</strong> — Prefer reversible actions over irreversible ones. An agent should create a draft email, not send it immediately.</li>
+<li><strong>Transparency</strong> — Agents should log every action they take and every decision they make, creating an audit trail that humans can review.</li>
+<li><strong>Graceful degradation</strong> — When something goes wrong, agents should fail safely — pause, alert a human, and preserve the current state rather than plowing forward.</li>
+<li><strong>Scope limitation</strong> — Clearly define the boundaries of what an agent can and cannot do. Ambiguous scope leads to unexpected behavior.</li>
+<li><strong>Testing and monitoring</strong> — Continuously test agent behavior in safe environments before deploying to production, and monitor production agents for anomalies.</li>
+</ul>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">You Can Do This!</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Polly encouraging you">
+Agentic AI can feel overwhelming — there are a lot of moving parts! But remember, you do not need to build a multi-agent research system on day one. Start with a simple agent that uses one or two tools, add a feedback loop, test it thoroughly, and grow from there. Every expert agent builder started by making a bot that could call a single API. You have already learned the hardest part: how to write clear, effective prompts. Everything else is architecture.</p>
+</div>
+<h2 id="the-prompt-engineers-role-in-the-agentic-era">The Prompt Engineer's Role in the Agentic Era</h2>
+<p>Here is something that might surprise you: as AI systems become more autonomous, prompt engineering becomes <em>more</em> important, not less. Why? Because in the agentic era, prompts are not just questions — they are <em>instructions for autonomous behavior</em>. The system prompt for an agent defines its personality, its capabilities, its constraints, its decision-making framework, and its safety boundaries. Getting those prompts wrong does not just produce a bad answer — it produces a bad <em>agent</em> that takes bad <em>actions</em>.</p>
+<p>The skills you have built throughout this course — clear communication, structured thinking, context management, output formatting — are exactly the skills you need to design effective agents. You know how to write role assignments (Chapter 4). You know how to manage context windows (Chapter 7). You know how to think about security (Chapter 11). Agent design is the synthesis of everything you have learned, applied to a system that acts on its own.</p>
+<p>The future of work with AI is not "humans vs. agents." It is humans and agents working together, each contributing what they do best. Humans provide judgment, values, creativity, and accountability. Agents provide speed, consistency, tirelessness, and the ability to juggle a hundred tasks at once. Great prompt engineering is the bridge between the two.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Outstanding Progress!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Let's craft the perfect prompt — for your first agent! You now understand how AI agents plan, reason, act, and learn from their results. You know about tool use, function calling, skill libraries, multi-agent systems, and the critical safety principles that keep everything on track. You are not just writing prompts anymore — you are designing autonomous systems. And that, fellow prompt crafters, is a superpower worth squawking about.</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>An <strong>AI agent</strong> uses a language model as its reasoning engine to autonomously plan, decide, and act toward a goal, going far beyond simple question-and-answer interactions.</li>
+<li><strong>Agent architecture</strong> defines how the reasoning engine, tools, memory, planner, executor, and monitor work together in a structured loop.</li>
+<li><strong>Tool use</strong> gives agents the ability to interact with the world through APIs, code interpreters, search engines, and file systems, while <strong>function calling</strong> is the structured mechanism models use to request tool execution.</li>
+<li><strong>Planning</strong> and <strong>goal decomposition</strong> allow agents to break complex objectives into manageable sub-tasks with clear success criteria.</li>
+<li><strong>Action selection</strong> is the decision process where an agent chooses its next step based on current state, remaining goals, and available tools.</li>
+<li><strong>Execution monitoring</strong>, <strong>feedback loops</strong>, and <strong>self-correction</strong> enable agents to detect errors and adapt their approach without human intervention.</li>
+<li><strong>Multi-step reasoning</strong> allows agents to chain logical steps together while maintaining coherence across extended task sequences.</li>
+<li><strong>Autonomous workflows</strong> and <strong>task automation</strong> apply agent capabilities to real-world processes, from code review to research synthesis.</li>
+<li><strong>Agent orchestration</strong>, <strong>workflow design</strong>, and <strong>pipeline construction</strong> are the disciplines of coordinating complex agent systems with proper sequencing and error handling.</li>
+<li><strong>Skills</strong> are reusable agent capabilities, and <strong>skill libraries</strong> are curated collections that define what an agent can do.</li>
+<li><strong>Agent memory</strong> (working, episodic, semantic) and <strong>agent context</strong> management are essential for agents handling long-running, complex tasks.</li>
+<li><strong>Human-in-the-loop</strong> design and <strong>approval workflows</strong> ensure that high-impact decisions receive human review before execution.</li>
+<li><strong>Sandboxed execution</strong> isolates agent actions in restricted environments to prevent unintended damage.</li>
+<li><strong>Agent collaboration</strong> and <strong>multi-agent systems</strong> divide complex work across specialized agents using patterns like manager-worker, pipeline, debate, and review.</li>
+<li><strong>Agent safety</strong> is a foundational design principle encompassing least privilege, reversibility, transparency, graceful degradation, scope limitation, and continuous monitoring.</li>
+</ul>
+<hr />
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>AI Agent</li>
@@ -1354,19 +2066,16 @@
 <li><a href="../01-ai-ml-foundations/">Chapter 1: AI and Machine Learning Foundations</a></li>
 <li><a href="../02-prompt-fundamentals/">Chapter 2: Prompt Fundamentals</a></li>
 <li><a href="../03-prompt-types-parameters/">Chapter 3: Prompt Types and Model Parameters</a></li>
-<li><a href="../04-core-prompt-techniques/">Chapter 4: Core Prompt Techniques</a></li>
-<li><a href="../05-advanced-prompt-techniques/">Chapter 5: Advanced Prompt Techniques</a></li>
-<li><a href="../07-context-memory-management/">Chapter 7: Context, Memory, and Information Management</a></li>
-<li><a href="../11-prompt-security/">Chapter 11: Prompt Security</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

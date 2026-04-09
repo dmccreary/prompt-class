@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="A comprehensive guide to systematically measuring, testing, and improving the performance of prompts and AI agents using A/B testing, benchmark testing, quality rubric design, human and automated evaluation, token efficiency strategies, batch processing, model selection, and performance monitoring.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>13. Evaluation and Optimization - Prompt Engineering Class</title>
+        <title>Evaluation and Optimization - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              13. Evaluation and Optimization
+              Evaluation and Optimization
             
           </span>
         </div>
@@ -684,7 +684,7 @@
   
   
   <span class="md-ellipsis">
-    8. Retrieval-Augmented Generation
+    8. Retrieval-Augmented Generation and GraphRAG
     
   </span>
   
@@ -844,9 +844,165 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-evaluation-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Evaluation Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-evaluation-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Evaluation: The Foundation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-metrics-what-to-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation Metrics: What to Measure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ab-testing-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B Testing Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-evaluation-vs-automated-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Evaluation vs. Automated Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-rubric-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Rubric Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmark Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmark Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-benchmark-testing-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Benchmark Testing Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-evaluation-beyond-single-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Evaluation: Beyond Single Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliability-error-recovery-and-retry-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliability, Error Recovery, and Retry Logic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Efficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection-and-model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection and Model Comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Selection and Model Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-model-selection-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Model Selection Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-evaluation-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: The Evaluation Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -988,6 +1144,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -1004,7 +1166,7 @@
   
   
   
-    <a href="../../lectures/meta-skills/" class="md-nav__link">
+    <a href="../../lectures/" class="md-nav__link">
       
   
   
@@ -1097,6 +1259,8 @@
       
         
           
+        
+      
         
       
     
@@ -1272,9 +1436,165 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-evaluation-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Evaluation Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-evaluation-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Evaluation: The Foundation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-metrics-what-to-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation Metrics: What to Measure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ab-testing-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B Testing Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-evaluation-vs-automated-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Evaluation vs. Automated Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-rubric-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Rubric Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmark Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmark Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-benchmark-testing-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Benchmark Testing Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-evaluation-beyond-single-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Evaluation: Beyond Single Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliability-error-recovery-and-retry-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliability, Error Recovery, and Retry Logic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Efficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection-and-model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection and Model Comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Selection and Model Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-model-selection-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Model Selection Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-evaluation-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: The Evaluation Lifecycle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1638,449 @@
 
 
 <h1 id="evaluation-and-optimization">Evaluation and Optimization</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter provides systematic approaches to measuring, testing, and improving the performance of both prompts and AI agents. Students will learn evaluation methodologies including A/B testing, benchmark testing, and quality rubric design for both human and automated assessment. The chapter covers agent-specific evaluation concerns such as reliability, error recovery, and retry logic. Students will also explore practical optimization strategies including token efficiency, batch processing, model selection, and performance monitoring to build robust, production-ready AI systems.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Prompt Crafters!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Words matter — let's get them right! And in this chapter, we are going to find out exactly <em>how right</em> our words are. Welcome to the science of evaluation and optimization — where we stop guessing whether our prompts are good and start <em>measuring</em> it. Polly has her clipboard ready. Let's go!</p>
+</div>
+<h2 id="why-evaluation-matters">Why Evaluation Matters</h2>
+<p>You have spent the previous chapters learning to write effective prompts, build multi-step chains, and even design autonomous agents. But here is a question that separates hobbyists from professionals: <em>How do you know your prompts actually work well?</em></p>
+<p>"It seemed pretty good" is not a measurement strategy. In any engineering discipline, if you cannot measure it, you cannot improve it. Prompt engineering is no different. A prompt that works beautifully for one example might fail spectacularly on the next ten. A chatbot that seems helpful in casual testing might produce embarrassing errors when real users interact with it. An agent that completes tasks in your demo might stall, loop, or hallucinate in production.</p>
+<p><strong>Prompt evaluation</strong> is the systematic process of measuring the quality, accuracy, consistency, and usefulness of outputs generated by a language model in response to specific prompts. It is the bridge between "I think this works" and "I have evidence this works." Without evaluation, you are flying blind — and in a field where a single poorly worded prompt can produce confidently wrong answers, flying blind is not an option.</p>
+<table>
+<thead>
+<tr>
+<th>What You Think</th>
+<th>What Evaluation Reveals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"My prompt gives great answers"</td>
+<td>It gives great answers 73% of the time; 27% have factual errors</td>
+</tr>
+<tr>
+<td>"Version B is better"</td>
+<td>Version A actually scores higher on clarity and accuracy metrics</td>
+</tr>
+<tr>
+<td>"The agent handles errors fine"</td>
+<td>The agent recovers from 4 of 7 common error types but crashes on the other 3</td>
+</tr>
+<tr>
+<td>"This model is the best choice"</td>
+<td>A cheaper model produces equivalent quality at 40% of the cost</td>
+</tr>
+</tbody>
+</table>
+<p>The good news? Evaluation does not have to be complicated. You can start with simple side-by-side comparisons and build up to automated testing pipelines as your needs grow. The key is to start measuring <em>something</em> — because any measurement is better than none.</p>
+<h2 id="prompt-evaluation-the-foundation">Prompt Evaluation: The Foundation</h2>
+<p><strong>Prompt evaluation</strong> is the practice of systematically assessing how well a prompt performs across a range of inputs, using defined criteria and repeatable methods. Think of it like quality control in a factory. You would not ship a product without testing it, and you should not deploy a prompt without evaluating it.</p>
+<p>The simplest form of prompt evaluation is to run your prompt against a set of test inputs and examine the outputs. Did the model follow the instructions? Was the output accurate? Was it formatted correctly? Was the tone appropriate? These questions seem obvious, but you would be surprised how many people skip this step entirely and wonder why their AI application produces inconsistent results.</p>
+<p>A good evaluation process has three components:</p>
+<ul>
+<li><strong>Test inputs</strong> — A diverse set of representative inputs that cover normal cases, edge cases, and adversarial cases</li>
+<li><strong>Expected outputs</strong> — Clear definitions of what a correct or acceptable response looks like</li>
+<li><strong>Scoring criteria</strong> — Specific dimensions along which you will judge the outputs</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Insight</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking deeply">
+Here is something to think about: you cannot evaluate a prompt with a single test case. That is like taste-testing one cookie and declaring the entire batch perfect. You need variety in your test inputs — typical cases, tricky cases, cases that are designed to break things. The more diverse your test set, the more confident you can be in your results.</p>
+</div>
+<h2 id="evaluation-metrics-what-to-measure">Evaluation Metrics: What to Measure</h2>
+<p><strong>Evaluation metrics</strong> are specific, quantifiable dimensions used to score and compare the quality of language model outputs. Choosing the right metrics is critical because what you measure determines what you optimize. Measure the wrong thing, and you will improve the wrong thing.</p>
+<p>Common evaluation metrics for prompt outputs include:</p>
+<ul>
+<li><strong>Accuracy</strong> — Does the output contain factually correct information?</li>
+<li><strong>Relevance</strong> — Does the output address what was actually asked?</li>
+<li><strong>Completeness</strong> — Does the output cover all required aspects of the task?</li>
+<li><strong>Consistency</strong> — Does the prompt produce similar quality results across multiple runs?</li>
+<li><strong>Formatting compliance</strong> — Does the output match the requested structure and format?</li>
+<li><strong>Tone and style</strong> — Does the output match the desired voice and reading level?</li>
+<li><strong>Latency</strong> — How long does the model take to generate the response?</li>
+<li><strong>Token usage</strong> — How many tokens does the prompt and response consume?</li>
+</ul>
+<p>Not every metric matters for every use case. A creative writing prompt might prioritize tone and style, while a data extraction prompt might prioritize accuracy and formatting compliance. The art is in selecting the metrics that align with your specific goals.</p>
+<p>Here is a practical scoring rubric for a customer service chatbot prompt:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Score 1 (Poor)</th>
+<th>Score 3 (Acceptable)</th>
+<th>Score 5 (Excellent)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>Contains factual errors</td>
+<td>Mostly correct, minor gaps</td>
+<td>Fully accurate, well-sourced</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>Robotic or rude</td>
+<td>Professional but generic</td>
+<td>Warm, helpful, brand-aligned</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Misses key information</td>
+<td>Addresses main question</td>
+<td>Addresses question plus anticipates follow-ups</td>
+</tr>
+<tr>
+<td>Formatting</td>
+<td>Wall of text</td>
+<td>Basic structure</td>
+<td>Clear headings, bullet points, easy to scan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ab-testing-prompts">A/B Testing Prompts</h2>
+<p><strong>A/B testing prompts</strong> is the practice of comparing two or more prompt variations against the same set of inputs to determine which version produces better results according to defined metrics. This is the single most practical evaluation technique you can learn, and it works whether you are a solo developer or part of a large team.</p>
+<p>The process is straightforward:</p>
+<ol>
+<li>Write two versions of your prompt (Prompt A and Prompt B)</li>
+<li>Run both prompts against the same set of test inputs</li>
+<li>Score the outputs using your evaluation metrics</li>
+<li>Compare the scores to determine which prompt performs better</li>
+<li>Keep the winner, iterate, and test again</li>
+</ol>
+<p>Here is an example. Suppose you are building a prompt that summarizes news articles. You might test these two variations:</p>
+<p><strong>Prompt A:</strong> "Summarize the following article in 3 bullet points."</p>
+<p><strong>Prompt B:</strong> "You are a news editor. Summarize the following article in exactly 3 bullet points. Each bullet should be one sentence. Focus on the most newsworthy facts."</p>
+<p>You run both against 20 test articles, score each output for accuracy, completeness, and formatting compliance, and discover that Prompt B scores 4.2 out of 5 on average while Prompt A scores 3.1. Prompt B wins — and you have data to prove it.</p>
+<p>The key insight is that small changes in prompt wording can produce surprisingly large differences in output quality. Adding a role ("You are a news editor"), adding constraints ("exactly 3 bullet points, one sentence each"), and adding focus instructions ("most newsworthy facts") each contributes to better performance. But you would never know <em>how much</em> each change helps without testing.</p>
+<table>
+<thead>
+<tr>
+<th>A/B Testing Step</th>
+<th>What to Do</th>
+<th>Common Mistake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create variations</td>
+<td>Change one element at a time</td>
+<td>Changing too many things at once</td>
+</tr>
+<tr>
+<td>Select test inputs</td>
+<td>Use 15-30 diverse examples</td>
+<td>Using only 2-3 easy examples</td>
+</tr>
+<tr>
+<td>Define metrics</td>
+<td>Pick 3-5 specific, measurable dimensions</td>
+<td>Using vague criteria like "better"</td>
+</tr>
+<tr>
+<td>Score outputs</td>
+<td>Use a consistent rubric</td>
+<td>Scoring based on gut feeling</td>
+</tr>
+<tr>
+<td>Analyze results</td>
+<td>Calculate averages and look at variance</td>
+<td>Declaring a winner based on one test case</td>
+</tr>
+</tbody>
+</table>
+<h2 id="human-evaluation-vs-automated-evaluation">Human Evaluation vs. Automated Evaluation</h2>
+<p>There are two fundamental approaches to scoring outputs, and understanding when to use each one is essential.</p>
+<p><strong>Human evaluation</strong> is the process of having people read and score language model outputs against defined criteria. Humans are excellent at judging nuance, tone, creativity, helpfulness, and cultural appropriateness — all things that are difficult to quantify with automated tools. When you need to know whether an output "feels right" or whether it would actually help a real user, human evaluation is the gold standard.</p>
+<p>However, human evaluation is slow, expensive, and inconsistent. Different evaluators may score the same output differently, and even the same evaluator may score differently depending on fatigue, mood, or the time of day. (Before you laugh, this is a well-documented problem in research. It turns out that humans are not as objective as we like to think — who knew?)</p>
+<p><strong>Automated evaluation</strong> uses algorithms, scoring functions, or even other language models to assess outputs programmatically. Automated methods are fast, consistent, and scalable. You can evaluate thousands of outputs in minutes rather than days. Common automated approaches include:</p>
+<ul>
+<li><strong>String matching</strong> — Checking whether the output contains required keywords or phrases</li>
+<li><strong>Regex validation</strong> — Verifying that the output matches a specific pattern or format</li>
+<li><strong>Semantic similarity</strong> — Using embeddings to measure how close the output is to a reference answer</li>
+<li><strong>LLM-as-judge</strong> — Using a language model to score another model's output against a rubric</li>
+</ul>
+<p>The LLM-as-judge approach deserves special attention because it is rapidly becoming the most popular automated evaluation method. You give a language model a rubric, the original prompt, and the output to evaluate, and ask it to score the output. Research shows that LLM judges correlate surprisingly well with human evaluators — typically 80-90% agreement on well-defined rubrics.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Use your words — specifically, use <em>both</em> evaluation methods! Start with human evaluation to develop your rubric and calibrate your expectations. Then build automated evaluation to scale your testing. Use human evaluation as a periodic check to make sure your automated scores still align with real-world quality. The best evaluation pipelines combine both approaches.</p>
+</div>
+<h2 id="quality-rubric-design">Quality Rubric Design</h2>
+<p>A <strong>quality rubric</strong> is a structured scoring guide that defines specific criteria, performance levels, and score values for evaluating language model outputs. A well-designed rubric transforms evaluation from a subjective opinion into a repeatable measurement process.</p>
+<p>Good rubrics share several characteristics:</p>
+<ul>
+<li><strong>Specific</strong> — Each criterion describes an observable quality, not a vague impression</li>
+<li><strong>Graduated</strong> — Each score level has a clear, distinct description</li>
+<li><strong>Independent</strong> — Criteria do not overlap or double-count the same quality</li>
+<li><strong>Actionable</strong> — Low scores point toward specific improvements</li>
+</ul>
+<p>Designing a rubric forces you to articulate exactly what "good" means for your use case. This clarity is valuable far beyond evaluation — it also improves your prompt writing because you now have a concrete target to aim for.</p>
+<p>Here is a rubric template you can adapt for almost any prompt evaluation:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task completion</td>
+<td>Ignores the task</td>
+<td>Partially addresses it</td>
+<td>Completes main task</td>
+<td>Completes task thoroughly</td>
+<td>Exceeds expectations</td>
+</tr>
+<tr>
+<td>Factual accuracy</td>
+<td>Multiple errors</td>
+<td>Some errors</td>
+<td>Mostly accurate</td>
+<td>Fully accurate</td>
+<td>Accurate with citations</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>Confusing</td>
+<td>Somewhat unclear</td>
+<td>Understandable</td>
+<td>Clear and well-organized</td>
+<td>Exceptionally clear</td>
+</tr>
+<tr>
+<td>Instruction following</td>
+<td>Ignores constraints</td>
+<td>Follows some</td>
+<td>Follows most</td>
+<td>Follows all</td>
+<td>Follows all, plus anticipates intent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="benchmark-testing">Benchmark Testing</h2>
+<p><strong>Benchmark testing</strong> is the practice of evaluating a prompt or model against a standardized set of test cases with known correct answers, enabling objective comparison across prompts, models, or configurations. Benchmarks are the yardsticks of the AI world.</p>
+<p>While A/B testing compares two prompt versions, benchmark testing establishes a baseline that you can compare against over time. When you update your prompt, you run it against your benchmark and check whether performance improved, stayed the same, or regressed. When a new model is released, you run your benchmark and see how it compares.</p>
+<p>Building a useful benchmark requires:</p>
+<ol>
+<li><strong>Curate test cases</strong> — Collect 50-200 representative inputs covering your full range of use cases</li>
+<li><strong>Define ground truth</strong> — For each test case, specify what a correct or ideal output looks like</li>
+<li><strong>Automate scoring</strong> — Build scripts that can run all test cases and score them automatically</li>
+<li><strong>Version control</strong> — Track your benchmark alongside your prompts so you can reproduce results</li>
+<li><strong>Update periodically</strong> — As your use cases evolve, add new test cases and retire outdated ones</li>
+</ol>
+<details>
+<summary>Show/Hide Diagram</summary>
+<h4 id="diagram-benchmark-testing-workflow">Diagram: Benchmark Testing Workflow</h4>
+<p>This diagram should be rendered as a Mermaid flowchart showing the lifecycle of benchmark-driven prompt evaluation and iteration.</p>
+<p><strong>Structure:</strong>
+A "Prompt Version" node feeds into a "Benchmark Runner" node. The Benchmark Runner connects to a "Test Cases (50-200)" data store. The Benchmark Runner also connects to "Model API" to execute tests. Results flow to a "Scorer" node that compares outputs against "Ground Truth" answers. The Scorer produces a "Results Dashboard" showing pass/fail rates and metric scores. The Results Dashboard feeds into a "Decision" diamond: if scores improved, the flow goes to "Deploy"; if scores regressed, the flow loops back to "Revise Prompt" which connects back to "Prompt Version." A "Version History" data store connects to the Results Dashboard for tracking trends over time.</p>
+<pre class="mermaid"><code>flowchart TD
+    PV["Prompt Version"] --&gt; BR["Benchmark Runner"]
+    BR --&gt; TC["Test Cases\n(50-200 examples)"]
+    BR --&gt; API["Model API"]
+    API --&gt; SC["Scorer"]
+    TC --&gt; SC
+    GT["Ground Truth\nAnswers"] --&gt; SC
+    SC --&gt; RD["Results Dashboard\n(Pass/Fail, Metrics)"]
+    RD --&gt; DEC{"Scores\nImproved?"}
+    DEC --&gt;|"Yes"| DEP["Deploy"]
+    DEC --&gt;|"No"| REV["Revise Prompt"]
+    REV --&gt; PV
+    VH["Version History"] &lt;--&gt; RD</code></pre>
+</details>
+<h2 id="agent-evaluation-beyond-single-prompts">Agent Evaluation: Beyond Single Prompts</h2>
+<p>When you move from evaluating individual prompts to evaluating AI agents, the complexity increases significantly. An agent does not just generate a single output — it plans, takes multiple actions, uses tools, handles errors, and produces a final result. Evaluating an agent means assessing the entire workflow, not just the final answer.</p>
+<p><strong>Agent evaluation</strong> is the process of measuring the performance, reliability, and safety of an AI agent across the full lifecycle of goal-directed task execution. It encompasses not only the quality of the final output but also the efficiency of the path taken, the agent's ability to recover from errors, and its adherence to safety constraints.</p>
+<p>Key dimensions of agent evaluation include:</p>
+<ul>
+<li><strong>Task completion rate</strong> — What percentage of assigned tasks does the agent complete successfully?</li>
+<li><strong>Path efficiency</strong> — Does the agent take a reasonable number of steps, or does it wander?</li>
+<li><strong>Error handling</strong> — How does the agent respond when tools fail or unexpected situations arise?</li>
+<li><strong>Safety compliance</strong> — Does the agent respect defined boundaries and escalate appropriately?</li>
+<li><strong>Cost</strong> — How much does the full agent run cost in terms of tokens and API calls?</li>
+<li><strong>Latency</strong> — How long does the agent take from goal assignment to final output?</li>
+</ul>
+<h2 id="reliability-error-recovery-and-retry-logic">Reliability, Error Recovery, and Retry Logic</h2>
+<p>Three closely related concepts are critical for production-ready agents and prompt-based systems.</p>
+<p><strong>Reliability</strong> is the measure of how consistently a system produces correct results over repeated runs and varied inputs. A reliable prompt gives you the same quality output whether you run it at 9 AM on Monday or 3 AM on Saturday. A reliable agent completes its assigned tasks without crashing, looping, or producing garbage.</p>
+<p>Reliability is harder to achieve than most people expect. Language models are inherently probabilistic — the same prompt can produce different outputs on each run. Temperature settings, model updates, and even server load can affect results. Building reliable systems requires defensive design: clear instructions, output validation, fallback strategies, and monitoring.</p>
+<p><strong>Error recovery</strong> is the ability of a system to detect when something has gone wrong and take corrective action. For prompts, error recovery might mean including instructions like "If you cannot find the answer, say so explicitly rather than guessing." For agents, error recovery means detecting tool failures, malformed outputs, or dead-end plans and adjusting course.</p>
+<p><strong>Retry logic</strong> is the specific mechanism by which a system automatically re-attempts a failed operation, often with modified parameters. In prompt engineering, retry logic might mean re-running a prompt with a lower temperature if the first output was incoherent, or re-sending an API call with exponential backoff if the server returns a rate limit error.</p>
+<p>Here is a practical retry strategy for agent tool calls:</p>
+<table>
+<thead>
+<tr>
+<th>Attempt</th>
+<th>Wait Time</th>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1st try</td>
+<td>0 seconds</td>
+<td>Execute normally</td>
+</tr>
+<tr>
+<td>2nd try</td>
+<td>2 seconds</td>
+<td>Retry with same parameters</td>
+</tr>
+<tr>
+<td>3rd try</td>
+<td>8 seconds</td>
+<td>Retry with simplified parameters</td>
+</tr>
+<tr>
+<td>4th try</td>
+<td>30 seconds</td>
+<td>Try alternative tool or approach</td>
+</tr>
+<tr>
+<td>5th try</td>
+<td>—</td>
+<td>Escalate to human or report failure</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out!</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly raising a warning">
+Retry logic without a maximum retry limit is a recipe for disaster. An agent stuck in an infinite retry loop will burn through your API budget faster than you can say "token limit exceeded." Always set a maximum number of retries and define what happens when all retries are exhausted. Graceful failure is a feature, not a bug.</p>
+</div>
+<h2 id="token-efficiency">Token Efficiency</h2>
+<p><strong>Token efficiency</strong> is the practice of minimizing the number of input and output tokens consumed by a prompt while maintaining or improving output quality. Tokens cost money, and in production systems that handle thousands or millions of requests, even small efficiency gains translate into significant savings.</p>
+<p>Token efficiency is not about being cheap — it is about being smart. A prompt that uses 500 tokens to achieve the same result as a 2,000-token prompt is not worse; it is better engineered. Here are practical strategies for improving token efficiency:</p>
+<ul>
+<li><strong>Remove redundant instructions</strong> — If the model already knows how to format JSON, you do not need three paragraphs explaining JSON formatting</li>
+<li><strong>Use concise role descriptions</strong> — "You are a medical summarizer" works as well as a 200-word backstory</li>
+<li><strong>Leverage examples wisely</strong> — One or two well-chosen few-shot examples often outperform five mediocre ones</li>
+<li><strong>Specify output length</strong> — Telling the model to "respond in 2-3 sentences" prevents rambling and saves output tokens</li>
+<li><strong>Use system prompts effectively</strong> — Move stable instructions to the system prompt rather than repeating them in every user message</li>
+</ul>
+<p>A 30% reduction in token usage across a system handling 100,000 requests per day does not just save money — it also reduces latency, because shorter prompts and responses are faster to process.</p>
+<h2 id="batch-processing">Batch Processing</h2>
+<p><strong>Batch processing</strong> is the technique of sending multiple prompts or tasks to a language model in a grouped, asynchronous manner rather than one at a time. Most major AI providers offer batch APIs that process large volumes of requests at reduced cost — typically 50% cheaper than real-time API calls.</p>
+<p>Batch processing is ideal for:</p>
+<ul>
+<li>Evaluating prompts against large test sets</li>
+<li>Processing datasets where results are not needed immediately</li>
+<li>Running nightly evaluation pipelines</li>
+<li>Generating content in bulk (product descriptions, summaries, translations)</li>
+</ul>
+<p>The trade-off is latency. Batch jobs may take minutes or hours to complete, so they are not suitable for real-time applications. But for evaluation and optimization workflows, batch processing is often the best approach because you can run hundreds of test cases affordably.</p>
+<h2 id="model-selection-and-model-comparison">Model Selection and Model Comparison</h2>
+<p><strong>Model selection</strong> is the process of choosing the most appropriate language model for a specific task based on factors including quality, speed, cost, and capability requirements. Not every task needs the most powerful (and expensive) model available.</p>
+<p><strong>Model comparison</strong> is the systematic evaluation of multiple models against the same benchmark to identify performance differences across relevant metrics. This is where your evaluation infrastructure really pays off — once you have a benchmark and a rubric, comparing models is as simple as running each model through the same tests.</p>
+<p>Here is a decision framework for model selection:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Use a Larger Model</th>
+<th>Use a Smaller Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task complexity</td>
+<td>Multi-step reasoning, nuanced writing</td>
+<td>Classification, extraction, formatting</td>
+</tr>
+<tr>
+<td>Accuracy requirements</td>
+<td>Medical, legal, financial content</td>
+<td>Internal tools, drafts, brainstorming</td>
+</tr>
+<tr>
+<td>Latency requirements</td>
+<td>Batch processing, offline tasks</td>
+<td>Real-time chat, autocomplete</td>
+</tr>
+<tr>
+<td>Budget</td>
+<td>Low volume, high value</td>
+<td>High volume, moderate value</td>
+</tr>
+<tr>
+<td>Context window needs</td>
+<td>Long documents, complex instructions</td>
+<td>Short inputs, simple outputs</td>
+</tr>
+</tbody>
+</table>
+<p>The surprising finding in many model comparison studies is that smaller, cheaper models often perform comparably to flagship models on well-structured tasks. A clear, well-engineered prompt can often close the quality gap between model tiers. This is one of the most powerful arguments for investing in prompt engineering — a great prompt on a mid-tier model can outperform a lazy prompt on the best model.</p>
+<details>
+<summary>Show/Hide Diagram</summary>
+<h4 id="diagram-model-selection-decision-tree">Diagram: Model Selection Decision Tree</h4>
+<p>This diagram should be rendered as a Mermaid flowchart showing a decision process for selecting the right model tier based on task characteristics.</p>
+<p><strong>Structure:</strong>
+Start with a "New Task" node. First decision diamond: "Requires complex reasoning?" If Yes, go to "Large Model (e.g., GPT-4, Claude Opus)." If No, next decision: "Requires nuanced tone/creativity?" If Yes, go to "Mid-tier Model (e.g., Claude Sonnet)." If No, next decision: "High volume (&gt;10K requests/day)?" If Yes, go to "Small/Fast Model (e.g., Claude Haiku)." If No, go to "Mid-tier Model." Each model selection node connects to a "Run Benchmark" node, which connects to a "Meets Quality Threshold?" diamond. If Yes, "Deploy." If No, "Try Next Tier Up" which loops back to the model options.</p>
+<pre class="mermaid"><code>flowchart TD
+    NT["New Task"] --&gt; CR{"Requires complex\nreasoning?"}
+    CR --&gt;|"Yes"| LG["Large Model\n(e.g., Claude Opus)"]
+    CR --&gt;|"No"| TC{"Requires nuanced\ntone/creativity?"}
+    TC --&gt;|"Yes"| MD["Mid-tier Model\n(e.g., Claude Sonnet)"]
+    TC --&gt;|"No"| HV{"High volume?\n(&gt;10K req/day)"}
+    HV --&gt;|"Yes"| SM["Small/Fast Model\n(e.g., Claude Haiku)"]
+    HV --&gt;|"No"| MD
+    LG --&gt; BM["Run Benchmark"]
+    MD --&gt; BM
+    SM --&gt; BM
+    BM --&gt; QT{"Meets quality\nthreshold?"}
+    QT --&gt;|"Yes"| DEP["Deploy"]
+    QT --&gt;|"No"| UP["Try Next\nTier Up"]
+    UP --&gt; BM</code></pre>
+</details>
+<h2 id="performance-monitoring">Performance Monitoring</h2>
+<p><strong>Performance monitoring</strong> is the ongoing practice of tracking the quality, reliability, speed, and cost of a deployed prompt or agent system over time. Evaluation is not a one-time activity — it is a continuous process. Models get updated, user patterns shift, data distributions change, and what worked last month may not work next month.</p>
+<p>A practical monitoring system tracks:</p>
+<ul>
+<li><strong>Output quality scores</strong> — Sampled and scored on a regular cadence (daily or weekly)</li>
+<li><strong>Error rates</strong> — Percentage of requests that produce failures, timeouts, or incoherent outputs</li>
+<li><strong>Latency percentiles</strong> — Not just average response time, but p50, p95, and p99</li>
+<li><strong>Token consumption</strong> — Trends in input and output token usage</li>
+<li><strong>Cost per request</strong> — Total API cost divided by number of successful completions</li>
+<li><strong>User feedback signals</strong> — Thumbs up/down, complaint rates, escalation rates</li>
+</ul>
+<p>When monitoring reveals a drop in quality — sometimes called "prompt drift" or "model regression" — you re-run your benchmarks, compare against your baseline, and investigate. Sometimes the fix is a prompt update. Sometimes the fix is switching models. Sometimes the fix is a conversation with the model provider. But you cannot fix what you do not see, which is why monitoring matters.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nice Work!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Time to talk to AI! You have now learned the complete evaluation and optimization toolkit — from rubric design and A/B testing to benchmark pipelines and production monitoring. That is a serious set of skills. Most people never get past "it looks good to me," but you now know how to actually <em>prove</em> that your prompts work. Go forth and measure!</p>
+</div>
+<h2 id="putting-it-all-together-the-evaluation-lifecycle">Putting It All Together: The Evaluation Lifecycle</h2>
+<p>Here is a practical workflow that ties all the concepts in this chapter together:</p>
+<ol>
+<li><strong>Design your rubric</strong> — Define what "good" means for your specific use case</li>
+<li><strong>Build a benchmark</strong> — Curate 50-200 test cases with ground truth answers</li>
+<li><strong>A/B test prompt variations</strong> — Compare versions using your rubric and benchmark</li>
+<li><strong>Evaluate with humans and automation</strong> — Use human judges for calibration, automated scoring for scale</li>
+<li><strong>Optimize for efficiency</strong> — Reduce tokens, select the right model, use batch processing where appropriate</li>
+<li><strong>Deploy with monitoring</strong> — Track quality, cost, and reliability in production</li>
+<li><strong>Iterate</strong> — When monitoring reveals issues, return to step 3 and improve</li>
+</ol>
+<p>This lifecycle is not a one-time process. It is a continuous loop of measurement and improvement. The best prompt engineers treat evaluation as a core part of their workflow, not an afterthought. Every prompt revision should be tested, every agent update should be benchmarked, and every production system should be monitored.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Prompt evaluation transforms "I think this works" into "I have evidence this works" through systematic measurement</li>
+<li>A/B testing is the most practical evaluation technique — compare two prompt versions against the same test inputs using defined metrics</li>
+<li>Quality rubrics make evaluation repeatable by defining specific criteria and score levels</li>
+<li>Human evaluation excels at nuance and tone; automated evaluation excels at scale and consistency — use both</li>
+<li>Benchmark testing establishes baselines for tracking performance over time and across model versions</li>
+<li>Agent evaluation goes beyond single outputs to assess reliability, error recovery, and retry logic across multi-step workflows</li>
+<li>Token efficiency saves money and reduces latency without sacrificing quality when done thoughtfully</li>
+<li>Model selection should match task requirements to model capabilities — the most expensive model is not always the best choice</li>
+<li>Performance monitoring is not optional in production — models change, users change, and prompt drift is real</li>
+<li>The evaluation lifecycle is continuous: design, test, deploy, monitor, iterate</li>
+</ul>
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>Agent Evaluation</li>
@@ -1350,14 +2111,15 @@
 <li><a href="../07-context-memory-management/">Chapter 7: Context, Memory, and Information Management</a></li>
 <li><a href="../12-agentic-ai/">Chapter 12: Agentic AI</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

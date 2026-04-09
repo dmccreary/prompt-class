@@ -1,0 +1,14 @@
+{
+  "sim_id": "prompt-iteration-cycle",
+  "diagram_name": "Prompt Iteration Cycle",
+  "chapter_number": 2,
+  "chapter_title": "Prompt Fundamentals",
+  "chapter_dir": "02-prompt-fundamentals",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "explain, summarize",
+  "learning_objective": "Explain the iterative process of prompt refinement and how each step contributes to improving response quality.",
+  "completion_status": "specified",
+  "extracted_date": "2026-04-08",
+  "specification": "Type: infographic\n**sim-id:** prompt-iteration-cycle<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Visualize the iterative prompt refinement loop showing how each cycle improves response quality.\n\nBloom Level: Understand (L2)\nBloom Verb: explain, summarize\nLearning Objective: Explain the iterative process of prompt refinement and how each step contributes to improving response quality.\n\nLayout: Circular diagram with 5 nodes arranged in a clockwise cycle, with a quality indicator in the center.\n\nNodes (clockwise from top):\n1. \"Write Prompt\" (blue) — Hover: \"Draft your initial prompt with clear structure and specific instructions\"\n2. \"Send to Model\" (blue) — Hover: \"Submit the prompt and receive the AI's response\"\n3. \"Evaluate Response\" (orange) — Hover: \"Check relevance, accuracy, completeness, and conciseness\"\n4. \"Diagnose Issues\" (orange) — Hover: \"Identify what went wrong: too vague? missing context? wrong format?\"\n5. \"Refine Prompt\" (blue) — Hover: \"Make targeted changes based on your diagnosis\"\n\nCenter: Quality gauge that fills from red to green as iterations increase (animated).\n\nArrows: Curved arrows connecting each node to the next in clockwise order.\n\nInteractive features:\n- Click any node to see a concrete example (e.g., clicking \"Diagnose Issues\" shows: \"Response was too generic → Diagnosis: prompt lacked specificity → Fix: add word count and audience\")\n- Quality gauge in center advances with each click-through of the cycle\n- Reset button to start over\n\nColor scheme: Blue for action steps, orange for evaluation steps, green for the quality indicator.\n\nResponsive: Must adapt to window width.\n\nInstructional Rationale: A cyclical diagram reinforces that iteration is a loop, not a failure. The quality gauge in the center makes the abstract concept of \"improvement\" tangible. Click-through examples ground each step in practice.\n\nImplementation: p5.js canvas with interactive nodes and animated center gauge"
+}

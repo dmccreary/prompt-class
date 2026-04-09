@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Space Explorer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        #controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 12px 16px;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+        }
+        #controls label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+        #controls input[type="text"] {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 240px;
+        }
+        #controls button {
+            padding: 6px 14px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            background: #1976d2;
+            color: white;
+        }
+        #controls button:hover { background: #1565c0; }
+        #controls button.secondary {
+            background: #757575;
+        }
+        #controls button.secondary:hover { background: #616161; }
+        main { width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="queryInput">Search query:</label>
+        <input type="text" id="queryInput" placeholder="Type a phrase to find nearest embeddings..." />
+        <button id="searchBtn">Search</button>
+        <button id="resetBtn" class="secondary">Reset</button>
+    </div>
+    <main id="canvas-container"></main>
+
+    <script>
+    // ── Data: phrases with pre-assigned 2D positions grouped by topic ──
+    const phrases = [
+        // AI / ML cluster (upper-left region)
+        { text: "machine learning models",    x: 0.22, y: 0.22, category: "AI/ML" },
+        { text: "neural networks",            x: 0.15, y: 0.30, category: "AI/ML" },
+        { text: "deep learning algorithms",   x: 0.35, y: 0.25, category: "AI/ML" },
+        { text: "AI training data",           x: 0.12, y: 0.42, category: "AI/ML" },
+        { text: "gradient descent optimizer",  x: 0.28, y: 0.38, category: "AI/ML" },
+        { text: "transformer architecture",   x: 0.20, y: 0.15, category: "AI/ML" },
+        { text: "natural language processing", x: 0.30, y: 0.18, category: "AI/ML" },
+
+        // Cooking / Food cluster (lower-right region)
+        { text: "baking chocolate cake",      x: 0.78, y: 0.68, category: "Cooking" },
+        { text: "sourdough bread recipe",     x: 0.82, y: 0.78, category: "Cooking" },
+        { text: "pasta carbonara technique",  x: 0.72, y: 0.75, category: "Cooking" },
+        { text: "grilling summer vegetables", x: 0.88, y: 0.72, category: "Cooking" },
+        { text: "French pastry tips",         x: 0.75, y: 0.82, category: "Cooking" },
+
+        // Space / Astronomy cluster (upper-right region)
+        { text: "Mars rover exploration",     x: 0.75, y: 0.20, category: "Space" },
+        { text: "James Webb telescope images", x: 0.82, y: 0.15, category: "Space" },
+        { text: "black hole physics",         x: 0.70, y: 0.25, category: "Space" },
+        { text: "International Space Station", x: 0.85, y: 0.28, category: "Space" },
+
+        // Music cluster (lower-left region)
+        { text: "jazz piano improvisation",   x: 0.18, y: 0.72, category: "Music" },
+        { text: "guitar chord progressions",  x: 0.22, y: 0.80, category: "Music" },
+        { text: "symphony orchestra concert", x: 0.15, y: 0.82, category: "Music" },
+        { text: "electronic music production", x: 0.28, y: 0.75, category: "Music" },
+
+        // Medicine cluster (center region)
+        { text: "clinical trial results",     x: 0.50, y: 0.45, category: "Medicine" },
+        { text: "vaccine development process", x: 0.55, y: 0.50, category: "Medicine" },
+        { text: "heart surgery techniques",   x: 0.48, y: 0.55, category: "Medicine" },
+    ];
+
+    // Category colors
+    const categoryColors = {
+        "AI/ML":    { r: 25,  g: 118, b: 210 },  // blue
+        "Cooking":  { r: 230, g: 81,  b: 0   },  // orange
+        "Space":    { r: 46,  g: 125, b: 50  },   // green
+        "Music":    { r: 142, g: 36,  b: 170 },   // purple
+        "Medicine": { r: 198, g: 40,  b: 40  },   // red
+    };
+
+    let canvasW, canvasH;
+    let marginX = 60;
+    let marginY = 50;
+    let hoveredIdx = -1;
+    let queryIdx = -1;         // index of the "query" point if user searches
+    let queryPoint = null;     // {x, y, text} of the query point
+    let nearestIndices = [];   // indices of nearest neighbors highlighted
+    let dotSize = 14;
+
+    function setup() {
+        canvasW = min(windowWidth, 900);
+        canvasH = 520;
+        let cnv = createCanvas(canvasW, canvasH);
+        cnv.parent("canvas-container");
+        textFont("Arial");
+
+        // Wire up buttons
+        select("#searchBtn").mousePressed(handleSearch);
+        select("#resetBtn").mousePressed(handleReset);
+        select("#queryInput").elt.addEventListener("keydown", function(e) {
+            if (e.key === "Enter") handleSearch();
+        });
+    }
+
+    function draw() {
+        background(250);
+        drawGrid();
+        drawAxes();
+        drawConnections();
+        drawPoints();
+        drawQueryPoint();
+        drawTooltip();
+        drawLegend();
+    }
+
+    // ── Drawing helpers ──
+
+    function toScreenX(normX) {
+        return marginX + normX * (canvasW - 2 * marginX);
+    }
+    function toScreenY(normY) {
+        return marginY + normY * (canvasH - 2 * marginY);
+    }
+    function toNormX(screenX) {
+        return (screenX - marginX) / (canvasW - 2 * marginX);
+    }
+    function toNormY(screenY) {
+        return (screenY - marginY) / (canvasH - 2 * marginY);
+    }
+
+    function drawGrid() {
+        stroke(230);
+        strokeWeight(0.5);
+        for (let i = 0; i <= 10; i++) {
+            let nx = i / 10;
+            let ny = i / 10;
+            line(toScreenX(nx), marginY, toScreenX(nx), canvasH - marginY);
+            line(marginX, toScreenY(ny), canvasW - marginX, toScreenY(ny));
+        }
+    }
+
+    function drawAxes() {
+        // Labels
+        fill(100);
+        noStroke();
+        textSize(12);
+        textAlign(CENTER, TOP);
+        text("Embedding Dimension 1", canvasW / 2, canvasH - 18);
+
+        push();
+        translate(14, canvasH / 2);
+        rotate(-HALF_PI);
+        textAlign(CENTER, BOTTOM);
+        text("Embedding Dimension 2", 0, 0);
+        pop();
+
+        // Title
+        textSize(16);
+        textAlign(CENTER, TOP);
+        fill(50);
+        text("Embedding Space (simplified to 2D)", canvasW / 2, 8);
+    }
+
+    function drawConnections() {
+        // Draw lines from query point to nearest neighbors
+        if (queryPoint && nearestIndices.length > 0) {
+            let qx = toScreenX(queryPoint.x);
+            let qy = toScreenY(queryPoint.y);
+            for (let idx of nearestIndices) {
+                let p = phrases[idx];
+                let px = toScreenX(p.x);
+                let py = toScreenY(p.y);
+                stroke(255, 152, 0, 120);
+                strokeWeight(2);
+                drawingContext.setLineDash([6, 4]);
+                line(qx, qy, px, py);
+                drawingContext.setLineDash([]);
+
+                // Distance label at midpoint
+                let d = dist(queryPoint.x, queryPoint.y, p.x, p.y);
+                let mx = (qx + px) / 2;
+                let my = (qy + py) / 2;
+                noStroke();
+                fill(120);
+                textSize(10);
+                textAlign(CENTER, CENTER);
+                text("d=" + nf(d, 1, 2), mx, my - 8);
+            }
+        }
+    }
+
+    function drawPoints() {
+        for (let i = 0; i < phrases.length; i++) {
+            let p = phrases[i];
+            let sx = toScreenX(p.x);
+            let sy = toScreenY(p.y);
+            let c = categoryColors[p.category];
+
+            let isNearest = nearestIndices.includes(i);
+            let isHovered = (i === hoveredIdx);
+
+            // Outer glow for nearest neighbors
+            if (isNearest) {
+                noStroke();
+                fill(255, 152, 0, 60);
+                ellipse(sx, sy, dotSize + 14);
+            }
+
+            // Dot
+            if (isHovered) {
+                stroke(50);
+                strokeWeight(2);
+                fill(c.r, c.g, c.b);
+                ellipse(sx, sy, dotSize + 4);
+            } else {
+                noStroke();
+                fill(c.r, c.g, c.b, isNearest ? 255 : 200);
+                ellipse(sx, sy, dotSize);
+            }
+
+            // Label for nearest or hovered
+            if (isNearest || isHovered) {
+                noStroke();
+                fill(50);
+                textSize(11);
+                textAlign(LEFT, CENTER);
+                text(p.text, sx + dotSize / 2 + 4, sy);
+            }
+        }
+    }
+
+    function drawQueryPoint() {
+        if (!queryPoint) return;
+        let qx = toScreenX(queryPoint.x);
+        let qy = toScreenY(queryPoint.y);
+
+        // Pulsing ring
+        let pulse = sin(frameCount * 0.08) * 4 + 10;
+        noFill();
+        stroke(255, 87, 34);
+        strokeWeight(2);
+        ellipse(qx, qy, dotSize + pulse);
+
+        // Diamond shape for query
+        fill(255, 87, 34);
+        noStroke();
+        push();
+        translate(qx, qy);
+        rotate(QUARTER_PI);
+        rectMode(CENTER);
+        rect(0, 0, 10, 10);
+        pop();
+
+        // Label
+        fill(255, 87, 34);
+        textSize(12);
+        textAlign(LEFT, CENTER);
+        textStyle(BOLD);
+        text(queryPoint.text + " (query)", qx + 14, qy);
+        textStyle(NORMAL);
+    }
+
+    function drawTooltip() {
+        if (hoveredIdx < 0 || queryPoint) return; // skip tooltip when query active (labels already shown)
+        let p = phrases[hoveredIdx];
+        let sx = toScreenX(p.x);
+        let sy = toScreenY(p.y);
+        let c = categoryColors[p.category];
+
+        let label = '"' + p.text + '"';
+        let catLabel = p.category;
+        textSize(12);
+        let tw = max(textWidth(label), textWidth(catLabel)) + 16;
+        let th = 42;
+        let tx = sx + 12;
+        let ty = sy - th - 4;
+        if (tx + tw > canvasW - 10) tx = sx - tw - 12;
+        if (ty < 5) ty = sy + 16;
+
+        fill(255, 255, 255, 240);
+        stroke(200);
+        strokeWeight(1);
+        rect(tx, ty, tw, th, 4);
+
+        noStroke();
+        fill(50);
+        textAlign(LEFT, TOP);
+        textStyle(BOLD);
+        text(label, tx + 8, ty + 6);
+        textStyle(NORMAL);
+        fill(c.r, c.g, c.b);
+        text(catLabel, tx + 8, ty + 24);
+    }
+
+    function drawLegend() {
+        let lx = canvasW - 170;
+        let ly = canvasH - 135;
+
+        fill(255, 255, 255, 230);
+        stroke(200);
+        strokeWeight(1);
+        rect(lx, ly, 160, 125, 6);
+
+        noStroke();
+        fill(70);
+        textSize(12);
+        textAlign(LEFT, TOP);
+        textStyle(BOLD);
+        text("Categories", lx + 10, ly + 8);
+        textStyle(NORMAL);
+
+        let categories = Object.keys(categoryColors);
+        for (let i = 0; i < categories.length; i++) {
+            let cat = categories[i];
+            let c = categoryColors[cat];
+            let cy = ly + 28 + i * 18;
+            fill(c.r, c.g, c.b);
+            noStroke();
+            ellipse(lx + 18, cy + 4, 10);
+            fill(70);
+            textSize(11);
+            text(cat, lx + 28, cy - 3);
+        }
+    }
+
+    // ── Interaction ──
+
+    function mouseMoved() {
+        hoveredIdx = -1;
+        for (let i = 0; i < phrases.length; i++) {
+            let sx = toScreenX(phrases[i].x);
+            let sy = toScreenY(phrases[i].y);
+            if (dist(mouseX, mouseY, sx, sy) < dotSize) {
+                hoveredIdx = i;
+                break;
+            }
+        }
+        cursor(hoveredIdx >= 0 ? HAND : ARROW);
+    }
+
+    // ── Search logic ──
+    // Simple: find the phrase whose text is most similar (by word overlap),
+    // place the query near it, then highlight the 3 nearest neighbors.
+
+    function handleSearch() {
+        let query = select("#queryInput").value().trim().toLowerCase();
+        if (!query) return;
+
+        // Score each phrase by word overlap with query
+        let queryWords = query.split(/\s+/);
+        let scores = phrases.map((p, i) => {
+            let pWords = p.text.toLowerCase().split(/\s+/);
+            let overlap = 0;
+            for (let qw of queryWords) {
+                for (let pw of pWords) {
+                    if (pw.includes(qw) || qw.includes(pw)) {
+                        overlap++;
+                    }
+                }
+            }
+            // Also boost if category words match
+            if (p.category.toLowerCase().includes(query) || query.includes(p.category.toLowerCase())) {
+                overlap += 0.5;
+            }
+            return { idx: i, score: overlap };
+        });
+
+        scores.sort((a, b) => b.score - a.score);
+
+        // Place query point near the best match with slight offset
+        let bestIdx = scores[0].idx;
+        let best = phrases[bestIdx];
+        queryPoint = {
+            x: constrain(best.x + random(-0.04, 0.04), 0.05, 0.95),
+            y: constrain(best.y + random(-0.04, 0.04), 0.05, 0.95),
+            text: query
+        };
+
+        // Find 3 nearest neighbors by Euclidean distance to query point
+        let distances = phrases.map((p, i) => ({
+            idx: i,
+            d: dist(queryPoint.x, queryPoint.y, p.x, p.y)
+        }));
+        distances.sort((a, b) => a.d - b.d);
+        nearestIndices = distances.slice(0, 3).map(d => d.idx);
+    }
+
+    function handleReset() {
+        queryPoint = null;
+        nearestIndices = [];
+        select("#queryInput").value("");
+    }
+
+    function windowResized() {
+        canvasW = min(windowWidth, 900);
+        resizeCanvas(canvasW, canvasH);
+    }
+    </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ quality_score: 97
 
 Prompt engineering is the practice of crafting effective instructions for large language models to produce accurate, relevant, and useful responses. As AI becomes deeply integrated into workplaces, education, and daily life, the ability to communicate precisely with these systems has become an essential modern literacy. This course provides a comprehensive, hands-on introduction to prompt engineering that empowers participants to harness AI tools effectively and responsibly.
 
-This course covers the full spectrum of prompt engineering, from foundational principles like clarity and specificity to advanced techniques such as chain-of-thought reasoning, few-shot learning, and retrieval-augmented generation (RAG). Participants will also explore the latest developments in agentic AI, where language models can use tools, execute multi-step workflows, and collaborate with specialized skills to accomplish complex tasks autonomously.
+This course covers the full spectrum of prompt engineering, from foundational principles like clarity and specificity to advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and GraphRAG — which uses knowledge graphs to answer questions that depend on relationships between entities. Participants will also explore the latest developments in agentic AI, where language models can use tools, execute multi-step workflows, and collaborate with specialized skills to accomplish complex tasks autonomously.
 
 Whether you are a business professional looking to streamline operations, an educator designing AI-enhanced curricula, or a curious learner exploring the capabilities of modern AI, this course will give you practical skills you can apply immediately. All concepts are taught through hands-on labs with real AI systems, ensuring participants leave with confidence and competence.
 
@@ -31,7 +31,7 @@ Whether you are a business professional looking to streamline operations, an edu
 - Iterative prompt refinement and A/B testing
 - System prompts, context windows, and token management
 - Token budgets, rate limits, and usage monitoring: understanding five-hour usage windows, estimating token costs, and working within platform limits
-- Retrieval-augmented generation (RAG) and grounding prompts in data
+- Retrieval-augmented generation (RAG), GraphRAG, and grounding prompts in data using knowledge graphs
 - Multimodal prompting: working with images, documents, and code
 - Agentic AI: tool use, skills, and multi-step autonomous workflows
 - AI agents and orchestration: planning, execution, and feedback loops
@@ -71,7 +71,8 @@ After completing this course, students will be able to:
 - Explain how token budgets, rate limits, and five-hour usage windows affect prompt strategy
 - Summarize the differences between zero-shot, few-shot, and chain-of-thought prompting strategies
 - Interpret how role assignment and persona prompts shape model behavior and output tone
-- Explain the concept of retrieval-augmented generation (RAG) and why grounding matters
+- Explain the concept of retrieval-augmented generation (RAG) and GraphRAG, and why grounding matters
+- Describe how GraphRAG uses knowledge graphs to answer relationship-based questions that traditional RAG cannot
 - Describe how AI agents use tools, skills, and planning to accomplish multi-step tasks
 
 ### Apply

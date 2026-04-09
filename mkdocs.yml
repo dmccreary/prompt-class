@@ -45,7 +45,7 @@ nav:
     - 5. Advanced Prompt Techniques: chapters/05-advanced-prompt-techniques/index.md
     - 6. Output Format Control: chapters/06-output-format-control/index.md
     - 7. Context, Memory, and Info Management: chapters/07-context-memory-management/index.md
-    - 8. Retrieval-Augmented Generation: chapters/08-retrieval-augmented-generation/index.md
+    - 8. Retrieval-Augmented Generation and GraphRAG: chapters/08-retrieval-augmented-generation/index.md
     - 9. Multimodal Prompting: chapters/09-multimodal-prompting/index.md
     - 10. Ethics and Responsible AI: chapters/10-ethics-responsible-ai/index.md
     - 11. Prompt Security: chapters/11-prompt-security/index.md
@@ -67,6 +67,7 @@ nav:
     - Mascot Style Guide: learning-graph/mascot-test.md
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Embedding Space Explorer: sims/embedding-space/index.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - Glossary: glossary.md

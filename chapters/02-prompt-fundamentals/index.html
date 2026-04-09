@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="The essential principles of writing effective prompts including structure, clarity, specificity, iteration, and evaluation.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>2. Prompt Fundamentals - Prompt Engineering Class</title>
+        <title>Prompt Fundamentals - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Prompt Fundamentals
+              Prompt Fundamentals
             
           </span>
         </div>
@@ -591,9 +591,192 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-is-a-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      What Is a Prompt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-input-output-paradigm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Input-Output Paradigm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-structure-the-anatomy-of-a-great-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Structure: The Anatomy of a Great Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction-clarity-say-what-you-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction Clarity: Say What You Mean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specificity-the-devil-is-in-the-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specificity: The Devil Is in the Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguity-avoidance-close-the-loopholes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambiguity Avoidance: Close the Loopholes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-decomposition-breaking-big-jobs-into-small-ones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Decomposition: Breaking Big Jobs into Small Ones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-length-finding-the-sweet-spot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Length: Finding the Sweet Spot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-art-of-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Art of Iteration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-testing-being-scientific-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Testing: Being Scientific About It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating-response-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluating Response Quality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluating Response Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relevance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completeness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conciseness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conciseness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-commands-talking-like-a-human" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Language Commands: Talking Like a Human
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-iteration-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Iteration Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-quality-evaluator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Quality Evaluator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1272,9 +1455,192 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-is-a-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      What Is a Prompt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-input-output-paradigm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Input-Output Paradigm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-structure-the-anatomy-of-a-great-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Structure: The Anatomy of a Great Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction-clarity-say-what-you-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction Clarity: Say What You Mean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specificity-the-devil-is-in-the-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specificity: The Devil Is in the Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguity-avoidance-close-the-loopholes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambiguity Avoidance: Close the Loopholes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-decomposition-breaking-big-jobs-into-small-ones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Decomposition: Breaking Big Jobs into Small Ones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-length-finding-the-sweet-spot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Length: Finding the Sweet Spot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-art-of-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Art of Iteration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-testing-being-scientific-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Testing: Being Scientific About It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating-response-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluating Response Quality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluating Response Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relevance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completeness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conciseness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conciseness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-commands-talking-like-a-human" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Language Commands: Talking Like a Human
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-iteration-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Iteration Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prompt-quality-evaluator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prompt Quality Evaluator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1684,323 @@
 
 
 <h1 id="prompt-fundamentals">Prompt Fundamentals</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter covers the essential principles of writing effective prompts for large language models. Students will learn how to structure prompts with clarity and specificity, avoid ambiguity, and decompose complex tasks into manageable instructions. The chapter also introduces the iterative process of prompt testing and evaluation, teaching students to assess response quality across dimensions of relevance, accuracy, completeness, and conciseness.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Word Wizards!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Time to talk to AI! This is where the real fun begins. You know what's happening inside the machine — now let's learn how to <em>talk</em> to it. Think of this chapter as your first conversation class, except your conversation partner has read most of the internet. No pressure.</p>
+</div>
+<h2 id="what-is-a-prompt">What Is a Prompt?</h2>
+<p>A <strong>prompt</strong> is simply the text you send to an AI model. That's it. Whether you type "What's the capital of France?" or write a 500-word instruction with examples, formatting requirements, and persona definitions — it's all a prompt.</p>
+<p>But here's the thing: not all prompts are created equal. The difference between a mediocre AI response and a brilliant one almost always comes down to the quality of the prompt. This is the core insight of <strong>prompt engineering</strong> — the systematic practice of crafting prompts that consistently produce excellent results.</p>
+<p>If prompt engineering had a bumper sticker, it would read: "Garbage in, garbage out. Gold in, gold out."</p>
+<h2 id="the-input-output-paradigm">The Input-Output Paradigm</h2>
+<p>Every interaction with a large language model follows the <strong>input-output paradigm</strong>: you provide input (the prompt), the model processes it, and it returns output (the response). Simple, right?</p>
+<p>What makes this interesting — and what separates skilled prompt engineers from everyone else — is that you have enormous control over the output by changing the input. Small changes to your prompt can produce dramatically different responses.</p>
+<p>Consider these two prompts asking the same thing:</p>
+<table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>Likely Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Tell me about dogs."</td>
+<td>A generic, rambling overview of dogs</td>
+</tr>
+<tr>
+<td>"List 5 differences between Golden Retrievers and Labrador Retrievers in a markdown table with columns for Feature, Golden Retriever, and Labrador."</td>
+<td>A precise, well-formatted comparison table</td>
+</tr>
+</tbody>
+</table>
+<p>Same topic. Completely different results. The second prompt succeeds because it applies the principles we're about to learn.</p>
+<h2 id="prompt-structure-the-anatomy-of-a-great-prompt">Prompt Structure: The Anatomy of a Great Prompt</h2>
+<p><strong>Prompt structure</strong> refers to how you organize the different elements of your instruction. A well-structured prompt typically contains some combination of these components:</p>
+<ul>
+<li><strong>Role</strong> — Who should the AI pretend to be? ("You are an experienced data scientist...")</li>
+<li><strong>Task</strong> — What should the AI do? ("Analyze this dataset and identify trends...")</li>
+<li><strong>Context</strong> — What background information does the AI need? ("The data covers sales from 2020-2024...")</li>
+<li><strong>Constraints</strong> — What limitations should the AI follow? ("Keep your response under 200 words...")</li>
+<li><strong>Output format</strong> — How should the response be structured? ("Present your findings as a numbered list...")</li>
+</ul>
+<p>Not every prompt needs all five components. A quick question like "What year was the Eiffel Tower built?" works fine as a standalone task. But for complex requests, including more components consistently produces better results.</p>
+<p>Here's a real example putting it all together:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Role: You are a nutritionist writing for a health magazine.
+Task: Create a 7-day meal plan for someone trying to eat more vegetables.
+Context: The person is a busy professional who has 30 minutes max for cooking.
+Constraints: No recipes requiring more than 5 ingredients. Avoid nuts (allergy).
+Format: Present as a markdown table with columns for Day, Breakfast, Lunch, Dinner.
+</code></pre></div></td></tr></table></div>
+<p>That prompt is going to get you a <em>much</em> better response than "Give me a meal plan."</p>
+<h2 id="instruction-clarity-say-what-you-mean">Instruction Clarity: Say What You Mean</h2>
+<p><strong>Instruction clarity</strong> is perhaps the single most important principle in prompt engineering. Clear instructions leave no room for the model to guess what you want.</p>
+<p>The challenge is that AI models take your words literally — but not always in the way you intend. When you say "make it better," the model has to guess what "better" means. Shorter? More formal? More detailed? Funnier? More accurate? The model will pick <em>something</em>, and it might not be what you had in mind.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Insight</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Words matter - let's get them right! Here's Polly's golden rule: if two different people could reasonably interpret your prompt in two different ways, the AI definitely will too. Rewrite until there's only one reasonable interpretation.</p>
+</div>
+<p>Compare these instructions:</p>
+<ul>
+<li>Vague: "Improve this email."</li>
+<li>Clear: "Rewrite this email to be more concise (under 150 words), use a professional but friendly tone, and add a clear call-to-action in the final sentence."</li>
+</ul>
+<p>The clear version tells the model exactly what "improve" means in this context. That's instruction clarity in action.</p>
+<h2 id="specificity-the-devil-is-in-the-details">Specificity: The Devil Is in the Details</h2>
+<p><strong>Specificity</strong> goes hand-in-hand with clarity. While clarity is about <em>what</em> you want, specificity is about providing enough detail that the model doesn't have to fill in gaps with assumptions.</p>
+<p>Specificity means including:</p>
+<ul>
+<li><strong>Quantities</strong> — "Give me 5 examples" not "Give me some examples"</li>
+<li><strong>Dimensions</strong> — "Write 300 words" not "Write a short paragraph"</li>
+<li><strong>Scope</strong> — "Focus on renewable energy in Southeast Asia since 2020" not "Tell me about energy"</li>
+<li><strong>Quality criteria</strong> — "Include at least one statistic per point" not "Make it informative"</li>
+<li><strong>Audience</strong> — "Explain for a 10-year-old" not "Explain simply"</li>
+</ul>
+<p>Every detail you <em>don't</em> specify is a decision the model makes for you. Sometimes that's fine. But when the output matters, specificity is your best friend.</p>
+<h2 id="ambiguity-avoidance-close-the-loopholes">Ambiguity Avoidance: Close the Loopholes</h2>
+<p><strong>Ambiguity avoidance</strong> means actively identifying and eliminating words, phrases, or structures in your prompt that could be interpreted multiple ways.</p>
+<p>Common sources of ambiguity in prompts:</p>
+<table>
+<thead>
+<tr>
+<th>Ambiguous Phrase</th>
+<th>The Problem</th>
+<th>Better Alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Make it better"</td>
+<td>Better how?</td>
+<td>"Make it more concise and formal"</td>
+</tr>
+<tr>
+<td>"A few examples"</td>
+<td>How many is "a few"?</td>
+<td>"Exactly 3 examples"</td>
+</tr>
+<tr>
+<td>"Recent data"</td>
+<td>How recent?</td>
+<td>"Data from 2023 onward"</td>
+</tr>
+<tr>
+<td>"Important points"</td>
+<td>Important to whom?</td>
+<td>"The 5 points most relevant to budget decisions"</td>
+</tr>
+<tr>
+<td>"Keep it short"</td>
+<td>How short?</td>
+<td>"Maximum 100 words"</td>
+</tr>
+</tbody>
+</table>
+<p>A helpful technique: after writing your prompt, read it as if you were a very literal-minded person who wants to do the least work possible. Any loophole you'd exploit? The model might exploit it too.</p>
+<h2 id="task-decomposition-breaking-big-jobs-into-small-ones">Task Decomposition: Breaking Big Jobs into Small Ones</h2>
+<p><strong>Task decomposition</strong> is the practice of breaking a complex request into smaller, manageable steps. This is one of the most powerful techniques in prompt engineering because it mirrors how the model actually works — generating tokens one at a time, building on what came before.</p>
+<p>Instead of asking:</p>
+<blockquote>
+<p>"Write a complete marketing strategy for my new product."</p>
+</blockquote>
+<p>Try decomposing it:</p>
+<ol>
+<li>"Identify the top 5 target demographics for a sustainable water bottle aimed at outdoor enthusiasts."</li>
+<li>"For each demographic, suggest 3 key messaging themes."</li>
+<li>"Write a 200-word product description targeting the most promising demographic."</li>
+<li>"Create 5 social media post ideas based on the messaging themes."</li>
+</ol>
+<p>Each step is clear, focused, and builds on the previous result. The AI can concentrate on one thing at a time, and you can course-correct between steps if something goes off track.</p>
+<p>This is also much better for your token budget. A single mega-prompt that goes sideways wastes all those tokens. Decomposed steps let you catch problems early.</p>
+<h2 id="prompt-length-finding-the-sweet-spot">Prompt Length: Finding the Sweet Spot</h2>
+<p><strong>Prompt length</strong> matters more than you might think. Too short, and you haven't given the model enough to work with. Too long, and you risk burying your actual instruction in noise.</p>
+<p>Here's the general principle:</p>
+<ul>
+<li><strong>Too short</strong>: "Write about climate change." (The model will produce something generic because you gave it no direction.)</li>
+<li><strong>Too long</strong>: A 2,000-word prompt with every possible detail about what you want, including lengthy examples, edge cases, and tangential background. (The model may lose focus or miss key instructions buried in the middle.)</li>
+<li><strong>Just right</strong>: Clear task, relevant context, specific constraints, desired format. Usually 50-300 words for most tasks.</li>
+</ul>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Polly's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly giving a tip">
+Use your words! But not ALL of them. The sweet spot for most prompts is the minimum length that leaves nothing important ambiguous. Every sentence should earn its place. If a sentence in your prompt doesn't change the output, cut it.</p>
+</div>
+<h2 id="the-art-of-iteration">The Art of Iteration</h2>
+<p>Now we arrive at the secret weapon that separates good prompt engineers from great ones: <strong>prompt iteration</strong>. Almost nobody writes a perfect prompt on the first try. The real skill is in the refinement cycle.</p>
+<p>Prompt iteration follows a simple loop:</p>
+<ol>
+<li><strong>Write</strong> your initial prompt</li>
+<li><strong>Send</strong> it to the model</li>
+<li><strong>Evaluate</strong> the response</li>
+<li><strong>Diagnose</strong> what went wrong (or right)</li>
+<li><strong>Refine</strong> the prompt based on your diagnosis</li>
+<li><strong>Repeat</strong> until the response meets your standards</li>
+</ol>
+<p>This isn't failure — this is the process. Professional prompt engineers iterate constantly. The difference is they iterate <em>systematically</em>, changing one thing at a time so they understand what's working.</p>
+<h2 id="prompt-testing-being-scientific-about-it">Prompt Testing: Being Scientific About It</h2>
+<p><strong>Prompt testing</strong> takes iteration a step further by applying a more rigorous approach. Instead of just "does this look good?", testing means running your prompt multiple times and across different inputs to see how consistently it performs.</p>
+<p>Key testing practices:</p>
+<ul>
+<li><strong>Run the same prompt multiple times</strong> — AI responses have some randomness. A prompt that works once might fail the next time.</li>
+<li><strong>Test with different inputs</strong> — If your prompt is a template ("Summarize this article: {article}"), test it with articles of different lengths, topics, and complexity.</li>
+<li><strong>Compare variations</strong> — Try two versions of a prompt and see which consistently produces better results.</li>
+<li><strong>Document what works</strong> — Keep notes on which prompts succeeded and why.</li>
+</ul>
+<p>This might sound like overkill for casual use, but for any prompt you plan to use repeatedly (business workflows, content creation, data analysis), testing saves enormous time in the long run.</p>
+<h2 id="evaluating-response-quality">Evaluating Response Quality</h2>
+<p>How do you know if a response is "good"? <strong>Response quality</strong> and <strong>response evaluation</strong> require clear criteria. Here are the four dimensions that matter most:</p>
+<h3 id="relevance">Relevance</h3>
+<p>Does the response actually address what you asked? <strong>Relevance</strong> means the output is on-topic and answers the question or completes the task. A beautifully written response that doesn't answer your question scores zero on relevance.</p>
+<h3 id="accuracy">Accuracy</h3>
+<p>Is the information correct? <strong>Accuracy</strong> is about factual correctness. AI models can produce confident-sounding information that's completely wrong (this is called hallucination, which we'll cover in Chapter 8). Always verify critical facts.</p>
+<h3 id="completeness">Completeness</h3>
+<p>Did the response cover everything you asked for? <strong>Completeness</strong> means all parts of your request were addressed. If you asked for 5 examples and got 3, that's incomplete — even if the 3 are excellent.</p>
+<h3 id="conciseness">Conciseness</h3>
+<p>Is the response appropriately brief? <strong>Conciseness</strong> means no unnecessary padding, repetition, or filler. Some responses are accurate and complete but bury the useful information in paragraphs of fluff.</p>
+<p>These four dimensions often trade off against each other. A very concise response might sacrifice completeness. A very complete response might sacrifice conciseness. Part of becoming a skilled prompt engineer is knowing which dimension matters most for each task.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Question to Ask</th>
+<th>Red Flag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevance</td>
+<td>Does this answer my question?</td>
+<td>Response wanders off-topic</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Is this factually correct?</td>
+<td>Specific claims without sources</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Did it cover everything I asked?</td>
+<td>Missing items from my request</td>
+</tr>
+<tr>
+<td>Conciseness</td>
+<td>Is every sentence necessary?</td>
+<td>Repetitive paragraphs, filler phrases</td>
+</tr>
+</tbody>
+</table>
+<h2 id="natural-language-commands-talking-like-a-human">Natural Language Commands: Talking Like a Human</h2>
+<p>A <strong>natural language command</strong> is simply an instruction written in everyday language rather than code or formal syntax. This is what makes prompt engineering so accessible — you don't need to learn a programming language. You just need to write clearly.</p>
+<p>However, "natural language" doesn't mean "casual language." The best prompts use natural language that is:</p>
+<ul>
+<li><strong>Direct</strong> — "List the top 5 causes" not "Could you maybe think about listing some causes if you don't mind?"</li>
+<li><strong>Specific</strong> — "In 200 words or less" not "Keep it shortish"</li>
+<li><strong>Structured</strong> — Use numbered steps, bullet points, or sections to organize complex instructions</li>
+<li><strong>Actionable</strong> — Start with a verb: "Write," "Analyze," "Compare," "Create," "List"</li>
+</ul>
+<p>One common mistake is being overly polite. While there's nothing wrong with saying "please," phrases like "I was wondering if perhaps you might be able to..." waste tokens and add ambiguity. The model doesn't have feelings to hurt. Be direct.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">You Can Do This!</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Polly encouraging">
+Let's craft the perfect prompt! Here's the wonderful truth: you already know how to communicate clearly with humans. Prompt engineering is just applying that same skill to AI — with a few extra tricks. And the best part? Unlike humans, AI never judges you for rephrasing the same question five times until you get it right.</p>
+</div>
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>Let's see these principles in action with a before-and-after example.</p>
+<p><strong>Before (unfocused prompt):</strong></p>
+<blockquote>
+<p>Write something about productivity tips for remote workers.</p>
+</blockquote>
+<p><strong>After (applying all principles):</strong></p>
+<blockquote>
+<p>Write a listicle of 7 practical productivity tips for remote workers who struggle with work-life boundaries. Target audience: professionals aged 25-40 who work from home full-time. For each tip, include a one-sentence explanation and one concrete example of how to implement it. Tone: conversational and encouraging, not preachy. Format: numbered list with bold tip titles. Length: 400-500 words total.</p>
+</blockquote>
+<p>The second prompt applies instruction clarity, specificity, ambiguity avoidance, and output format specification. It will produce a dramatically better response — and it took about 30 seconds longer to write.</p>
+<p>That 30 seconds is the best investment in quality you'll ever make.</p>
+<h4 id="diagram-prompt-iteration-cycle">Diagram: Prompt Iteration Cycle</h4>
+<iframe src="../../sims/prompt-iteration-cycle/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Prompt Iteration Cycle</summary>
+<p>Type: infographic
+<strong>sim-id:</strong> prompt-iteration-cycle<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Visualize the iterative prompt refinement loop showing how each cycle improves response quality.</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: explain, summarize
+Learning Objective: Explain the iterative process of prompt refinement and how each step contributes to improving response quality.</p>
+<p>Layout: Circular diagram with 5 nodes arranged in a clockwise cycle, with a quality indicator in the center.</p>
+<p>Nodes (clockwise from top):
+1. "Write Prompt" (blue) — Hover: "Draft your initial prompt with clear structure and specific instructions"
+2. "Send to Model" (blue) — Hover: "Submit the prompt and receive the AI's response"
+3. "Evaluate Response" (orange) — Hover: "Check relevance, accuracy, completeness, and conciseness"
+4. "Diagnose Issues" (orange) — Hover: "Identify what went wrong: too vague? missing context? wrong format?"
+5. "Refine Prompt" (blue) — Hover: "Make targeted changes based on your diagnosis"</p>
+<p>Center: Quality gauge that fills from red to green as iterations increase (animated).</p>
+<p>Arrows: Curved arrows connecting each node to the next in clockwise order.</p>
+<p>Interactive features:
+- Click any node to see a concrete example (e.g., clicking "Diagnose Issues" shows: "Response was too generic → Diagnosis: prompt lacked specificity → Fix: add word count and audience")
+- Quality gauge in center advances with each click-through of the cycle
+- Reset button to start over</p>
+<p>Color scheme: Blue for action steps, orange for evaluation steps, green for the quality indicator.</p>
+<p>Responsive: Must adapt to window width.</p>
+<p>Instructional Rationale: A cyclical diagram reinforces that iteration is a loop, not a failure. The quality gauge in the center makes the abstract concept of "improvement" tangible. Click-through examples ground each step in practice.</p>
+<p>Implementation: p5.js canvas with interactive nodes and animated center gauge</p>
+</details>
+<h4 id="diagram-prompt-quality-evaluator">Diagram: Prompt Quality Evaluator</h4>
+<iframe src="../../sims/prompt-quality-evaluator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Prompt Quality Evaluator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> prompt-quality-evaluator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let students evaluate sample prompts against the four quality dimensions (relevance, accuracy, completeness, conciseness) and see how their ratings compare to expert ratings.</p>
+<p>Bloom Level: Evaluate (L5)
+Bloom Verb: assess, judge
+Learning Objective: Assess the quality of AI prompts and responses using the four evaluation dimensions.</p>
+<p>Layout:
+- Top area: Display a sample prompt and response pair
+- Middle area: Four slider controls (one per quality dimension, 1-10 scale)
+- Bottom area: Score comparison panel showing student rating vs. expert rating</p>
+<p>Controls:
+- "Next Prompt" button to cycle through 5 pre-loaded prompt/response examples
+- Four sliders: Relevance (1-10), Accuracy (1-10), Completeness (1-10), Conciseness (1-10)
+- "Check My Ratings" button to reveal expert scores</p>
+<p>Pre-loaded examples (5 pairs):
+1. A vague prompt with a wandering response (low relevance)
+2. A specific prompt with a factually incorrect response (low accuracy)
+3. A good prompt with a partial response (low completeness)
+4. A good prompt with a bloated response (low conciseness)
+5. An excellent prompt with an excellent response (high on all dimensions)</p>
+<p>Visual feedback:
+- Green highlight when student rating is within 2 points of expert
+- Yellow highlight when student rating is within 3-4 points
+- Red highlight when student rating is 5+ points away
+- Overall score displayed as percentage match</p>
+<p>Responsive: Must adapt to window width.</p>
+<p>Instructional Rationale: Active evaluation practice (rating then comparing to experts) builds assessment skills at Bloom's Evaluate level. Students internalize quality criteria through calibration rather than passive reading.</p>
+<p>Implementation: p5.js with text rendering and slider controls</p>
+</details>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>A <strong>prompt</strong> is your instruction to the AI; <strong>prompt engineering</strong> is the art of writing great ones</li>
+<li>The <strong>input-output paradigm</strong> means you control the output by controlling the input</li>
+<li>Great prompts have clear <strong>structure</strong>: role, task, context, constraints, format</li>
+<li><strong>Clarity</strong> and <strong>specificity</strong> eliminate guesswork; <strong>ambiguity avoidance</strong> closes loopholes</li>
+<li><strong>Task decomposition</strong> breaks complex jobs into manageable steps</li>
+<li><strong>Prompt iteration</strong> is the process, not a sign of failure — iterate systematically</li>
+<li>Evaluate responses on four dimensions: <strong>relevance</strong>, <strong>accuracy</strong>, <strong>completeness</strong>, <strong>conciseness</strong></li>
+<li>Use <strong>natural language commands</strong> that are direct, specific, and actionable</li>
+</ul>
+<p>Remember: prompt engineering is always evolving, but the fundamentals in this chapter are timeless. Clear communication has always been a superpower — now it just has a new application.</p>
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>Prompt</li>
@@ -1345,14 +2026,15 @@
 <ul>
 <li><a href="../01-ai-ml-foundations/">Chapter 1: AI and Machine Learning Foundations</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

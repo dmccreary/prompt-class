@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="Categories of prompts and model settings like temperature, top-p, and penalties that give you fine-grained control over AI output.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>3. Prompt Types and Parameters - Prompt Engineering Class</title>
+        <title>Prompt Types and Model Parameters - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Prompt Types and Parameters
+              Prompt Types and Model Parameters
             
           </span>
         </div>
@@ -614,9 +614,180 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-five-flavors-of-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Five Flavors of Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Five Flavors of Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directive-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directive Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrogative-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interrogative Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-ended-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-Ended Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-ended-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed-Ended Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversational-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversational Prompts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-model-control-panel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Model Control Panel: Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Model Control Panel: Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperature-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temperature Setting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-p-sampling-nucleus-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top-P Sampling (Nucleus Sampling)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency Penalty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presence-penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presence Penalty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-tokens-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Max Tokens Setting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seed Parameter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-temperature-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Temperature Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-prompt-types-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Prompt Types and Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1272,9 +1443,180 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-five-flavors-of-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Five Flavors of Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Five Flavors of Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directive-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directive Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrogative-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interrogative Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-ended-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-Ended Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-ended-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed-Ended Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversational-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversational Prompts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-model-control-panel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Model Control Panel: Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Model Control Panel: Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperature-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temperature Setting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-p-sampling-nucleus-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top-P Sampling (Nucleus Sampling)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency Penalty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presence-penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presence Penalty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-tokens-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Max Tokens Setting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seed Parameter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-temperature-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Temperature Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-prompt-types-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Prompt Types and Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1660,336 @@
 
 
 <h1 id="prompt-types-and-model-parameters">Prompt Types and Model Parameters</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter explores the various categories of prompts and the model parameters that influence AI output. Students will learn to distinguish between directive, interrogative, open-ended, closed-ended, and conversational prompts, selecting the right type for each task. The chapter also covers critical model settings such as temperature, top-p sampling, and frequency penalties, giving students fine-grained control over the creativity, consistency, and reproducibility of AI responses.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Let's Get Technical!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Use your words! Now that you know the fundamentals of writing good prompts, let's talk about the <em>types</em> of prompts and the secret control panel behind every AI model. Think of model parameters as the mixing board in a recording studio — the singer (your prompt) matters most, but the engineer's settings make all the difference.</p>
+</div>
+<h2 id="the-five-flavors-of-prompts">The Five Flavors of Prompts</h2>
+<p>Not all prompts are the same shape. Understanding the different categories helps you choose the right approach for each situation. Let's meet the five main types.</p>
+<h3 id="directive-prompts">Directive Prompts</h3>
+<p>A <strong>directive prompt</strong> tells the AI exactly what to do. It's a command, an instruction, a marching order. Directive prompts are the workhorses of prompt engineering — they get things done.</p>
+<p>Examples of directive prompts:</p>
+<ul>
+<li>"Write a 200-word product description for a wireless Bluetooth speaker."</li>
+<li>"Translate the following paragraph from English to Spanish."</li>
+<li>"Create a Python function that sorts a list of dictionaries by the 'date' key."</li>
+</ul>
+<p>Directive prompts work best when you know precisely what output you want. They pair perfectly with the specificity and clarity principles from Chapter 2.</p>
+<h3 id="interrogative-prompts">Interrogative Prompts</h3>
+<p>An <strong>interrogative prompt</strong> asks a question. It requests information, explanation, or analysis rather than commanding a specific output.</p>
+<p>Examples:</p>
+<ul>
+<li>"What are the main causes of the French Revolution?"</li>
+<li>"How does photosynthesis work?"</li>
+<li>"Why do neural networks need activation functions?"</li>
+</ul>
+<p>Interrogative prompts are great for learning, research, and exploration. The quality of the answer depends heavily on how specific your question is — "Tell me about history" will get you a very different response than "What were the three most important economic factors leading to the Industrial Revolution in England?"</p>
+<h3 id="open-ended-prompts">Open-Ended Prompts</h3>
+<p><strong>Open-ended prompts</strong> give the model creative freedom. They don't constrain the format, length, or direction of the response, allowing the AI to explore ideas broadly.</p>
+<p>Examples:</p>
+<ul>
+<li>"What are some innovative ways to reduce food waste in cities?"</li>
+<li>"Brainstorm names for a sustainable clothing brand."</li>
+<li>"How might artificial intelligence change education in the next decade?"</li>
+</ul>
+<p>Open-ended prompts are ideal for brainstorming, creative writing, and exploring possibilities. The tradeoff is less predictability — you might get brilliant ideas or wandering tangents.</p>
+<h3 id="closed-ended-prompts">Closed-Ended Prompts</h3>
+<p><strong>Closed-ended prompts</strong> constrain the response to a specific format or set of options. They're the opposite of open-ended prompts — they want a precise, bounded answer.</p>
+<p>Examples:</p>
+<ul>
+<li>"Is Python an interpreted or compiled language? Answer in one word."</li>
+<li>"Rate this customer review sentiment as Positive, Negative, or Neutral."</li>
+<li>"What is 2 + 2? Give only the number."</li>
+</ul>
+<p>Closed-ended prompts are essential for data extraction, classification, and any task where you need consistent, structured output. They're heavily used in business automation.</p>
+<h3 id="conversational-prompts">Conversational Prompts</h3>
+<p><strong>Conversational prompts</strong> engage the AI in a back-and-forth dialogue. Rather than a single instruction, they build on previous exchanges to progressively refine or explore a topic.</p>
+<p>Examples:</p>
+<ul>
+<li>"Let's discuss the pros and cons of remote work."</li>
+<li>"I'm planning a trip to Japan. Can you help me think through the itinerary?"</li>
+<li>"I just got this error in my code. Here's the traceback..." followed by "What if I try using a different data structure?" followed by "Can you show me how that would look?"</li>
+</ul>
+<p>Conversational prompts leverage the model's context window — each message builds on the conversation history, allowing for nuanced, evolving interactions.</p>
+<p>The following table summarizes when to use each prompt type:</p>
+<table>
+<thead>
+<tr>
+<th>Prompt Type</th>
+<th>Best For</th>
+<th>Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directive</td>
+<td>Getting specific output</td>
+<td>Writing emails, generating code, formatting data</td>
+</tr>
+<tr>
+<td>Interrogative</td>
+<td>Learning and research</td>
+<td>Understanding concepts, getting explanations</td>
+</tr>
+<tr>
+<td>Open-Ended</td>
+<td>Brainstorming and creativity</td>
+<td>Generating ideas, exploring possibilities</td>
+</tr>
+<tr>
+<td>Closed-Ended</td>
+<td>Classification and extraction</td>
+<td>Sentiment analysis, yes/no decisions, data labeling</td>
+</tr>
+<tr>
+<td>Conversational</td>
+<td>Iterative exploration</td>
+<td>Debugging, planning, complex problem-solving</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Insight</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Words matter - let's get them right! In practice, most effective prompts are hybrids. A great prompt might start as a directive ("Write a blog post..."), include interrogative elements ("What would resonate with a millennial audience?"), and use closed-ended constraints ("Format as exactly 5 sections with bold headers"). Don't feel boxed in by categories — mix and match!</p>
+</div>
+<h2 id="the-model-control-panel-parameters">The Model Control Panel: Parameters</h2>
+<p>Now for the fun part. Behind every AI interface is a set of adjustable parameters that influence <em>how</em> the model generates its response. These are the dials and knobs that let you tune the AI's behavior beyond just what you write in the prompt.</p>
+<p>Not every interface exposes these settings — consumer chatbots like ChatGPT often hide them behind defaults. But if you're using an API or an advanced interface, understanding these parameters gives you superpowers that most users never discover.</p>
+<h3 id="temperature-setting">Temperature Setting</h3>
+<p><strong>Temperature</strong> controls the randomness (or creativity) of the model's output. It's a number typically between 0 and 2, with most useful values between 0 and 1.</p>
+<p>Here's the intuition: at each step of generating a response, the model calculates a probability for every possible next token. Temperature affects how it picks from those probabilities.</p>
+<ul>
+<li><strong>Temperature 0</strong> — The model always picks the highest-probability token. Output is deterministic and consistent. Same prompt → same response every time.</li>
+<li><strong>Temperature 0.3-0.5</strong> — Mostly predictable with occasional variation. Great for factual tasks.</li>
+<li><strong>Temperature 0.7-0.8</strong> — Good balance of creativity and coherence. The default for most chatbots.</li>
+<li><strong>Temperature 1.0+</strong> — Highly creative and unpredictable. Can produce surprising insights — or nonsense.</li>
+</ul>
+<p>Think of temperature like spice in cooking. Zero is plain rice — reliable, consistent, boring. One is a Thai curry — exciting, flavorful, occasionally too much. You want the right amount for the dish you're making.</p>
+<table>
+<thead>
+<tr>
+<th>Temperature</th>
+<th>Behavior</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0</td>
+<td>Deterministic, always the same</td>
+<td>Code generation, factual Q&amp;A, data extraction</td>
+</tr>
+<tr>
+<td>0.3</td>
+<td>Low variation, highly focused</td>
+<td>Technical writing, summarization</td>
+</tr>
+<tr>
+<td>0.7</td>
+<td>Balanced creativity and coherence</td>
+<td>General writing, conversation</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>High variation, creative</td>
+<td>Brainstorming, poetry, creative fiction</td>
+</tr>
+<tr>
+<td>1.5+</td>
+<td>Very random, often incoherent</td>
+<td>Experimental use only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top-p-sampling-nucleus-sampling">Top-P Sampling (Nucleus Sampling)</h3>
+<p><strong>Top-P sampling</strong> is an alternative (or complement) to temperature for controlling randomness. Instead of adjusting the probability distribution, top-p defines a cutoff: the model only considers tokens whose cumulative probability adds up to <em>P</em>.</p>
+<ul>
+<li><strong>Top-P = 0.1</strong> — The model only considers the top 10% most likely tokens. Very focused.</li>
+<li><strong>Top-P = 0.9</strong> — The model considers the top 90% of tokens. More diverse outputs.</li>
+<li><strong>Top-P = 1.0</strong> — All tokens are considered (default).</li>
+</ul>
+<p>In practice, most people adjust either temperature <em>or</em> top-p, not both. They achieve similar effects through different mechanisms. If you're new to parameter tuning, start with temperature — it's more intuitive.</p>
+<h3 id="frequency-penalty">Frequency Penalty</h3>
+<p>The <strong>frequency penalty</strong> discourages the model from repeating the same words or phrases. It applies a penalty to tokens that have already appeared in the response, proportional to how many times they've appeared.</p>
+<ul>
+<li><strong>Frequency penalty = 0</strong> — No penalty. The model may repeat words freely.</li>
+<li><strong>Frequency penalty = 0.5-1.0</strong> — Moderate discouragement of repetition. Good for varied writing.</li>
+<li><strong>Frequency penalty = 2.0</strong> — Strong penalty. The model aggressively avoids reusing words.</li>
+</ul>
+<p>This is useful when you notice the model falling into repetitive patterns — using the same transition phrase, repeating the same adjective, or restating the same point in slightly different words.</p>
+<h3 id="presence-penalty">Presence Penalty</h3>
+<p>The <strong>presence penalty</strong> is similar to frequency penalty but simpler: it applies a flat penalty to any token that has appeared <em>at all</em> in the response, regardless of how many times.</p>
+<ul>
+<li><strong>Presence penalty = 0</strong> — No penalty.</li>
+<li><strong>Presence penalty = 0.5-1.0</strong> — Encourages the model to explore new topics and vocabulary.</li>
+<li><strong>Presence penalty = 2.0</strong> — Strongly pushes the model toward novel territory.</li>
+</ul>
+<p>The difference between frequency and presence penalty:</p>
+<ul>
+<li><strong>Frequency penalty</strong> says: "Don't use this word <em>as often</em>."</li>
+<li><strong>Presence penalty</strong> says: "Don't use this word <em>again at all</em>."</li>
+</ul>
+<p>Presence penalty is great when you want the model to cover diverse topics rather than dwelling on one theme.</p>
+<h3 id="max-tokens-setting">Max Tokens Setting</h3>
+<p>The <strong>max tokens setting</strong> is the simplest parameter: it caps the maximum length of the model's response in tokens. Remember from Chapter 1 that one token is roughly 3/4 of a word.</p>
+<ul>
+<li><strong>Max tokens = 100</strong> — Short response (~75 words). Good for quick answers.</li>
+<li><strong>Max tokens = 500</strong> — Medium response (~375 words). Good for explanations.</li>
+<li><strong>Max tokens = 2000</strong> — Long response (~1,500 words). Good for articles or detailed analysis.</li>
+<li><strong>Max tokens = 4096</strong> — Very long response. Good for comprehensive content.</li>
+</ul>
+<p>Important: the model will stop generating when it hits the max token limit, even mid-sentence. Set this too low and you'll get cut-off responses. Set it too high and you'll pay for tokens you don't need.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Polly's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly giving a tip">
+Let's craft the perfect prompt! Here's a pro move: set max tokens slightly higher than you need, but tell the model the desired length <em>in the prompt</em> ("Write approximately 300 words"). The prompt controls the natural stopping point; max tokens is the safety net that prevents runaway responses.</p>
+</div>
+<h3 id="stop-sequences">Stop Sequences</h3>
+<p><strong>Stop sequences</strong> are specific strings that tell the model to stop generating when encountered. This gives you precise control over where the response ends.</p>
+<p>For example, if you set the stop sequence to <code>"\n\n"</code> (two newlines), the model will stop at the first double line break. Other common stop sequences:</p>
+<ul>
+<li><code>"END"</code> — Stop when the model generates the word "END"</li>
+<li><code>"---"</code> — Stop at a horizontal rule</li>
+<li><code>"Q:"</code> — Stop before generating the next question (useful for Q&amp;A format)</li>
+</ul>
+<p>Stop sequences are especially useful when you want the model to generate one item from a list, one answer from a set, or one section of a document.</p>
+<h3 id="seed-parameter">Seed Parameter</h3>
+<p>The <strong>seed parameter</strong> is a number that initializes the model's random number generator. When you set the same seed with the same prompt and parameters, you get (nearly) the same output every time.</p>
+<p>This is invaluable for:</p>
+<ul>
+<li><strong>Debugging</strong> — Reproduce the same response to test changes</li>
+<li><strong>Testing</strong> — Compare prompt variations with controlled randomness</li>
+<li><strong>Collaboration</strong> — Share a prompt+seed combination so others get the same result</li>
+</ul>
+<p>Not all providers support the seed parameter, and even with a seed, outputs aren't guaranteed to be perfectly identical across different model versions. But it gets you close.</p>
+<h3 id="reproducibility">Reproducibility</h3>
+<p><strong>Reproducibility</strong> is the broader goal that the seed parameter serves: the ability to get the same (or very similar) results when running the same prompt under the same conditions.</p>
+<p>Achieving reproducibility requires controlling:</p>
+<ul>
+<li>The prompt text (identical)</li>
+<li>The model version (same checkpoint)</li>
+<li>Temperature (set to 0 for maximum reproducibility)</li>
+<li>Seed (if available)</li>
+<li>Max tokens and other parameters (identical)</li>
+</ul>
+<p>Reproducibility matters in professional settings where you need to demonstrate, audit, or validate AI-generated outputs. It's also essential for scientific applications of prompt engineering.</p>
+<h4 id="diagram-temperature-explorer">Diagram: Temperature Explorer</h4>
+<iframe src="../../sims/temperature-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Temperature Explorer MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> temperature-explorer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let students interactively explore how temperature affects the probability distribution of next-token selection, visualizing the tradeoff between creativity and consistency.</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: demonstrate, practice
+Learning Objective: Demonstrate how the temperature parameter changes the probability distribution of token selection and predict the effect on output creativity.</p>
+<p>Layout:
+- Left area (60%): Bar chart showing probability distribution of top 10 candidate tokens
+- Right area (40%): Controls and explanation panel</p>
+<p>Visual elements:
+- Bar chart with 10 bars representing top candidate tokens (labeled with words like "the," "a," "brilliant," "unusual," "purple")
+- Bars colored from blue (high probability) to orange (low probability)
+- Highlighted bar showing which token would be selected
+- Text display showing the resulting sentence building token by token</p>
+<p>Controls:
+- Temperature slider: 0.0 to 2.0 (default 0.7), step 0.1
+- "Generate Next Token" button: samples one token from the distribution
+- "Generate 10 Tokens" button: samples 10 tokens in sequence
+- "Reset" button: clears generated text
+- Prompt input field with default "The best way to learn is"</p>
+<p>Behavior:
+- At temp 0: tallest bar always selected, same word every time
+- At temp 0.7: usually high-probability tokens, occasional surprises
+- At temp 1.5+: nearly random selection, often producing unexpected combinations
+- Bar heights adjust dynamically as temperature changes
+- Generated sentence appears below the chart, growing token by token</p>
+<p>Data Visibility Requirements:
+- Stage 1: Show raw probability scores for each candidate token
+- Stage 2: Show temperature-adjusted probabilities (softmax with temperature)
+- Stage 3: Show selected token highlighted
+- Stage 4: Show running sentence with new token appended</p>
+<p>Responsive: Must adapt to window width.</p>
+<p>Instructional Rationale: Interactive parameter exploration at Bloom's Apply level lets students build intuition through experimentation rather than memorization. Seeing the probability distribution change in real-time connects the abstract concept of "temperature" to concrete token selection behavior.</p>
+<p>Implementation: p5.js with bar chart rendering, probability math, and text accumulation</p>
+</details>
+<h2 id="combining-prompt-types-and-parameters">Combining Prompt Types and Parameters</h2>
+<p>The real magic happens when you combine the right prompt type with the right parameters. Here are some proven combinations:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Prompt Type</th>
+<th>Temperature</th>
+<th>Max Tokens</th>
+<th>Other Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extract data from text</td>
+<td>Closed-ended + Directive</td>
+<td>0.0</td>
+<td>200</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Write creative fiction</td>
+<td>Open-ended</td>
+<td>0.9</td>
+<td>2000</td>
+<td>Presence penalty 0.6</td>
+</tr>
+<tr>
+<td>Answer factual questions</td>
+<td>Interrogative</td>
+<td>0.2</td>
+<td>500</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Brainstorm ideas</td>
+<td>Open-ended</td>
+<td>1.0</td>
+<td>1000</td>
+<td>Presence penalty 0.8</td>
+</tr>
+<tr>
+<td>Code generation</td>
+<td>Directive</td>
+<td>0.0-0.2</td>
+<td>1000</td>
+<td>Frequency penalty 0</td>
+</tr>
+<tr>
+<td>Conversational tutoring</td>
+<td>Conversational</td>
+<td>0.5</td>
+<td>500</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Progress!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Let's craft the perfect prompt! You now have TWO levers for controlling AI output — what you write (prompt type and content) and how the model processes it (parameters). Most people only know about the first one. You, fellow prompt crafter, are already in the top tier.</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Prompts come in five main types: <strong>directive</strong>, <strong>interrogative</strong>, <strong>open-ended</strong>, <strong>closed-ended</strong>, and <strong>conversational</strong> — choose based on your task</li>
+<li><strong>Temperature</strong> controls creativity vs. consistency (0 = predictable, 1+ = creative)</li>
+<li><strong>Top-P</strong> is an alternative randomness control that limits the token pool</li>
+<li><strong>Frequency</strong> and <strong>presence penalties</strong> reduce repetition and encourage variety</li>
+<li><strong>Max tokens</strong> caps response length — set it as a safety net, not a target</li>
+<li><strong>Stop sequences</strong> give precise control over where responses end</li>
+<li>The <strong>seed parameter</strong> enables <strong>reproducibility</strong> — same seed + same prompt = same output</li>
+<li>The best results come from combining the right prompt type with the right parameter settings</li>
+</ul>
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>Directive Prompts</li>
@@ -1341,14 +2011,15 @@
 <li><a href="../01-ai-ml-foundations/">Chapter 1: AI and Machine Learning Foundations</a></li>
 <li><a href="../02-prompt-fundamentals/">Chapter 2: Prompt Fundamentals</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

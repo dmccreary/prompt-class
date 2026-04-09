@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="Learn techniques for managing context windows effectively, including prompt compression and expansion, token counting, conversation history management, session persistence, and strategies for working with long-form documents.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>7. Context, Memory, and Info Management - Prompt Engineering Class</title>
+        <title>Context, Memory, and Information Management - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. Context, Memory, and Info Management
+              Context, Memory, and Information Management
             
           </span>
         </div>
@@ -706,9 +706,192 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-context-challenge" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Context Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-window-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Window Limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Counting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stateless-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stateless Interaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-in-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory in AI Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Compression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Expansion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversation-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversation History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-form-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Form Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Long-Form Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-long-form-document-processing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Long-Form Document Processing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-summarization-and-summary-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Summarization and Summary Generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-extraction-and-key-point-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Extraction and Key Point Identification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relevance-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-injection-and-background-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Injection and Background Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-knowledge-priming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Knowledge Priming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-generation-and-technical-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Generation and Technical Writing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Generation and Technical Writing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-context-management-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Context Management Decision Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-context-management-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Context Management Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1272,9 +1455,192 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-context-challenge" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Context Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-window-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Window Limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Counting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stateless-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stateless Interaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-in-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory in AI Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Compression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Expansion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversation-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversation History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-form-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Form Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Long-Form Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-long-form-document-processing-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Long-Form Document Processing Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-summarization-and-summary-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Summarization and Summary Generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#information-extraction-and-key-point-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Extraction and Key Point Identification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relevance-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance Filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-injection-and-background-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Injection and Background Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-knowledge-priming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Knowledge Priming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-generation-and-technical-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Generation and Technical Writing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Generation and Technical Writing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-context-management-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Context Management Decision Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-context-management-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Context Management Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1684,484 @@
 
 
 <h1 id="context-memory-and-information-management">Context, Memory, and Information Management</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter addresses one of the most critical challenges in prompt engineering: managing context effectively within the constraints of AI model context windows. Students will learn techniques for prompt compression and expansion, token counting, and relevance filtering to make the most of limited context space. The chapter covers conversation history management, session persistence, and strategies for working with long-form documents. Students will also master information extraction, summarization, and domain knowledge priming to build rich, contextually aware prompts.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome Back, Fellow Prompt Crafters!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Let's craft the perfect prompt! In this chapter, we tackle one of the sneakiest challenges in prompt engineering: managing context. Think of it like packing a suitcase — you can't bring everything, so you need to be smart about what goes in.</p>
+</div>
+<h2 id="the-context-challenge">The Context Challenge</h2>
+<p>Every conversation you have with an AI model takes place inside an invisible box called the <strong>context window</strong>. This window has a fixed size, measured in tokens, and it holds <em>everything</em> — your prompt, the system instructions, previous conversation turns, and the model's responses. When the box gets full, something has to go.</p>
+<p>Understanding this constraint is what separates effective prompt engineers from frustrated users who wonder why their AI "forgot" what they told it five minutes ago. The truth is, the AI didn't forget. It simply ran out of room — or, more precisely, the oldest content fell out of the window while new content was added.</p>
+<p>This chapter gives you a toolkit for making the most of that limited space. You'll learn how to compress information, expand it when needed, filter for relevance, manage conversation history, and inject context strategically. These are the skills that let you work with AI on complex, multi-step projects instead of just quick one-off questions.</p>
+<h2 id="context-window-limits">Context Window Limits</h2>
+<p>A <strong>context window limit</strong> is the maximum number of tokens a model can process in a single interaction, including both input and output. Early models like GPT-3 had context windows of about 4,000 tokens — roughly 3,000 words. Modern models offer windows of 100,000 to 200,000 tokens or more. That sounds like a lot, but it fills up faster than you'd expect.</p>
+<p>Here's a practical way to think about it: a typical novel is about 80,000 words, or roughly 100,000 tokens. A model with a 128K token context window can theoretically hold an entire novel. But remember, the output also consumes tokens from that same window. And if you're having a multi-turn conversation, every previous exchange is using space too.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>Why does my AI seem to &quot;forget&quot; things?
+
+The AI&#39;s context window works like a conveyor belt:
+┌──────────────────────────────────────────────┐
+│  System    │ Turn 1 │ Turn 2 │ ... │ Turn N  │
+│  Prompt    │ Q + A  │ Q + A  │     │ Q + A   │
+└──────────────────────────────────────────────┘
+                                    ▲
+                            Window limit reached!
+                            Oldest turns drop off.
+</code></pre></div></td></tr></table></div>
+<p>The practical implication: you must treat context space as a precious resource. Every unnecessary word in your prompt is a word that could have been used for something more valuable.</p>
+<h2 id="token-counting">Token Counting</h2>
+<p><strong>Token counting</strong> is the practice of estimating or measuring how many tokens a piece of text consumes within a model's context window. Tokens are the fundamental units that language models use to process text. A token is not the same as a word — it's a chunk of text that the model's tokenizer has learned to treat as a single unit.</p>
+<p>In English, a rough rule of thumb is that one token equals about 0.75 words, or alternatively, 100 tokens equals about 75 words. But this varies significantly across languages, technical content, and special characters.</p>
+<p>Here are some practical token estimates:</p>
+<table>
+<thead>
+<tr>
+<th>Content Type</th>
+<th>Approximate Length</th>
+<th>Estimated Tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A short prompt</td>
+<td>1-2 sentences</td>
+<td>20-50 tokens</td>
+</tr>
+<tr>
+<td>A detailed prompt with examples</td>
+<td>1-2 paragraphs</td>
+<td>100-300 tokens</td>
+</tr>
+<tr>
+<td>A one-page document</td>
+<td>~500 words</td>
+<td>~650 tokens</td>
+</tr>
+<tr>
+<td>A 10-page report</td>
+<td>~5,000 words</td>
+<td>~6,500 tokens</td>
+</tr>
+<tr>
+<td>A full novel</td>
+<td>~80,000 words</td>
+<td>~100,000 tokens</td>
+</tr>
+</tbody>
+</table>
+<p>Why does this matter for prompt engineering? Because every token you spend on your prompt is a token the model cannot use for its response. If you paste a 50-page document into a model with a 16K token window and ask for a detailed analysis, the model may not have enough room left to generate a complete answer.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Tokens Are Not Words</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Here's something that trips people up: the word "unbelievable" is one word but might be split into three tokens ("un", "believ", "able"). Meanwhile, common words like "the" are almost always a single token. Technical terms, code, and non-English text tend to use more tokens per word. When in doubt, use a tokenizer tool to get exact counts!</p>
+</div>
+<p>Most AI platforms provide tokenizer tools or APIs that let you count tokens precisely. OpenAI's <code>tiktoken</code> library, Anthropic's token counting API, and various online tools can give you exact numbers. When you're working on projects where context space is tight, checking your token count before submitting a prompt is a smart habit.</p>
+<h2 id="stateless-interaction">Stateless Interaction</h2>
+<p>Here's a fact that surprises many people: most AI models are fundamentally <strong>stateless</strong>. A stateless interaction means the model has no persistent memory between separate API calls. Each time you send a prompt, the model treats it as a completely fresh conversation — unless the application layer sends along the previous conversation history.</p>
+<p>When you use a chat interface like ChatGPT or Claude, it <em>feels</em> like the model remembers your conversation. But what's actually happening behind the scenes is that the application is resending the entire conversation history with each new message. The model reads through all of it, generates a response, and then immediately "forgets" everything. It's like a goldfish with perfect reading comprehension — brilliant in the moment, but starting fresh every time.</p>
+<p>This is why your conversation eventually seems to "lose" earlier context. As the conversation grows longer, the application must either truncate older messages to stay within the context window or summarize them to save space.</p>
+<p>Understanding statelessness is crucial because it means <strong>you</strong> are responsible for managing what information the model has access to at any given moment.</p>
+<h2 id="memory-in-ai-systems">Memory in AI Systems</h2>
+<p>Given that models are stateless, how do modern AI applications create the illusion of <strong>memory</strong>? Memory in AI systems refers to any mechanism that allows information to persist across interactions, giving the appearance (and practical benefit) of continuity.</p>
+<p>There are several approaches to AI memory:</p>
+<p><strong>Conversation-level memory</strong> is the simplest form. The application stores the current conversation and resends it with each new message. This is what most chat interfaces do by default. It works well for short conversations but degrades as the conversation exceeds the context window.</p>
+<p><strong>Session persistence</strong> extends memory beyond a single conversation. Session persistence means saving conversation state so that a user can return later and continue where they left off. Some applications store session data in databases and reload relevant portions when you return. This is how ChatGPT's "memory" feature and Claude's project knowledge work.</p>
+<p><strong>Long-term memory systems</strong> use external storage (databases, vector stores, or files) to maintain information indefinitely. When you start a new conversation, the system retrieves relevant stored information and injects it into the prompt. This approach is the foundation of many enterprise AI applications.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>Memory Architecture in AI Chat Applications:
+
+┌─────────────┐    ┌──────────────────┐    ┌────────────┐
+│   User&#39;s    │───▶│  Application     │───▶│  AI Model  │
+│   Message   │    │  Layer           │    │  (Stateless│
+└─────────────┘    │                  │    │   per call)│
+                   │ - Loads history  │    └────────────┘
+                   │ - Retrieves      │           │
+                   │   memory         │           │
+                   │ - Manages tokens │    ┌──────┘
+                   └──────────────────┘    │
+                          │                ▼
+                   ┌──────────────┐  ┌──────────┐
+                   │  Conversation│  │ Response  │
+                   │  Database    │  │ to User   │
+                   └──────────────┘  └──────────┘
+</code></pre></div></td></tr></table></div>
+<p>The key insight is that "memory" in current AI systems is really an engineering solution built <em>around</em> a stateless model. The model itself doesn't remember anything — the surrounding system manages memory on its behalf.</p>
+<h2 id="context-management">Context Management</h2>
+<p><strong>Context management</strong> is the overarching discipline of deciding what information to include in a prompt, how to structure it, and when to add or remove content as a conversation evolves. It's the strategic skill that ties together everything else in this chapter.</p>
+<p>Good context management means asking yourself three questions before every prompt:</p>
+<ol>
+<li><strong>What does the model need to know right now?</strong> Not everything — just what's relevant to this specific request.</li>
+<li><strong>What is the model likely to already know?</strong> Models have extensive training data. You don't need to explain what Python is to a model that has seen millions of Python files.</li>
+<li><strong>What can I leave out to save space?</strong> Every token saved is a token available for a better response.</li>
+</ol>
+<p>Think of yourself as an editor briefing a brilliant but amnesiac consultant. You need to provide enough context for them to do excellent work, without drowning them in irrelevant details.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">The 80/20 Rule of Context</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly with a helpful tip">
+Words matter — let's get them right! In most prompts, about 20% of the context does 80% of the work. Before pasting a long document into your prompt, ask yourself: "Can I include just the relevant section instead?" A focused excerpt almost always produces better results than a full document dump.</p>
+</div>
+<h2 id="prompt-compression">Prompt Compression</h2>
+<p><strong>Prompt compression</strong> is the technique of reducing the token count of your prompt while preserving its essential meaning and instructions. It's the art of saying more with less.</p>
+<p>Why compress? Because shorter prompts leave more room for the model's response, cost less (if you're paying per token), and often produce more focused answers. A compressed prompt forces you to identify what truly matters.</p>
+<p>Here are practical compression techniques:</p>
+<p><strong>Remove redundancy.</strong> If you've stated something once, don't repeat it. Models have excellent reading comprehension within their context window.</p>
+<p><strong>Use abbreviations and shorthand</strong> when the meaning is clear. Instead of "Please generate a comprehensive summary of the following document," try "Summarize this document."</p>
+<p><strong>Replace examples with patterns.</strong> Instead of giving five examples of the output format you want, give one example and a clear description of the pattern.</p>
+<p><strong>Use structured formats.</strong> A bulleted list of requirements often uses fewer tokens than the same requirements written as prose paragraphs.</p>
+<p>Here's a before-and-after example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>BEFORE (87 tokens):
+I would like you to please analyze the following customer feedback 
+and provide me with a summary of the main themes. Please make sure 
+to identify both positive and negative sentiments. Also, I would 
+appreciate it if you could organize the themes by frequency, with 
+the most common themes listed first. Please be thorough.
+
+AFTER (34 tokens):
+Analyze this customer feedback. Identify main themes (positive and 
+negative), ordered by frequency. Be thorough.
+</code></pre></div></td></tr></table></div>
+<p>Same instructions. Less than half the tokens. The model will produce equally good results — possibly better, because the signal-to-noise ratio improved.</p>
+<h2 id="prompt-expansion">Prompt Expansion</h2>
+<p><strong>Prompt expansion</strong> is the opposite of compression: deliberately adding more detail, context, examples, or constraints to a prompt to improve the quality and specificity of the response. Sometimes a short prompt is too ambiguous, and the model needs more guidance to deliver what you actually want.</p>
+<p>Expansion is appropriate when:</p>
+<ul>
+<li>The task is complex or multi-step</li>
+<li>The domain is specialized and the model might make incorrect assumptions</li>
+<li>You need the output to follow a very specific format or style</li>
+<li>Previous attempts with shorter prompts produced inadequate results</li>
+</ul>
+<p>Effective expansion adds <em>useful</em> information, not filler. Compare these two expansions of a simple prompt:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>ORIGINAL:
+Write a project proposal.
+
+POOR EXPANSION (adds words but not value):
+Write a very good, detailed, comprehensive, thorough project 
+proposal that covers all the important aspects and is well-written.
+
+GOOD EXPANSION (adds specific context):
+Write a project proposal for a school library digitization project.
+Audience: school board members (non-technical).
+Sections: Executive Summary, Problem Statement, Proposed Solution, 
+Timeline (6 months), Budget ($50K), Expected Outcomes.
+Tone: professional, persuasive.
+Length: 2 pages.
+</code></pre></div></td></tr></table></div>
+<p>The good expansion succeeds because it provides concrete details that eliminate ambiguity. The poor expansion just adds adjectives that the model would have tried to satisfy anyway.</p>
+<h2 id="conversation-history">Conversation History</h2>
+<p><strong>Conversation history</strong> refers to the accumulated record of all previous messages (both user prompts and model responses) in a multi-turn interaction. Managing this history effectively is one of the most important practical skills in prompt engineering.</p>
+<p>As conversations grow longer, you face a dilemma: you want the model to remember important context from earlier in the conversation, but you also need room for new instructions and responses. Here are strategies for managing this tension:</p>
+<p><strong>Periodic summarization.</strong> Every few turns, ask the model to summarize the key decisions and context from the conversation so far. Then start a new conversation with that summary as the opening context. This is like taking meeting notes — you compress hours of discussion into a page of key points.</p>
+<p><strong>Selective history.</strong> Not every turn in a conversation is equally important. If turns 3-7 were about exploring options and turn 8 was the final decision, you might only need to keep turn 8 going forward.</p>
+<p><strong>Explicit state tracking.</strong> For complex projects, maintain a running "state document" that captures all current decisions, requirements, and context. Update it as the conversation progresses and include it at the start of each new prompt.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Example: Explicit State Tracking
+
+Include at the top of each prompt:
+---
+PROJECT STATE:
+- Project: Customer portal redesign
+- Decision: React frontend, Python API backend
+- Current phase: Database schema design
+- Constraints: Must support 10K concurrent users
+- Open questions: Authentication provider selection
+---
+
+Your new question or instruction goes here.
+</code></pre></div></td></tr></table></div>
+<h2 id="long-form-context">Long-Form Context</h2>
+<p><strong>Long-form context</strong> refers to working with source material that spans many pages — documents, reports, codebases, or datasets that may approach or exceed the model's context window. This is where context management gets genuinely challenging.</p>
+<p>When working with long documents, you have several strategies:</p>
+<p><strong>Chunking.</strong> Break the document into smaller pieces and process each piece separately. Then combine the results. This works well for tasks like summarization where each section can be processed independently.</p>
+<p><strong>Hierarchical processing.</strong> First, ask the model to create an outline or table of contents from the document. Then, use that outline to identify which sections are relevant to your question and only include those sections in your follow-up prompt.</p>
+<p><strong>Progressive refinement.</strong> Start with a high-level pass over the entire document (or a summary of it), then drill down into specific sections that need detailed attention.</p>
+<details>
+<summary>Expand to see diagram specification</summary>
+<h4 id="diagram-long-form-document-processing-strategies">Diagram: Long-Form Document Processing Strategies</h4>
+<p>Create a flowchart using Mermaid syntax that shows decision logic for processing long documents:</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Long Document] --&gt; B{Fits in context window?}
+    B --&gt;|Yes| C[Process directly]
+    B --&gt;|No| D{Task type?}
+    D --&gt;|Summarization| E[Chunk and summarize each piece]
+    D --&gt;|Question answering| F[Extract relevant sections only]
+    D --&gt;|Analysis| G[Hierarchical: outline first, then drill down]
+    E --&gt; H[Combine chunk summaries into final summary]
+    F --&gt; I[Process focused excerpt with question]
+    G --&gt; J[Process relevant sections in detail]
+    H --&gt; K[Final Output]
+    I --&gt; K
+    J --&gt; K
+    C --&gt; K</code></pre>
+<p>This diagram should help students decide which strategy to use based on their document size and task type.</p>
+</details>
+<h2 id="document-summarization-and-summary-generation">Document Summarization and Summary Generation</h2>
+<p><strong>Document summarization</strong> is the process of using AI to condense a longer text into a shorter version that captures the essential information. <strong>Summary generation</strong> is the broader skill of creating summaries at various levels of detail for different audiences and purposes.</p>
+<p>Summarization is one of the most common prompt engineering tasks, and it's also where context management skills pay off most directly. A well-managed summarization prompt produces a tight, useful summary. A poorly managed one produces either a truncated mess or a summary that misses key points.</p>
+<p>Effective summarization prompts specify:</p>
+<ul>
+<li><strong>Target length</strong> — "Summarize in 3 paragraphs" or "Summarize in under 200 words"</li>
+<li><strong>Audience</strong> — "Summarize for a technical audience" versus "Summarize for a general reader"</li>
+<li><strong>Focus</strong> — "Focus on the financial implications" or "Focus on the methodology"</li>
+<li><strong>Format</strong> — "Use bullet points" or "Write a narrative paragraph"</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Effective summarization prompt:
+
+Summarize the attached research paper. 
+Target: 250 words.
+Audience: Healthcare administrators (non-researchers).
+Focus: Practical implications for hospital workflow.
+Format: 3-4 bullet points for key findings, followed by a 
+one-paragraph recommendation.
+</code></pre></div></td></tr></table></div>
+<h2 id="information-extraction-and-key-point-identification">Information Extraction and Key Point Identification</h2>
+<p><strong>Information extraction</strong> is the technique of using prompts to pull specific data points, facts, or structured information from unstructured text. <strong>Key point identification</strong> is the related skill of finding the most important ideas or arguments in a document.</p>
+<p>These skills are essential when you don't need a full summary — you need specific answers. Consider the difference:</p>
+<ul>
+<li><em>Summarize this contract</em> → gives you an overview</li>
+<li><em>Extract all payment terms from this contract</em> → gives you specific data</li>
+<li><em>What are the three main arguments in this essay?</em> → gives you key points</li>
+</ul>
+<p>Information extraction works best when you tell the model exactly what to look for:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Extract the following from this job posting:
+- Job title
+- Required years of experience
+- Required technical skills (list)
+- Salary range (if mentioned)
+- Remote work policy
+
+Format: JSON object
+</code></pre></div></td></tr></table></div>
+<p><strong>Key point identification</strong> is particularly useful for quickly processing large volumes of text. You might ask: "What are the 5 most important points in this article?" or "What claims does the author support with evidence?"</p>
+<h2 id="relevance-filtering">Relevance Filtering</h2>
+<p><strong>Relevance filtering</strong> is the practice of selectively including only the most pertinent information in your prompt, excluding everything that doesn't directly contribute to the current task. It's the context management skill that most directly saves you tokens and improves response quality.</p>
+<p>Think of relevance filtering as being a good research assistant. If your boss asks you to brief them on a competitor's pricing strategy, you don't hand them the competitor's entire annual report. You find the relevant pages, highlight the key sections, and present just what they need.</p>
+<p>Apply the same principle to your prompts:</p>
+<ul>
+<li><strong>Don't paste entire documents</strong> when a relevant excerpt will do</li>
+<li><strong>Remove boilerplate</strong> — headers, footers, legal disclaimers, and formatting artifacts</li>
+<li><strong>Strip metadata</strong> that doesn't affect the task — timestamps, internal reference numbers, formatting codes</li>
+<li><strong>Prioritize recent information</strong> when working with time-sensitive content</li>
+</ul>
+<div class="admonition mascot-warning">
+<p class="admonition-title">The Context Window Is Not a Junk Drawer</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly with a warning">
+One of the most common mistakes in prompt engineering is the "kitchen sink" approach — pasting in everything you can find and hoping the model will sort it out. This usually backfires. Irrelevant context confuses the model, dilutes the signal from your actual instructions, and wastes precious tokens. Be a curator, not a hoarder!</p>
+</div>
+<h2 id="context-injection-and-background-information">Context Injection and Background Information</h2>
+<p><strong>Context injection</strong> is the technique of strategically inserting relevant information into a prompt that the model would not otherwise have access to. This includes private data, recent events, domain-specific details, or any information that falls outside the model's training data.</p>
+<p><strong>Background information</strong> is any supplementary context you provide to help the model understand the situation, constraints, or domain it's working within.</p>
+<p>Context injection is one of the most powerful prompt engineering techniques because it lets you combine the model's general intelligence with your specific, up-to-date knowledge. Common scenarios include:</p>
+<ul>
+<li>Providing a company's style guide before asking the model to write marketing copy</li>
+<li>Including a patient's medical history before asking the model to help draft a clinical summary</li>
+<li>Pasting in relevant code files before asking the model to debug an issue</li>
+<li>Sharing meeting notes before asking the model to draft follow-up action items</li>
+</ul>
+<p>The key to effective context injection is placement and labeling. Clearly separate the injected context from your instructions:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>CONTEXT:
+[Your background information here]
+
+INSTRUCTIONS:
+[What you want the model to do with that context]
+</code></pre></div></td></tr></table></div>
+<p>This structure helps the model understand which parts are reference material and which parts are action items.</p>
+<h2 id="domain-knowledge-priming">Domain Knowledge Priming</h2>
+<p><strong>Domain knowledge priming</strong> is the technique of providing the model with specialized vocabulary, rules, conventions, or background knowledge for a specific field before asking it to perform a task in that domain. It's a specific form of context injection focused on expertise rather than data.</p>
+<p>Why is this necessary? While models have broad knowledge across many domains, their understanding can be shallow or outdated in specialized fields. Domain knowledge priming fills those gaps.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>Example: Priming for a legal domain task
+
+You are assisting a contracts attorney. Key terms for this task:
+- &quot;Indemnification&quot; = obligation to compensate for loss or damage
+- &quot;Force majeure&quot; = unforeseeable circumstances preventing 
+  contract fulfillment
+- &quot;Liquidated damages&quot; = predetermined compensation amount 
+  agreed upon in the contract
+- Governing jurisdiction: State of Delaware, USA
+
+Now, review the following contract clause and identify any 
+potential risks for the buyer...
+</code></pre></div></td></tr></table></div>
+<p>Priming is especially valuable when working with:</p>
+<ul>
+<li>Industry-specific terminology that has different meanings in general usage</li>
+<li>Internal company processes or naming conventions</li>
+<li>Regulatory frameworks with precise definitions</li>
+<li>Academic fields with evolving standards or competing schools of thought</li>
+</ul>
+<h2 id="report-generation-and-technical-writing">Report Generation and Technical Writing</h2>
+<p><strong>Report generation</strong> is the use of AI to create structured documents that present information, analysis, or recommendations in a formal format. <strong>Technical writing</strong> is the specialized discipline of communicating complex or specialized information clearly and accurately.</p>
+<p>These are output-focused applications of context management. To generate a good report, you need to provide the model with the right raw materials (data, findings, context) and clear instructions about the report's structure, audience, and purpose.</p>
+<p>A strong report generation prompt follows this pattern:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>Generate a quarterly sales report.
+
+DATA:
+[Insert key metrics, trends, and figures]
+
+STRUCTURE:
+1. Executive Summary (3-4 sentences)
+2. Key Metrics (table format)
+3. Trend Analysis (2-3 paragraphs)
+4. Recommendations (bullet points)
+
+AUDIENCE: VP of Sales (familiar with industry terminology)
+TONE: Professional, data-driven
+LENGTH: 2 pages
+</code></pre></div></td></tr></table></div>
+<p>Technical writing requires additional attention to precision. When generating technical content, include instructions like:</p>
+<ul>
+<li>"Define all acronyms on first use"</li>
+<li>"Use active voice"</li>
+<li>"Include specific version numbers and dates"</li>
+<li>"Cite sources for all factual claims"</li>
+</ul>
+<details>
+<summary>Expand to see diagram specification</summary>
+<h4 id="diagram-context-management-decision-framework">Diagram: Context Management Decision Framework</h4>
+<p>Create a diagram showing how different context management techniques relate to each other and when to use each one:</p>
+<pre class="mermaid"><code>flowchart LR
+    A[New Prompt Task] --&gt; B{How much context needed?}
+    B --&gt;|Minimal| C[Prompt Compression]
+    B --&gt;|Moderate| D[Relevance Filtering + Context Injection]
+    B --&gt;|Extensive| E{Does it fit in context window?}
+    E --&gt;|Yes| F[Background Info + Domain Priming]
+    E --&gt;|No| G[Document Summarization + Chunking]
+    C --&gt; H[Submit Prompt]
+    D --&gt; H
+    F --&gt; H
+    G --&gt; I[Process in Stages]
+    I --&gt; H
+    H --&gt; J{Multi-turn conversation?}
+    J --&gt;|Yes| K[Manage Conversation History]
+    J --&gt;|No| L[Done]
+    K --&gt; M{History getting long?}
+    M --&gt;|Yes| N[Summarize + Reset Context]
+    M --&gt;|No| L
+    N --&gt; L</code></pre>
+<p>This diagram provides students with a practical decision tree for choosing the appropriate context management strategy for any given task.</p>
+</details>
+<h2 id="putting-it-all-together-a-context-management-workflow">Putting It All Together: A Context Management Workflow</h2>
+<p>Let's walk through a realistic scenario that combines multiple techniques from this chapter.</p>
+<p><strong>Scenario:</strong> You're a project manager who needs to use AI to analyze a 40-page project requirements document and produce a two-page executive summary for your steering committee.</p>
+<p><strong>Step 1: Assess the context.</strong> The document is roughly 40 pages, or about 52,000 tokens. Your model has a 128K context window. It fits, but it will consume a large portion of your available space.</p>
+<p><strong>Step 2: Apply relevance filtering.</strong> You scan the document and realize that 15 pages are appendices with raw data tables. You remove those, bringing the document down to 25 pages (~32,500 tokens). Much better.</p>
+<p><strong>Step 3: Apply prompt compression.</strong> You write a concise prompt rather than a verbose one. You specify exactly what the steering committee cares about: timeline, budget, risks, and key deliverables.</p>
+<p><strong>Step 4: Inject background context.</strong> You add a brief note about the steering committee's priorities: "The committee is primarily concerned with budget adherence and the Q3 delivery deadline."</p>
+<p><strong>Step 5: Use domain knowledge priming.</strong> You include a few lines defining internal project terminology that appears throughout the document.</p>
+<p><strong>Step 6: Submit and iterate.</strong> You send the prompt, review the summary, and then ask follow-up questions about specific sections — using the conversation history to maintain continuity.</p>
+<p>This workflow demonstrates that context management is not a single technique but a combination of skills applied strategically. With practice, it becomes second nature.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You've Mastered Context Management!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Use your words! You now understand how to pack the right information into every prompt, manage conversation history like a pro, and handle documents of any length. These skills are the backbone of advanced prompt engineering — everything from RAG systems to agentic AI builds on this foundation. Onward!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Context windows have hard limits.</strong> Every token in your prompt (including conversation history) counts toward this limit. Treat context space as a precious resource.</li>
+<li><strong>AI models are stateless.</strong> What feels like "memory" is really the application resending conversation history with each request. Understanding this changes how you structure interactions.</li>
+<li><strong>Prompt compression saves tokens and improves focus.</strong> Remove redundancy, use concise language, and replace verbose instructions with structured formats.</li>
+<li><strong>Prompt expansion adds value when tasks are complex.</strong> More detail reduces ambiguity, but only when the added detail is specific and actionable — not just more adjectives.</li>
+<li><strong>Relevance filtering is your most powerful context management tool.</strong> Include only what the model needs for the current task. Be a curator, not a collector.</li>
+<li><strong>Context injection and domain priming let you extend the model's knowledge.</strong> Combine the model's general intelligence with your specific, current information.</li>
+<li><strong>Conversation history management is essential for multi-turn work.</strong> Use periodic summarization, selective history, and explicit state tracking to maintain continuity without exceeding context limits.</li>
+<li><strong>Document processing requires strategy.</strong> For long documents, choose between chunking, hierarchical processing, and progressive refinement based on your task type and document size.</li>
+</ul>
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>Prompt Compression</li>
@@ -1352,14 +2194,15 @@
 <li><a href="../05-advanced-prompt-techniques/">Chapter 5: Advanced Prompt Techniques</a></li>
 <li><a href="../06-output-format-control/">Chapter 6: Output Format Control</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

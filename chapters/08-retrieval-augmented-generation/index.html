@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="Learn how Retrieval-Augmented Generation (RAG) combines language models with external knowledge sources to produce grounded, accurate responses using vector databases, embeddings, semantic search, document chunking, and source citation practices.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>8. Retrieval-Augmented Generation - Prompt Engineering Class</title>
+        <title>Retrieval-Augmented Generation - Prompt Engineering Class</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. Retrieval-Augmented Generation
+              Retrieval-Augmented Generation
             
           </span>
         </div>
@@ -729,9 +729,174 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-models-need-help-remembering" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Models Need Help Remembering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Retrieval-Augmented Generation?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Knowledge Base
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embeddings-turning-words-into-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embeddings: Turning Words Into Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-databases-where-embeddings-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector Databases: Where Embeddings Live
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Chunking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grounding-and-factual-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grounding and Factual Accuracy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grounding and Factual Accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-rag-grounding-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: RAG Grounding Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Citation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-information-and-external-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Information and External Data Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-enhanced-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search-Enhanced Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-based-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidence-Based Responses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-rag-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A RAG Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: A RAG Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-end-to-end-rag-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: End-to-End RAG System Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls and Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducing-hallucination-with-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reducing Hallucination with RAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1272,9 +1437,174 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-models-need-help-remembering" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Models Need Help Remembering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Retrieval-Augmented Generation?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Knowledge Base
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embeddings-turning-words-into-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embeddings: Turning Words Into Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-databases-where-embeddings-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector Databases: Where Embeddings Live
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Chunking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grounding-and-factual-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grounding and Factual Accuracy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grounding and Factual Accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-rag-grounding-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: RAG Grounding Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Citation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-information-and-external-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Information and External Data Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-enhanced-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search-Enhanced Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-based-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidence-Based Responses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-rag-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A RAG Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: A RAG Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-end-to-end-rag-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: End-to-End RAG System Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls and Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducing-hallucination-with-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reducing Hallucination with RAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1318,8 +1648,460 @@
 
 
 <h1 id="retrieval-augmented-generation">Retrieval-Augmented Generation</h1>
-<h2 id="summary">Summary</h2>
-<p>This chapter introduces Retrieval-Augmented Generation (RAG), a powerful paradigm that combines language models with external knowledge sources to produce grounded, accurate responses. Students will learn how vector databases, embeddings, and semantic search work together to retrieve relevant information at query time. The chapter covers document chunking strategies, source citation practices, and techniques for reducing hallucination. Students will understand how to integrate real-time information and build evidence-based response systems that go beyond the model's training data.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Time to Talk to AI — With Receipts!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Let's craft the perfect prompt! In this chapter, we explore one of the most important breakthroughs in practical AI: teaching language models to <em>look things up</em> before answering. Think of it as giving your AI a library card — and making sure it actually uses it.</p>
+</div>
+<h2 id="why-models-need-help-remembering">Why Models Need Help Remembering</h2>
+<p>You've already learned that language models are trained on massive datasets and can generate remarkably fluent text. But here's the uncomfortable truth: a language model's knowledge is frozen in time. Everything it "knows" comes from its training data, which has a hard cutoff date. Ask a model about something that happened last week, and it will either admit ignorance or — more dangerously — make something up with complete confidence.</p>
+<p>This limitation is called the <strong>knowledge cutoff</strong>. A knowledge cutoff is the date beyond which a language model has no training data. If a model was trained on data through January 2025, it has no knowledge of events, publications, or discoveries after that date. It's like asking a friend who has been living on a desert island for a year to give you the latest stock prices. No matter how smart they are, they simply don't have the information.</p>
+<p>But the knowledge cutoff is only part of the problem. Even within its training period, a model may not have encountered specific documents you care about — your company's internal policies, your research papers, your product documentation, or the latest regulatory filings in your industry. The model's training data, however vast, cannot contain everything.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>The Knowledge Gap Problem:
+
+Training Data          Knowledge Cutoff     Present Day
+━━━━━━━━━━━━━━━━━━━━━━━━━┫                    │
+  ▲ Model knows this     ▲ Nothing beyond     ▲ Your question
+  │ (but maybe not        │ this date           │ is about THIS
+  │  YOUR documents)      │                     │
+</code></pre></div></td></tr></table></div>
+<p>This is where <strong>Retrieval-Augmented Generation</strong> enters the picture.</p>
+<h2 id="what-is-retrieval-augmented-generation">What Is Retrieval-Augmented Generation?</h2>
+<p><strong>Retrieval-Augmented Generation</strong> (RAG) is a technique that enhances a language model's responses by retrieving relevant information from external sources and including it in the prompt before the model generates its answer. Instead of relying solely on what the model learned during training, RAG gives the model access to up-to-date, specific, and verifiable information at the moment you ask your question.</p>
+<p>The core idea is beautifully simple: before the model answers, go find the relevant facts and hand them over. Here's the basic RAG workflow:</p>
+<ol>
+<li><strong>You ask a question.</strong> Your prompt is sent to the system.</li>
+<li><strong>The system searches for relevant information.</strong> Using your question, the system searches through a collection of documents, databases, or other knowledge sources.</li>
+<li><strong>Relevant passages are retrieved.</strong> The search returns the most relevant chunks of text.</li>
+<li><strong>The retrieved information is added to the prompt.</strong> The original question is combined with the retrieved passages into an augmented prompt.</li>
+<li><strong>The model generates a response.</strong> The language model now answers your question using both its general knowledge and the specific retrieved information.</li>
+</ol>
+<p>Think of it this way: instead of asking a brilliant friend to answer your question from memory, you hand them the relevant pages from a textbook and <em>then</em> ask the question. They can now give you a much more accurate, detailed, and verifiable answer.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">RAG Is Not Cheating — It's Smart</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Some people worry that RAG is like "cheating" because the model isn't answering from its own knowledge. But consider this: when <em>you</em> write a research paper, do you answer every question from memory? Of course not — you look things up, check your sources, and cite them. RAG is just teaching AI to do the same thing. The smartest people in the room are usually the ones who know where to find the answer, not the ones who try to memorize everything.</p>
+</div>
+<h2 id="the-knowledge-base">The Knowledge Base</h2>
+<p>At the heart of every RAG system is a <strong>knowledge base</strong>. A knowledge base is an organized collection of documents, data, or information that serves as the external source of truth for the RAG system. This could be anything: a company's documentation library, a collection of research papers, a product catalog, a legal code, or even a curated set of web pages.</p>
+<p>The quality of a RAG system is directly tied to the quality of its knowledge base. A brilliant retrieval system searching through poorly organized, outdated, or inaccurate documents will produce poor results. This is the "garbage in, garbage out" principle at work — the AI can only be as good as the information you give it.</p>
+<p>Knowledge bases come in many forms:</p>
+<table>
+<thead>
+<tr>
+<th>Knowledge Base Type</th>
+<th>Examples</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document collections</td>
+<td>PDFs, Word docs, web pages</td>
+<td>Enterprise search, research</td>
+</tr>
+<tr>
+<td>Structured databases</td>
+<td>SQL databases, spreadsheets</td>
+<td>Product data, financial records</td>
+</tr>
+<tr>
+<td>Code repositories</td>
+<td>GitHub repos, API docs</td>
+<td>Developer assistance</td>
+</tr>
+<tr>
+<td>Multimedia archives</td>
+<td>Transcripts, image metadata</td>
+<td>Media search, accessibility</td>
+</tr>
+<tr>
+<td>Real-time feeds</td>
+<td>News APIs, sensor data</td>
+<td>Current events, monitoring</td>
+</tr>
+</tbody>
+</table>
+<p>Building an effective knowledge base requires thoughtful curation. You need to decide what information belongs, how often it should be updated, and how to handle contradictions between sources. This is less a technical challenge than an organizational one — and it's where many RAG projects succeed or fail.</p>
+<h2 id="embeddings-turning-words-into-numbers">Embeddings: Turning Words Into Numbers</h2>
+<p>To search a knowledge base effectively, a RAG system needs to understand meaning, not just match keywords. This is where <strong>embeddings</strong> come in. An embedding is a numerical representation of text (or other data) as a vector — a list of numbers that captures the semantic meaning of the content.</p>
+<p>Imagine you could place every sentence ever written on a giant map, where sentences with similar meanings are close together and sentences with different meanings are far apart. That's essentially what an embedding does, except the "map" has hundreds or thousands of dimensions instead of just two.</p>
+<p>For example, the sentences "The cat sat on the mat" and "A feline rested on the rug" would have very similar embeddings — their vectors would be close together in the embedding space — even though they share almost no words in common. Meanwhile, "The stock market crashed today" would be far away from both of them.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Embedding Space (simplified to 2D):
+
+         &quot;machine learning models&quot;
+                 ●
+    &quot;neural networks&quot;          &quot;deep learning algorithms&quot;
+           ●                          ●
+
+                                           &quot;baking chocolate cake&quot;
+                                                    ●
+    &quot;AI training data&quot;                  &quot;sourdough bread recipe&quot;
+           ●                                   ●
+</code></pre></div></td></tr></table></div>
+<p>Embedding models — specialized neural networks designed specifically for this task — convert text into these vectors. Popular embedding models include OpenAI's <code>text-embedding-3-small</code>, Cohere's <code>embed-v3</code>, and open-source options like <code>sentence-transformers</code>. The vectors typically have 256 to 3,072 dimensions, though you'll never need to look at the individual numbers. The system handles all the math behind the scenes.</p>
+<p>The key insight is this: embeddings let computers understand <em>meaning</em> rather than just matching exact words. This is what makes modern search so much more powerful than the keyword search of the early internet.</p>
+<h2 id="vector-databases-where-embeddings-live">Vector Databases: Where Embeddings Live</h2>
+<p>Once you've converted your documents into embeddings, you need somewhere to store and search them efficiently. That's the job of a <strong>vector database</strong>. A vector database is a specialized database designed to store, index, and search through high-dimensional vectors (embeddings) at scale.</p>
+<p>Traditional databases are great at finding exact matches — "show me all customers named Smith" — but they're terrible at finding <em>similar</em> things. Vector databases are built specifically for similarity search. Given a query vector, they can rapidly find the most similar vectors in a collection of millions or billions, usually in milliseconds.</p>
+<p>Popular vector databases include Pinecone, Weaviate, Chroma, Qdrant, Milvus, and pgvector (a PostgreSQL extension). Cloud providers also offer managed vector search services, like Amazon OpenSearch, Google Vertex AI Vector Search, and Azure AI Search.</p>
+<p>Here's how vector databases fit into the RAG pipeline:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>RAG Pipeline with Vector Database:
+
+┌──────────┐    ┌────────────┐    ┌──────────────────┐
+│ Documents │───▶│ Embedding  │───▶│  Vector Database  │
+│ (raw text)│    │   Model    │    │  (stores vectors) │
+└──────────┘    └────────────┘    └──────────────────┘
+                                          │
+                                          │ At query time:
+                                          ▼
+┌──────────┐    ┌────────────┐    ┌──────────────────┐
+│  User&#39;s  │───▶│ Embedding  │───▶│ Similarity Search │
+│  Query   │    │   Model    │    │ (find top matches)│
+└──────────┘    └────────────┘    └──────────────────┘
+                                          │
+                                          ▼
+                                  ┌──────────────────┐
+                                  │ Retrieved Passages│
+                                  │ + User&#39;s Query    │──▶ LLM ──▶ Response
+                                  └──────────────────┘
+</code></pre></div></td></tr></table></div>
+<p>The "magic" of vector databases is in their indexing algorithms. They use techniques like Hierarchical Navigable Small World (HNSW) graphs and Inverted File (IVF) indexes to avoid comparing the query vector against every single stored vector. Instead, they navigate through a clever data structure that narrows the search space quickly — like using a table of contents instead of reading every page of a book.</p>
+<h2 id="semantic-search">Semantic Search</h2>
+<p><strong>Semantic search</strong> is the process of finding information based on meaning rather than exact keyword matches. In a RAG system, semantic search is what connects your question to the most relevant passages in the knowledge base.</p>
+<p>Traditional keyword search works by matching the exact words in your query to words in documents. If you search for "automobile repair," you'll only find documents that contain those exact words. You'll miss documents about "car maintenance," "vehicle troubleshooting," or "fixing your truck" — even though they all discuss the same topic.</p>
+<p>Semantic search solves this problem by comparing the <em>meaning</em> of your query to the <em>meaning</em> of the documents, using embeddings and vector similarity. When you search for "automobile repair," semantic search understands the concept behind your words and can retrieve documents about car maintenance, vehicle diagnostics, and mechanic services — even if those exact words never appear in your query.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Keyword Search</th>
+<th>Semantic Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matching method</td>
+<td>Exact word overlap</td>
+<td>Meaning similarity</td>
+</tr>
+<tr>
+<td>Handles synonyms?</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Handles rephrasing?</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Very fast</td>
+<td>Fast (with indexing)</td>
+</tr>
+<tr>
+<td>Setup complexity</td>
+<td>Low</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Known-item search</td>
+<td>Exploratory search</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, many RAG systems use a hybrid approach that combines both keyword and semantic search, taking the best of both worlds. This is sometimes called "hybrid search" or "fusion retrieval."</p>
+<h2 id="document-chunking">Document Chunking</h2>
+<p>Here's a practical challenge: your knowledge base might contain documents that are hundreds or thousands of pages long. You can't embed an entire 500-page manual as a single vector — the meaning would be too diffuse to be useful, and the text would be too long to fit in a prompt. Instead, you need to break documents into smaller pieces. This process is called <strong>document chunking</strong>.</p>
+<p>Document chunking is the process of splitting large documents into smaller, meaningful segments that can be individually embedded and retrieved. The goal is to create chunks that are large enough to contain useful information but small enough to be precise and fit within context windows.</p>
+<p>This sounds straightforward, but chunking strategy has a surprisingly large impact on RAG quality. Chunk too small, and you lose context — a paragraph might reference something explained two paragraphs earlier. Chunk too large, and your retrieved passages will contain lots of irrelevant information mixed in with the useful bits.</p>
+<p>Common chunking strategies include:</p>
+<ul>
+<li><strong>Fixed-size chunking</strong>: Split text every N characters or tokens, with optional overlap between chunks. Simple and fast, but may split sentences or ideas mid-thought.</li>
+<li><strong>Sentence-based chunking</strong>: Split at sentence boundaries, grouping a fixed number of sentences together. Better than character splitting but still somewhat arbitrary.</li>
+<li><strong>Paragraph-based chunking</strong>: Use paragraph breaks as natural splitting points. Works well for well-structured documents.</li>
+<li><strong>Semantic chunking</strong>: Use an embedding model to detect topic shifts and split at points where the meaning changes significantly. More sophisticated but computationally expensive.</li>
+<li><strong>Hierarchical chunking</strong>: Create chunks at multiple levels (document, section, paragraph) and store relationships between them. Allows the system to retrieve at the appropriate level of detail.</li>
+</ul>
+<div class="admonition mascot-tip">
+<p class="admonition-title">The Overlap Trick</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly giving a tip">
+Words matter — let's get them right! When using fixed-size chunking, always add overlap between consecutive chunks. If your chunks are 500 tokens, set a 50-100 token overlap so that information that falls right at a chunk boundary isn't lost. It's like making sure adjacent puzzle pieces share a little bit of their edges — it helps everything fit together.</p>
+</div>
+<p>A good rule of thumb for chunk size is 200-500 tokens, though the optimal size depends on your content type and use case. Technical documentation with dense, self-contained sections might work well with larger chunks, while conversational content like customer support transcripts might benefit from smaller ones.</p>
+<h2 id="grounding-and-factual-accuracy">Grounding and Factual Accuracy</h2>
+<p>The primary reason organizations adopt RAG is to improve <strong>grounding</strong>. Grounding is the practice of anchoring an AI model's responses in verifiable, authoritative source material rather than allowing it to generate answers purely from its trained parameters.</p>
+<p>Without grounding, language models are prone to a well-known failure mode: <strong>hallucination</strong>. Hallucination occurs when a language model generates information that sounds plausible and is stated with confidence but is factually incorrect or entirely fabricated. The model isn't "lying" — it's doing exactly what it was trained to do, which is produce statistically likely text. Sometimes that text happens to be wrong.</p>
+<p>Hallucination is not a rare edge case. Studies have found that language models hallucinate at rates ranging from 5% to 30% depending on the task, the domain, and the model. In high-stakes domains like healthcare, legal, and finance, even a 5% error rate is unacceptable.</p>
+<p>RAG reduces hallucination by giving the model actual evidence to work with. When the model can point to a specific passage that supports its answer, it's much less likely to fabricate information. It's like the difference between a witness testifying from memory versus testifying while reviewing their notes — the notes keep them honest.</p>
+<p><strong>Factual accuracy</strong> — the degree to which generated responses contain correct, verifiable information — is the ultimate measure of a RAG system's success. Improving factual accuracy requires attention to every link in the chain: the quality of the knowledge base, the precision of the retrieval, the size and overlap of chunks, and the clarity of the prompt that combines the retrieved information with the user's question.</p>
+<details>
+<summary>Diagram Specification</summary>
+<h4 id="diagram-rag-grounding-pipeline">Diagram: RAG Grounding Pipeline</h4>
+<p>Create a horizontal flowchart showing how grounding works in a RAG system:</p>
+<ol>
+<li><strong>User Query</strong> (rectangle) — "What is our return policy for electronics?"</li>
+<li><strong>Retrieval System</strong> (rectangle) — searches the vector database</li>
+<li><strong>Retrieved Evidence</strong> (document shape) — shows 3 relevant chunks: "Policy Doc Section 3.2", "FAQ Entry #47", "Customer Service Guide p.12"</li>
+<li><strong>Augmented Prompt</strong> (rectangle) — combines the user query with retrieved evidence</li>
+<li><strong>LLM</strong> (rectangle) — generates a response grounded in the evidence</li>
+<li><strong>Grounded Response</strong> (rectangle) — includes the answer with source citations</li>
+</ol>
+<p>Arrows flow left to right. Below the pipeline, show a contrasting "Without RAG" path: User Query goes directly to LLM, which produces an "Ungrounded Response" marked with a warning icon and the label "Risk of hallucination."</p>
+<p>Color scheme: Use blue for the RAG pipeline and orange/amber for the warning path. Include a legend distinguishing "grounded" and "ungrounded" paths.</p>
+</details>
+<h2 id="source-citation">Source Citation</h2>
+<p>One of the most powerful features of RAG is the ability to practice <strong>source citation</strong>. Source citation is the inclusion of specific references to the documents, passages, or data sources that informed the model's response. This isn't just good academic practice — it's what makes RAG responses <em>verifiable</em>.</p>
+<p>When a RAG system includes citations, users can check the original sources to confirm the answer is correct. This creates a trust-but-verify dynamic that's essential for professional use. Instead of asking "Do I trust this AI?" the user can ask "Do I trust these sources?" — a much more answerable question.</p>
+<p>Effective source citation in RAG prompts typically follows this pattern:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>Prompt Template with Citation Instructions:
+
+You are a helpful assistant. Answer the user&#39;s question using
+ONLY the information provided in the context below. For each
+claim in your response, cite the source using [Source N] notation.
+If the context does not contain enough information to answer
+the question, say &quot;I don&#39;t have enough information to answer
+that question.&quot;
+
+Context:
+[Source 1: Company Policy Manual, Section 3.2]
+Electronics purchased within 30 days may be returned with
+original packaging for a full refund...
+
+[Source 2: FAQ Database, Entry #47]
+Extended warranty products are excluded from the standard
+return policy...
+
+Question: {user_question}
+</code></pre></div></td></tr></table></div>
+<p>Notice the instruction to only use provided context and to admit when information is insufficient. These guardrails are critical for maintaining factual accuracy and preventing the model from filling gaps with hallucinated information.</p>
+<h2 id="real-time-information-and-external-data-integration">Real-Time Information and External Data Integration</h2>
+<p>One of RAG's greatest strengths is its ability to provide <strong>real-time information</strong>. Real-time information refers to data that is current and up-to-date at the moment of the query, as opposed to information that was frozen at the model's training cutoff.</p>
+<p>By connecting to live data sources — news feeds, stock tickers, weather services, database APIs, or regularly updated document repositories — a RAG system can answer questions about what's happening right now. This is something a standalone language model simply cannot do.</p>
+<p><strong>External data integration</strong> is the broader practice of connecting a language model to outside data sources, APIs, and systems to extend its capabilities beyond what's in its training data. RAG is the most common form of external data integration, but the concept extends to database queries, API calls, web searches, and more.</p>
+<p>Here are some practical examples of external data integration:</p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>External Source</th>
+<th>RAG Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer support</td>
+<td>Product documentation, knowledge base</td>
+<td>Accurate, up-to-date answers</td>
+</tr>
+<tr>
+<td>Legal research</td>
+<td>Case law databases, statutes</td>
+<td>Current rulings and citations</td>
+</tr>
+<tr>
+<td>Medical inquiry</td>
+<td>Clinical guidelines, drug databases</td>
+<td>Latest treatment protocols</td>
+</tr>
+<tr>
+<td>Financial analysis</td>
+<td>Market data, SEC filings</td>
+<td>Real-time figures and trends</td>
+</tr>
+<tr>
+<td>Technical support</td>
+<td>Release notes, bug trackers</td>
+<td>Current known issues and fixes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-enhanced-prompting">Search-Enhanced Prompting</h2>
+<p>You don't always need a full RAG infrastructure to benefit from retrieval principles. <strong>Search-enhanced prompting</strong> is a technique where users manually or semi-automatically search for relevant information and include it directly in their prompts to improve response quality.</p>
+<p>This is something you can start doing immediately, even without any special tools. Here's the basic approach:</p>
+<ol>
+<li><strong>Search for relevant information</strong> using Google, an internal wiki, a database, or any other source.</li>
+<li><strong>Copy the most relevant passages</strong> into your prompt.</li>
+<li><strong>Tell the model to use this information</strong> when generating its response.</li>
+<li><strong>Ask for citations</strong> back to the provided material.</li>
+</ol>
+<p>For example, instead of asking "What are the best practices for cloud security?" you might search for the latest NIST cloud security guidelines, paste the relevant sections into your prompt, and ask: "Based on the following NIST guidelines, summarize the top five best practices for cloud security and explain each one."</p>
+<p>This manual approach gives you many of the benefits of a full RAG system — grounding, factual accuracy, source citation — without requiring any infrastructure. It's RAG done by hand. Think of it as the difference between having a personal research assistant (automated RAG) and doing the research yourself before asking for help (search-enhanced prompting).</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">You're Already Doing RAG!</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Polly encouraging">
+Here's something cool: if you've ever copied text from a website and pasted it into a prompt to help the AI answer more accurately, you've already done a manual version of RAG! The automated systems we're discussing in this chapter just do the same thing faster and at scale. You've had the right instinct all along.</p>
+</div>
+<h2 id="evidence-based-responses">Evidence-Based Responses</h2>
+<p>The ultimate goal of RAG is to produce <strong>evidence-based responses</strong>. An evidence-based response is a generated answer in which every factual claim is supported by retrieved source material, and those sources are cited for verification.</p>
+<p>This concept mirrors the standards of academic and professional writing. A doctor doesn't just tell you what they think; they refer to clinical studies. A lawyer doesn't just offer opinions; they cite case law. Similarly, an AI system producing evidence-based responses provides both the answer and the proof.</p>
+<p>Building prompts that encourage evidence-based responses requires clear instructions to the model. Here are some effective techniques:</p>
+<ul>
+<li><strong>Explicit grounding instructions</strong>: "Answer based ONLY on the provided documents."</li>
+<li><strong>Citation requirements</strong>: "Cite specific passages using [Source N] notation."</li>
+<li><strong>Confidence indicators</strong>: "If you're less than 80% confident in an answer, say so."</li>
+<li><strong>Refusal instructions</strong>: "If the documents don't contain relevant information, state that clearly rather than guessing."</li>
+<li><strong>Contradiction handling</strong>: "If sources conflict, present both viewpoints with their respective citations."</li>
+</ul>
+<p>When these techniques are combined with a well-designed RAG pipeline, the results can be remarkably reliable. The model becomes less of an oracle that you have to trust blindly and more of a research assistant that shows its work.</p>
+<h2 id="putting-it-all-together-a-rag-workflow">Putting It All Together: A RAG Workflow</h2>
+<p>Let's walk through a complete example to see how all these concepts work together in practice. Imagine you're building a customer support system for a software company.</p>
+<p><strong>Step 1: Build your knowledge base.</strong> You gather all your product documentation, FAQ pages, release notes, and support articles. This is your knowledge base — the source of truth for your system.</p>
+<p><strong>Step 2: Chunk your documents.</strong> You process each document through a chunking strategy. For your well-structured documentation, you use paragraph-based chunking with 400-token chunks and 50-token overlaps.</p>
+<p><strong>Step 3: Generate embeddings.</strong> Each chunk is passed through an embedding model, converting it into a vector. You now have thousands of vectors, each representing the meaning of a specific chunk of documentation.</p>
+<p><strong>Step 4: Store in a vector database.</strong> All the embeddings are stored in a vector database along with the original text and metadata (document title, section, date updated).</p>
+<p><strong>Step 5: Process a user query.</strong> A customer asks: "How do I export my data in CSV format?" The system converts this question into an embedding using the same embedding model.</p>
+<p><strong>Step 6: Retrieve relevant chunks.</strong> The vector database performs a semantic search, finding the five most similar chunks. These include passages from the export documentation, the data management FAQ, and a recent release note about a new export feature.</p>
+<p><strong>Step 7: Build the augmented prompt.</strong> The system combines the user's question with the retrieved passages and includes instructions for citation and grounding.</p>
+<p><strong>Step 8: Generate the response.</strong> The language model reads the augmented prompt and generates a helpful, accurate response that references the specific documentation sections.</p>
+<details>
+<summary>Diagram Specification</summary>
+<h4 id="diagram-end-to-end-rag-system-architecture">Diagram: End-to-End RAG System Architecture</h4>
+<p>Create a two-part diagram showing the RAG system architecture:</p>
+<p><strong>Part 1 — Indexing Phase (top half):</strong></p>
+<p>Show a horizontal flow from left to right:</p>
+<ol>
+<li><strong>Document Sources</strong> (cylinder/database shapes) — "Product Docs," "FAQs," "Release Notes"</li>
+<li><strong>Document Processor</strong> (rectangle) — "Chunking Engine" with subtitle "400 tokens, 50 overlap"</li>
+<li><strong>Embedding Model</strong> (rectangle) — "text-embedding-3-small"</li>
+<li><strong>Vector Database</strong> (cylinder) — "Pinecone / Chroma / pgvector" with subtitle "Stores vectors + metadata"</li>
+</ol>
+<p>Arrows connect each stage left to right. Label this section "Offline Indexing (done once, updated periodically)."</p>
+<p><strong>Part 2 — Query Phase (bottom half):</strong></p>
+<p>Show a horizontal flow:</p>
+<ol>
+<li><strong>User Query</strong> (rectangle) — "How do I export my data in CSV format?"</li>
+<li><strong>Embedding Model</strong> (rectangle) — same model as above, with a dashed line connecting to Part 1's embedding model</li>
+<li><strong>Vector Search</strong> (rectangle) — "Top-5 similar chunks"</li>
+<li><strong>Prompt Assembly</strong> (rectangle) — combines query + retrieved chunks + instructions</li>
+<li><strong>LLM</strong> (rectangle) — generates the final response</li>
+<li><strong>Response</strong> (rectangle) — grounded answer with citations</li>
+</ol>
+<p>Arrows connect each stage. Label this section "Online Query (happens in real-time)."</p>
+<p>Use blue for the indexing path, green for the query path, and connect the two paths at the vector database with a bidirectional arrow. Include timing annotations: "Indexing: minutes to hours" and "Query: milliseconds to seconds."</p>
+</details>
+<h2 id="common-pitfalls-and-best-practices">Common Pitfalls and Best Practices</h2>
+<p>RAG is powerful, but it's not magic. Here are common mistakes and how to avoid them:</p>
+<p><strong>Pitfall 1: Poor chunking.</strong> If your chunks are too large, retrieved passages will be diluted with irrelevant text. If too small, they'll lack context. Experiment with chunk sizes and test the results with real queries.</p>
+<p><strong>Pitfall 2: Ignoring metadata.</strong> Don't just store text — store metadata like document title, section heading, date, and author. This information helps with filtering, citation, and debugging. If a user asks about a 2025 policy, you can filter results to documents from 2025.</p>
+<p><strong>Pitfall 3: No instructions to the model.</strong> Simply pasting retrieved text into a prompt without clear instructions is like handing someone a stack of papers without telling them what to do. Always include explicit instructions about how to use the context, when to cite sources, and what to do when information is insufficient.</p>
+<p><strong>Pitfall 4: Stale knowledge bases.</strong> A RAG system is only as current as its knowledge base. If your documents haven't been updated in months, your system will give outdated answers — and it will cite outdated sources while doing it. Establish a regular refresh cycle.</p>
+<p><strong>Pitfall 5: Over-reliance on RAG.</strong> Not every question needs retrieval. Simple conversational queries, creative writing tasks, and general knowledge questions are better handled by the model's native capabilities. Use RAG when accuracy and currency matter, not for everything.</p>
+<table>
+<thead>
+<tr>
+<th>Best Practice</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test with real user queries</td>
+<td>Reveals chunking and retrieval gaps</td>
+</tr>
+<tr>
+<td>Include source metadata</td>
+<td>Enables filtering and proper citation</td>
+</tr>
+<tr>
+<td>Set a retrieval threshold</td>
+<td>Avoids including irrelevant passages</td>
+</tr>
+<tr>
+<td>Use hybrid search</td>
+<td>Combines keyword precision with semantic recall</td>
+</tr>
+<tr>
+<td>Monitor and iterate</td>
+<td>RAG quality improves with tuning</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reducing-hallucination-with-rag">Reducing Hallucination with RAG</h2>
+<p>Let's address the elephant in the room: <strong>hallucination</strong>. While RAG significantly reduces hallucination compared to using a language model alone, it doesn't eliminate it entirely. A model can still hallucinate in a RAG context in several ways:</p>
+<ul>
+<li><strong>Misinterpreting retrieved information</strong>: The model may draw incorrect conclusions from the retrieved passages.</li>
+<li><strong>Filling gaps creatively</strong>: If the retrieved information partially addresses the question, the model may "complete" the answer with fabricated details.</li>
+<li><strong>Ignoring retrieved context</strong>: Sometimes the model relies on its training data instead of the provided context, especially if the training data contradicts the retrieved information.</li>
+</ul>
+<p>To minimize hallucination in RAG systems, use these prompting strategies:</p>
+<ol>
+<li><strong>Be explicit</strong>: "Use ONLY the provided context to answer. Do not use your general knowledge."</li>
+<li><strong>Require citations</strong>: "Every factual claim must reference a specific source from the context."</li>
+<li><strong>Allow refusal</strong>: "If the context doesn't contain the answer, respond with 'The provided documents don't contain this information.'"</li>
+<li><strong>Request confidence levels</strong>: "Rate your confidence in this answer on a scale of 1-5 based on the strength of the supporting evidence."</li>
+</ol>
+<p>These techniques won't achieve perfection, but they dramatically improve reliability. In professional settings, combining RAG with human review creates a workflow where the AI does the heavy lifting of research and drafting while humans verify the final output. (One AI researcher joked that RAG stands for "Really Awesome Guardrails." It doesn't, but the acronym probably should.)</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You've Unlocked RAG Knowledge!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Use your words! You now understand how to connect language models to external knowledge, reduce hallucination with grounding techniques, and build evidence-based responses with proper citations. These skills form the foundation of every serious enterprise AI application — and they make your prompts dramatically more reliable. Onward to even greater adventures!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>RAG combines retrieval with generation.</strong> Instead of relying solely on a model's training data, RAG searches external knowledge sources and includes relevant information in the prompt before the model generates its response.</li>
+<li><strong>Embeddings capture meaning as numbers.</strong> By converting text into high-dimensional vectors, embedding models enable computers to understand semantic similarity — finding related content even when the exact words differ.</li>
+<li><strong>Vector databases power fast similarity search.</strong> Specialized databases store and index embeddings, enabling millisecond retrieval from collections of millions of documents.</li>
+<li><strong>Document chunking strategy matters enormously.</strong> How you split documents into smaller pieces directly impacts retrieval quality. Use overlapping chunks at appropriate sizes for your content type.</li>
+<li><strong>Grounding reduces hallucination.</strong> Anchoring responses in retrieved source material makes AI outputs more reliable, but it doesn't eliminate errors entirely. Always include explicit grounding instructions in your prompts.</li>
+<li><strong>Source citation builds trust.</strong> Requiring the model to cite specific sources makes responses verifiable and transforms blind trust into informed verification.</li>
+<li><strong>You can practice RAG manually.</strong> Search-enhanced prompting — finding information yourself and including it in your prompt — gives you many RAG benefits without any infrastructure.</li>
+<li><strong>RAG quality depends on knowledge base quality.</strong> The best retrieval system in the world can't compensate for outdated, incomplete, or inaccurate source documents. Curate your knowledge base carefully.</li>
+</ul>
 <h2 id="concepts">Concepts</h2>
 <ol>
 <li>Retrieval-Augmented Generation</li>
@@ -1348,14 +2130,15 @@
 <li><a href="../06-output-format-control/">Chapter 6: Output Format Control</a></li>
 <li><a href="../07-context-memory-management/">Chapter 7: Context, Memory, and Information Management</a></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

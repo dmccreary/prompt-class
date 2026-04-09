@@ -1,0 +1,14 @@
+{
+  "sim_id": "long-form-document-processing-strategies",
+  "diagram_name": "Long-Form Document Processing Strategies",
+  "chapter_number": 7,
+  "chapter_title": "Context, Memory, and Information Management",
+  "chapter_dir": "07-context-memory-management",
+  "library": null,
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-04-09",
+  "specification": "Create a flowchart using Mermaid syntax that shows decision logic for processing long documents:\nThis diagram should help students decide which strategy to use based on their document size and task type."
+}

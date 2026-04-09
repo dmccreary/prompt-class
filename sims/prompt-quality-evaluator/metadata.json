@@ -1,0 +1,41 @@
+{
+  "title": "Prompt Quality Evaluator",
+  "description": "Interactive simulation where students evaluate AI prompts and responses against four quality dimensions (relevance, accuracy, completeness, conciseness) and compare their ratings to expert scores with color-coded feedback.",
+  "creator": "Dan McCreary",
+  "date": "2026-04-09",
+  "subject": [
+    "Prompt Engineering",
+    "AI Literacy",
+    "Critical Evaluation",
+    "Response Quality"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/prompt-quality-evaluator/",
+  "publisher": "Prompt Engineering Course",
+  "educationalLevel": "High School, Undergraduate",
+  "learningResourceType": "simulation",
+  "audience": "Students, Educators",
+  "version": "1.0.0",
+  "bloomLevel": [
+    "Evaluate"
+  ],
+  "concepts": [
+    "Prompt Quality",
+    "Relevance",
+    "Accuracy",
+    "Completeness",
+    "Conciseness",
+    "Evaluation Calibration"
+  ],
+  "prerequisites": [
+    "Basic understanding of AI prompts",
+    "Familiarity with large language models"
+  ],
+  "library": "p5.js"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "AI Concepts Hierarchy",
+  "description": "Interactive nested hierarchy showing how 20 foundational AI concepts relate to each other in a Russian nesting doll style visualization.",
+  "subject": "Artificial Intelligence, Prompt Engineering",
+  "creator": "Dan McCreary",
+  "date": "2026-04-09",
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "library": "p5.js",
+  "bloom_level": "Understand",
+  "bloom_verb": "classify, organize",
+  "learning_objective": "Classify the foundational AI concepts into their hierarchical relationships and explain how they build on each other.",
+  "duration": "10-15 minutes",
+  "grade_level": "High School through Undergraduate",
+  "prerequisites": "None"
+}

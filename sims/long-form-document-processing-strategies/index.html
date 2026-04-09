@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for long-form document processing strategies.">
+        <meta name="description" content="Interactive decision tree that guides students through choosing the right strategy for processing long documents based on goal, document size, and detail level.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -972,17 +972,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Iframe Embed Code
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1349,17 +1338,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Iframe Embed Code
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1517,37 +1495,39 @@
 <br/>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive decision tree guides students through choosing the right strategy for processing documents that exceed a model's context window. By answering 2-3 questions about their goal (summarize, extract, analyze, or Q&amp;A), document size, and required detail level, students arrive at a recommended strategy with step-by-step instructions and pro tips.</p>
+<p>Strategies covered include direct summarization, hierarchical summarization, map-reduce, chunking with overlap, targeted extraction, and more.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://dmccreary.github.io/prompt-class/sims/long-form-document-processing-strategies/main.html&quot;</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">&quot;627&quot;</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Read the question</strong> displayed at the top of the decision tree</li>
+<li><strong>Click an answer</strong> to proceed to the next decision point or a strategy recommendation</li>
+<li><strong>Review the recommendation</strong> including its description, numbered steps, and pro tip</li>
+<li><strong>Click "Start Over"</strong> to try a different path and compare strategies</li>
+<li><strong>Click "Back"</strong> to revisit a previous decision</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>High School through Adult Learners</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<p>Basic understanding of context windows and token limits in language models.</p>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Navigate through all four starting paths (summarize, extract, analyze, Q&amp;A) and note the different strategies recommended.</li>
+<li><strong>Guided Practice</strong> (5 min): Given a scenario (e.g., "You have a 200-page legal contract and need to find all liability clauses"), use the decision tree to find the best strategy. Discuss why that strategy fits.</li>
+<li><strong>Discussion</strong> (5 min): Compare map-reduce vs. hierarchical summarization. When would you choose one over the other?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Students can identify the appropriate processing strategy for a given document size and task</li>
+<li>Students can explain why chunking strategies differ based on the goal</li>
+<li>Students can describe the tradeoffs between processing speed and detail retention</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/MapReduce">Wikipedia: MapReduce</a> - The distributed processing paradigm that inspires map-reduce summarization</li>
+<li><a href="https://python.langchain.com/docs/how_to/#text-splitters">LangChain Document Processing</a> - Practical implementations of chunking strategies</li>
 </ol>
 
 
@@ -1629,7 +1609,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright &copy; 2025, 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   

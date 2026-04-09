@@ -1,7 +1,7 @@
 # License Prompt
 
 ```
-I want to share my traing materials for a class with other teachers.
+I want to share my training materials for a class with other teachers.
 I would like to allow them to use my lesson plans free.
 I would like to ask for attribution.
 I don't want them to resell my lessons for profit.

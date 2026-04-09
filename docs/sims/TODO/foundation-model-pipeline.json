@@ -1,0 +1,14 @@
+{
+  "sim_id": "foundation-model-pipeline",
+  "diagram_name": "Foundation Model Training Pipeline",
+  "chapter_number": 1,
+  "chapter_title": "AI and Machine Learning Foundations",
+  "chapter_dir": "01-ai-ml-foundations",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "explain, summarize",
+  "learning_objective": "Explain how pre-training, fine-tuning, and transfer learning work together to create a useful language model.",
+  "completion_status": "specified",
+  "extracted_date": "2026-04-08",
+  "specification": "Type: infographic\n**sim-id:** foundation-model-pipeline<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Illustrate the three-stage pipeline from raw data to useful AI assistant (pre-training, fine-tuning, deployment), showing how each stage transforms the model.\n\nBloom Level: Understand (L2)\nBloom Verb: explain, summarize\nLearning Objective: Explain how pre-training, fine-tuning, and transfer learning work together to create a useful language model.\n\nLayout: Horizontal left-to-right pipeline with three main stages connected by arrows.\n\nStage 1 - Pre-Training (left):\n- Icon: large stack of documents/books\n- Label: \"Pre-Training\"\n- Sub-label: \"Trillions of tokens from books, web, code\"\n- Output: \"Foundation Model\" (large neural network icon)\n- Hover text: \"The model learns language patterns by predicting the next token billions of times.\"\n\nStage 2 - Fine-Tuning (center):\n- Icon: smaller focused dataset with human feedback annotations\n- Label: \"Fine-Tuning\"\n- Sub-label: \"Instructions, conversations, human feedback\"\n- Output: \"Specialized Assistant\" (refined network icon)\n- Hover text: \"The foundation model is adapted to follow instructions, be helpful, and refuse harmful requests.\"\n\nStage 3 - Deployment (right):\n- Icon: chat interface with user and assistant messages\n- Label: \"Your Prompt\"\n- Sub-label: \"Inference: generating responses token by token\"\n- Output: \"Response\"\n- Hover text: \"The fine-tuned model generates responses to your prompts using everything it learned.\"\n\nArrows between stages with labels:\n- Stage 1 → Stage 2: \"Transfer Learning\"\n- Stage 2 → Stage 3: \"API / Chat Interface\"\n\nColor scheme: Blue gradient (lighter for earlier stages, darker for later stages), with orange accent for user interaction at Stage 3.\n\nInteractive features:\n- Hover over each stage to see detailed explanation panel\n- Click stage to expand with example data (sample pre-training text, sample fine-tuning instruction, sample prompt/response)\n\nResponsive: Must adapt to window width. Use percentage-based positioning.\n\nInstructional Rationale: A static pipeline diagram with hover-to-reveal details supports the Understand objective by letting students trace the process at their own pace and connect each stage to concrete examples.\n\nImplementation: p5.js canvas with clickable/hoverable regions"
+}

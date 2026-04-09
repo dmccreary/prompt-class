@@ -1,7 +1,17 @@
+---
+title: Prompt Engineering
+description: An interactive intelligent textbook on prompt engineering with embedded simulations.
+image: img/cover-landscape.png
+og:image: img/cover-landscape.png
+hide:
+    toc
+---
 # Prompt Engineering Course
 
-![](./img/cover-small.png)
+![](./img/cover-landscape.png)
 <!--
+Generate a wide-landscape cover image.
+The title on the top is "Prompt Engineering"
 The image is a vividly painted, dreamlike scene blending classical architecture, a serene landscape, and a touch of modern life:
 
 Foreground:
@@ -18,9 +28,11 @@ On both sides of the pool, seated women in long flowing garments are visible, ea
 
 Color palette & mood:
 Warm oranges, golds, and pinks dominate the sky and clothing, harmonizing with cooler greens and blues from the trees and water reflections. The lighting is soft yet luminous, creating a tranquil and slightly surreal mood, as if the viewer is in a timeless, idyllic world where past and present mingle.
-->
 
-Welcome to the website for my prompt engineering course.  I have
+The image is reminiscent of the Maxfield Parrish painting Daybreak
+-->
+
+Welcome to the website for the prompt engineering course.  I have
 been teaching this course since March of 2020.  I continually learn more about how to help students write better prompts to get better
 results out of their large language models.  The course contains
 the background about how large language models work and
@@ -37,4 +49,4 @@ All the content is licensed under a [creative commons license](license).  You ar
 
 Please let me know if you find these tools useful.
 
-Good Luck! [Dan McCreary on LinkedIn](https://www.linkedin.com/in/danmccreary/)
+Have fun! [Dan McCreary on LinkedIn](https://www.linkedin.com/in/danmccreary/)

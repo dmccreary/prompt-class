@@ -8,7 +8,7 @@ hide:
 ---
 # Prompt Engineering Course
 
-![](./img/cover-landscape.png)
+![](./img/cover.png)
 <!--
 Generate a wide-landscape cover image.
 The title on the top is "Prompt Engineering"

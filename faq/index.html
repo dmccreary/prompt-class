@@ -1,0 +1,2812 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/faq/">
+      
+      
+        <link rel="prev" href="../instructor-notes/">
+      
+      
+        <link rel="next" href="../glossary/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>FAQ - Prompt Engineering Class</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/mascot.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NVZ3NEY8KG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NVZ3NEY8KG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NVZ3NEY8KG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompt-engineering-faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompt Engineering Class
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Prompt Engineering Class
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample-outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Outline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../labs/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Labs
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../chapters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../lectures/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Lectures
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learning Graph
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../appendices/chatgpt-millionaires/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Appendices
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructor-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instructor Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-this-course-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this course about?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-this-course-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is this course for?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-prerequisites-for-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the prerequisites for this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-the-course-structured" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is the course structured?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-install-any-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to install any software?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-long-does-the-course-take-to-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long does the course take to complete?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-will-i-be-able-to-do-after-completing-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      What will I be able to do after completing this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-ai-tools-does-this-course-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      What AI tools does this course use?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-this-course-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is this course free?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-prompt-engineering-different-from-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is prompt engineering different from programming?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-this-course-different-from-other-prompt-engineering-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes this course different from other prompt engineering resources?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-navigate-the-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I navigate the textbook?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concept Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concept Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-large-language-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a large language model?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tokens-and-why-do-they-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are tokens and why do they matter?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-context-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a context window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-zero-shot-one-shot-and-few-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between zero-shot, one-shot, and few-shot prompting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-chain-of-thought-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is chain-of-thought prompting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is retrieval-augmented generation (RAG)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-graphrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is GraphRAG?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an AI agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt chaining?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a system prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-transformer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the transformer architecture?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-hallucination-in-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is hallucination in AI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-pre-training-and-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between pre-training and fine-tuning?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-inference-work-in-language-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does inference work in language models?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a prompt template?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-five-components-of-a-well-structured-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the five components of a well-structured prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-output-format-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is output format specification?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-a-chatbot-and-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between a chatbot and an AI agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-function-calling-in-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is function calling in AI?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Detail Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Detail Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-temperature-mean-in-ai-model-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does "temperature" mean in AI model settings?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-top-p-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Top-P sampling?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-frequency-penalty-and-presence-penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are frequency penalty and presence penalty?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-max-tokens-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the max tokens setting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-stop-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are stop sequences?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-json-csv-and-xml-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between JSON, CSV, and XML output?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is tokenization?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-vector-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a vector database?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are embeddings?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-document-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is document chunking?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-seed-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the seed parameter?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-input-tokens-and-output-tokens-for-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between input tokens and output tokens for pricing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is rate limiting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-five-hour-token-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the five-hour token window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-content-moderation-in-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is content moderation in AI systems?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenge-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Challenge Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenge Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-ai-give-me-vague-or-generic-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the AI give me vague or generic responses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-fix-responses-that-are-too-long-or-too-short" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I fix responses that are too long or too short?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-i-do-when-the-ai-hallucinates-incorrect-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should I do when the AI hallucinates incorrect facts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-ai-not-follow-my-formatting-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the AI not follow my formatting instructions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-get-consistent-results-across-multiple-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I get consistent results across multiple runs?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-do-when-my-prompt-is-too-long-for-the-context-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I do when my prompt is too long for the context window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-avoid-bias-in-ai-generated-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I avoid bias in AI-generated content?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-model-sometimes-ignore-parts-of-my-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the model sometimes ignore parts of my prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-handle-tasks-that-are-too-complex-for-a-single-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I handle tasks that are too complex for a single prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-injection-and-how-do-i-defend-against-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt injection and how do I defend against it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-know-which-ai-model-to-use-for-my-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I know which AI model to use for my task?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practice Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-a-good-system-prompt-for-an-ai-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write a good system prompt for an AI application?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-few-shot-examples-versus-detailed-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use few-shot examples versus detailed instructions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-best-way-to-iterate-on-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the best way to iterate on prompts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-structure-prompts-for-data-analysis-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I structure prompts for data analysis tasks?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-use-role-assignment-effectively" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I use role assignment effectively?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-an-agentic-workflow-versus-a-simple-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use an agentic workflow versus a simple prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-reduce-ai-costs-while-maintaining-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I reduce AI costs while maintaining quality?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-most-important-ethical-guidelines-for-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the most important ethical guidelines for prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-build-a-reusable-prompt-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I build a reusable prompt library?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-evaluate-the-quality-of-ai-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I evaluate the quality of AI responses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-secure-ai-applications-against-adversarial-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I secure AI applications against adversarial attacks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topic-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topic Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topic Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-multi-agent-systems-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do multi-agent systems work?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-tree-of-thoughts-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Tree of Thoughts technique?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-design-effective-approval-workflows-for-ai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I design effective approval workflows for AI agents?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-sandboxed-execution-and-why-is-it-important-for-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is sandboxed execution and why is it important for agents?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-future-of-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the future of prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-combine-rag-with-agentic-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I combine RAG with agentic AI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-evaluate-and-compare-different-prompt-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I evaluate and compare different prompt strategies?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-meta-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is meta-prompting?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-this-course-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this course about?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-this-course-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is this course for?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-prerequisites-for-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the prerequisites for this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-the-course-structured" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is the course structured?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-install-any-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need to install any software?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-long-does-the-course-take-to-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long does the course take to complete?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-will-i-be-able-to-do-after-completing-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      What will I be able to do after completing this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-ai-tools-does-this-course-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      What AI tools does this course use?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-this-course-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is this course free?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-prompt-engineering-different-from-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is prompt engineering different from programming?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-this-course-different-from-other-prompt-engineering-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes this course different from other prompt engineering resources?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-navigate-the-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I navigate the textbook?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concept Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concept Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-large-language-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a large language model?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tokens-and-why-do-they-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are tokens and why do they matter?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-context-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a context window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-zero-shot-one-shot-and-few-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between zero-shot, one-shot, and few-shot prompting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-chain-of-thought-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is chain-of-thought prompting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is retrieval-augmented generation (RAG)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-graphrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is GraphRAG?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an AI agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt chaining?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a system prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-transformer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the transformer architecture?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-hallucination-in-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is hallucination in AI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-pre-training-and-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between pre-training and fine-tuning?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-inference-work-in-language-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does inference work in language models?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a prompt template?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-five-components-of-a-well-structured-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the five components of a well-structured prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-output-format-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is output format specification?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-a-chatbot-and-an-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between a chatbot and an AI agent?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-function-calling-in-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is function calling in AI?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Detail Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Detail Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-temperature-mean-in-ai-model-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does "temperature" mean in AI model settings?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-top-p-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Top-P sampling?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-frequency-penalty-and-presence-penalty" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are frequency penalty and presence penalty?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-max-tokens-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the max tokens setting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-stop-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are stop sequences?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-json-csv-and-xml-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between JSON, CSV, and XML output?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-tokenization" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is tokenization?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-vector-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a vector database?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are embeddings?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-document-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is document chunking?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-seed-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the seed parameter?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-input-tokens-and-output-tokens-for-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between input tokens and output tokens for pricing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is rate limiting?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-five-hour-token-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the five-hour token window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-content-moderation-in-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is content moderation in AI systems?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenge-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Challenge Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenge Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-ai-give-me-vague-or-generic-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the AI give me vague or generic responses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-fix-responses-that-are-too-long-or-too-short" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I fix responses that are too long or too short?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-should-i-do-when-the-ai-hallucinates-incorrect-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      What should I do when the AI hallucinates incorrect facts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-ai-not-follow-my-formatting-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the AI not follow my formatting instructions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-get-consistent-results-across-multiple-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I get consistent results across multiple runs?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-do-when-my-prompt-is-too-long-for-the-context-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I do when my prompt is too long for the context window?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-avoid-bias-in-ai-generated-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I avoid bias in AI-generated content?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-the-model-sometimes-ignore-parts-of-my-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does the model sometimes ignore parts of my prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-handle-tasks-that-are-too-complex-for-a-single-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I handle tasks that are too complex for a single prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-injection-and-how-do-i-defend-against-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt injection and how do I defend against it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-know-which-ai-model-to-use-for-my-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I know which AI model to use for my task?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practice Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practice Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-a-good-system-prompt-for-an-ai-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write a good system prompt for an AI application?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-few-shot-examples-versus-detailed-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use few-shot examples versus detailed instructions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-best-way-to-iterate-on-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the best way to iterate on prompts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-structure-prompts-for-data-analysis-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I structure prompts for data analysis tasks?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-use-role-assignment-effectively" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I use role assignment effectively?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-an-agentic-workflow-versus-a-simple-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use an agentic workflow versus a simple prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-reduce-ai-costs-while-maintaining-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I reduce AI costs while maintaining quality?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-most-important-ethical-guidelines-for-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are the most important ethical guidelines for prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-build-a-reusable-prompt-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I build a reusable prompt library?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-evaluate-the-quality-of-ai-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I evaluate the quality of AI responses?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-secure-ai-applications-against-adversarial-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I secure AI applications against adversarial attacks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topic-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topic Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topic Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-multi-agent-systems-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do multi-agent systems work?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-tree-of-thoughts-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Tree of Thoughts technique?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-design-effective-approval-workflows-for-ai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I design effective approval workflows for AI agents?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-sandboxed-execution-and-why-is-it-important-for-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is sandboxed execution and why is it important for agents?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-future-of-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the future of prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-combine-rag-with-agentic-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can I combine RAG with agentic AI?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-evaluate-and-compare-different-prompt-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I evaluate and compare different prompt strategies?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-meta-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is meta-prompting?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="prompt-engineering-faq">Prompt Engineering FAQ</h1>
+<h2 id="getting-started-questions">Getting Started Questions</h2>
+<h3 id="what-is-this-course-about">What is this course about?</h3>
+<p>This course, <strong>Prompt Engineering: From Fundamentals to Agentic AI</strong>, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum of prompt engineering — from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI, where language models use tools and execute multi-step workflows autonomously. For a full overview, see the <a href="../course-description/">course description</a>.</p>
+<h3 id="who-is-this-course-for">Who is this course for?</h3>
+<p>This course is designed for a <strong>general audience</strong> with at least a high school education. That includes business professionals, educators, students, and anyone seeking to communicate effectively with AI. No prior programming or AI experience is required. Whether you're a marketing manager drafting emails, a teacher designing lessons, or a curious learner exploring AI capabilities, this course meets you where you are. See the <a href="../course-description/">course description</a> for more details.</p>
+<h3 id="what-are-the-prerequisites-for-this-course">What are the prerequisites for this course?</h3>
+<p>None. You need basic computer literacy and access to a web browser. Familiarity with any AI chatbot (such as ChatGPT, Claude, or Gemini) is helpful but not required. The course starts from the very beginning and builds up systematically.</p>
+<h3 id="how-is-the-course-structured">How is the course structured?</h3>
+<p>The course is organized into 17 chapters that progress from foundational concepts to advanced topics. It begins with <a href="../chapters/01-ai-ml-foundations/">AI and ML Foundations</a> and <a href="../chapters/02-prompt-fundamentals/">Prompt Fundamentals</a>, moves through core and advanced techniques, covers specialized topics like <a href="../chapters/08-retrieval-augmented-generation/">RAG</a> and <a href="../chapters/12-agentic-ai/">Agentic AI</a>, and concludes with <a href="../chapters/17-capstone-projects/">Capstone Projects</a>. There are also 17+ hands-on <a href="../labs/">labs</a>.</p>
+<h3 id="do-i-need-to-install-any-software">Do I need to install any software?</h3>
+<p>No special software installation is required. You'll primarily interact with AI through web-based chatbot interfaces like ChatGPT, Claude, or Gemini. Some labs use <a href="https://p5js.org/">P5.js</a> for interactive visualizations, which runs in your browser. A few data analysis labs use Python, but these are optional and clearly marked.</p>
+<h3 id="how-long-does-the-course-take-to-complete">How long does the course take to complete?</h3>
+<p>The course is designed for classroom instruction but can also be completed through self-study. The 17 chapters plus labs provide enough material for a full semester course or an intensive multi-day workshop. You can also work through individual chapters and labs at your own pace.</p>
+<h3 id="what-will-i-be-able-to-do-after-completing-this-course">What will I be able to do after completing this course?</h3>
+<p>You'll be able to write clear, well-structured prompts that consistently produce excellent AI responses, use advanced techniques like chain-of-thought and few-shot prompting, control output formats, manage context windows efficiently, evaluate AI outputs critically, and even design agentic workflows where AI systems use tools and execute complex tasks autonomously. See the full list of <a href="../course-description/">learning outcomes</a>.</p>
+<h3 id="what-ai-tools-does-this-course-use">What AI tools does this course use?</h3>
+<p>The course is <strong>model-agnostic</strong> — the principles and techniques apply to any large language model. Labs and examples reference ChatGPT, Claude, and Gemini, but the skills transfer to any current or future AI system. The emphasis is on <em>how to communicate effectively with AI</em>, not on any specific tool.</p>
+<h3 id="is-this-course-free">Is this course free?</h3>
+<p>Yes. All course content is available online under a <a href="../license/">Creative Commons BY-NC-SA 4.0 license</a>, which means you can use, share, and adapt the materials for non-commercial educational purposes with proper attribution.</p>
+<h3 id="how-is-prompt-engineering-different-from-programming">How is prompt engineering different from programming?</h3>
+<p>Programming involves writing code in formal languages (Python, JavaScript, etc.) with strict syntax rules. Prompt engineering involves writing instructions in <strong>natural language</strong> — plain English — to guide AI behavior. You don't need to learn a programming language. However, the underlying skills are similar: clear thinking, specificity, structured communication, and iterative refinement. Both are about giving precise instructions to a computer system.</p>
+<h3 id="what-makes-this-course-different-from-other-prompt-engineering-resources">What makes this course different from other prompt engineering resources?</h3>
+<p>This course was first taught in March 2020 and has been continuously updated since. It emphasizes <strong>hands-on labs</strong> with real AI systems, teaches a systematic approach grounded in learning science (Bloom's Taxonomy), and covers the full range from basic prompting through agentic AI. Unlike many resources that focus on "secret hacks," this course builds genuine, transferable skills. The underlying message: good communication with AI is a superpower, not a gimmick.</p>
+<h3 id="how-do-i-navigate-the-textbook">How do I navigate the textbook?</h3>
+<p>Use the navigation menu on the left side of the site. Chapters are numbered sequentially and designed to be read in order, though you can jump to specific topics of interest. Each chapter lists its prerequisite chapters at the bottom. Labs are organized separately and can be completed alongside the relevant chapters.</p>
+<h2 id="core-concept-questions">Core Concept Questions</h2>
+<h3 id="what-is-a-large-language-model">What is a large language model?</h3>
+<p>A <strong>Large Language Model</strong> (LLM) is a type of generative AI that specializes in understanding and producing human language. Models like GPT-4, Claude, Gemini, and Llama are all LLMs. They're called "large" because they have billions of parameters and are trained on enormous datasets. LLMs can answer questions, write essays and code, translate languages, summarize documents, analyze data, and much more. The same model that writes your marketing copy can debug your Python code — it all depends on how you prompt it. Learn more in <a href="../chapters/01-ai-ml-foundations/">Chapter 1</a>.</p>
+<h3 id="what-is-a-prompt">What is a prompt?</h3>
+<p>A <strong>prompt</strong> is simply the text you send to an AI model. It can be a quick question like "What's the capital of France?" or a 500-word instruction with examples, formatting requirements, and persona definitions. The quality of the prompt directly determines the quality of the response — this is the core insight behind prompt engineering. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a> for details.</p>
+<h3 id="what-is-prompt-engineering">What is prompt engineering?</h3>
+<p><strong>Prompt engineering</strong> is the systematic practice of crafting prompts that consistently produce excellent results from AI models. It involves understanding how to structure instructions, provide context, set constraints, specify output formats, and iteratively refine your prompts based on the responses you receive. It's a skill that combines clear communication, structured thinking, and knowledge of how AI models work. This entire course is dedicated to building that skill. Start with <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a>.</p>
+<h3 id="what-are-tokens-and-why-do-they-matter">What are tokens and why do they matter?</h3>
+<p><strong>Tokens</strong> are the small chunks of text that AI models process. A token is roughly 3/4 of a word in English. "Hello" is 1 token, while "unbelievable" might be 2-3 tokens. Tokens matter for two reasons: <strong>cost</strong> (most AI services charge per token) and <strong>limits</strong> (every model has a maximum context window measured in tokens). Understanding tokens helps you write prompts that are efficient and stay within bounds. See <a href="../chapters/01-ai-ml-foundations/">Chapter 1</a> and <a href="../chapters/14-usage-limits-token-economics/">Chapter 14</a>.</p>
+<h3 id="what-is-a-context-window">What is a context window?</h3>
+<p>The <strong>context window</strong> is the maximum number of tokens an AI model can consider at once — both your input and its output combined. Think of it as the model's working memory. Current frontier models support 100,000-200,000+ tokens. A larger context window lets you provide more examples and background information, but models can sometimes lose track of information buried in very long contexts. Learn strategies for managing this in <a href="../chapters/07-context-memory-management/">Chapter 7</a>.</p>
+<h3 id="what-is-the-difference-between-zero-shot-one-shot-and-few-shot-prompting">What is the difference between zero-shot, one-shot, and few-shot prompting?</h3>
+<p>These techniques differ in <strong>how many examples</strong> you provide. <strong>Zero-shot</strong> gives no examples — you just describe the task. <strong>One-shot</strong> provides one example to demonstrate the expected format. <strong>Few-shot</strong> provides 2-5+ examples to establish a clear pattern. Zero-shot is fast but less precise; few-shot is more precise but uses more tokens. The right choice depends on your task complexity and format requirements. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a> for detailed comparisons and examples.</p>
+<h3 id="what-is-chain-of-thought-prompting">What is chain-of-thought prompting?</h3>
+<p><strong>Chain-of-thought (CoT) prompting</strong> asks the AI to explain its reasoning step by step before arriving at a final answer. Simply adding "Let's think step by step" to your prompt can dramatically improve accuracy on math, logic, and multi-step reasoning tasks — sometimes by over 50%. The technique works because it forces the model to lay out intermediate reasoning tokens before jumping to a conclusion. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-is-retrieval-augmented-generation-rag">What is retrieval-augmented generation (RAG)?</h3>
+<p><strong>Retrieval-augmented generation</strong> (RAG) is a technique that enhances AI responses by first retrieving relevant information from an external knowledge base, then using that information to generate a grounded, accurate answer. RAG helps overcome the knowledge cutoff limitation of LLMs and reduces hallucination by anchoring responses in specific source documents. Learn about RAG and its advanced variant GraphRAG in <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a>.</p>
+<h3 id="what-is-graphrag">What is GraphRAG?</h3>
+<p><strong>GraphRAG</strong> is an advanced form of retrieval-augmented generation that uses <strong>knowledge graphs</strong> to answer questions that depend on relationships between entities. While traditional RAG retrieves relevant text chunks, GraphRAG traverses a structured graph of connected concepts, enabling it to answer multi-hop relationship questions that traditional RAG cannot handle well. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a>.</p>
+<h3 id="what-is-an-ai-agent">What is an AI agent?</h3>
+<p>An <strong>AI agent</strong> is a software system that uses a language model as its reasoning engine to autonomously plan, decide, and take actions to achieve a goal. Unlike a chatbot (which waits for your next question), an agent receives a high-level objective, breaks it into steps, selects tools, executes them, evaluates results, and adjusts its plan as needed. Agents represent a fundamental shift from question-and-answer interaction to goal-driven autonomy. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="what-is-prompt-chaining">What is prompt chaining?</h3>
+<p><strong>Prompt chaining</strong> is the practice of using the output of one prompt as the input to the next, creating a sequence of prompts that work together to accomplish a complex task. Think of it like an assembly line: each prompt handles one specific job. Chaining produces higher-quality results than trying to do everything in a single massive prompt because each step is focused and manageable. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-is-a-system-prompt">What is a system prompt?</h3>
+<p>A <strong>system prompt</strong> is a set of hidden instructions that shape the AI model's behavior throughout a conversation. It defines the model's role, personality, constraints, and response guidelines. System prompts are separate from user prompts and are typically set by developers building AI applications. They're a powerful tool for consistent, controlled AI behavior. Learn about system prompts in <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-is-the-transformer-architecture">What is the transformer architecture?</h3>
+<p>The <strong>Transformer</strong> is the neural network architecture that powers virtually every modern large language model. Introduced in 2017 in the paper "Attention Is All You Need," transformers use an <strong>attention mechanism</strong> that allows the model to look at all words in a passage simultaneously and understand how they relate to each other. This parallel processing also made them enormously faster to train, enabling the creation of truly massive language models. See <a href="../chapters/01-ai-ml-foundations/">Chapter 1</a>.</p>
+<h3 id="what-is-hallucination-in-ai">What is hallucination in AI?</h3>
+<p><strong>Hallucination</strong> occurs when an AI model generates confident-sounding information that is factually incorrect or entirely fabricated. Models don't "know" they're wrong — they predict tokens based on patterns, and sometimes those patterns produce plausible-sounding nonsense. Hallucination is one of the most important risks to understand as a prompt engineer. Techniques like RAG, chain-of-thought prompting, and explicit verification requests can reduce hallucination. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a>.</p>
+<h3 id="what-is-the-difference-between-pre-training-and-fine-tuning">What is the difference between pre-training and fine-tuning?</h3>
+<p><strong>Pre-training</strong> is the initial training phase where a model learns language patterns from massive amounts of text by playing a prediction game: given a sequence of tokens, predict the next one. <strong>Fine-tuning</strong> takes that pre-trained model and trains it further on a smaller, specific dataset to adapt it for particular tasks or behaviors — like following instructions, refusing harmful requests, or specializing in a domain. Pre-training gives the model knowledge; fine-tuning gives it specialization. See <a href="../chapters/01-ai-ml-foundations/">Chapter 1</a>.</p>
+<h3 id="how-does-inference-work-in-language-models">How does inference work in language models?</h3>
+<p><strong>Inference</strong> is the process of a trained model generating a response to your input. Language models generate text <strong>one token at a time</strong>, from left to right. Each time the model produces a token, it considers everything that came before and predicts the most likely next token. This is why the text appears word by word in chat interfaces. This token-by-token generation is also why chain-of-thought prompting works — it forces the model to lay out reasoning before jumping to a conclusion. See <a href="../chapters/01-ai-ml-foundations/">Chapter 1</a>.</p>
+<h3 id="what-is-a-prompt-template">What is a prompt template?</h3>
+<p>A <strong>prompt template</strong> is a reusable prompt structure with placeholders (often marked with curly braces) that you fill in for each new use case. Templates capture proven prompt patterns so you and your team can use them consistently. For example, a template might define the role, task structure, and output format, with variables for the specific content. Building a library of templates is one of the most practical things you can do as a prompt engineer. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-are-the-five-components-of-a-well-structured-prompt">What are the five components of a well-structured prompt?</h3>
+<p>A well-structured prompt typically contains: (1) <strong>Role</strong> — who the AI should be, (2) <strong>Task</strong> — what it should do, (3) <strong>Context</strong> — background information it needs, (4) <strong>Constraints</strong> — limitations to follow, and (5) <strong>Output format</strong> — how the response should be structured. Not every prompt needs all five, but for complex requests, including more components consistently produces better results. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a>.</p>
+<h3 id="what-is-output-format-specification">What is output format specification?</h3>
+<p><strong>Output format specification</strong> is the practice of explicitly declaring the desired structure, syntax, and layout of an AI model's response. AI models can produce output in Markdown, JSON, CSV, XML, YAML, HTML, tables, numbered lists, and more — they just need clear instructions about which format to use. This skill separates casual AI users from people who get things done efficiently. See <a href="../chapters/06-output-format-control/">Chapter 6</a>.</p>
+<h3 id="what-is-the-difference-between-a-chatbot-and-an-ai-agent">What is the difference between a chatbot and an AI agent?</h3>
+<p>A <strong>chatbot</strong> follows a question-and-answer pattern — you ask, it responds. An <strong>AI agent</strong> receives a high-level goal and autonomously plans, selects tools, executes steps, monitors results, and adjusts its approach. The chatbot is like a reference librarian; the agent is like a research assistant who goes off to gather data and comes back with a finished product. The key difference is autonomy. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="what-is-function-calling-in-ai">What is function calling in AI?</h3>
+<p><strong>Function calling</strong> is the mechanism by which a language model requests the execution of a predefined function. The model generates structured output (typically JSON) specifying which function to call and what arguments to pass. The system executes the function and returns the result. Importantly, the model never runs the function itself — it <em>requests</em> execution, and the surrounding system handles it. This separation is critical for security. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h2 id="technical-detail-questions">Technical Detail Questions</h2>
+<h3 id="what-does-temperature-mean-in-ai-model-settings">What does "temperature" mean in AI model settings?</h3>
+<p><strong>Temperature</strong> is a parameter that controls the randomness of a model's output. A lower temperature (e.g., 0.1) makes the model more deterministic and focused, producing predictable, conservative responses. A higher temperature (e.g., 0.9) increases randomness, producing more creative and varied outputs. For factual tasks, use low temperature. For brainstorming or creative writing, use higher temperature. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a>.</p>
+<h3 id="what-is-top-p-sampling">What is Top-P sampling?</h3>
+<p><strong>Top-P sampling</strong> (also called nucleus sampling) is an alternative to temperature for controlling output randomness. Instead of scaling all token probabilities, Top-P limits the model to consider only the smallest set of tokens whose cumulative probability exceeds a threshold P. For example, Top-P of 0.9 means the model considers the most likely tokens that together account for 90% of the probability mass. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a>.</p>
+<h3 id="what-are-frequency-penalty-and-presence-penalty">What are frequency penalty and presence penalty?</h3>
+<p>These parameters discourage the model from repeating itself. <strong>Frequency penalty</strong> reduces the likelihood of tokens that have already appeared, proportional to how many times they've appeared. <strong>Presence penalty</strong> applies a flat penalty to any token that has appeared at all, regardless of count. Use frequency penalty to reduce repetitive phrasing and presence penalty to encourage the model to explore new topics. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a>.</p>
+<h3 id="what-is-the-max-tokens-setting">What is the max tokens setting?</h3>
+<p>The <strong>max tokens</strong> setting limits the maximum length of the model's response. If you set max tokens to 500, the model will stop generating after 500 tokens even if its response isn't complete. This is useful for controlling costs and ensuring concise responses, but set it too low and you'll get truncated answers. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a>.</p>
+<h3 id="what-are-stop-sequences">What are stop sequences?</h3>
+<p><strong>Stop sequences</strong> are specific strings that tell the model to stop generating when they appear in the output. For example, you might set a stop sequence of "---" so the model stops when it reaches a divider. This gives you precise control over where the response ends, which is especially useful when generating structured data or multiple items. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a>.</p>
+<h3 id="what-is-the-difference-between-json-csv-and-xml-output">What is the difference between JSON, CSV, and XML output?</h3>
+<p>These are different structured data formats that AI models can produce. <strong>JSON</strong> (JavaScript Object Notation) is lightweight and widely used in web applications — great for nested data. <strong>CSV</strong> (Comma-Separated Values) is simple and works well for tabular data that will go into spreadsheets. <strong>XML</strong> (Extensible Markup Language) is more verbose but supports complex hierarchical data with custom tags. Choose based on your downstream use case. See <a href="../chapters/06-output-format-control/">Chapter 6</a>.</p>
+<h3 id="what-is-tokenization">What is tokenization?</h3>
+<p><strong>Tokenization</strong> is the process of splitting text into tokens before an AI model can process it. A token isn't exactly a word — it's a chunk of text the model has learned to recognize. Common words like "the" are usually one token, while longer words get split into multiple tokens. Understanding tokenization helps you estimate costs and stay within context window limits. See <a href="../chapters/01-ai-ml-foundations/">Chapter 1</a>.</p>
+<h3 id="what-is-a-vector-database">What is a vector database?</h3>
+<p>A <strong>vector database</strong> is a specialized database that stores and retrieves data as high-dimensional vectors (numerical representations). In the context of RAG, documents are converted into vector embeddings and stored in a vector database. When you ask a question, your query is also converted to a vector, and the database finds the most semantically similar documents. This enables semantic search — finding content by meaning, not just keywords. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a>.</p>
+<h3 id="what-are-embeddings">What are embeddings?</h3>
+<p>An <strong>embedding</strong> is a numerical representation of text (or other data) as a vector of numbers. Embeddings capture semantic meaning: words and phrases with similar meanings have vectors that are close together in the embedding space. Embeddings power semantic search, recommendation systems, and the retrieval step in RAG pipelines. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a>.</p>
+<h3 id="what-is-document-chunking">What is document chunking?</h3>
+<p><strong>Document chunking</strong> is the process of splitting large documents into smaller, manageable pieces for storage in a vector database. Chunk size matters: chunks that are too small lose context, while chunks that are too large may contain irrelevant information. Good chunking strategies consider natural document boundaries (paragraphs, sections) and overlap between chunks to preserve context. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a>.</p>
+<h3 id="what-is-the-seed-parameter">What is the seed parameter?</h3>
+<p>The <strong>seed parameter</strong> allows you to set a fixed starting point for the model's random number generator, enabling more reproducible outputs. When you use the same seed with the same prompt and parameters, you'll get the same (or very similar) response each time. This is useful for testing and debugging prompts. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a>.</p>
+<h3 id="what-is-the-difference-between-input-tokens-and-output-tokens-for-pricing">What is the difference between input tokens and output tokens for pricing?</h3>
+<p><strong>Input tokens</strong> (your prompt, system message, and context) and <strong>output tokens</strong> (the model's response) are priced differently. Output tokens almost always cost 3-5x more than input tokens because generating new text requires more computation than processing existing text. This means every unnecessary word you ask the model to <em>generate</em> costs significantly more than extra context you <em>send</em> it. See <a href="../chapters/14-usage-limits-token-economics/">Chapter 14</a>.</p>
+<h3 id="what-is-rate-limiting">What is rate limiting?</h3>
+<p><strong>Rate limiting</strong> is a restriction on how many API requests you can make within a given time period. AI providers impose rate limits to prevent system overload and ensure fair access. Rate limits may apply per minute, per hour, or per day, and can restrict both the number of requests and the total tokens processed. Exceeding rate limits results in temporary throttling. See <a href="../chapters/14-usage-limits-token-economics/">Chapter 14</a>.</p>
+<h3 id="what-is-the-five-hour-token-window">What is the five-hour token window?</h3>
+<p>The <strong>five-hour token window</strong> is a usage measurement period used by some AI platforms (including Claude) to track consumption. Instead of monthly caps, usage is measured within rolling five-hour windows. When you hit your limit within a window, you may experience throttling or reduced access until the window resets. Understanding this helps you plan intensive work sessions. See <a href="../chapters/14-usage-limits-token-economics/">Chapter 14</a>.</p>
+<h3 id="what-is-content-moderation-in-ai-systems">What is content moderation in AI systems?</h3>
+<p><strong>Content moderation</strong> refers to the automated filtering and review of AI inputs and outputs to prevent the generation of harmful, inappropriate, or policy-violating content. This includes filtering hate speech, explicit content, dangerous instructions, and other categories of harmful output. Content moderation is a key layer in AI safety, working alongside guardrails and output filtering. See <a href="../chapters/11-prompt-security/">Chapter 11</a>.</p>
+<h2 id="common-challenge-questions">Common Challenge Questions</h2>
+<h3 id="why-does-the-ai-give-me-vague-or-generic-responses">Why does the AI give me vague or generic responses?</h3>
+<p>The most common cause is a vague or generic prompt. If you ask "Tell me about dogs," you'll get a generic overview. Instead, be specific: include quantities, dimensions, scope, quality criteria, and audience. For example: "List 5 differences between Golden Retrievers and Labrador Retrievers in a markdown table." Every detail you don't specify is a decision the model makes for you. Review the principles of <a href="../chapters/02-prompt-fundamentals/">instruction clarity and specificity</a>.</p>
+<h3 id="how-do-i-fix-responses-that-are-too-long-or-too-short">How do I fix responses that are too long or too short?</h3>
+<p>Explicitly state the desired length in your prompt. Use specific measurements: "Write exactly 200 words," "Respond in 3 bullet points," or "Keep your answer under 100 words." You can also use the <strong>max tokens</strong> parameter to enforce a hard length limit. For shorter responses, ask for "concise" or "brief" output. For longer ones, request "detailed" or "comprehensive" responses with specific section requirements. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a>.</p>
+<h3 id="what-should-i-do-when-the-ai-hallucinates-incorrect-facts">What should I do when the AI hallucinates incorrect facts?</h3>
+<p>First, always verify critical facts independently. To reduce hallucination: (1) use <strong>chain-of-thought prompting</strong> so you can check the reasoning, (2) explicitly ask the model to cite sources or say "I don't know" when uncertain, (3) use <strong>RAG</strong> to ground responses in verified documents, (4) apply <strong>self-consistency</strong> by generating multiple responses and checking for agreement, and (5) lower the temperature setting for more deterministic outputs. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a> and <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="why-does-the-ai-not-follow-my-formatting-instructions">Why does the AI not follow my formatting instructions?</h3>
+<p>Common causes include: burying format instructions at the end of a long prompt (put them near the beginning), using ambiguous format descriptions ("make it pretty" vs. "use a markdown table with columns X, Y, Z"), or conflicting instructions. Be explicit about the format, provide an example of the desired output structure, and use few-shot prompting to demonstrate the exact format you want. See <a href="../chapters/06-output-format-control/">Chapter 6</a>.</p>
+<h3 id="how-do-i-get-consistent-results-across-multiple-runs">How do I get consistent results across multiple runs?</h3>
+<p>AI responses have inherent randomness. To increase consistency: (1) lower the <strong>temperature</strong> to 0-0.2, (2) use the <strong>seed parameter</strong> for reproducible outputs, (3) provide detailed, unambiguous prompts with few-shot examples, and (4) use prompt templates for repeated tasks. For critical applications, use <strong>self-consistency</strong> — generate multiple responses and select the most common answer. See <a href="../chapters/03-prompt-types-parameters/">Chapter 3</a> and <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-do-i-do-when-my-prompt-is-too-long-for-the-context-window">What do I do when my prompt is too long for the context window?</h3>
+<p>Strategies include: (1) <strong>summarize</strong> background information instead of including full documents, (2) use <strong>document chunking</strong> to include only relevant sections, (3) remove redundant examples from few-shot prompts, (4) implement <strong>RAG</strong> to dynamically retrieve only what's needed, (5) use <strong>prompt compression</strong> techniques, and (6) consider using a model with a larger context window. See <a href="../chapters/07-context-memory-management/">Chapter 7</a>.</p>
+<h3 id="how-do-i-avoid-bias-in-ai-generated-content">How do I avoid bias in AI-generated content?</h3>
+<p>Be aware that AI models reflect biases in their training data. To mitigate bias: (1) explicitly instruct the model to be balanced and inclusive, (2) specify diverse perspectives in your prompt, (3) review outputs critically for stereotypes or one-sided representations, (4) test prompts with different demographic contexts, and (5) use inclusive language guidelines in your system prompts. See <a href="../chapters/10-ethics-responsible-ai/">Chapter 10</a>.</p>
+<h3 id="why-does-the-model-sometimes-ignore-parts-of-my-prompt">Why does the model sometimes ignore parts of my prompt?</h3>
+<p>Models can lose track of instructions in very long prompts, a phenomenon sometimes called "lost in the middle." Key instructions buried in the center of a long prompt may be overlooked. Solutions: (1) put critical instructions at the beginning and end of your prompt, (2) use numbered lists for multiple requirements, (3) break complex prompts into chained, focused steps, and (4) explicitly ask the model to address each requirement. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a> and <a href="../chapters/07-context-memory-management/">Chapter 7</a>.</p>
+<h3 id="how-do-i-handle-tasks-that-are-too-complex-for-a-single-prompt">How do I handle tasks that are too complex for a single prompt?</h3>
+<p>Use <strong>task decomposition</strong> and <strong>prompt chaining</strong>. Break the complex task into smaller, manageable steps, where each prompt handles one well-defined subtask. Use the output from one step as input to the next. This approach produces higher-quality results, makes debugging easier, and lets you course-correct between steps. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a> and <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-is-prompt-injection-and-how-do-i-defend-against-it">What is prompt injection and how do I defend against it?</h3>
+<p><strong>Prompt injection</strong> is an attack where someone crafts input that causes the AI to ignore its original instructions and follow the attacker's instructions instead. It works because language models don't inherently distinguish between developer instructions and user input — both are just tokens. Defenses include input validation, output filtering, separating system and user prompts, adding guardrails, and red teaming your applications. See <a href="../chapters/11-prompt-security/">Chapter 11</a>.</p>
+<h3 id="how-do-i-know-which-ai-model-to-use-for-my-task">How do I know which AI model to use for my task?</h3>
+<p>Match model capability to task complexity. Simple tasks (basic Q&amp;A, formatting, translation) work fine with smaller, cheaper models. Complex tasks (multi-step reasoning, nuanced analysis, creative writing) benefit from larger, more capable models. Consider cost, latency, context window size, and specific strengths of each model. Test your prompts across multiple models to find the best fit. See <a href="../chapters/13-evaluation-optimization/">Chapter 13</a> and <a href="../chapters/14-usage-limits-token-economics/">Chapter 14</a>.</p>
+<h2 id="best-practice-questions">Best Practice Questions</h2>
+<h3 id="how-do-i-write-a-good-system-prompt-for-an-ai-application">How do I write a good system prompt for an AI application?</h3>
+<p>A good system prompt defines the AI's <strong>role</strong>, <strong>capabilities</strong>, <strong>constraints</strong>, and <strong>response guidelines</strong>. Be specific about what the AI should and should not do. Include: the persona or expertise area, the target audience, formatting expectations, content boundaries, and safety guardrails. Test the system prompt with adversarial inputs to ensure it holds up. Keep it as concise as possible while covering all necessary behaviors. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a> and <a href="../chapters/11-prompt-security/">Chapter 11</a>.</p>
+<h3 id="when-should-i-use-few-shot-examples-versus-detailed-instructions">When should I use few-shot examples versus detailed instructions?</h3>
+<p>Use <strong>few-shot examples</strong> when the desired output format or style is easier to demonstrate than describe, when you want highly consistent output patterns, or when the task is unusual and hard to specify in words. Use <strong>detailed instructions</strong> when the task is straightforward but needs constraints, when examples would use too many tokens, or when the task varies too much for fixed examples to apply. Often, combining both approaches works best. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="what-is-the-best-way-to-iterate-on-prompts">What is the best way to iterate on prompts?</h3>
+<p>Follow a systematic refinement cycle: (1) write your initial prompt, (2) send it and evaluate the response, (3) diagnose what went wrong, (4) change <strong>one thing at a time</strong> so you understand what's working, (5) repeat until the response meets your standards. Keep notes on what works. Test with different inputs to ensure consistency. Don't expect perfection on the first try — iteration is the process, not a sign of failure. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a>.</p>
+<h3 id="how-should-i-structure-prompts-for-data-analysis-tasks">How should I structure prompts for data analysis tasks?</h3>
+<p>Include: (1) the specific data to analyze or describe the dataset clearly, (2) the exact analysis you want performed, (3) the output format (table, chart description, bullet points), (4) any statistical methods to use or avoid, and (5) the audience for the analysis. Use prompt chaining for multi-step analyses: first explore the data, then compute statistics, then generate visualizations, then write interpretive summaries. See <a href="../chapters/06-output-format-control/">Chapter 6</a> and <a href="../chapters/15-business-applications/">Chapter 15</a>.</p>
+<h3 id="how-do-i-use-role-assignment-effectively">How do I use role assignment effectively?</h3>
+<p><strong>Role assignment</strong> tells the AI to adopt a specific persona or expertise. Use it to shape both the content and tone of responses. Be specific: "You are a senior data scientist with 10 years of experience in healthcare analytics" is better than "You are an expert." The role influences vocabulary, depth of explanation, and perspective. Match the role to your audience and purpose. Don't assign conflicting roles. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="when-should-i-use-an-agentic-workflow-versus-a-simple-prompt">When should I use an agentic workflow versus a simple prompt?</h3>
+<p>Use <strong>simple prompts</strong> for one-step tasks with clear inputs and outputs: writing emails, answering questions, translating text, summarizing documents. Use <strong>agentic workflows</strong> for complex, multi-step tasks that require tool use, external data retrieval, iterative refinement, or autonomous decision-making. Agentic approaches shine when the task involves searching databases, running code, coordinating multiple operations, or adapting based on intermediate results. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="how-can-i-reduce-ai-costs-while-maintaining-quality">How can I reduce AI costs while maintaining quality?</h3>
+<p>Key strategies: (1) use the <strong>smallest model</strong> capable of handling your task, (2) keep prompts concise — cut unnecessary context, (3) limit output length with max tokens and explicit length instructions, (4) cache and reuse responses for identical queries, (5) use <strong>prompt templates</strong> to avoid reinventing prompts, (6) remember that output tokens cost 3-5x more than input tokens, so requesting shorter responses saves disproportionately. See <a href="../chapters/14-usage-limits-token-economics/">Chapter 14</a>.</p>
+<h3 id="what-are-the-most-important-ethical-guidelines-for-prompt-engineering">What are the most important ethical guidelines for prompt engineering?</h3>
+<p>Key principles include: (1) <strong>fairness</strong> — design prompts that produce equitable treatment across groups, (2) <strong>transparency</strong> — be honest about AI involvement in content, (3) <strong>accountability</strong> — take responsibility for AI outputs you use, (4) <strong>privacy</strong> — never include personally identifiable information in prompts unnecessarily, (5) <strong>accuracy</strong> — verify AI outputs before sharing them as fact, and (6) <strong>attribution</strong> — respect intellectual property and copyright. See <a href="../chapters/10-ethics-responsible-ai/">Chapter 10</a>.</p>
+<h3 id="how-do-i-build-a-reusable-prompt-library">How do I build a reusable prompt library?</h3>
+<p>Start by saving prompts that work well, then formalize them: give each prompt a <strong>name</strong>, <strong>purpose</strong>, <strong>template</strong>, and <strong>notes</strong> about what works best and common pitfalls. Organize by use case (email drafting, code review, data analysis). Test each prompt across different inputs and models. Share with your team and iterate based on feedback. Version control your library so you can track improvements over time. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="how-do-i-evaluate-the-quality-of-ai-responses">How do I evaluate the quality of AI responses?</h3>
+<p>Assess responses on four dimensions: (1) <strong>Relevance</strong> — does it address your question? (2) <strong>Accuracy</strong> — is the information correct? (3) <strong>Completeness</strong> — did it cover everything you asked for? (4) <strong>Conciseness</strong> — is every sentence necessary? These dimensions sometimes trade off against each other. For formal evaluation, create rubrics, use A/B testing, and combine human judgment with automated metrics. See <a href="../chapters/02-prompt-fundamentals/">Chapter 2</a> and <a href="../chapters/13-evaluation-optimization/">Chapter 13</a>.</p>
+<h3 id="how-do-i-secure-ai-applications-against-adversarial-attacks">How do I secure AI applications against adversarial attacks?</h3>
+<p>Implement defense in depth: (1) <strong>input validation</strong> — filter and sanitize user input before it reaches the model, (2) <strong>output filtering</strong> — scan responses for policy violations before displaying them, (3) <strong>guardrails</strong> — define clear boundaries in system prompts, (4) <strong>least privilege</strong> — give AI systems only the minimum permissions needed, (5) <strong>red teaming</strong> — actively test your system with adversarial inputs before deployment, (6) <strong>monitoring</strong> — log and review AI interactions for anomalies. See <a href="../chapters/11-prompt-security/">Chapter 11</a>.</p>
+<h2 id="advanced-topic-questions">Advanced Topic Questions</h2>
+<h3 id="how-do-multi-agent-systems-work">How do multi-agent systems work?</h3>
+<p><strong>Multi-agent systems</strong> divide complex work across multiple specialized AI agents. Common patterns include: <strong>manager-worker</strong> (one agent plans, workers execute), <strong>pipeline</strong> (agents arranged in sequence), <strong>debate</strong> (agents argue opposing perspectives), and <strong>review</strong> (one agent produces work, another critiques it). Each agent has its own tools, specialization, and area of responsibility. Multi-agent systems enable tackling problems too complex for any single agent. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="what-is-the-tree-of-thoughts-technique">What is the Tree of Thoughts technique?</h3>
+<p><strong>Tree of Thoughts (ToT)</strong> is an advanced prompting technique where the model explores multiple reasoning branches at each step, evaluates which are most promising, and continues only along the best paths. Unlike chain-of-thought (a single reasoning path), ToT considers alternatives, evaluates trade-offs, and backtracks when a path leads nowhere. It's especially useful for creative tasks, strategic planning, and problems without a single right answer. See <a href="../chapters/04-core-prompt-techniques/">Chapter 4</a>.</p>
+<h3 id="how-do-i-design-effective-approval-workflows-for-ai-agents">How do I design effective approval workflows for AI agents?</h3>
+<p>Place human approval at the boundary between <strong>planning and execution</strong> — let the agent plan freely but require approval before executing high-impact steps. Define which actions need approval (sending communications, financial transactions, modifying production systems, deleting data). Design escalation paths for when approval is denied. Balance automation efficiency with appropriate human oversight. Never deploy agents with unrestricted authority in production. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="what-is-sandboxed-execution-and-why-is-it-important-for-agents">What is sandboxed execution and why is it important for agents?</h3>
+<p><strong>Sandboxed execution</strong> runs an AI agent's actions within a restricted, isolated environment that limits what the agent can access and affect. Sandboxing is essential because agents that can run code, call APIs, and modify files could cause real damage. Strategies include container isolation (Docker), network restrictions, file system boundaries, resource limits, time limits, and permission scoping (principle of least privilege). See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="what-is-the-future-of-prompt-engineering">What is the future of prompt engineering?</h3>
+<p>As AI models become more capable and autonomous, prompt engineering becomes <em>more</em> important, not less. In the agentic era, prompts define autonomous behavior — an agent's system prompt controls its personality, capabilities, constraints, and safety boundaries. The skills you build in this course (clear communication, structured thinking, context management) are durable and transferable across model generations. Models will get bigger and smarter, but they'll still need well-crafted instructions. See <a href="../chapters/12-agentic-ai/">Chapter 12</a>.</p>
+<h3 id="how-can-i-combine-rag-with-agentic-ai">How can I combine RAG with agentic AI?</h3>
+<p>Agents can use RAG as one of their tools — retrieving relevant information from knowledge bases before reasoning about a task. A <strong>RAG pipeline builder</strong> is one example of a capstone project that combines these concepts. The agent plans what information is needed, retrieves it from a vector database, verifies its relevance, and incorporates it into its reasoning. This combination produces grounded, accurate, autonomous workflows. See <a href="../chapters/08-retrieval-augmented-generation/">Chapter 8</a> and <a href="../chapters/17-capstone-projects/">Chapter 17</a>.</p>
+<h3 id="how-do-i-evaluate-and-compare-different-prompt-strategies">How do I evaluate and compare different prompt strategies?</h3>
+<p>Use systematic <strong>A/B testing</strong>: run the same inputs through different prompt versions and measure which produces better results against defined criteria. Track metrics like accuracy, relevance, completeness, consistency, cost, and latency. Use both human evaluation (for subjective quality) and automated metrics (for measurable dimensions). Document your experiments and maintain a prompt testing log. See <a href="../chapters/13-evaluation-optimization/">Chapter 13</a>.</p>
+<h3 id="what-is-meta-prompting">What is meta-prompting?</h3>
+<p><strong>Meta-prompting</strong> is the technique of using prompts to generate or improve other prompts. Instead of crafting a prompt yourself, you ask the AI to help you design an optimal prompt for a specific task. This is one of the most powerful advanced techniques because it leverages the model's understanding of what makes prompts effective. Meta-prompting can also be used to create prompt templates, evaluation rubrics, and entire prompt engineering workflows. See <a href="../labs/17-meta-prompts/">Lab 17</a>.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../instructor-notes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Instructor Notes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Instructor Notes
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>

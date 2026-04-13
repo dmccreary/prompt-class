@@ -6,37 +6,34 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive infographic showing the three-stage pipeline from pre-training through fine-tuning to deployment, with hover tooltips and click-to-expand examples.">
+        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/sims/foundation-model-pipeline/">
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/appendices/chatgpt-millionaires/">
       
       
-        <link rel="prev" href="../embedding-space/">
+        <link rel="prev" href="../../sims/embedding-space/">
       
       
-        <link rel="next" href="../graph-viewer/">
+        <link rel="next" href="../../slides/">
       
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>The ChatGPT Millionaire Boom - Prompt Engineering Class</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-      
-      
-      <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
-    
-    
-      
-        <title>Foundation Model Training Pipeline - Prompt Engineering Class</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -75,6 +72,7 @@
 
     
     
+    
   </head>
   
   
@@ -92,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#foundation-model-training-pipeline" class="md-skip">
+        <a href="#the-get-rich-with-chatgpt-publishing-boom" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Foundation Model Training Pipeline
+              The ChatGPT Millionaire Boom
             
           </span>
         </div>
@@ -154,7 +152,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
@@ -184,7 +182,7 @@
         <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -229,7 +227,7 @@
       <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -251,14 +249,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
     
   </span>
-  
   
 
       </a>
@@ -278,14 +271,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     About
-  
-
     
   </span>
-  
   
 
       </a>
@@ -305,14 +293,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Course Description
-  
-
     
   </span>
-  
   
 
       </a>
@@ -332,14 +315,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Sample Outline
-  
-
     
   </span>
-  
   
 
       </a>
@@ -426,14 +404,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Labs
-  
-
     
   </span>
-  
   
 
       
@@ -514,14 +487,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Chapters
-  
-
     
   </span>
-  
   
 
       
@@ -572,14 +540,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Lectures
-  
-
     
   </span>
-  
   
 
       
@@ -604,6 +567,8 @@
       
         
           
+        
+      
         
       
         
@@ -638,14 +603,60 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Learning Graph
-  
-
     
   </span>
   
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
   
 
       
@@ -671,26 +682,6 @@
     
       
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
     
     
@@ -702,130 +693,28 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
-    
-  
-    MicroSims
-  
-
+    Appendices
     
   </span>
   
-  
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    MicroSims
-  
-
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ai-concepts-hierarchy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AI Concepts Hierarchy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../context-management-decision-framework/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Context Management Decision Framework
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../embedding-space/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Embedding Space Explorer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -848,14 +737,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Foundation Model Training Pipeline
-  
-
+    The ChatGPT Millionaire Boom
     
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -866,14 +750,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Foundation Model Training Pipeline
-  
-
+    The ChatGPT Millionaire Boom
     
   </span>
-  
   
 
       </a>
@@ -894,116 +773,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-this-microsim" class="md-nav__link">
+  <a href="#the-flood" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        About This MicroSim
-      
+      The Flood
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
+  <a href="#the-common-playbook" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How to Use
-      
+      The Common Playbook
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#the-quality-problem-ai-slop" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Iframe Embed Code
-      
+      The Quality Problem: "AI Slop"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lesson-plan" class="md-nav__link">
+  <a href="#what-this-tells-us-about-prompt-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Lesson Plan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lesson Plan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#grade-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Grade Level
-      
+      What This Tells Us About Prompt Engineering
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#duration" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#the-numbers-in-perspective" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Duration
-      
+      The Numbers in Perspective
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#why-we-mention-this-in-a-prompt-engineering-course" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Prerequisites
-      
+      Why We Mention This in a Prompt Engineering Course
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#activities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Activities
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assessment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Assessment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        References
-      
+      References
     </span>
   </a>
   
@@ -1013,146 +839,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../graph-viewer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learning Graph Viewer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../long-form-document-processing-strategies/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Long-Form Document Processing Strategies
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../prompt-iteration-cycle/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Prompt Iteration Cycle
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../prompt-quality-evaluator/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Prompt Quality Evaluator
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../temperature-explorer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Temperature Explorer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1177,14 +863,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Slides
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1204,14 +885,31 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Instructor Notes
-  
-
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
   
 
       </a>
@@ -1231,14 +929,31 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Glossary
-  
-
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
   
 
       </a>
@@ -1258,14 +973,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     References
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1285,14 +995,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Contact
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1327,116 +1032,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-this-microsim" class="md-nav__link">
+  <a href="#the-flood" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        About This MicroSim
-      
+      The Flood
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
+  <a href="#the-common-playbook" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        How to Use
-      
+      The Common Playbook
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#the-quality-problem-ai-slop" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Iframe Embed Code
-      
+      The Quality Problem: "AI Slop"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lesson-plan" class="md-nav__link">
+  <a href="#what-this-tells-us-about-prompt-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Lesson Plan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lesson Plan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#grade-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Grade Level
-      
+      What This Tells Us About Prompt Engineering
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#duration" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#the-numbers-in-perspective" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Duration
-      
+      The Numbers in Perspective
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#why-we-mention-this-in-a-prompt-engineering-course" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Prerequisites
-      
+      Why We Mention This in a Prompt Engineering Course
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#activities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Activities
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assessment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Assessment
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        References
-      
+      References
     </span>
   </a>
   
@@ -1452,55 +1104,6 @@
           
           
             <div class="md-content" data-md-component="content">
-              
-                
-
-
-
-  
-
-
-  <nav class="md-path" aria-label="Navigation" >
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    MicroSims
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
-              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -1510,61 +1113,109 @@
   
 
 
-<h1 id="foundation-model-training-pipeline">Foundation Model Training Pipeline</h1>
-<iframe src="main.html" height="522px" width="100%" scrolling="no"></iframe>
-
-<p><a class="md-button md-button--primary" href="main.html">Run the Foundation Model Training Pipeline MicroSim Fullscreen</a>
-<br/>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
-<h2 id="about-this-microsim">About This MicroSim</h2>
-<p>This interactive infographic illustrates the three-stage pipeline that transforms raw data into a useful AI assistant:</p>
-<ol>
-<li><strong>Pre-Training</strong> -- A foundation model learns language patterns by predicting the next token across trillions of tokens from books, websites, and code repositories.</li>
-<li><strong>Fine-Tuning</strong> -- The foundation model is adapted using instructions, conversations, and human feedback (RLHF) to follow instructions, be helpful, and refuse harmful requests.</li>
-<li><strong>Deployment</strong> -- The fine-tuned model generates responses to your prompts token by token through an API or chat interface.</li>
-</ol>
-<p>The arrows between stages show how <strong>transfer learning</strong> carries knowledge forward and how the final model is accessed via an <strong>API or chat interface</strong>.</p>
-<h2 id="how-to-use">How to Use</h2>
+<h1 id="the-get-rich-with-chatgpt-publishing-boom">The "Get Rich with ChatGPT" Publishing Boom</h1>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">A Thought Worth Perching On</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Words matter — let's get them right! And nowhere do words matter <em>less</em> than in books with titles like "69+ Proven Ways to Profit with ChatGPT." Polly has read a few of these so you don't have to. Spoiler: step one is usually "write a book about making money with ChatGPT." It's turtles all the way down, fellow prompt crafters.</p>
+</div>
+<h2 id="the-flood">The Flood</h2>
+<p>Within weeks of ChatGPT's public release in late November 2022, something remarkable happened on Amazon's Kindle Direct Publishing platform: hundreds of books about making money with AI appeared almost overnight. By February 2023, over 200 e-books on Amazon listed ChatGPT as an author or co-author — and that number grew exponentially from there.</p>
+<p>This wasn't a trickle. It was a flood. And it hasn't stopped.</p>
+<p>Research from the National Bureau of Economic Research (NBER) found that the number of new AI-related book titles appearing monthly nearly <strong>tripled</strong> between 2022 and 2025. While an exact real-time total is impossible to calculate due to the rapid influx of self-published material, there are now <strong>thousands</strong> of books, e-books, and guides published about how to get rich or make money using ChatGPT and other large language models.</p>
+<h2 id="the-common-playbook">The Common Playbook</h2>
+<p>If you browse the AI section of any major e-book platform, you'll notice a pattern. The same themes appear again and again, often with breathless titles and suspiciously similar content:</p>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Typical Titles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passive income promises</td>
+<td>"ChatGPT Millionaire," "Passive Income with AI"</td>
+</tr>
+<tr>
+<td>Numbered lists of opportunities</td>
+<td>"69+ Proven Ways to Profit," "300+ Lucrative Ways to Make Money"</td>
+</tr>
+<tr>
+<td>Multi-volume "Bibles"</td>
+<td>"The AI Millionaire Bible (Volumes 1-7)"</td>
+</tr>
+<tr>
+<td>Side hustle guides</td>
+<td>"Quit Your Job with ChatGPT," "AI Side Hustles That Actually Work"</td>
+</tr>
+<tr>
+<td>Prompt collections</td>
+<td>"10,000 ChatGPT Prompts for Business," "The Ultimate Prompt Playbook"</td>
+</tr>
+</tbody>
+</table>
+<p>The irony is thick enough to spread on toast: many of these books were themselves written by ChatGPT. The product <em>is</em> the pitch. "Use AI to write a book about using AI to make money" is the ouroboros of the self-publishing world.</p>
+<h2 id="the-quality-problem-ai-slop">The Quality Problem: "AI Slop"</h2>
+<p>The publishing industry has coined a blunt term for the bulk of this content: <strong>"AI slop."</strong> These are low-quality books generated rapidly to capitalize on the AI trend, with minimal human editing, fact-checking, or original insight.</p>
+<p>Common quality issues include:</p>
 <ul>
-<li><strong>Hover</strong> over any stage to see a detailed explanation of what happens at that step.</li>
-<li><strong>Click</strong> a stage to expand an example panel showing sample data for that stage (pre-training text, a fine-tuning instruction pair, or a prompt and response).</li>
-<li><strong>Click again</strong> or click outside to close the expanded panel.</li>
+<li><strong>Hallucinated facts</strong> — AI-generated content that sounds authoritative but is factually wrong</li>
+<li><strong>Generic advice</strong> — Repackaged common knowledge dressed up with AI buzzwords</li>
+<li><strong>Recycled prompts</strong> — Collections of prompts freely available on the internet, sold for $9.99</li>
+<li><strong>Contradictory information</strong> — Different sections of the same book giving conflicting guidance</li>
+<li><strong>Copyright ambiguity</strong> — Content generated entirely by AI may not be eligible for copyright protection in many jurisdictions, raising questions about what buyers are actually purchasing</li>
 </ul>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://dmccreary.github.io/prompt-class/sims/foundation-model-pipeline/main.html&quot;</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">&quot;522px&quot;</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="lesson-plan">Lesson Plan</h2>
-<h3 id="grade-level">Grade Level</h3>
-<p>9-12 and Undergraduate</p>
-<h3 id="duration">Duration</h3>
-<p>5-10 minutes</p>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Basic understanding of what AI and machine learning are at a high level.</p>
-<h3 id="activities">Activities</h3>
-<ol>
-<li><strong>Exploration</strong> (3 min): Have students hover over each stage and read the detailed descriptions. Ask them to note the key transformation that happens at each stage.</li>
-<li><strong>Guided Practice</strong> (4 min): Click each stage to see example data. Discuss: How does pre-training data differ from fine-tuning data? Why does the model need both?</li>
-<li><strong>Discussion</strong> (3 min): Ask students to explain in their own words why a model trained only on raw text (pre-training) would not be a good assistant without fine-tuning.</li>
-</ol>
-<h3 id="assessment">Assessment</h3>
-<p>Students should be able to:</p>
+<p>The signal-to-noise ratio is brutal. For every thoughtful book about AI's genuine impact on work and productivity, there are dozens of get-rich-quick guides that deliver little more than the prompt "ask ChatGPT to write a blog post" stretched to 100 pages.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Buyer Beware</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a warning">
+I've seen this go wrong more times than I've molted feathers, and trust me, that's a lot. If a book promises to make you a millionaire with ChatGPT prompts, ask yourself: if these prompts really generated millions, why is the author selling them for $4.99 on Kindle? The math doesn't math, word wizards.</p>
+</div>
+<h2 id="what-this-tells-us-about-prompt-engineering">What This Tells Us About Prompt Engineering</h2>
+<p>The ChatGPT book boom is actually a fascinating case study in what happens when a powerful technology meets low barriers to entry and high public excitement. A few observations worth noting:</p>
+<p><strong>The hype cycle is real.</strong> Every transformative technology generates a wave of get-rich-quick literature. The internet had it in the late 1990s ("Make Millions with Your Website!"). Cryptocurrency had it in 2017 ("Bitcoin Millionaire!"). AI is having its moment now. The pattern is predictable: genuine innovation attracts genuine practitioners <em>and</em> opportunistic grifters. The grifters are louder but less durable.</p>
+<p><strong>AI-generated content needs human judgment.</strong> The flood of low-quality AI books is itself the best argument for why prompt engineering matters. The people who used ChatGPT to generate a 100-page book in an afternoon produced slop. The people who used it thoughtfully — iterating on prompts, fact-checking outputs, adding genuine expertise — produced something worth reading. The tool is the same. The skill of the operator makes all the difference.</p>
+<p><strong>The real value isn't secret prompts.</strong> Despite what the "10 Secret Prompts" genre suggests, there are no magic incantations that unlock hidden AI capabilities. The real value of prompt engineering lies in systematic thinking, clear communication, and domain expertise — exactly the skills this course teaches. A well-crafted prompt from someone who understands their domain will always outperform a "secret prompt" from someone who doesn't.</p>
+<p><strong>Millions of people <em>are</em> quietly benefiting from AI.</strong> Here's the twist: while the "ChatGPT Millionaire" books are largely nonsense, the underlying trend they're trying to exploit is real. Millions of people are genuinely becoming more productive, more articulate, and more capable at their jobs by learning to use AI tools well. They're just not writing breathless e-books about it. They're writing better emails, producing cleaner reports, analyzing data more efficiently, and delivering higher-quality work. The quiet wins are the real story.</p>
+<h2 id="the-numbers-in-perspective">The Numbers in Perspective</h2>
+<p>To appreciate the scale of the AI book phenomenon:</p>
 <ul>
-<li>Name and describe the three stages of the foundation model pipeline</li>
-<li>Explain the role of transfer learning between pre-training and fine-tuning</li>
-<li>Describe why fine-tuning with human feedback is necessary</li>
+<li><strong>200+ e-books</strong> listed ChatGPT as author or co-author on Amazon by February 2023 — just three months after ChatGPT's release</li>
+<li><strong>Monthly new AI titles nearly tripled</strong> between 2022 and 2025, according to NBER research</li>
+<li><strong>Thousands of titles</strong> now exist across Amazon, Gumroad, and other platforms promising AI-powered wealth</li>
+<li><strong>Quality filtering is minimal</strong> — platforms have struggled to keep pace with the volume of AI-generated submissions</li>
 </ul>
+<p>The publishing industry is still adapting. Amazon and other platforms have introduced disclosure requirements for AI-generated content, but enforcement remains a work in progress.</p>
+<h2 id="why-we-mention-this-in-a-prompt-engineering-course">Why We Mention This in a Prompt Engineering Course</h2>
+<p>This course takes a different approach from the "get rich quick" genre. We believe:</p>
+<ol>
+<li>
+<p><strong>Prompt engineering is a genuine skill</strong> — not a collection of secret hacks, but a systematic practice built on clear communication, structured thinking, and iterative refinement.</p>
+</li>
+<li>
+<p><strong>The skills are transferable</strong> — unlike memorized prompt templates that become obsolete when models change, the principles taught here work across any current or future AI system.</p>
+</li>
+<li>
+<p><strong>Honest education beats hype</strong> — we'd rather teach you to fish (with well-crafted prompts) than sell you a fish-shaped AI-generated e-book about fishing.</p>
+</li>
+<li>
+<p><strong>Everyone is still figuring this out</strong> — the field is evolving rapidly, and the most honest thing anyone can say is that we're all learning together. The difference between this course and a "ChatGPT Millionaire" book is that we're upfront about what we know, what we don't know, and what's likely to change.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">The Real Superpower</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Use your words! Here's the truth that no $4.99 e-book will tell you: the real superpower isn't a secret prompt. It's the ability to think clearly, communicate precisely, and apply genuine expertise through AI tools. That's what this course teaches. And unlike "69+ Proven Ways to Profit," it actually works. No refund necessary.</p>
+</div>
 <h2 id="references">References</h2>
 <ol>
-<li><a href="https://en.wikipedia.org/wiki/Foundation_model">Wikipedia: Foundation Models</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Transfer_learning">Wikipedia: Transfer Learning</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)">Wikipedia: Fine-tuning (machine learning)</a></li>
+<li>
+<p>National Bureau of Economic Research (NBER) — Research on the surge in AI-related book publications, documenting the near-tripling of monthly new titles between 2022 and 2025.</p>
+</li>
+<li>
+<p>Reuters — Reporting on the flood of AI-written books on Amazon's Kindle Direct Publishing platform following ChatGPT's release, with over 200 titles listing ChatGPT as author by February 2023.</p>
+</li>
 </ol>
 
 
@@ -1572,9 +1223,6 @@
 
 
 
-
-  
-  
 
 
 
@@ -1606,10 +1254,10 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../embedding-space/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Embedding Space Explorer">
+          <a href="../../sims/embedding-space/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Embedding Space Explorer">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -1623,18 +1271,18 @@
         
         
           
-          <a href="../graph-viewer/" class="md-footer__link md-footer__link--next" aria-label="Next: Learning Graph Viewer">
+          <a href="../../slides/" class="md-footer__link md-footer__link--next" aria-label="Next: Slides">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Learning Graph Viewer
+                Slides
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
             </div>
           </a>
         
@@ -1646,7 +1294,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025, 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -1664,11 +1312,10 @@
     
     
       
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       

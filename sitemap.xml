@@ -2,326 +2,310 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/prompt-class/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/about/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/contact/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/course-description/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/faq/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/glossary/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/instructor-notes/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/license/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/references/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/sample-outline/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/slides/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/appendices/chatgpt-millionaires/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/01-ai-ml-foundations/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/02-prompt-fundamentals/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/03-prompt-types-parameters/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/04-core-prompt-techniques/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/05-advanced-prompt-techniques/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/06-output-format-control/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/07-context-memory-management/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/08-retrieval-augmented-generation/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/09-multimodal-prompting/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/10-ethics-responsible-ai/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/11-prompt-security/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/12-agentic-ai/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/13-evaluation-optimization/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/14-usage-limits-token-economics/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/15-business-applications/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/16-educational-applications/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/chapters/17-capstone-projects/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/img/mascot/image-prompts/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/01-license/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/01-lists/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/02-mermaid/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/03-markdown-table/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/04-validate-zipcode/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/05-bouncing-ball-slider/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/05-bouncing-ball/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/05-p5-circle/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/06-explain-embeddings/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/07-healthcare-costs/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/08-job-description/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/09-interview-questions/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/09-multiple-choice-quiz/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/10-github-repo-analyzer/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/11-plot-continents/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/12-acceptance-test-plan/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/12-success-probability/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/13-decomposition/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/14-nell-image-prompt/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/15-veiled-prime-prompt/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/16-tutor/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/17-meta-prompts/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/18-cover/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/18-kernel/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/labs/19-meta-skill-lecture/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/concept-list/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/prompt-class/learning-graph/faq-quality-report/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/mascot-test/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/logs/added-graphrag/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/logs/ch-01-content-generation/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/logs/chapter-content-generator-2026-04-08/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/logs/chapter-design/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/logs/learning-graph-generator-0.04-2026-04-08/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/learning-graph/logs/mascot-generation/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/lectures/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/lectures/meta-skills/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/lectures/skills/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/sims/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/ai-concepts-hierarchy/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/context-management-decision-framework/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/sims/embedding-space/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/foundation-model-pipeline/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/prompt-class/sims/graph-viewer/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/long-form-document-processing-strategies/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/prompt-iteration-cycle/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/prompt-quality-evaluator/</loc>
-         <lastmod>2026-04-09</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/prompt-class/sims/temperature-explorer/</loc>
-         <lastmod>2026-04-09</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
 </urlset>

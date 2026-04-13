@@ -74,6 +74,8 @@ nav:
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Embedding Space Explorer: sims/embedding-space/index.md
+  - Appendices:
+    - The ChatGPT Millionaire Boom: appendices/chatgpt-millionaires.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - FAQ: faq.md

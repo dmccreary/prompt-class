@@ -14,7 +14,7 @@ version: 0.07
 
 ## Why This Chapter Matters
 
-Here's a secret that the "Get Rich with ChatGPT" books won't tell you: the best prompt engineers aren't just good at writing instructions. They have a basic mental model of *how* these AI systems work. You don't need to understand every mathematical detail (we certainly won't cover that here), but knowing the fundamentals gives you a genuine edge.
+Here's a secret that the ["Get Rich with ChatGPT" books](../../appendices/chatgpt-millionaires.md) won't tell you: the best prompt engineers aren't just good at writing instructions. They have a basic mental model of *how* these AI systems work. You don't need to understand every mathematical detail (we certainly won't cover that here), but knowing the fundamentals gives you a genuine edge.
 
 It's like driving a car. You don't need to rebuild the engine, but knowing that the gas pedal controls speed and the brake pedal stops you? Pretty helpful. This chapter gives you the AI equivalent of that understanding.
 

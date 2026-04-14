@@ -29,7 +29,7 @@ On both sides of the pool, seated women in long flowing garments are visible, ea
 Color palette & mood:
 Warm oranges, golds, and pinks dominate the sky and clothing, harmonizing with cooler greens and blues from the trees and water reflections. The lighting is soft yet luminous, creating a tranquil and slightly surreal mood, as if the viewer is in a timeless, idyllic world where past and present mingle.
 
-The image is reminiscent of the Maxfield Parrish painting Daybreak
+The image is reminiscent of the Maxfield Parrish painting Daybreak.
 -->
 
 Welcome to the website for the prompt engineering course.  I have

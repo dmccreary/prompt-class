@@ -76,6 +76,7 @@ nav:
     - Embedding Space Explorer: sims/embedding-space/index.md
   - Appendices:
     - The ChatGPT Millionaire Boom: appendices/chatgpt-millionaires.md
+    - Crash Course in Talking to Agents: appendices/crash-course-talking-to-agents.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - FAQ: faq.md

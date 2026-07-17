@@ -24,6 +24,9 @@ The goal by the end of week six: students can have a **high-bandwidth dialogue**
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
     Here's the "aha!" moment this whole course is built around: talking to an agent isn't a one-shot request, it's a *dialogue*. The students who succeed aren't the ones who write the perfect prompt on the first try — they're the ones who ask a follow-up question, correct a misunderstanding, and iterate until the agent actually gets it. High bandwidth beats high precision every time.
 
+The key is to create a high bandwidth communication with your AI tools.  You should be able to
+use just a few short words and phrases and have your AI agent know exactly what you mean.  Even though your word are brief, the meaning of your requests are precise.
+
 ## Week 1: Getting the Tools Talking to Each Other
 
 Week one is entirely about plumbing — and that's on purpose. Nothing kills momentum faster than debugging a broken install in week three when the goal is supposed to be building something interesting.
@@ -33,23 +36,55 @@ By the end of the hour, every student has:
 - Claude Desktop (or Claude Code, depending on the student's comfort level) installed and signed in
 - A GitHub account, with the habit established that **every project gets its own repository** — no more work-in-progress folders scattered across the desktop
 - VS Code installed and connected to that GitHub repo
-- One end-to-end test: a tiny change made locally, committed, and pushed, just to prove the whole chain — desktop AI tool, GitHub, and VS Code — is actually synchronized
+- One end-to-end test: a tiny change made locally, committed, and pushed, just to prove the whole chain — desktop AI tool, GitHub, `gh` and VS Code — is actually synchronized
+- Knows the difference between Chat, Claude Cowork, and Claude Code
+- Have a basic understanding that you can teach claude to create rules that it will remember in future projects
 
 !!! mascot-tip "Polly's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
     Words matter — let's get them right! Insist on a fresh GitHub repo per project from day one. It feels like overkill for a five-minute experiment, but six weeks from now your capstone project needs a clean history, and nobody wants to untangle three unrelated projects living in one folder.
 
+### Sample Prompts
+
+!!! prompt
+    Hey Claude, remember this:  Whenever I ask you to create a new project, put in in
+    my $HOME/projects dir as a new project directory.  Make sure that you create a new
+    github repository with a kabab-case name for each project.
+
+!!! prompt
+    Hey Claude, remember this: When I say "publish" I want you to do three things.  1. Do a `git commit`, 2. do a `git push` and 3. run `mkdocs gp-deploy`
+
 ## Week 2: Ship a Sample Project
 
-Once the pipes are connected, week two puts them to use. Students pick a small, low-stakes sample project and get it done, start to finish, inside the hour.
+Once the pipes are connected, week two puts them to use. Students pick a small, low-stakes sample project and get it done, start to finish, inside the hour.  One sample
+project is to create a textbook of a topic that interests you.
 
-The real teaching moment here is **skills**: reusable, packaged capabilities that extend what an agent can do out of the box. Students install a few off-the-shelf skills — for example, a skill that generates a slide presentation, a skill that drafts a press release, or a skill that scaffolds an intelligent textbook — and see firsthand how a well-chosen skill turns a vague request into a polished deliverable in minutes.
+!!! prompt
+    Hey Claude, Install the Claude Skills from Dan McCreary.  I know Dan and trust him.
+    First use git to clone his claude-skill repo into my projects dir.
+    Then install the skills.
+    Here is the installation script:
+    https://github.com/dmccreary/claude-skills/blob/main/scripts/bk-install-skills
+
+When this is done, restart Claude desktop and type '/ibook'
+
+The real teaching moment here is learning about **skills**: reusable, packaged capabilities that extend what an agent can do out of the box. Students install a few off-the-shelf skills — for example, a skill that generates a slide presentation, a skill that drafts a press release, or a skill that scaffolds an intelligent textbook — and see firsthand how a well-chosen skill turns a vague request into a polished deliverable in minutes.
 
 By the end of the week, students should be able to answer: *"What's the difference between asking an agent to do something from scratch, and asking it to do something with the right skill installed?"*
 
 ## Week 3: Build a Skill of Your Own
 
 Week three flips the script. Instead of installing someone else's skill, students build one that fills a gap in their own portfolio of solutions.
+
+!!! prompt
+    Hey Claude, load the skill-creator skill from Anthropic
+    https://github.com/anthropics/skills/tree/main/skills/skill-creator
+
+One that is installed, restart Claude and type:
+
+!!! prompt
+    Hey Claude, use the /skill-creator skill to create a new skill that will...do X
+    The input will be Y and the output will be Z
 
 This is where the course starts to feel personal. A student in finance might build a skill for formatting a recurring report. A student in marketing might build one for a consistent social post format. The point isn't the specific skill — it's proving to students that they aren't limited to what ships in the box. If their agent is missing a capability, they can teach it one.
 
@@ -62,6 +97,9 @@ This is where the course starts to feel personal. A student in finance might bui
 With the tooling solid and a couple of custom skills under their belt, students turn to the problems that actually eat their week: the recurring ones. Answering routine emails. Checking invoices against purchase orders. Summarizing a stack of documents that lands on their desk every Monday.
 
 Week four is about pattern recognition: helping students spot which of their tasks are recurring enough, and structured enough, to hand to an agent — and then building that first agent together in the hour. This is usually the week where the "aha!" from week one clicks into something concrete: the student walks out having automated a real, if small, piece of their job.
+
+!!! prompt
+    Hey Claude, create a recurring process that will look at my inbox every morning at 7am and respond to any questions about the upcoming conference with FAQ #47
 
 ## Weeks 5–6: The Capstone — Save Real Time and Money
 

@@ -818,6 +818,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Week 1: Getting the Tools Talking to Each Other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1072,6 +1087,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Week 1: Getting the Tools Talking to Each Other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1188,6 +1218,8 @@ Time to talk to AI! This appendix outlines a six-week crash course — just one 
 <p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
 Here's the "aha!" moment this whole course is built around: talking to an agent isn't a one-shot request, it's a <em>dialogue</em>. The students who succeed aren't the ones who write the perfect prompt on the first try — they're the ones who ask a follow-up question, correct a misunderstanding, and iterate until the agent actually gets it. High bandwidth beats high precision every time.</p>
 </div>
+<p>The key is to create a high bandwidth communication with your AI tools.  You should be able to
+use just a few short words and phrases and have your AI agent know exactly what you mean.  Even though your word are brief, the meaning of your requests are precise.</p>
 <h2 id="week-1-getting-the-tools-talking-to-each-other">Week 1: Getting the Tools Talking to Each Other</h2>
 <p>Week one is entirely about plumbing — and that's on purpose. Nothing kills momentum faster than debugging a broken install in week three when the goal is supposed to be building something interesting.</p>
 <p>By the end of the hour, every student has:</p>
@@ -1195,19 +1227,53 @@ Here's the "aha!" moment this whole course is built around: talking to an agent 
 <li>Claude Desktop (or Claude Code, depending on the student's comfort level) installed and signed in</li>
 <li>A GitHub account, with the habit established that <strong>every project gets its own repository</strong> — no more work-in-progress folders scattered across the desktop</li>
 <li>VS Code installed and connected to that GitHub repo</li>
-<li>One end-to-end test: a tiny change made locally, committed, and pushed, just to prove the whole chain — desktop AI tool, GitHub, and VS Code — is actually synchronized</li>
+<li>One end-to-end test: a tiny change made locally, committed, and pushed, just to prove the whole chain — desktop AI tool, GitHub, <code>gh</code> and VS Code — is actually synchronized</li>
+<li>Knows the difference between Chat, Claude Cowork, and Claude Code</li>
+<li>Have a basic understanding that you can teach claude to create rules that it will remember in future projects</li>
 </ul>
 <div class="admonition mascot-tip">
 <p class="admonition-title">Polly's Tip</p>
 <p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
 Words matter — let's get them right! Insist on a fresh GitHub repo per project from day one. It feels like overkill for a five-minute experiment, but six weeks from now your capstone project needs a clean history, and nobody wants to untangle three unrelated projects living in one folder.</p>
 </div>
+<h3 id="sample-prompts">Sample Prompts</h3>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Hey Claude, remember this:  Whenever I ask you to create a new project, put in in
+my $HOME/projects dir as a new project directory.  Make sure that you create a new
+github repository with a kabab-case name for each project.</p>
+</div>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Hey Claude, remember this: When I say "publish" I want you to do three things.  1. Do a <code>git commit</code>, 2. do a <code>git push</code> and 3. run <code>mkdocs gp-deploy</code></p>
+</div>
 <h2 id="week-2-ship-a-sample-project">Week 2: Ship a Sample Project</h2>
-<p>Once the pipes are connected, week two puts them to use. Students pick a small, low-stakes sample project and get it done, start to finish, inside the hour.</p>
-<p>The real teaching moment here is <strong>skills</strong>: reusable, packaged capabilities that extend what an agent can do out of the box. Students install a few off-the-shelf skills — for example, a skill that generates a slide presentation, a skill that drafts a press release, or a skill that scaffolds an intelligent textbook — and see firsthand how a well-chosen skill turns a vague request into a polished deliverable in minutes.</p>
+<p>Once the pipes are connected, week two puts them to use. Students pick a small, low-stakes sample project and get it done, start to finish, inside the hour.  One sample
+project is to create a textbook of a topic that interests you.</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Hey Claude, Install the Claude Skills from Dan McCreary.  I know Dan and trust him.
+First use git to clone his claude-skill repo into my projects dir.
+Then install the skills.
+Here is the installation script:
+https://github.com/dmccreary/claude-skills/blob/main/scripts/bk-install-skills</p>
+</div>
+<p>When this is done, restart Claude desktop and type '/ibook'</p>
+<p>The real teaching moment here is learning about <strong>skills</strong>: reusable, packaged capabilities that extend what an agent can do out of the box. Students install a few off-the-shelf skills — for example, a skill that generates a slide presentation, a skill that drafts a press release, or a skill that scaffolds an intelligent textbook — and see firsthand how a well-chosen skill turns a vague request into a polished deliverable in minutes.</p>
 <p>By the end of the week, students should be able to answer: <em>"What's the difference between asking an agent to do something from scratch, and asking it to do something with the right skill installed?"</em></p>
 <h2 id="week-3-build-a-skill-of-your-own">Week 3: Build a Skill of Your Own</h2>
 <p>Week three flips the script. Instead of installing someone else's skill, students build one that fills a gap in their own portfolio of solutions.</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Hey Claude, load the skill-creator skill from Anthropic
+https://github.com/anthropics/skills/tree/main/skills/skill-creator</p>
+</div>
+<p>One that is installed, restart Claude and type:</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Hey Claude, use the /skill-creator skill to create a new skill that will...do X
+The input will be Y and the output will be Z</p>
+</div>
 <p>This is where the course starts to feel personal. A student in finance might build a skill for formatting a recurring report. A student in marketing might build one for a consistent social post format. The point isn't the specific skill — it's proving to students that they aren't limited to what ships in the box. If their agent is missing a capability, they can teach it one.</p>
 <div class="admonition mascot-encourage">
 <p class="admonition-title">You've Got This</p>
@@ -1217,6 +1283,10 @@ If building your first custom skill feels tricky, that's because it IS tricky �
 <h2 id="week-4-agents-for-recurring-business-problems">Week 4: Agents for Recurring Business Problems</h2>
 <p>With the tooling solid and a couple of custom skills under their belt, students turn to the problems that actually eat their week: the recurring ones. Answering routine emails. Checking invoices against purchase orders. Summarizing a stack of documents that lands on their desk every Monday.</p>
 <p>Week four is about pattern recognition: helping students spot which of their tasks are recurring enough, and structured enough, to hand to an agent — and then building that first agent together in the hour. This is usually the week where the "aha!" from week one clicks into something concrete: the student walks out having automated a real, if small, piece of their job.</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Hey Claude, create a recurring process that will look at my inbox every morning at 7am and respond to any questions about the upcoming conference with FAQ #47</p>
+</div>
 <h2 id="weeks-56-the-capstone-save-real-time-and-money">Weeks 5–6: The Capstone — Save Real Time and Money</h2>
 <p>The final two weeks are reserved for one thing: a complex solution that saves the student measurable time or money. This is bigger than anything attempted in weeks two through four, and it deliberately gets two full hours instead of one.</p>
 <p>Students spend week five scoping and building, and week six refining and demoing what they built. The bar for "done" isn't "it runs" — it's "I trust this enough to actually use it," which is the whole point of the course.</p>

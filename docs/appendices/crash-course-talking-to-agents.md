@@ -1,6 +1,6 @@
 # Crash Course in Talking to Agents
 
-*It is better to teach someone to fish than to give them fish."
+*It is better to teach someone to fish than to give them fish.*
 
 !!! mascot-welcome "Let's Craft the Perfect Prompt!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">

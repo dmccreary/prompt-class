@@ -1,0 +1,1789 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/appendices/an-mentorship-certification/">
+      
+      
+        <link rel="prev" href="../crash-course-talking-to-agents/">
+      
+      
+        <link rel="next" href="../../slides/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>AI Mentorship Certification - Prompt Engineering Class</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NVZ3NEY8KG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NVZ3NEY8KG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NVZ3NEY8KG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-mentorship-certification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompt Engineering Class
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Mentorship Certification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Prompt Engineering Class
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sample-outline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Outline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../labs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../lectures/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Lectures
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-millionaires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The ChatGPT Millionaire Boom
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crash-course-talking-to-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crash Course in Talking to Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AI Mentorship Certification
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    AI Mentorship Certification
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#program-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-this-program-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who This Program Is For
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certification-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-an-ai-certified-mentor-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What an AI Certified Mentor Can Do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-tool-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1: Tool Readiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-prompting-and-problem-solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2: Prompting and Problem Solving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-mentoring-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 3: Mentoring Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-4-supervised-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 4: Supervised Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-practical-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Practical Demonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsible-mentoring-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsible Mentoring Standards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsible Mentoring Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keep-the-learner-in-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep the Learner in Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-before-trusting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Before Trusting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protect-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protect Privacy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respect-academic-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respect Academic Integrity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-age-appropriate-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Age-Appropriate Safeguards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#know-when-to-escalate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Know When to Escalate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volunteer-service-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volunteer Service Approval
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-submission-and-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Submission and Certificate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-10-hour-volunteer-service-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample 10-Hour Volunteer Service Log
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructor Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#program-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-this-program-is-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who This Program Is For
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certification-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-an-ai-certified-mentor-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What an AI Certified Mentor Can Do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-tool-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1: Tool Readiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-prompting-and-problem-solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2: Prompting and Problem Solving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-mentoring-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 3: Mentoring Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-4-supervised-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 4: Supervised Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-practical-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Practical Demonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsible-mentoring-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsible Mentoring Standards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsible Mentoring Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keep-the-learner-in-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep the Learner in Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-before-trusting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Before Trusting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protect-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protect Privacy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respect-academic-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respect Academic Integrity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-age-appropriate-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Age-Appropriate Safeguards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#know-when-to-escalate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Know When to Escalate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volunteer-service-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volunteer Service Approval
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-submission-and-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Submission and Certificate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-10-hour-volunteer-service-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample 10-Hour Volunteer Service Log
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ai-mentorship-certification">AI Mentorship Certification</h1>
+<p><em>Learn the tools. Practice the craft. Help someone else succeed.</em></p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Future AI Mentors!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Great AI mentors do more than know which button to click. They help learners think clearly, experiment safely, and keep ownership of their work. Time to talk to AI—and teach someone else how to talk back!</p>
+</div>
+<h2 id="program-overview">Program Overview</h2>
+<p>The <strong>AI Mentorship Certification</strong> prepares experienced students, educators, and professionals to serve as <strong>AI Certified Mentors</strong>. Certified mentors help senior-high students, college students, and adult learners use AI coding agents such as Claude Desktop, Claude Code, and Codex to create programs, debug problems, and learn new technical skills.</p>
+<p>This certification is designed for a world in which a programming student may ask fewer questions about Python syntax and more questions such as:</p>
+<ul>
+<li>How do I explain my project to an AI agent?</li>
+<li>How can I tell whether the generated code is correct?</li>
+<li>What should I do when the agent gets stuck or changes the wrong file?</li>
+<li>How much of the solution should I ask the agent to write?</li>
+<li>How do I learn from AI-generated code instead of merely copying it?</li>
+</ul>
+<p>An AI Certified Mentor should be able to answer those questions while keeping the learner in the driver's seat. The mentor's job is not to produce answers on demand. The job is to help learners develop the judgment, communication habits, and verification skills needed to solve problems with an AI partner.</p>
+<h2 id="who-this-program-is-for">Who This Program Is For</h2>
+<p>The program welcomes:</p>
+<ul>
+<li>Senior-high students who already have experience building and debugging programs</li>
+<li>College students studying programming, data, engineering, design, or related subjects</li>
+<li>Teachers, tutors, and youth-program volunteers</li>
+<li>Software professionals and other adults who want to support new AI-assisted creators</li>
+</ul>
+<p>Candidates do not need to be expert software engineers. They do need patience, curiosity, dependable communication skills, and enough technical experience to recognize when a learner or an AI agent needs a different approach.</p>
+<h2 id="certification-requirements">Certification Requirements</h2>
+<p>To earn the <strong>AI Certified Mentor</strong> certificate, a candidate must complete all of the following requirements:</p>
+<ol>
+<li>Obtain and maintain access to a licensed AI coding tool: <strong>Claude or Codex</strong>.</li>
+<li>Complete the required mentor training activities.</li>
+<li>Demonstrate the core competencies in a practical review with an instructor or approved evaluator.</li>
+<li>Follow the program's safety, privacy, academic-integrity, and youth-protection rules.</li>
+<li>Complete at least <strong>10 hours of approved volunteer mentoring</strong>.</li>
+<li>Submit a signed volunteer service log and a short reflection on what the mentor learned.</li>
+</ol>
+<p>The license is a working requirement, not a trophy. Candidates must have enough access to practice between sessions and to mentor without repeatedly running into free-tier limits.</p>
+<h2 id="what-an-ai-certified-mentor-can-do">What an AI Certified Mentor Can Do</h2>
+<p>By the end of the program, a certified mentor can:</p>
+<ul>
+<li>Help a learner turn a vague idea into a clear, achievable project</li>
+<li>Ask diagnostic questions before reaching for a solution</li>
+<li>Write and refine prompts that include goals, context, constraints, and success criteria</li>
+<li>Use Claude or Codex to inspect a project, plan changes, generate code, and explain results</li>
+<li>Help learners read error messages and debug through small, testable steps</li>
+<li>Review AI-generated code for correctness, security, readability, and fit with the learner's goal</li>
+<li>Use version control to preserve work and recover from unwanted changes</li>
+<li>Explain code at the learner's level without taking over the keyboard</li>
+<li>Recognize hallucinations, uncertainty, and overconfident answers</li>
+<li>Protect private information and model responsible AI use</li>
+<li>Document a mentoring session and identify an appropriate next step</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">The Mentor's Real Superpower</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+The best mentor is not the person who types the solution fastest. It is the person who asks, “What have you tried, what happened, and what do you think the program should do next?” A useful pause can teach more than a perfect paste.</p>
+</div>
+<h2 id="training-path">Training Path</h2>
+<p>The certification may be offered as a short intensive program or as weekly sessions. Candidates progress through four stages.</p>
+<h3 id="stage-1-tool-readiness">Stage 1: Tool Readiness</h3>
+<p>Candidates set up Claude or Codex and learn how the tool interacts with local files, terminals, editors, and repositories. Each candidate must demonstrate that they can:</p>
+<ul>
+<li>Sign in and confirm that the licensed tool is available</li>
+<li>Open an existing project and explain its basic file structure</li>
+<li>Create a small project with an AI agent</li>
+<li>Run the program and inspect the result</li>
+<li>Use Git to save a known-good version before making a risky change</li>
+<li>Review proposed file changes before accepting them</li>
+</ul>
+<p>The goal is not to memorize every command. The goal is to build a reliable workflow in which the candidate always knows what changed, how to test it, and how to recover.</p>
+<h3 id="stage-2-prompting-and-problem-solving">Stage 2: Prompting and Problem Solving</h3>
+<p>Candidates practice turning real student questions into productive conversations with an agent. They learn a repeatable mentoring loop:</p>
+<ol>
+<li><strong>Clarify:</strong> What is the learner trying to build or understand?</li>
+<li><strong>Inspect:</strong> What code, data, error message, or prior attempt already exists?</li>
+<li><strong>Plan:</strong> What is the smallest useful next step?</li>
+<li><strong>Prompt:</strong> Give the agent relevant context, constraints, and a definition of success.</li>
+<li><strong>Review:</strong> Read the response and proposed changes before trusting them.</li>
+<li><strong>Test:</strong> Run the program or another appropriate check.</li>
+<li><strong>Reflect:</strong> Ask the learner to explain what changed and why it worked.</li>
+</ol>
+<p>A weak prompt might say:</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Fix my Python game.</p>
+</div>
+<p>A mentor helps the learner provide useful context:</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>I am building a beginner Python guessing game. When the player enters a letter, the program crashes with the error shown below. First explain the error in language appropriate for a high-school student. Then propose the smallest change that handles non-numeric input without rewriting the rest of the game. Show me how to test the fix with three inputs.</p>
+</div>
+<h3 id="stage-3-mentoring-practice">Stage 3: Mentoring Practice</h3>
+<p>Candidates conduct role-play sessions before working independently with learners. Practice scenarios should include:</p>
+<ul>
+<li>A learner who wants the AI to complete an entire assignment</li>
+<li>A learner who cannot explain code that the AI generated</li>
+<li>A program that runs but produces an incorrect result</li>
+<li>An agent that repeatedly proposes the same failed fix</li>
+<li>A learner who is frustrated, embarrassed, or afraid to experiment</li>
+<li>A project containing personal information that should not be sent to an AI service</li>
+</ul>
+<p>During these sessions, evaluators look for a balance between assistance and independence. The candidate should use questions, hints, examples, and small demonstrations before taking control of the work.</p>
+<h3 id="stage-4-supervised-service">Stage 4: Supervised Service</h3>
+<p>Candidates complete at least 10 hours of approved volunteer mentoring. Service may take place in a coding club, classroom, library, community program, online help session, hackathon, or other approved learning environment.</p>
+<p>At least some of the service should involve direct interaction with learners using Claude or Codex on authentic tasks. Appropriate tasks include:</p>
+<ul>
+<li>Planning a small Python, web, data, or creative coding project</li>
+<li>Debugging code and interpreting error messages</li>
+<li>Improving a prompt after an incomplete or incorrect answer</li>
+<li>Reviewing AI-generated code before running it</li>
+<li>Creating tests and checking results</li>
+<li>Using Git to save, compare, or restore work</li>
+<li>Asking an agent to explain unfamiliar code</li>
+<li>Reflecting on what the learner—not just the AI—understands</li>
+</ul>
+<h2 id="required-practical-demonstration">Required Practical Demonstration</h2>
+<p>Before certification is awarded, each candidate completes a practical review. The candidate mentors a learner or evaluator through a short project while an instructor observes.</p>
+<p>The demonstration should show that the candidate can:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Successful Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session opening</td>
+<td>Establish the learner's goal, current skill level, and definition of success</td>
+</tr>
+<tr>
+<td>Prompt construction</td>
+<td>Provide relevant context and constraints without exposing private information</td>
+</tr>
+<tr>
+<td>Agent use</td>
+<td>Ask the agent to inspect, explain, plan, or edit in manageable steps</td>
+</tr>
+<tr>
+<td>Technical judgment</td>
+<td>Review proposed changes and identify at least one risk or assumption</td>
+</tr>
+<tr>
+<td>Verification</td>
+<td>Run the program, test expected behavior, and investigate failures</td>
+</tr>
+<tr>
+<td>Teaching</td>
+<td>Ask the learner to predict, explain, or make a decision</td>
+</tr>
+<tr>
+<td>Session closing</td>
+<td>Summarize progress and agree on a clear next step</td>
+</tr>
+</tbody>
+</table>
+<p>A candidate may repeat the demonstration after receiving feedback. This is a certification program, not a dramatic talent show. Iteration is part of the skill being certified.</p>
+<h2 id="responsible-mentoring-standards">Responsible Mentoring Standards</h2>
+<p>AI Certified Mentors agree to follow these standards during training and volunteer service.</p>
+<h3 id="keep-the-learner-in-control">Keep the Learner in Control</h3>
+<p>Whenever possible, the learner should state the goal, approve the plan, type or authorize important prompts, run the program, and explain the result. A mentor may demonstrate a technique, but should return control quickly.</p>
+<h3 id="verify-before-trusting">Verify Before Trusting</h3>
+<p>Generated code can be plausible and still be wrong. Mentors teach learners to inspect changes, run tests, compare results with requirements, and ask for evidence. “The agent sounded confident” is not a test plan.</p>
+<h3 id="protect-privacy">Protect Privacy</h3>
+<p>Do not place passwords, API keys, private student records, health information, unpublished organizational data, or other sensitive material into an AI prompt. Use fictional or anonymized examples when practicing. Follow the rules of the school, employer, volunteer site, and AI service.</p>
+<h3 id="respect-academic-integrity">Respect Academic Integrity</h3>
+<p>Mentors help learners understand and follow the rules for each course or assignment. If AI assistance is limited, the mentor works within those limits. When disclosure or citation is required, the mentor helps the learner document how AI was used.</p>
+<h3 id="use-age-appropriate-safeguards">Use Age-Appropriate Safeguards</h3>
+<p>When working with minors, mentors must follow the host organization's supervision, communication, consent, and youth-protection policies. Mentors should use approved accounts, spaces, and communication channels and should never move a student conversation to an unapproved private channel.</p>
+<h3 id="know-when-to-escalate">Know When to Escalate</h3>
+<p>Mentors should involve an instructor or program leader when a request involves safety, harassment, self-harm, illegal activity, serious privacy concerns, or a problem beyond the mentor's training. Being certified does not mean handling every situation alone.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Helpful Is Not the Same as Doing It for Them</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a warning">
+If the learner leaves with working code but cannot explain what it does, the agent finished the task and the mentoring did not. Use your words, then ask the learner to use theirs.</p>
+</div>
+<h2 id="volunteer-service-approval">Volunteer Service Approval</h2>
+<p>Volunteer hours count toward certification when they are:</p>
+<ul>
+<li>Completed after the candidate begins the certification program</li>
+<li>Provided without payment as part of an approved educational or community activity</li>
+<li>Focused on helping learners build AI-assisted problem-solving skills</li>
+<li>Documented with the date, learner identifier, tasks, duration, and brief notes</li>
+<li>Confirmed by an instructor, site coordinator, or other approved supervisor</li>
+</ul>
+<p>Use first names, initials, or program-assigned identifiers in the log rather than sensitive student information. Hours may be divided across multiple learners and sessions. The total must reach at least <strong>10.0 hours</strong>.</p>
+<h2 id="final-submission-and-certificate">Final Submission and Certificate</h2>
+<p>The candidate submits:</p>
+<ul>
+<li>The completed volunteer service log</li>
+<li>Supervisor confirmation of the recorded hours</li>
+<li>A short reflection describing one mentoring success, one challenge, and one practice the candidate will improve</li>
+<li>Any required evidence from the practical demonstration</li>
+</ul>
+<p>After the program verifies the requirements, the candidate receives an <strong>AI Certified Mentor</strong> certificate. Programs may also issue a digital badge and record the certification date, tool used, and renewal or continuing-education expectations.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Ten Hours That Multiply</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Ten volunteer hours do more than complete a certificate. Every learner you help becomes more capable of helping the next person. That is how a coding class turns into a community of confident AI problem solvers!</p>
+</div>
+<h2 id="sample-10-hour-volunteer-service-log">Sample 10-Hour Volunteer Service Log</h2>
+<p>The sample below shows one way to document the required 10 hours. Replace the sample identifiers and activities with the candidate's actual approved service. Add rows if needed, and use decimal hours such as <code>1.5</code> for a 90-minute session.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Student</th>
+<th>Tasks</th>
+<th style="text-align: right;">Hours</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-08</td>
+<td>Student A</td>
+<td>Scoped a Python quiz project and created a step-by-step plan with Claude</td>
+<td style="text-align: right;">1.0</td>
+<td>Student explained the planned input, output, and success criteria</td>
+</tr>
+<tr>
+<td>2026-09-10</td>
+<td>Student B</td>
+<td>Diagnosed a loop error and tested the smallest proposed fix</td>
+<td style="text-align: right;">1.0</td>
+<td>Used three test cases; learner explained the off-by-one error</td>
+</tr>
+<tr>
+<td>2026-09-15</td>
+<td>Student C</td>
+<td>Improved a vague Codex prompt by adding context and constraints</td>
+<td style="text-align: right;">1.5</td>
+<td>Compared the first response with the revised response</td>
+</tr>
+<tr>
+<td>2026-09-17</td>
+<td>Student D</td>
+<td>Reviewed AI-generated code for readability and hidden assumptions</td>
+<td style="text-align: right;">1.0</td>
+<td>Renamed variables and added comments chosen by the learner</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td>Student A</td>
+<td>Added input validation and created a simple test checklist</td>
+<td style="text-align: right;">1.5</td>
+<td>Restored a known-good Git version after one failed attempt</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td>Student E</td>
+<td>Used an agent to explain unfamiliar functions at the learner's level</td>
+<td style="text-align: right;">1.0</td>
+<td>Learner summarized each function without agent assistance</td>
+</tr>
+<tr>
+<td>2026-09-29</td>
+<td>Student F</td>
+<td>Planned and debugged a small web application</td>
+<td style="text-align: right;">1.5</td>
+<td>Checked browser errors and verified the final behavior</td>
+</tr>
+<tr>
+<td>2026-10-01</td>
+<td>Student B</td>
+<td>Reflected on AI use and prepared a project demonstration</td>
+<td style="text-align: right;">1.5</td>
+<td>Learner identified which work was theirs and which involved AI</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Total volunteer service</strong></td>
+<td style="text-align: right;"><strong>10.0</strong></td>
+<td>Supervisor verification: <strong><em>_</em></strong><strong><em>_</em></strong>______</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mentor name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><em><br>
+<strong>Volunteer site or program:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></em><br>
+<strong>Supervisor name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><em><br>
+<strong>Supervisor signature:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></em><br>
+<strong>Date verified:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../crash-course-talking-to-agents/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Crash Course in Talking to Agents">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Crash Course in Talking to Agents
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../slides/" class="md-footer__link md-footer__link--next" aria-label="Next: Slides">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Slides
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

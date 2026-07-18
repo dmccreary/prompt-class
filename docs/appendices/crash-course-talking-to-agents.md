@@ -1,5 +1,7 @@
 # Crash Course in Talking to Agents
 
+*It is better to teach someone to fish than to give them fish."
+
 !!! mascot-welcome "Let's Craft the Perfect Prompt!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
     Time to talk to AI! This appendix outlines a six-week crash course — just one hour a week — that takes a complete beginner from "I've never opened a terminal" to "my agent just answered a complex business question for me." No wasted minutes, no fluff. Let's craft the perfect prompt, fellow prompt crafters!
@@ -9,6 +11,8 @@
 This mini-course is designed for busy professionals — the kind of people who can carve out exactly one hour a week, not a whole afternoon. They don't need to become programmers. They need to become fluent enough in AI tools that they can hand off real work to an agent and trust the result.
 
 The goal by the end of week six: students can have a **high-bandwidth dialogue** with their AI agents — asking sharp questions, giving clear direction, and reading the agent's answers critically — so their agents can reliably automate a piece of their day-to-day work.
+
+My goal is at the end of six weeks my students do not need me.  Claude will almost always have a better answer to their questions including topics like career advise, resume building, networking and emotional heath.  After week six I am no longer an AI coach.  I am only their spiritual advisor.
 
 ## Course Format at a Glance
 

@@ -40,7 +40,8 @@ By the end of the hour, every student has:
 - Claude Desktop (or Claude Code, depending on the student's comfort level) installed and signed in
 - A GitHub account, with the habit established that **every project gets its own repository** — no more work-in-progress folders scattered across the desktop
 - VS Code installed and connected to that GitHub repo
-- One end-to-end test: a tiny change made locally, committed, and pushed, just to prove the whole chain — desktop AI tool, GitHub, `gh` and VS Code — is actually synchronized
+- One end-to-end test: a tiny change made locally, committed, and pushed, just to prove the whole chain — desktop AI tool, GitHub, `gh`, and VS Code — is actually synchronized
+- `gh` is a unix shell command that allows Claude to run GitHub commands like create a new repo and open issues
 - Knows the difference between Chat, Claude Cowork, and Claude Code
 - Have a basic understanding that you can teach claude to create rules that it will remember in future projects
 
@@ -111,9 +112,13 @@ The final two weeks are reserved for one thing: a complex solution that saves th
 
 Students spend week five scoping and building, and week six refining and demoing what they built. The bar for "done" isn't "it runs" — it's "I trust this enough to actually use it," which is the whole point of the course.
 
+We will also introduce you to building a simple "TODO" list using GitHub KanBan projects.  That allows you to not only put new tasks on a backlog, but see agents move tasks from in-progress to complete.
+
 !!! mascot-warning "Don't Skip This"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a warning">
     I've seen this go wrong more times than I've molted feathers, and trust me, that's a lot: students who pick a capstone that's too vague ("help me with my job") stall out. Push for something specific and measurable — "draft a first-pass reply to every incoming support email" beats "help with customer service" every single time.
+
+We also then talk about shipping a project such as building a complex web site, building web applications, creating games for your children or automating basic accounting tasks.
 
 ## Why the One-Hour, Six-Week Format Works
 

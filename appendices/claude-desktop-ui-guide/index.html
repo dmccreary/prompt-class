@@ -1,0 +1,1664 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/appendices/claude-desktop-ui-guide/">
+      
+      
+        <link rel="prev" href="../an-mentorship-certification/">
+      
+      
+        <link rel="next" href="../../slides/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Claude Desktop UI Guide - Prompt Engineering Class</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NVZ3NEY8KG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NVZ3NEY8KG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NVZ3NEY8KG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-guided-tour-of-the-claude-desktop-user-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompt Engineering Class
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Claude Desktop UI Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Prompt Engineering Class
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sample-outline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Outline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../labs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../lectures/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Lectures
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-millionaires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The ChatGPT Millionaire Boom
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crash-course-talking-to-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crash Course in Talking to Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../an-mentorship-certification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Mentorship Certification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Claude Desktop UI Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Claude Desktop UI Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-a-reality-check-this-app-changes-daily" class="md-nav__link">
+    <span class="md-ellipsis">
+      First, a Reality Check: This App Changes Daily
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-home-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Home Screen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-vs-cowork-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat vs. Cowork vs. Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat vs. Cowork vs. Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-vs-cowork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat vs. Cowork
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cowork-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cowork vs. Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-continuation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Continuation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-skills-connectors-plugins-and-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customize: Skills, Connectors, Plugins, and Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customize: Skills, Connectors, Plugins, and Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipping-approvals-and-using-chrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skipping Approvals — and Using Chrome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-code-dashboard-and-screen-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Code Dashboard and Screen Regions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-footer-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Footer Bar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-claude-desktop-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Claude Desktop on Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youve-got-the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      You've Got the Map
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructor Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-a-reality-check-this-app-changes-daily" class="md-nav__link">
+    <span class="md-ellipsis">
+      First, a Reality Check: This App Changes Daily
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-home-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Home Screen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-vs-cowork-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat vs. Cowork vs. Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat vs. Cowork vs. Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-vs-cowork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat vs. Cowork
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cowork-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cowork vs. Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-continuation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Continuation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-skills-connectors-plugins-and-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customize: Skills, Connectors, Plugins, and Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customize: Skills, Connectors, Plugins, and Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#your-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipping-approvals-and-using-chrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skipping Approvals — and Using Chrome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-code-dashboard-and-screen-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Code Dashboard and Screen Regions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-footer-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Footer Bar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-claude-desktop-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Claude Desktop on Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youve-got-the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      You've Got the Map
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="a-guided-tour-of-the-claude-desktop-user-interface">A Guided Tour of the Claude Desktop User Interface</h1>
+<p><em>Every button, tab, and toggle — explained for people who just installed the thing five minutes ago.</em></p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Fellow Prompt Crafters!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Time to talk to AI! You've got Claude Desktop open, and it's staring back at you with a friendly "Coffee and Claude time?" Lovely. But what do all those little icons <em>do</em>? This guide walks you through the whole screen, region by region, so you never have to guess which button does what. Let's get you comfortable!</p>
+</div>
+<p>This appendix is a visual field guide to the <strong>Claude Desktop</strong> application. It's built for brand-new students who have just installed the app and want to know what they're looking at. We'll go region by region, screen by screen, with two hands-on interactive diagrams you can hover, click, and quiz yourself on.</p>
+<h2 id="first-a-reality-check-this-app-changes-daily">First, a Reality Check: This App Changes Daily</h2>
+<p>Claude Desktop is being co-written by Claude itself — one of the most capable models ever built — and the team ships new features at a genuinely dizzying pace. New buttons appear. Old ones move. A panel you learned yesterday might wear a slightly different hat tomorrow.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Don't Panic When Things Move</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Polly reassuring the reader">
+If you open the app and something looks different from these screenshots, that's not you losing your mind — that's just Tuesday. This guide will drift out of date within days of being written, and that's a <em>good</em> sign. What matters isn't memorizing pixel positions; it's understanding the <em>concepts</em>: Chat vs. Cowork, Projects, Skills, Memory, permissions. Those ideas stick around even when the buttons shuffle.</p>
+</div>
+<p>So treat the exact layouts here as "true as of this writing" and focus on the ideas. The ideas are what transfer.</p>
+<h2 id="the-home-screen">The Home Screen</h2>
+<p>When you open Claude Desktop in Home mode, this is your launchpad. The left <strong>sidebar</strong> holds your navigation and recent chats; the big <strong>prompt box</strong> in the center is where the magic starts.</p>
+<p>The interactive diagram below labels every region. Switch to <strong>Quiz</strong> mode to test yourself once you've explored.</p>
+<iframe src="../../sims/claude-desktop-home-screen/main.html" width="100%" height="640px" frameborder="0" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/claude-desktop-home-screen/">Open the Home Screen diagram fullscreen</a></p>
+<p>Here's the static screenshot for reference:</p>
+<p><img alt="The Claude Desktop Home screen" src="../../img/claude-desktop-ui/home-screen.png" /></p>
+<p>A few regions deserve special attention, and they get their own sections below.</p>
+<h2 id="chat-vs-cowork-vs-code">Chat vs. Cowork vs. Code</h2>
+<p>Claude Desktop can act in three different "modes," and knowing which one you're in is half the battle. The first choice you make is right under the prompt box: a little toggle between <strong>Chat</strong> and <strong>Cowork</strong>.</p>
+<p><img alt="The Chat / Cowork toggle" src="../../img/claude-desktop-ui/chat-cowork-toggle.png" /></p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">The Big Idea: Talk vs. Do</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking about the concept">
+Here's the "aha!" that makes the whole app click: <strong>Chat talks, Cowork does.</strong> Chat is a back-and-forth conversation — Claude gives you advice but can't touch your files. Cowork is <em>agentic</em> — you describe an outcome, step away, and come back to finished work: edited documents, organized folders, real deliverables. Same friendly Claude, very different superpowers.</p>
+</div>
+<h3 id="chat-vs-cowork">Chat vs. Cowork</h3>
+<p>The key difference is <strong>file access and autonomy.</strong></p>
+<ul>
+<li>
+<p><strong>Chat</strong> is for regular back-and-forth conversation. Claude responds to your messages one at a time and can offer guidance, but it can't directly read, edit, or create files on your computer. Think of it as talking to a brilliant colleague over coffee.</p>
+</li>
+<li>
+<p><strong>Cowork</strong> is agentic. You describe an outcome, and Claude takes on complex, multi-step tasks and executes them on your behalf — reading, editing, and creating files in folders <em>you</em> specify, using connected tools. It <em>completes</em> tasks rather than just describing how to do them. Crucially, it does not go outside your desktop.</p>
+</li>
+</ul>
+<p>Here's the difference in one before/after:</p>
+<blockquote>
+<p><strong>Chat:</strong> "How would I organize a messy downloads folder?" → You get a thoughtful list of steps to do yourself.</p>
+<p><strong>Cowork:</strong> "Organize my messy downloads folder into subfolders by file type." → Claude actually does it, and you come back to a tidy folder.</p>
+</blockquote>
+<h3 id="cowork-vs-code">Cowork vs. Code</h3>
+<p>There's a third mode — <strong>Claude Code</strong> — reachable from the <strong>Code</strong> tab at the top of the sidebar. Cowork and Code run on the <em>same</em> agentic engine, but they're built for different people.</p>
+<ul>
+<li>
+<p><strong>Claude Code</strong> is built for software engineering — writing, debugging, and shipping code. It's aimed at developers and lives in the terminal, IDEs like VS Code and JetBrains, and the desktop app.</p>
+</li>
+<li>
+<p><strong>Cowork</strong> is built for non-coding knowledge work — research, analysis, document creation, organizing files, and other multi-step tasks. It's aimed at knowledge workers and professionals, requires no terminal, and lets Claude read, edit, and create files in folders you specify.</p>
+</li>
+</ul>
+<p>In short: <strong>same engine, different audience.</strong> Code targets engineers in a developer environment; Cowork targets everyone else doing general knowledge work.</p>
+<h2 id="cloud-continuation">Cloud Continuation</h2>
+<p>See that little cloud badge in the top-right corner? When you start a task, you can choose where it runs.</p>
+<p><img alt="The cloud continuation menu: run in the cloud or on your computer" src="../../img/claude-desktop-ui/cloud-continuation.png" /></p>
+<ul>
+<li><strong>In the cloud</strong> — keeps going even when you close the app. Perfect for long jobs: kick it off, shut the laptop, come back to finished work.</li>
+<li><strong>On your computer</strong> — only runs while your computer is on.</li>
+</ul>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Polly's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Words matter — let's get them right! Reach for <strong>cloud</strong> mode when you've asked for something big and slow, like "research every competitor and write me a summary." Then go make actual coffee. Claude keeps working whether your laptop is open or not.</p>
+</div>
+<h2 id="projects">Projects</h2>
+<p><strong>Projects</strong> let you put prompt resources together — files, instructions, and context that Claude should remember across many related chats. Instead of re-explaining your situation every time, you set it up once in a Project.</p>
+<p><img alt="The Projects screen showing several project cards" src="../../img/claude-desktop-ui/projects.png" /></p>
+<p>Click <strong>New project</strong> to start one, and give it a clear name and a short description of what it's for. One important note: <strong>Home Projects (Chat and Cowork) are different from Code Projects.</strong> They live in separate places because they serve different kinds of work.</p>
+<h2 id="customize-skills-connectors-plugins-and-memory">Customize: Skills, Connectors, Plugins, and Memory</h2>
+<p>The <strong>Customize</strong> panel is your control room. This is where Claude goes from "smart chatbot" to "tailored assistant that knows your tools and remembers your preferences." It has four sections:</p>
+<p><img alt="The Customize menu: Skills, Connectors, Plugins, Memory" src="../../img/claude-desktop-ui/customize-menu.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Skills</strong></td>
+<td>Packages of precise rules for specific tasks — like a recipe Claude follows to produce a consistent result every time.</td>
+</tr>
+<tr>
+<td><strong>Connectors</strong></td>
+<td>Ways to connect Claude to applications and databases.</td>
+</tr>
+<tr>
+<td><strong>Plugins</strong></td>
+<td>Bundles of capabilities (often Skills + Connectors together) you can install in one click.</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>What Claude remembers about you between sessions.</td>
+</tr>
+</tbody>
+</table>
+<p>Let's look at Plugins and Memory more closely.</p>
+<h3 id="plugins">Plugins</h3>
+<p>The <strong>Plugins</strong> directory is a marketplace of ready-made capability bundles — Design, Marketing, Data, Finance, Product Management, and more. Each shows how many people have installed it. Click the <strong>+</strong> to add one.</p>
+<p><img alt="The Plugins directory with installable capability bundles" src="../../img/claude-desktop-ui/plugins-directory.png" /></p>
+<p>You can browse <strong>Anthropic</strong>-built plugins or <strong>Partners</strong>, filter and sort, and search by keyword. Installing a well-chosen plugin is one of the fastest ways to level up what Claude can do for your specific line of work.</p>
+<h3 id="memory">Memory</h3>
+<p><strong>Memory</strong> is what lets Claude feel like it actually knows you. Instead of starting from scratch every session, Claude can carry forward relevant context — your role, your projects, your preferences.</p>
+<p><img alt="The Memory settings screen" src="../../img/claude-desktop-ui/memory-settings.png" /></p>
+<p>Two toggles control the automatic side of Memory:</p>
+<ul>
+<li><strong>Search and reference chats</strong> — lets Claude search past conversations for relevant details.</li>
+<li><strong>Generate memory from chats</strong> — lets Claude build up memory from what you discuss.</li>
+</ul>
+<p>Memory is organized into a <strong>Profile</strong> (who you are) and <strong>Topics</strong> (Dev Environment, Fitness, Home Projects, and so on). You can also <strong>import memory from other AI providers</strong> to bring your existing context along.</p>
+<h4 id="your-profile">Your Profile</h4>
+<p>The <strong>Profile</strong> is the heart of your Memory — a short summary and a bulleted list of details about who you are and what you're working on. You can view it, edit it, or delete it entirely.</p>
+<p><img alt="A user Profile inside Memory settings" src="../../img/claude-desktop-ui/user-profile-memory.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Keep Your Lists Short</p>
+<p>Notice the little coaching prompts at the bottom of these panels, like "Keep lists under five things." That's not just decoration — tidy, focused memory helps Claude give you sharper answers. Prune it now and then, the same way you'd clean out a junk drawer.</p>
+</div>
+<h2 id="skipping-approvals-and-using-chrome">Skipping Approvals — and Using Chrome</h2>
+<p>By default, Cowork pauses and asks permission before doing certain things. That's a safety feature. But you'll eventually meet a dialog offering to <strong>Skip all approvals</strong> so Claude can use your connectors without pausing — and a toggle to let Claude <strong>Use Chrome</strong> to browse and act on websites.</p>
+<p><img alt="The 'Skip all approvals?' dialog with a Use Chrome toggle" src="../../img/claude-desktop-ui/skip-approvals.png" /></p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Read This Before You Click 'Yes, Continue'</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a serious warning">
+I've seen this go sideways more times than I've molted feathers, and trust me, that's a lot. "Skip all approvals" means Claude will work and use your connectors <strong>without pausing for your OK</strong> — and yes, the dialog literally warns "This can put your data at risk." When you're new, keep approvals <strong>on</strong>. Watch what Claude does a few dozen times first. Turn this off only once you deeply trust a specific, well-tested workflow. Same goes for <strong>Use Chrome</strong>: powerful, but it lets Claude act on live websites, so grant it deliberately, not reflexively.</p>
+</div>
+<p>The safe habit: start cautious, loosen slowly, and never click "Yes, continue" on a dialog you don't fully understand.</p>
+<h2 id="the-code-dashboard-and-screen-regions">The Code Dashboard and Screen Regions</h2>
+<p>Switch to the <strong>Code</strong> tab and the Home screen becomes a developer dashboard — "What's up next, Dan?" — complete with usage stats, session counts, and a heat-map of your activity.</p>
+<p><img alt="The Claude Code dashboard with usage statistics" src="../../img/claude-desktop-ui/code-dashboard.png" /></p>
+<p>The overall layout stays familiar: a <strong>sidebar</strong> on the left (now organized by project), a big <strong>content area</strong> in the middle, and — most important for daily driving — a dense <strong>footer bar</strong> along the bottom. That footer packs a remarkable amount of control into a thin strip, so it gets its own interactive diagram next.</p>
+<h2 id="the-footer-bar">The Footer Bar</h2>
+<p>The footer is small but mighty. It's where you set your file context (local or cloud, which directory, which Git branch), choose your model and effort level, control permissions, and keep an eye on how much usage you have left.</p>
+<p>Hover over each numbered marker in the diagram below to learn what it does. It's a wide strip, so labels sit above and below the image.</p>
+<iframe src="../../sims/claude-desktop-footer/main.html" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+
+<p><a class="md-button" href="../../sims/claude-desktop-footer/">Open the Footer Regions diagram fullscreen</a></p>
+<p>Here's the static screenshot for reference:</p>
+<p><img alt="The Claude Desktop footer bar" src="../../img/claude-desktop-ui/footer-regions.png" /></p>
+<p>Two footer controls are worth memorizing early:</p>
+<ul>
+<li>The <strong>Directory</strong> chip tells you exactly which folder Cowork can read and write. Glance at it before every task — it's your safety rail.</li>
+<li>The <strong>Permissions &amp; Planning</strong> chip (you may see it read "Bypass permissions") sets how much Claude does without asking. Revisit the warning above before you loosen it.</li>
+</ul>
+<h2 id="installing-claude-desktop-on-windows">Installing Claude Desktop on Windows</h2>
+<p>If you're on Windows, one extra step: Claude Desktop requires the <strong>Windows Subsystem for Linux (WSL)</strong> to be installed first. Anthropic maintains an up-to-date walkthrough:</p>
+<ul>
+<li><a href="https://support.claude.com/en/articles/12622703-deploy-claude-desktop-for-windows">Deploy Claude Desktop for Windows</a></li>
+</ul>
+<p>Follow that guide to get WSL and the desktop app set up, then come back here to learn your way around the screen.</p>
+<h2 id="youve-got-the-map">You've Got the Map</h2>
+<p>That's the whole cockpit. You now know the sidebar, the three modes, Projects, the Customize control room, Memory, permissions, and that mighty little footer.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Nicely Done, Word Wizards!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Use your words! Twenty minutes ago that screen was a wall of mystery icons. Now you can point at any region and say what it does — and you've got two interactive diagrams to quiz yourself with whenever the app shuffles things around. Remember: the buttons will keep moving, but the <em>concepts</em> are yours forever. Go make Claude do something useful. Time to talk to AI!</p>
+</div>
+<h2 id="related-reading">Related Reading</h2>
+<ul>
+<li><a href="../crash-course-talking-to-agents/">Crash Course in Talking to Agents</a> — the six-week plan for getting fluent with these tools.</li>
+<li><a href="../../sims/claude-desktop-home-screen/">Home Screen interactive diagram</a></li>
+<li><a href="../../sims/claude-desktop-footer/">Footer Regions interactive diagram</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../an-mentorship-certification/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AI Mentorship Certification">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                AI Mentorship Certification
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../slides/" class="md-footer__link md-footer__link--next" aria-label="Next: Slides">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Slides
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

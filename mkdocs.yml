@@ -75,11 +75,14 @@ nav:
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Embedding Space Explorer: sims/embedding-space/index.md
+    - Claude Desktop Home Screen: sims/claude-desktop-home-screen/index.md
+    - Claude Desktop Footer Regions: sims/claude-desktop-footer/index.md
 
   - Appendices:
     - The ChatGPT Millionaire Boom: appendices/chatgpt-millionaires.md
     - Crash Course in Talking to Agents: appendices/crash-course-talking-to-agents.md
     - AI Mentorship Certification: appendices/ai-mentorship-certification.md
+    - Claude Desktop UI Guide: appendices/claude-desktop-ui-guide.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - FAQ: faq.md

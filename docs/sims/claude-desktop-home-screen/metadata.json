@@ -1,0 +1,23 @@
+{
+  "title": "Claude Desktop Home Screen",
+  "description": "An interactive infographic overlay that labels the sixteen key regions of the Claude Desktop Home screen: the sidebar toggle, search, Home/Code tabs, prompt box, the Chat/Cowork toggle, model selector, approval mode, and more.",
+  "type": "MicroSim",
+  "subject": "Prompt Engineering",
+  "creator": "Prompt Engineering Class",
+  "license": "CC BY-NC-SA 4.0",
+  "format": "text/html",
+  "educationalUse": "instruction",
+  "educationalLevel": "beginner",
+  "interactivityType": "active",
+  "learningResourceType": "interactive infographic overlay",
+  "bloomLevel": "Understand",
+  "canvasHeight": 900,
+  "concepts": [
+    "Claude Desktop user interface",
+    "Chat vs. Cowork modes",
+    "Projects and Skills",
+    "Model selection and reasoning effort",
+    "Approval modes and file access scope"
+  ],
+  "library": "diagram.js (interactive infographic overlay)"
+}

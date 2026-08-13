@@ -1,0 +1,185 @@
+{
+  "title": "Claude Desktop Home Screen",
+  "orientation": "portrait",
+  "image": "home-screen.png",
+  "layout": "side-panel",
+  "showNumbers": true,
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Sidebar Toggle",
+      "x": 10,
+      "y": 2.6,
+      "radius": 3.2,
+      "color": "#34495E",
+      "hint": "Two-pane icon in the very top-left corner of the window.",
+      "description": "Collapses or expands the left sidebar. Hide it to give your conversation more room; show it to browse Projects, Scheduled tasks, and recent chats.",
+      "tip": "If your sidebar ever 'disappears,' this is the button that brings it back."
+    },
+    {
+      "id": 2,
+      "label": "Search",
+      "x": 13.5,
+      "y": 2.6,
+      "radius": 3.2,
+      "color": "#3498DB",
+      "hint": "Magnifying-glass icon next to the sidebar toggle.",
+      "description": "Search across all of your past conversations by keyword. A fast way to find that chat where you worked out a prompt weeks ago.",
+      "tip": "Memory lets Claude reference past chats automatically, but Search is how YOU find them by hand."
+    },
+    {
+      "id": 3,
+      "label": "Cloud / Continuation Badge",
+      "x": 95.5,
+      "y": 2.7,
+      "radius": 3.2,
+      "color": "#1ABC9C",
+      "hint": "Small cloud icon labeled 'Beta' in the top-right corner.",
+      "description": "Shows when a task can keep running in the cloud (Cloud Continuation). A cloud task keeps going even after you close the app, unlike a task pinned to your computer.",
+      "tip": "Handy for long jobs: kick it off, close the laptop, come back to finished work."
+    },
+    {
+      "id": 4,
+      "label": "Home / Code Tabs",
+      "x": 27,
+      "y": 8,
+      "radius": 3.5,
+      "color": "#8E44AD",
+      "hint": "Two pill-shaped tabs at the top of the sidebar: 'Home' and 'Code'.",
+      "description": "Switches the whole app between two modes. Home is for Chat and Cowork (everyday knowledge work). Code is Claude Code, aimed at software engineering in the terminal, VS Code, and JetBrains.",
+      "tip": "Same engine underneath, different audience: Code targets engineers, Home targets everyone else."
+    },
+    {
+      "id": 5,
+      "label": "New Chat",
+      "x": 6.5,
+      "y": 13,
+      "radius": 3.5,
+      "color": "#2ECC71",
+      "hint": "The '+ New' button at the top of the sidebar list.",
+      "description": "Starts a fresh conversation with a clean context. Reach for this whenever you switch topics so old messages don't confuse the new request.",
+      "tip": "A new chat is cheaper and clearer than trying to steer a long, tangled one back on topic."
+    },
+    {
+      "id": 6,
+      "label": "Projects",
+      "x": 9,
+      "y": 16.3,
+      "radius": 3.5,
+      "color": "#E67E22",
+      "hint": "Folder icon labeled 'Projects' near the top of the sidebar.",
+      "description": "Projects bundle related prompts, files, and instructions together so Claude keeps consistent context across many chats about the same work.",
+      "tip": "Home Projects (Chat and Cowork) are separate from Code Projects."
+    },
+    {
+      "id": 7,
+      "label": "Scheduled",
+      "x": 9,
+      "y": 23,
+      "radius": 3.5,
+      "color": "#F39C12",
+      "hint": "Clock icon labeled 'Scheduled' in the sidebar.",
+      "description": "The task scheduler. Set Claude to run a job on a recurring schedule, such as a daily briefing at 7 AM or a Monday inbox summary.",
+      "tip": "This is how you turn a one-off prompt into a standing, automated routine."
+    },
+    {
+      "id": 8,
+      "label": "Customize",
+      "x": 8.5,
+      "y": 29.5,
+      "radius": 3.5,
+      "color": "#9B59B6",
+      "hint": "Briefcase icon labeled 'Customize' in the sidebar.",
+      "description": "Opens the panel where you manage Skills, Connectors, Plugins, and Memory. This is your control room for extending what Claude can do.",
+      "tip": "Spend ten minutes here early on. A few good Skills and Connectors change everything."
+    },
+    {
+      "id": 9,
+      "label": "Prompt Input",
+      "x": 45,
+      "y": 45.5,
+      "radius": 4,
+      "color": "#34495E",
+      "hint": "The large text box in the center reading 'Type / for skills'.",
+      "description": "Where you write your prompt. Type a forward slash (/) to pull up installed Skills, or just start typing your request in plain language.",
+      "tip": "The '/' shortcut is the fastest way to invoke a Skill without remembering its exact name."
+    },
+    {
+      "id": 10,
+      "label": "Chat / Cowork Toggle",
+      "x": 55,
+      "y": 53.5,
+      "radius": 4,
+      "color": "#E74C3C",
+      "hint": "A pair of pill buttons labeled 'Chat' and 'Cowork' below the prompt box.",
+      "description": "The single most important toggle on this screen. Chat is conversation only (no file access). Cowork is agentic: it reads, edits, and creates files in folders you specify and completes multi-step tasks.",
+      "tip": "Pick Chat for advice, Cowork when you want Claude to actually DO the work and hand back finished files."
+    },
+    {
+      "id": 11,
+      "label": "Model Selector",
+      "x": 80,
+      "y": 53.5,
+      "radius": 4,
+      "color": "#3498DB",
+      "hint": "Text showing the model name and effort, e.g. 'Opus 4.8  High'.",
+      "description": "Chooses which Claude model answers and how much reasoning effort it spends. Stronger models and higher effort give deeper answers but take a little longer.",
+      "tip": "Use a capable model at High effort for hard reasoning; drop down for quick, cheap lookups."
+    },
+    {
+      "id": 12,
+      "label": "Voice Dictation",
+      "x": 91,
+      "y": 53.5,
+      "radius": 3.5,
+      "color": "#16A085",
+      "hint": "Microphone icon at the right edge of the prompt box.",
+      "description": "Dictate your prompt out loud instead of typing. Great for long, rambling thoughts you want to capture quickly and then refine.",
+      "tip": "Talking often produces richer prompts than typing. Say what you want, then clean it up."
+    },
+    {
+      "id": 13,
+      "label": "Project Directory",
+      "x": 55,
+      "y": 60,
+      "radius": 3.5,
+      "color": "#E67E22",
+      "hint": "A folder chip below the prompt box showing a project name.",
+      "description": "Shows which folder Cowork is allowed to read and write in. Claude's file access is scoped to this directory, which keeps the rest of your computer off-limits.",
+      "tip": "Always confirm this points at the RIGHT folder before you let Cowork run."
+    },
+    {
+      "id": 14,
+      "label": "Approval Mode",
+      "x": 71,
+      "y": 60,
+      "radius": 3.5,
+      "color": "#E74C3C",
+      "hint": "A dropdown reading 'Manual' (or similar) in the lower toolbar.",
+      "description": "Controls how often Claude pauses for your approval before taking an action. Manual asks before each step; looser modes let it run further on its own.",
+      "tip": "Start on Manual while you learn what Claude does. Loosen it only once you trust the workflow."
+    },
+    {
+      "id": 15,
+      "label": "Design (Labs)",
+      "x": 7,
+      "y": 92,
+      "radius": 3.2,
+      "color": "#1ABC9C",
+      "hint": "Palette icon labeled 'Design' with a 'Labs' tag, bottom-left.",
+      "description": "An experimental Labs feature for visual and UI design work. Labs features are previews that may change or disappear as the app evolves.",
+      "tip": "Labs = 'we're still cooking this.' Fun to try, not something to depend on yet."
+    },
+    {
+      "id": 16,
+      "label": "Get Apps",
+      "x": 34,
+      "y": 96.5,
+      "radius": 3.2,
+      "color": "#8E44AD",
+      "hint": "Download icon near your account name at the bottom.",
+      "description": "Download Claude on other devices and platforms so your work follows you between desktop, web, and mobile.",
+      "tip": "Signing in everywhere keeps your chats, Projects, and Memory in sync."
+    }
+  ]
+}

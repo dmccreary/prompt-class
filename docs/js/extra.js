@@ -1,3 +1,17 @@
+// Auto-resize interactive infographic-overlay MicroSim iframes.
+// diagram.js inside each overlay reports its rendered content height via
+// postMessage; match the message source to its iframe and apply the height.
+window.addEventListener("message", function (event) {
+    if (!event.data || event.data.type !== "microsim-resize") return;
+    const iframes = document.querySelectorAll("iframe");
+    for (let i = 0; i < iframes.length; i++) {
+        if (iframes[i].contentWindow === event.source) {
+            iframes[i].style.height = event.data.height + "px";
+            break;
+        }
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Find all admonitions with the "prompt" class

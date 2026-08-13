@@ -1,0 +1,23 @@
+{
+  "title": "Claude Desktop Footer Regions",
+  "description": "An interactive infographic overlay that labels the fourteen controls in the Claude Desktop footer bar: the update reminder, local/cloud toggle, directory, Git branch and worktree, add-files, account, plan, permissions, voice, model, effort, and resources gauge.",
+  "type": "MicroSim",
+  "subject": "Prompt Engineering",
+  "creator": "Prompt Engineering Class",
+  "license": "CC BY-NC-SA 4.0",
+  "format": "text/html",
+  "educationalUse": "instruction",
+  "educationalLevel": "beginner",
+  "interactivityType": "active",
+  "learningResourceType": "interactive infographic overlay",
+  "bloomLevel": "Understand",
+  "canvasHeight": 520,
+  "concepts": [
+    "Claude Desktop footer controls",
+    "Local vs. cloud file access",
+    "Git branch and worktree context",
+    "Permission and planning modes",
+    "Model, effort, and usage limits"
+  ],
+  "library": "diagram.js (interactive infographic overlay)"
+}

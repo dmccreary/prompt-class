@@ -69,7 +69,7 @@ project is to create a textbook of a topic that interests you.
     First use git to clone his claude-skill repo into my projects dir.
     Then install the skills.
     Here is the installation script:
-    https://github.com/dmccreary/claude-skills/blob/main/scripts/bk-install-skills
+    https://github.com/dmccreary/ibook-skills/blob/main/scripts/bk-install-skills
 
 When this is done, restart Claude desktop and type '/ibook'
 

@@ -1,0 +1,129 @@
+/* Claude Code Setup - vis-network MicroSim
+ * Layout: header (title + subtitle) on top, full-width network
+ * diagram in the middle, click-driven infobox pinned below.
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ===========================================
+   HEADER (Title + Subtitle)
+   =========================================== */
+.header {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    padding: 14px 12px 6px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* ===========================================
+   NETWORK CANVAS
+   =========================================== */
+#network {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    background-color: aliceblue;
+    border: 1px solid #e0e3e8;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+/* vis-network hover tooltip styling */
+.vis-tooltip {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    max-width: 260px;
+    white-space: normal !important;
+    background-color: #1a1a2e !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 8px 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ===========================================
+   INFOBOX (Below the diagram)
+   =========================================== */
+.infobox {
+    width: 100%;
+    max-width: 900px;
+    min-height: 100px;
+    margin: 12px 0 18px;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    border-left: 6px solid #d97757;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    transition: border-color 0.2s ease;
+}
+
+.infobox-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.infobox-detail {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+@media (max-width: 600px) {
+    .title {
+        font-size: 19px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    #network {
+        height: 340px;
+    }
+
+    .infobox {
+        padding: 12px 14px;
+    }
+
+    .infobox-heading {
+        font-size: 14px;
+    }
+
+    .infobox-detail {
+        font-size: 13px;
+    }
+}

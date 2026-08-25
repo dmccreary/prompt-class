@@ -1,0 +1,73 @@
+{
+  "title": "Prompt Quality Evaluator",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "A calibration exercise where students rate five prompt and response pairs on relevance, accuracy, completeness, and conciseness, then compare their ratings against expert scores.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Prompt and Response Quality Evaluation",
+    "learningObjectives": [
+      "Assess the quality of AI prompts and responses using the four evaluation dimensions"
+    ],
+    "bloomsTaxonomy": "Evaluate",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "The four quality dimensions: relevance, accuracy, completeness, conciseness"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 615
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Rate-then-reveal calibration against expert scores",
+    "keyQuestions": [
+      "Which dimension catches a fluent but factually wrong response?",
+      "Can a response score 10 on accuracy and 2 on completeness?"
+    ],
+    "commonMisconceptions": [
+      "Equating fluency with accuracy",
+      "Equating conciseness with brevity"
+    ],
+    "assessmentOpportunities": [
+      "Rate a new pair within 2 points of expert on three of four dimensions",
+      "Name which dimension a given failure belongs to"
+    ]
+  },
+  "chapter": "02-prompt-fundamentals",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/prompt-quality-evaluator/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Relevance",
+    "Accuracy",
+    "Completeness",
+    "Conciseness",
+    "Calibration"
+  ],
+  "canvasHeight": 615,
+  "library": "p5.js"
+}

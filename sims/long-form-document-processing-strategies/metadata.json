@@ -1,0 +1,75 @@
+{
+  "title": "Long-Form Document Processing Strategies",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "An interactive decision flowchart for processing documents that do not fit in the context window, branching on document size and task type, with hover details for every step.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Long-Form Document Processing",
+    "learningObjectives": [
+      "Select an appropriate long-document processing strategy given a document size and task type",
+      "Justify the choice of strategy"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Context Window",
+      "Estimating token count from word count"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "mermaid.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 640
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Decision flowchart with hover-revealed detail per node",
+    "keyQuestions": [
+      "At what point should a document that technically fits be treated as though it does not?",
+      "What goes wrong if you chunk-and-summarize a question-answering task?"
+    ],
+    "commonMisconceptions": [
+      "Assuming chunking is always the right answer for a long document",
+      "Assuming a document that fits the window will be processed well"
+    ],
+    "assessmentOpportunities": [
+      "Route an unfamiliar scenario to the correct branch",
+      "Name a specific risk of the chosen branch"
+    ]
+  },
+  "chapter": "07-context-memory-management",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/long-form-document-processing-strategies/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Chunking",
+    "Summarization",
+    "Relevance Extraction",
+    "Hierarchical Processing",
+    "Context Window"
+  ],
+  "canvasHeight": 640,
+  "library": "mermaid.js"
+}

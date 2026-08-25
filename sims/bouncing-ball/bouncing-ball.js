@@ -1,4 +1,5 @@
 // Bouncing Ball MicroSim with speed control
+// CANVAS_HEIGHT: 350
 // Canvas dimensions
 let canvasWidth = 400;
 let drawHeight = 300;

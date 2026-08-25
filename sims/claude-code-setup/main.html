@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Claude Code Setup using vis-network</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <div class="title">Claude Code Setup</div>
+            <div class="subtitle">Getting the key components of your desktop configured correctly.</div>
+        </div>
+
+        <div id="network"></div>
+
+        <div class="infobox" id="infobox">
+            <div class="infobox-heading" id="infobox-heading">Click a tool or a relationship to learn more</div>
+            <div class="infobox-detail" id="infobox-detail">The circles are the tools you set up in Week 1. The arrows show how they talk to each other. Click any circle or arrow below to read what it does &mdash; hover for a quick one-line reminder.</div>
+        </div>
+    </main>
+
+    <script src="claude-code-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "title": "Prompt Iteration Cycle",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "A five-step refinement loop - write, send, evaluate, diagnose, refine - with a quality gauge in the centre that climbs as the learner works around the cycle.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Prompt Iteration Cycle",
+    "learningObjectives": [
+      "Explain the iterative process of prompt refinement",
+      "Describe how each step contributes to improving response quality"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Basic prompt writing"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 565
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Cyclical diagram with click-through worked examples and a cumulative quality gauge",
+    "keyQuestions": [
+      "Which of the five steps do people usually skip?",
+      "Is there a point where more iteration stops paying off?"
+    ],
+    "commonMisconceptions": [
+      "Treating a poor first response as a verdict rather than data",
+      "Refining a prompt without first diagnosing what went wrong"
+    ],
+    "assessmentOpportunities": [
+      "Name all five steps in order",
+      "State a diagnosis in the form 'the response was X because the prompt lacked Y'"
+    ]
+  },
+  "chapter": "02-prompt-fundamentals",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/prompt-iteration-cycle/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Prompt Refinement",
+    "Iteration",
+    "Response Evaluation",
+    "Diagnosis"
+  ],
+  "canvasHeight": 565,
+  "library": "p5.js"
+}

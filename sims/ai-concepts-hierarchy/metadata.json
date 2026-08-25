@@ -1,0 +1,76 @@
+{
+  "title": "AI Concepts Hierarchy",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "A nested infographic of the twenty foundational AI concepts, from Artificial Intelligence at the outside down to Human-AI Interaction at the centre, with hover definitions and click-to-highlight dependencies.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "AI Concepts Hierarchy",
+    "learningObjectives": [
+      "Classify the foundational AI concepts into their hierarchical relationships",
+      "Explain how each concept builds on the concepts that contain it"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 605
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Nested containment diagram with hover definitions and dependency highlighting",
+    "keyQuestions": [
+      "Why is Human-AI Interaction the most deeply nested concept?",
+      "What would stop working if training data disappeared?"
+    ],
+    "commonMisconceptions": [
+      "Thinking a transformer is a category that contains neural networks rather than a kind of neural network",
+      "Treating Generative AI as separate from Large Language Models"
+    ],
+    "assessmentOpportunities": [
+      "Place a newly encountered term in the correct container",
+      "Explain why Context Window depends on Token"
+    ]
+  },
+  "chapter": "01-ai-ml-foundations",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/ai-concepts-hierarchy/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Natural Language Processing",
+    "Large Language Model",
+    "Transformer Architecture",
+    "Token",
+    "Context Window",
+    "Inference",
+    "Foundation Model"
+  ],
+  "canvasHeight": 605,
+  "library": "p5.js"
+}

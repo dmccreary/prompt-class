@@ -1,0 +1,1756 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/prompt-class/appendices/powershell-vs-wsl/">
+      
+      
+        <link rel="prev" href="../claude-desktop-ui-guide/">
+      
+      
+        <link rel="next" href="../../slides/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>PowerShell vs. WSL - Prompt Engineering Class</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NVZ3NEY8KG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NVZ3NEY8KG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NVZ3NEY8KG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#powershell-vs-wsl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompt Engineering Class
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PowerShell vs. WSL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Prompt Engineering Class
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/prompt-class" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sample-outline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample Outline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../labs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Labs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../lectures/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Lectures
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-millionaires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The ChatGPT Millionaire Boom
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crash-course-talking-to-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crash Course in Talking to Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-mentorship-certification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Mentorship Certification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-desktop-ui-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude Desktop UI Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PowerShell vs. WSL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    PowerShell vs. WSL
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-decision-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Decision Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tradeoffs-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tradeoffs at a Glance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Tradeoffs at a Glance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Set Up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Set Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#already-have-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Already Have PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-tasks-side-by-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Tasks, Side by Side
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Tasks, Side by Side">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-files-in-a-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      List files in a directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-inside-files-for-a-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search inside files for a word
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-folder-and-move-into-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new folder and move into it
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-and-delete-every-tmp-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find and delete every .tmp file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-a-python-virtual-environment-tool-is-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check if a Python virtual environment tool is installed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-real-example-publishing-this-book-with-mkdocs-gh-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Real Example: Publishing This Book with mkdocs gh-deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Real Example: Publishing This Book with mkdocs gh-deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishing-from-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing from WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-from-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing from PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-line-for-ai-driven-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bottom Line for AI-Driven Automation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructor Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-decision-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Decision Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tradeoffs-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tradeoffs at a Glance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Tradeoffs at a Glance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Set Up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Set Up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#already-have-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Already Have PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-tasks-side-by-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Tasks, Side by Side
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Tasks, Side by Side">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-files-in-a-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      List files in a directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-inside-files-for-a-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search inside files for a word
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-folder-and-move-into-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new folder and move into it
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-and-delete-every-tmp-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find and delete every .tmp file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-a-python-virtual-environment-tool-is-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check if a Python virtual environment tool is installed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-real-example-publishing-this-book-with-mkdocs-gh-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Real Example: Publishing This Book with mkdocs gh-deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Real Example: Publishing This Book with mkdocs gh-deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishing-from-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing from WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-from-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing from PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-line-for-ai-driven-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bottom Line for AI-Driven Automation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="powershell-vs-wsl">PowerShell vs. WSL</h1>
+<p><em>Two shells walk into a terminal. Only one of them has ever met <code>sed</code>.</em></p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Let's Talk Shells!</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Polly waving welcome">
+Time to talk to AI — and to the operating system underneath it! If you're on Windows and setting up Claude Code or Claude Desktop to automate your daily tasks, you'll hit a fork in the road almost immediately: do you let your AI agent drive <strong>Windows PowerShell</strong>, or do you install the <strong>Windows Subsystem for Linux (WSL)</strong> and let it drive a real Linux shell instead? Let's sort out which one earns a permanent spot on your machine.</p>
+</div>
+<h2 id="why-this-decision-matters">Why This Decision Matters</h2>
+<p>Every time your AI agent runs a command — installing a package, moving a file, publishing a website — it has to translate your request into an actual shell command. Most of the automation scripts, coding tutorials, and AI-agent skills in the world were written assuming a POSIX shell like <code>bash</code>. That's not a Windows-vs-Linux culture war opinion; it's just a fact of where 30+ years of tooling history landed.</p>
+<p>PowerShell is a genuinely powerful, modern shell — arguably more consistent and object-oriented than <code>bash</code> in some ways. But it's a different dialect, with different punctuation, different built-in commands, and different assumptions about what a "pipe" passes between programs. When an AI agent reaches for a Unix-flavored command out of habit, PowerShell either errors out or does something subtly different than intended.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">A Thought Worth Perching On</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Polly thinking">
+Here's the "aha!" moment: <code>bash</code> and PowerShell aren't just two spellings of the same shell. <code>bash</code> pipes flow <strong>plain text</strong> from one program to the next. PowerShell pipes flow <strong>structured .NET objects</strong>. That's a genuinely nice design for Windows-native scripting — but it means a command an AI agent copies from a tutorial, a GitHub README, or its own training data (almost always written for <code>bash</code>) can fail in ways that have nothing to do with the task itself and everything to do with dialect mismatch.</p>
+</div>
+<h2 id="the-tradeoffs-at-a-glance">The Tradeoffs at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>WSL (Linux shell on Windows)</th>
+<th>PowerShell (native Windows shell)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Setup</strong></td>
+<td>One-time install (<code>wsl --install</code>), then a restart</td>
+<td>Already installed on every Windows machine</td>
+</tr>
+<tr>
+<td><strong>Matches AI tooling defaults</strong></td>
+<td>Yes — most agent skills, install scripts, and examples assume <code>bash</code></td>
+<td>No — commands need Windows-specific rewrites</td>
+</tr>
+<tr>
+<td><strong>Package managers</strong></td>
+<td><code>apt</code>, <code>pip</code>, <code>npm</code>, <code>conda</code> all behave like they do on Mac/Linux tutorials</td>
+<td>Windows equivalents (<code>winget</code>, <code>choco</code>) exist but aren't what most tutorials show</td>
+</tr>
+<tr>
+<td><strong>File paths</strong></td>
+<td>Forward slashes, case-sensitive, POSIX-style (<code>/home/dan/projects</code>)</td>
+<td>Backslashes, case-insensitive, Windows-style (<code>C:\Users\Dan\projects</code>)</td>
+</tr>
+<tr>
+<td><strong>Access to Windows-native features</strong></td>
+<td>Limited — no direct registry, COM, or Windows service access</td>
+<td>Full — registry, Active Directory, IIS, Office automation</td>
+</tr>
+<tr>
+<td><strong>Speed on Windows files</strong></td>
+<td>Slower when working across the WSL/Windows filesystem boundary (<code>/mnt/c/...</code>)</td>
+<td>Native — no boundary to cross</td>
+</tr>
+<tr>
+<td><strong>Error rate with AI-generated commands</strong></td>
+<td>Lower — commands generally "just work" as written</td>
+<td>Higher — quoting, aliases, and pipe semantics differ enough to trip up copy-pasted commands</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The short version:</strong> if your goal is "let my AI agent automate my daily tasks with the fewest surprises," WSL is the safer default. If your task specifically needs to touch Windows itself — the registry, a Windows service, Active Directory — PowerShell is the right (and sometimes only) tool.</p>
+<h3 id="interactive-comparison">Interactive Comparison</h3>
+<p>Hover over any highlighted cell below for a concrete command example.</p>
+<iframe src="../../sims/powershell-vs-wsl-comparison/main.html" height="692px" width="100%" scrolling="no" style="border: none;"></iframe>
+
+<p><a class="md-button" href="../../sims/powershell-vs-wsl-comparison/main.html">Open the PowerShell vs. WSL Comparison Infographic Fullscreen</a></p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Polly's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
+Words matter — let's get them right! You don't have to pick a side forever. Install WSL for your everyday AI-driven automation (file management, git, publishing your website), and keep PowerShell around for the rare moment you need to do something Windows-specific, like managing a Windows service. Most people end up using WSL 90% of the time.</p>
+</div>
+<h2 id="getting-set-up">Getting Set Up</h2>
+<h3 id="installing-wsl">Installing WSL</h3>
+<p>From PowerShell (run as Administrator, one time only):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">wsl</span> <span class="p">-</span><span class="n">-install</span>
+</code></pre></div></td></tr></table></div>
+<p>This installs WSL2 along with a default Ubuntu distribution, then prompts for a restart. After restarting, you launch a Linux terminal by typing <code>wsl</code> from the Start menu or from within PowerShell — no dual-boot, no separate machine, just a Linux environment living alongside Windows.</p>
+<h3 id="already-have-powershell">Already Have PowerShell</h3>
+<p>Nothing to install — it ships with Windows. Just open it from the Start menu.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Don't Skip This</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Polly giving a warning">
+I've seen this go wrong more times than I've molted feathers, and trust me, that's a lot: people install WSL and then keep working with their project files under <code>C:\Users\...</code> instead of moving them into WSL's own filesystem (<code>~/</code>, which is really <code>\\wsl$\Ubuntu\home\...</code>). That cross-filesystem access is slow and occasionally flaky. Once you commit to WSL, keep your project's git repo <em>inside</em> the Linux filesystem, not on the Windows side.</p>
+</div>
+<h2 id="simple-tasks-side-by-side">Simple Tasks, Side by Side</h2>
+<p>Here's the same handful of everyday tasks, done both ways. Notice how many of the WSL commands are exactly what you'd type on a Mac — that's the whole point.</p>
+<h3 id="list-files-in-a-directory">List files in a directory</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">WSL (bash)</label><label for="__tabbed_1_2">PowerShell</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-la
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Get-ChildItem</span> <span class="n">-Force</span>
+<span class="c"># or the shorter alias</span>
+<span class="nb">ls </span><span class="n">-Force</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 id="search-inside-files-for-a-word">Search inside files for a word</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">WSL (bash)</label><label for="__tabbed_2_2">PowerShell</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;gh-deploy&quot;</span><span class="w"> </span>.
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Select-String</span> <span class="n">-Path</span> <span class="p">*</span> <span class="n">-Pattern</span> <span class="s2">&quot;gh-deploy&quot;</span> <span class="n">-Recurse</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 id="create-a-new-folder-and-move-into-it">Create a new folder and move into it</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">WSL (bash)</label><label for="__tabbed_3_2">PowerShell</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>new-project<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>new-project
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Name</span> <span class="s2">&quot;new-project&quot;</span>
+<span class="nb">Set-Location</span> <span class="nb">new-project</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 id="find-and-delete-every-tmp-file">Find and delete every <code>.tmp</code> file</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">WSL (bash)</label><label for="__tabbed_4_2">PowerShell</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tmp&quot;</span><span class="w"> </span>-delete
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Get-ChildItem</span> <span class="n">-Recurse</span> <span class="n">-Filter</span> <span class="p">*.</span><span class="n">tmp</span> <span class="p">|</span> <span class="nb">Remove-Item</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 id="check-if-a-python-virtual-environment-tool-is-installed">Check if a Python virtual environment tool is installed</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">WSL (bash)</label><label for="__tabbed_5_2">PowerShell</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>which<span class="w"> </span>python3<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python3<span class="w"> </span>--version
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Get-Command</span> <span class="n">python</span>
+<span class="n">python</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<p>Notice the pattern: the WSL column is almost always shorter and matches what you'd find in any online tutorial, Stack Overflow answer, or AI-generated snippet. The PowerShell column usually needs its own, Windows-specific translation — and that translation step is exactly where errors creep in when an agent is moving fast.</p>
+<h2 id="the-real-example-publishing-this-book-with-mkdocs-gh-deploy">The Real Example: Publishing This Book with <code>mkdocs gh-deploy</code></h2>
+<p>This entire textbook is built with MkDocs and published to GitHub Pages with a single shell command: <code>mkdocs gh-deploy</code>. It's a great real-world test case because it involves several steps chained together — activating a Python environment, then building and pushing a static site.</p>
+<h3 id="publishing-from-wsl">Publishing from WSL</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Activate the conda environment that has mkdocs installed</span>
+conda<span class="w"> </span>activate<span class="w"> </span>mkdocs
+
+<span class="c1"># Build the site and push it to the gh-pages branch</span>
+mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></td></tr></table></div>
+<p>That's it. Two lines. This works identically to how it would work on a Mac or a Linux CI server, because it <em>is</em> Linux underneath. If you've ever followed a <code>mkdocs</code> tutorial written by someone on a Mac (most of them), you can paste their commands straight into WSL and they'll run.</p>
+<h3 id="publishing-from-powershell">Publishing from PowerShell</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c"># Activate the conda environment (note the different activation command)</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">mkdocs</span>
+
+<span class="c"># Build the site and push it to the gh-pages branch</span>
+<span class="n">mkdocs</span> <span class="n">gh-deploy</span>
+</code></pre></div></td></tr></table></div>
+<p>Interesting twist: <code>mkdocs gh-deploy</code> itself is a Python console script, so it actually runs the same way in both shells once the environment is active — Python tools tend to be well-behaved cross-platform citizens. The friction shows up <em>around</em> the command, not in it:</p>
+<ul>
+<li>If your conda/pip install hit a permissions snag, the fix in PowerShell often involves <code>Set-ExecutionPolicy</code> to allow scripts to run — a step that doesn't exist in WSL at all.</li>
+<li>If <code>mkdocs</code> isn't on your <code>PATH</code>, PowerShell's error message and fix (<code>$env:PATH</code>, editing System Environment Variables through a GUI) look completely different from the WSL fix (editing <code>~/.bashrc</code> and running <code>export PATH=...</code>).</li>
+<li>Git authentication for the push that <code>gh-deploy</code> performs behind the scenes sometimes behaves differently with Windows Credential Manager versus a Linux SSH key or credential helper — one more place PowerShell users hit a wall that WSL users don't.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Two Lines, Zero Drama</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Polly celebrating">
+Use your words — and use the <em>right shell</em> for them! Once you're in WSL, <code>conda activate mkdocs</code> followed by <code>mkdocs gh-deploy</code> is the entire publishing pipeline for this book. No PATH archaeology, no execution-policy prompts, no "why does this GitHub tutorial not match my screen." Just two lines and a live site.</p>
+</div>
+<h2 id="bottom-line-for-ai-driven-automation">Bottom Line for AI-Driven Automation</h2>
+<p>If you're setting up a Windows machine so an AI agent can handle your daily tasks — file wrangling, running dev tools, publishing a site — install WSL first. It gives your agent the shell environment that most of its training, tooling, and skills already assume, which means fewer errors and less time spent translating commands after the fact. Keep PowerShell in your back pocket for the moments you specifically need Windows itself, not as your everyday driver.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">You've Got This</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Polly cheering the class on">
+If juggling two shells feels like one more thing to learn on top of prompt engineering itself, that's fair — but you've got this, fellow prompt crafters. Ten minutes installing WSL now saves you dozens of confusing error messages later, and it means every "just run this command" answer your AI agent gives you actually works on the first try.</p>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../claude-desktop-ui-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Claude Desktop UI Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Claude Desktop UI Guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../slides/" class="md-footer__link md-footer__link--next" aria-label="Next: Slides">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Slides
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

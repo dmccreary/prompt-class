@@ -62,7 +62,7 @@
   "type": "Interactive Simulation",
   "format": "text/html",
   "identifier": "https://dmccreary.github.io/prompt-class/sims/foundation-model-pipeline/",
-  "publisher": "Prompt Engineering Class",
+  "publisher": "Agent Orchestration",
   "concepts": [
     "Pre-Training",
     "Fine-Tuning",

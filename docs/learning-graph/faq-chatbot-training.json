@@ -1,14 +1,14 @@
 {
   "faq_version": "1.0",
   "generated_date": "2026-08-25",
-  "source_textbook": "Prompt Engineering: From Fundamentals to Agentic AI",
+  "source_textbook": "Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams",
   "total_questions": 64,
   "questions": [
     {
       "id": "faq-001",
       "category": "Getting Started",
       "question": "What is this course about?",
-      "answer": "This course, Prompt Engineering: From Fundamentals to Agentic AI, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI.",
+      "answer": "This course, Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI.",
       "bloom_level": "Understand",
       "difficulty": "easy",
       "concepts": ["Prompt Engineering", "Large Language Model"],

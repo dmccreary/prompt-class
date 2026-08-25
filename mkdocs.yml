@@ -1,5 +1,5 @@
-site_name: Prompt Engineering Class
-site_description: 'Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: Agent Orchestration
+site_description: 'Learn to design, direct, and orchestrate teams of AI agents — from prompt engineering fundamentals to managing dozens of concurrent agents across desktop AI environments. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/prompt-class'
@@ -71,6 +71,7 @@ nav:
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Mascot Style Guide: learning-graph/mascot-test.md
+    - Favicon Contact Sheet: learning-graph/favicon-contact-sheet.md
   
   - MicroSims:
     - List of MicroSims: sims/index.md
@@ -107,6 +108,7 @@ nav:
 edit_uri: 'blob/main/docs'
 theme:
   name: material
+  favicon: img/favicon.ico
   logo: img/mascot/neutral.png
   icon:
     previous: fontawesome/solid/angle-left
@@ -127,7 +129,9 @@ theme:
     - navigation.footer
 plugins:
   - search
-#  - social
+  - social
+hooks:
+  - hooks/social_image.py
 markdown_extensions:
   - admonition
   - md_in_html
@@ -150,7 +154,7 @@ extra_javascript:
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
-  textbook_name: Prompt Engineering Class
+  textbook_name: Agent Orchestration
   textbook_version: "1.0"
   generator: false
   analytics:

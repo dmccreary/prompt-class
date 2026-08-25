@@ -1,15 +1,15 @@
 ---
-title: "List of MicroSims for Prompt Engineering Class"
-description: "A list of all the MicroSims used in the Prompt Engineering Class course"
+title: "List of MicroSims for Agent Orchestration"
+description: "A list of all the MicroSims used in the Agent Orchestration course"
 image: /sims/index-screen-image.png
 og:image: /sims/index-screen-image.png
 hide:
     toc
 ---
 
-# List of MicroSims for Prompt Engineering Class
+# List of MicroSims for Agent Orchestration
 
-Interactive Micro Simulations to help students learn prompt engineering class fundamentals.
+Interactive Micro Simulations to help students learn agent orchestration and prompt engineering fundamentals.
 
 <div class="grid cards" markdown>
 

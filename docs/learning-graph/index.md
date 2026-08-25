@@ -1,4 +1,4 @@
-# Learning Graph for Prompt Engineering
+# Learning Graph for Agent Orchestration
 
 [Open Learning Graph Viewer Fullscreen](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
 

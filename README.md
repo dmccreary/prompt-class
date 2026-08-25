@@ -1,4 +1,4 @@
-# Prompt Engineering Course
+# Agent Orchestration
 
 **🌐 Course Website: [https://dmccreary.github.io/prompt-class](https://dmccreary.github.io/prompt-class)**
 
@@ -8,7 +8,7 @@
 [![MkDocs](https://img.shields.io/badge/Built%20with-MkDocs-blue)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/Material%20for-MkDocs-526CFE)](https://squidfunk.github.io/mkdocs-material/)
 
-> A comprehensive course on prompt engineering for large language models, covering fundamentals, best practices, and hands-on labs.
+> A comprehensive course on orchestrating teams of AI agents, from prompt engineering fundamentals through managing dozens of concurrent agents on desktop AI platforms, with hands-on labs.
 
 ## Table of Contents
 

@@ -1,10 +1,10 @@
-# Prompt Engineering FAQ
+# Agent Orchestration FAQ
 
 ## Getting Started Questions
 
 ### What is this course about?
 
-This course, **Prompt Engineering: From Fundamentals to Agentic AI**, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum of prompt engineering — from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI, where language models use tools and execute multi-step workflows autonomously. For a full overview, see the [course description](course-description.md).
+This course, **Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams**, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum of prompt engineering — from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI, where language models use tools and execute multi-step workflows autonomously. For a full overview, see the [course description](course-description.md).
 
 ### Who is this course for?
 

@@ -64,7 +64,7 @@
   "type": "Interactive Simulation",
   "format": "text/html",
   "identifier": "https://dmccreary.github.io/prompt-class/sims/context-management-decision-framework/",
-  "publisher": "Prompt Engineering Class",
+  "publisher": "Agent Orchestration",
   "concepts": [
     "Prompt Compression",
     "Relevance Filtering",

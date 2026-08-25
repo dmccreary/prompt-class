@@ -1,0 +1,95 @@
+/* Mermaid MicroSim Stylesheet
+   Layout: 2/3 diagram panel + 1/3 info panel
+   Designed for minimal padding in iframe embedding
+*/
+
+/* Reset - minimal padding/margin for iframe embedding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container: diagram left 2/3, info panel right 1/3 */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left 2/3: Mermaid diagram */
+.diagram-panel {
+    width: 66.67%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    overflow: auto;
+}
+
+.mermaid {
+    width: 100%;
+    max-height: 100%;
+}
+
+.mermaid svg {
+    max-width: 100%;
+    max-height: calc(100vh - 20px);
+}
+
+/* Right 1/3: Info panel for hover content */
+.info-panel {
+    width: 33.33%;
+    height: 100%;
+    background-color: #f8f9fa;
+    border-left: 1px solid #dee2e6;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.info-panel h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #667eea;
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.info-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.info-placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Node hover styling */
+.node {
+    cursor: pointer;
+}
+
+.node:hover rect,
+.node:hover circle,
+.node:hover polygon {
+    filter: brightness(1.1);
+}

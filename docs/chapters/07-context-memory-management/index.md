@@ -282,6 +282,10 @@ flowchart TD
     J --> K
     C --> K
 ```
+
+<iframe src="../../sims/long-form-document-processing-strategies/main.html" width="100%" height="532px" scrolling="no"></iframe>
+[Run Long-Form Document Processing Strategies Fullscreen](../../sims/long-form-document-processing-strategies/main.html)
+
 <details markdown="1">
 <summary>Expand to see diagram specification</summary>
 Create a flowchart using Mermaid syntax that shows decision logic for processing long documents:
@@ -462,6 +466,10 @@ flowchart TD
     M -->|No| L
     N --> L
 ```
+
+
+<iframe src="../../sims/context-management-decision-framework/main.html" width="100%" height="882px" scrolling="no"></iframe>
+[Run Context Management Decision Framework Fullscreen](../../sims/context-management-decision-framework/main.html)
 
 <details markdown="1">
 <summary>Expand to see diagram specification</summary>

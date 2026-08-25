@@ -74,16 +74,19 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - AI Concepts Hierarchy: sims/ai-concepts-hierarchy/index.md
     - Claude Code Setup: sims/claude-code-setup/index.md
     - Claude Desktop Footer Regions: sims/claude-desktop-footer/index.md
     - Claude Desktop Home Screen: sims/claude-desktop-home-screen/index.md
+    - Context Management Decision Framework: sims/context-management-decision-framework/index.md
     - Embedding Space Explorer: sims/embedding-space/index.md
+    - Foundation Model Training Pipeline: sims/foundation-model-pipeline/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Long-Form Document Processing Strategies: sims/long-form-document-processing-strategies/index.md
     - PowerShell vs. WSL Comparison Infographic: sims/powershell-vs-wsl-comparison/index.md
-
-
-
-
+    - Prompt Iteration Cycle: sims/prompt-iteration-cycle/index.md
+    - Prompt Quality Evaluator: sims/prompt-quality-evaluator/index.md
+    - Temperature Explorer: sims/temperature-explorer/index.md
 
   - Appendices:
     - The ChatGPT Millionaire Boom: appendices/chatgpt-millionaires.md

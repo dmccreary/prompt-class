@@ -7,7 +7,7 @@ hide:
 
 [Open the Claude Desktop Footer Regions Fullscreen](./main.html){ .md-button .md-button--primary }
 
-<iframe src="./main.html" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+<iframe src="./main.html" width="100%" height="522px" frameborder="0" scrolling="no"></iframe>
 
 ## How to Use This Interactive Diagram
 

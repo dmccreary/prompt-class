@@ -26,6 +26,7 @@ let hoveredIndex = -1;
 let queryPoint = null;      // { x, y, text, category } once a search has run
 let nearestIndices = [];    // indices into phrases, closest first
 let statusMessage = '';
+let placedLabels = [];   // label rects already drawn this frame
 
 const dotSize = 14;
 const plotLeft = 56;
@@ -122,7 +123,7 @@ function setup() {
   queryInput.attribute('placeholder', 'e.g. how do transformers work');
   queryInput.position(controlLeftMargin, drawHeight + 10);
   queryInput.elt.addEventListener('keydown', e => {
-    if (e.key === 'Enter') runSearch();
+    if (e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 13) runSearch();
   });
 
   searchButton = createButton('Search');
@@ -170,9 +171,11 @@ function draw() {
   drawLegend();
   drawGrid();
   drawAxisLabels();
+  placedLabels = [];
   drawConnections();
   drawPoints();
   drawQueryPoint();
+  drawSearchLabels();
   drawTooltip();
   drawControlLabels();
 }
@@ -205,10 +208,29 @@ function drawTitle() {
   text('Embedding Space Explorer', canvasWidth / 2, 12);
 
   fill('dimgray');
-  textSize(13);
   const subtitle = statusMessage ||
     'Similar meanings sit close together - hover a dot, or search a phrase of your own';
-  text(subtitle, canvasWidth / 2, 40);
+  const shortSubtitle = statusMessage || 'Similar meanings sit close together';
+
+  // On a phone the full subtitle runs off both edges, so shrink it and fall
+  // back to a shorter wording rather than letting it clip.
+  let subSize = 13;
+  textSize(subSize);
+  while (textWidth(subtitle) > canvasWidth - 16 && subSize > 10) {
+    subSize -= 1;
+    textSize(subSize);
+  }
+  let shown = subtitle;
+  if (textWidth(subtitle) > canvasWidth - 16) {
+    shown = shortSubtitle;
+    subSize = 13;
+    textSize(subSize);
+    while (textWidth(shown) > canvasWidth - 16 && subSize > 9) {
+      subSize -= 1;
+      textSize(subSize);
+    }
+  }
+  text(shown, canvasWidth / 2, 40);
 
   textAlign(LEFT, CENTER);
   textSize(defaultTextSize);
@@ -291,16 +313,7 @@ function drawConnections() {
     drawingContext.setLineDash([6, 4]);
     line(qx, qy, px, py);
     drawingContext.setLineDash([]);
-
-    const d = dist(queryPoint.x, queryPoint.y, p.x, p.y);
-    noStroke();
-    fill(120);
-    textSize(10);
-    textAlign(CENTER, CENTER);
-    text('d=' + nf(d, 1, 2), (qx + px) / 2, (qy + py) / 2 - 8);
   }
-  textAlign(LEFT, CENTER);
-  textSize(defaultTextSize);
 }
 
 function drawPoints() {
@@ -329,26 +342,81 @@ function drawPoints() {
       ellipse(sx, sy, dotSize);
     }
 
-    if (isNearest) {
-      drawPointLabel(p.text, sx, sy);
-    }
   }
 }
 
-function drawPointLabel(label, sx, sy) {
-  noStroke();
-  fill(50);
-  textSize(11);
-  const w = textWidth(label);
-  if (sx + dotSize + w + 10 > plotRight()) {
-    textAlign(RIGHT, CENTER);
-    text(label, sx - dotSize / 2 - 6, sy);
-  } else {
-    textAlign(LEFT, CENTER);
-    text(label, sx + dotSize / 2 + 6, sy);
+function rectsOverlap(a, b) {
+  return !(a.x + a.w < b.x || b.x + b.w < a.x ||
+           a.y + a.h < b.y || b.y + b.h < a.y);
+}
+
+// A query often lands directly on top of its best match, which used to stack
+// every label in the same few pixels. Try a ring of candidate offsets around
+// the anchor and take the first that clears both the labels already placed and
+// the edges of the plot.
+function placeLabel(label, ax, ay, size, bold) {
+  textSize(size);
+  textStyle(bold ? BOLD : NORMAL);
+  const w = textWidth(label) + 10;
+  const h = size + 7;
+  const gap = dotSize / 2 + 7;
+
+  let chosen = null;
+  outer:
+  for (let step = 0; step < 7 && !chosen; step++) {
+    const dy = step * (h + 3);
+    const candidates = [
+      { x: ax + gap,     y: ay - h / 2 - dy },
+      { x: ax - gap - w, y: ay - h / 2 - dy },
+      { x: ax + gap,     y: ay - h / 2 + dy },
+      { x: ax - gap - w, y: ay - h / 2 + dy }
+    ];
+    for (const c of candidates) {
+      if (c.x < 4 || c.x + w > canvasWidth - 4) continue;
+      if (c.y < 4 || c.y + h > drawHeight - 4) continue;
+      const r = { x: c.x, y: c.y, w: w, h: h };
+      if (!placedLabels.some(o => rectsOverlap(o, r))) {
+        chosen = r;
+        break outer;
+      }
+    }
   }
+  if (!chosen) chosen = { x: ax + gap, y: ay - h / 2, w: w, h: h };
+  placedLabels.push(chosen);
+  return chosen;
+}
+
+// Draws a label in a translucent plate so it stays readable over dots and
+// dashed connector lines.
+function drawPlacedLabel(label, ax, ay, size, bold, col) {
+  const r = placeLabel(label, ax, ay, size, bold);
+  noStroke();
+  fill(255, 255, 255, 225);
+  rect(r.x - 2, r.y, r.w + 4, r.h, 3);
+  fill(col[0], col[1], col[2]);
+  textAlign(LEFT, CENTER);
+  textSize(size);
+  textStyle(bold ? BOLD : NORMAL);
+  text(label, r.x + 3, r.y + r.h / 2);
+  textStyle(NORMAL);
   textAlign(LEFT, CENTER);
   textSize(defaultTextSize);
+}
+
+// The query label claims its spot first, then each neighbour in order of
+// increasing distance.
+function drawSearchLabels() {
+  if (!queryPoint) return;
+
+  drawPlacedLabel('"' + queryPoint.text + '"',
+    toScreenX(queryPoint.x), toScreenY(queryPoint.y), 12, true, [216, 67, 21]);
+
+  for (const idx of nearestIndices) {
+    const p = phrases[idx];
+    const d = dist(queryPoint.x, queryPoint.y, p.x, p.y);
+    drawPlacedLabel(p.text + '  (d=' + nf(d, 1, 2) + ')',
+      toScreenX(p.x), toScreenY(p.y), 11, false, [40, 40, 40]);
+  }
 }
 
 function drawQueryPoint() {
@@ -371,22 +439,6 @@ function drawQueryPoint() {
   rect(0, 0, 11, 11);
   pop();
   rectMode(CORNER);
-
-  const label = '"' + queryPoint.text + '"';
-  fill(216, 67, 21);
-  textSize(12);
-  textStyle(BOLD);
-  const w = textWidth(label);
-  if (qx + w + 20 > plotRight()) {
-    textAlign(RIGHT, CENTER);
-    text(label, qx - 16, qy);
-  } else {
-    textAlign(LEFT, CENTER);
-    text(label, qx + 16, qy);
-  }
-  textStyle(NORMAL);
-  textAlign(LEFT, CENTER);
-  textSize(defaultTextSize);
 }
 
 function drawTooltip() {

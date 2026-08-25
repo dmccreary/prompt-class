@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="Learn to design, direct, and orchestrate teams of AI agents — from prompt engineering fundamentals to managing dozens of concurrent agents across desktop AI environments. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Glossary - Prompt Engineering Class</title>
+        <title>Glossary - Agent Orchestration</title>
       
     
     
@@ -75,9 +75,9 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Glossary - Prompt Engineering Class" >
+        <meta  property="og:title"  content="Glossary - Agent Orchestration" >
       
-        <meta  property="og:description"  content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+        <meta  property="og:description"  content="Learn to design, direct, and orchestrate teams of AI agents — from prompt engineering fundamentals to managing dozens of concurrent agents across desktop AI environments. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/prompt-class/assets/images/social/glossary.png" >
       
@@ -91,9 +91,9 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Glossary - Prompt Engineering Class" >
+        <meta  name="twitter:title"  content="Glossary - Agent Orchestration" >
       
-        <meta  name="twitter:description"  content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+        <meta  name="twitter:description"  content="Learn to design, direct, and orchestrate teams of AI agents — from prompt engineering fundamentals to managing dozens of concurrent agents across desktop AI environments. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/prompt-class/assets/images/social/glossary.png" >
       
@@ -132,7 +132,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href=".." title="Agent Orchestration" class="md-header__button md-logo" aria-label="Agent Orchestration" data-md-component="logo">
       
   <img src="../img/mascot/neutral.png" alt="logo">
 
@@ -145,7 +145,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Prompt Engineering Class
+            Agent Orchestration
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -238,12 +238,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href=".." title="Agent Orchestration" class="md-nav__button md-logo" aria-label="Agent Orchestration" data-md-component="logo">
       
   <img src="../img/mascot/neutral.png" alt="logo">
 
     </a>
-    Prompt Engineering Class
+    Agent Orchestration
   </label>
   
     <div class="md-nav__source">
@@ -2605,6 +2605,15 @@
   <a href="#model-comparison" class="md-nav__link">
     <span class="md-ellipsis">
       Model Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-families-and-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Families and Tiers
     </span>
   </a>
   
@@ -5693,6 +5702,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#model-families-and-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Families and Tiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#model-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Model Parameters
@@ -7644,12 +7662,17 @@
 <h4 id="model-comparison">Model Comparison</h4>
 <p>Systematically evaluating how different AI models perform on the same tasks and prompts to identify the best model for each use case.</p>
 <p>Model comparison reveals that no single model is best at everything. Different models have different strengths, and the best choice depends on your specific needs.</p>
+<h4 id="model-families-and-tiers">Model Families and Tiers</h4>
+<p>A provider's lineup of models offered at distinct capability levels — typically a fast/small tier, a balanced mid tier, and a frontier tier — that trade reasoning capability against speed and cost.</p>
+<p>Every major provider ships roughly the same three tiers, because they are all balancing the same tradeoff. The product names change frequently; the tier structure rarely does. Anthropic names its models after forms of writing (Haiku, Sonnet, Opus, Fable), which conveniently encodes the ordering from shortest to longest.</p>
+<p>Choosing a tier is a prompt engineering decision, not just a billing one: smaller models need more explicit instructions, more examples, and more structure, while larger models infer more from less. A prompt that works on a frontier model may fail on a fast one because it was quietly relying on the larger model to read between the lines.</p>
+<p><strong>Example:</strong> Using Claude Haiku to classify 50,000 support tickets by category, then Claude Opus to write the executive summary of what those categories reveal — matching tier to task instead of paying frontier prices for classification.</p>
 <h4 id="model-parameters">Model Parameters</h4>
 <p>The internal numerical values (weights) within a neural network that are adjusted during training and determine how the model responds to inputs.</p>
 <p>When people say a model has "70 billion parameters," they're describing its size and complexity. Larger models generally handle nuanced prompts better, but they also cost more to run.</p>
 <h4 id="model-selection">Model Selection</h4>
 <p>The process of choosing the most appropriate AI model for a specific task, considering factors like capability, cost, speed, context window size, and specialized features.</p>
-<p>Model selection is a key decision in prompt engineering. The best prompt in the world won't help if you're using the wrong model for the job.</p>
+<p>Model selection is a key decision in prompt engineering. The best prompt in the world won't help if you're using the wrong model for the job. See also Model Families and Tiers for the structure of the options you are selecting among.</p>
 <p><strong>Example:</strong> Using a small, fast model for simple classification tasks and reserving the expensive frontier model for complex reasoning — matching model capability to task difficulty.</p>
 <h4 id="multi-agent-systems">Multi-Agent Systems</h4>
 <p>Architectures where multiple specialized AI agents interact, communicate, and coordinate to achieve goals that exceed any single agent's capabilities.</p>

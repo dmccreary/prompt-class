@@ -1,14 +1,14 @@
 {
   "faq_version": "1.0",
-  "generated_date": "2026-04-08",
-  "source_textbook": "Prompt Engineering: From Fundamentals to Agentic AI",
-  "total_questions": 62,
+  "generated_date": "2026-08-25",
+  "source_textbook": "Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams",
+  "total_questions": 64,
   "questions": [
     {
       "id": "faq-001",
       "category": "Getting Started",
       "question": "What is this course about?",
-      "answer": "This course, Prompt Engineering: From Fundamentals to Agentic AI, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI.",
+      "answer": "This course, Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams, teaches you how to write effective instructions for large language models (LLMs) to produce accurate, relevant, and useful responses. It covers the full spectrum from basic principles like clarity and specificity through advanced techniques such as chain-of-thought reasoning, few-shot learning, retrieval-augmented generation (RAG), and agentic AI.",
       "bloom_level": "Understand",
       "difficulty": "easy",
       "concepts": ["Prompt Engineering", "Large Language Model"],
@@ -809,6 +809,32 @@
       "source_links": ["docs/labs/17-meta-prompts.md"],
       "has_example": false,
       "word_count": 36
+    },
+    {
+      "id": "faq-063",
+      "category": "Core Concepts",
+      "question": "What do the different model names like Haiku, Sonnet, and Opus mean?",
+      "answer": "They are capability tiers. Every major AI provider offers roughly the same three: a fast/small tier for high-volume, well-defined work such as classification, extraction, and routing; a balanced mid tier that handles most everyday writing, analysis, and coding; and a frontier tier for the hardest reasoning. Anthropic names its tiers after forms of writing (Haiku, Sonnet, Opus, Fable), which runs shortest to longest. Other providers use different vocabulary for the same structure. Product names change every few months; the tier pattern has held for years, so learn the pattern rather than memorizing names.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": ["Model Families and Tiers", "Model Parameters", "Large Language Model"],
+      "keywords": ["model tiers", "haiku", "sonnet", "opus", "fable", "model families", "model size"],
+      "source_links": ["docs/chapters/01-ai-ml-foundations/index.md"],
+      "has_example": false,
+      "word_count": 84
+    },
+    {
+      "id": "faq-064",
+      "category": "Core Concepts",
+      "question": "Does the model I pick change how I should write my prompt?",
+      "answer": "Yes. Smaller models need more explicit instructions, more examples, and more structure, while larger models infer more from less. A prompt that works well on a frontier model can fail on a fast one because it was relying on the larger model to read between the lines. Deliberately testing a prompt one tier down reveals which parts of it are doing real work.",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": ["Model Families and Tiers", "Model Selection", "Instruction Clarity"],
+      "keywords": ["model selection", "model tiers", "prompt scaffolding", "few-shot", "instruction clarity"],
+      "source_links": ["docs/chapters/01-ai-ml-foundations/index.md"],
+      "has_example": false,
+      "word_count": 65
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Prompt Engineering: From Fundamentals to Agentic AI",
+    "title": "Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams",
     "description": "A comprehensive learning graph covering prompt engineering from foundational AI concepts through advanced techniques including agentic AI, RAG, multimodal prompting, and 35 capstone projects.",
     "creator": "Dan McCreary",
     "date": "2026-04-08",
@@ -136,67 +136,67 @@
       "label": "Artificial Intelligence",
       "group": "FOUND",
       "shape": "box",
-      "cis": 70418
+      "cis": 70448
     },
     {
       "id": 2,
       "label": "Machine Learning",
       "group": "FOUND",
-      "cis": 53025
+      "cis": 53049
     },
     {
       "id": 3,
       "label": "Natural Language Processing",
       "group": "FOUND",
-      "cis": 17365
+      "cis": 17371
     },
     {
       "id": 4,
       "label": "Large Language Model",
       "group": "FOUND",
-      "cis": 17326
+      "cis": 17332
     },
     {
       "id": 5,
       "label": "Neural Network Basics",
       "group": "FOUND",
-      "cis": 35148
+      "cis": 35163
     },
     {
       "id": 6,
       "label": "Transformer Architecture",
       "group": "FOUND",
-      "cis": 17327
+      "cis": 17333
     },
     {
       "id": 7,
       "label": "Token",
       "group": "FOUND",
-      "cis": 8975
+      "cis": 8981
     },
     {
       "id": 8,
       "label": "Tokenization",
       "group": "FOUND",
-      "cis": 738
+      "cis": 741
     },
     {
       "id": 9,
       "label": "Context Window",
       "group": "FOUND",
-      "cis": 454
+      "cis": 457
     },
     {
       "id": 10,
       "label": "Training Data",
       "group": "FOUND",
-      "cis": 510
+      "cis": 513
     },
     {
       "id": 11,
       "label": "Model Parameters",
       "group": "FOUND",
-      "cis": 494
+      "cis": 497
     },
     {
       "id": 12,
@@ -1961,6 +1961,12 @@
       "label": "Intelligent Textbook",
       "group": "CAP",
       "cis": 1
+    },
+    {
+      "id": 306,
+      "label": "Model Families and Tiers",
+      "group": "FOUND",
+      "cis": 3
     }
   ],
   "edges": [
@@ -3913,6 +3919,10 @@
       "to": 14
     },
     {
+      "from": 252,
+      "to": 306
+    },
+    {
       "from": 253,
       "to": 241
     },
@@ -4511,6 +4521,14 @@
     {
       "from": 305,
       "to": 304
+    },
+    {
+      "from": 306,
+      "to": 9
+    },
+    {
+      "from": 306,
+      "to": 11
     }
   ]
 }

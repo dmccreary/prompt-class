@@ -3,7 +3,7 @@
   "description": "An interactive infographic overlay that labels the fourteen controls in the Claude Desktop footer bar: the update reminder, local/cloud toggle, directory, Git branch and worktree, add-files, account, plan, permissions, voice, model, effort, and resources gauge.",
   "type": "MicroSim",
   "subject": "Prompt Engineering",
-  "creator": "Prompt Engineering Class",
+  "creator": "Agent Orchestration",
   "license": "CC BY-NC-SA 4.0",
   "format": "text/html",
   "educationalUse": "instruction",

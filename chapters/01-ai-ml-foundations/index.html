@@ -26,7 +26,7 @@
     
     
       
-        <title>AI and Machine Learning Foundations - Prompt Engineering Class</title>
+        <title>AI and Machine Learning Foundations - Agent Orchestration</title>
       
     
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="AI and Machine Learning Foundations - Prompt Engineering Class" >
+        <meta  property="og:title"  content="AI and Machine Learning Foundations - Agent Orchestration" >
       
         <meta  property="og:description"  content="An introduction to the fundamental concepts of artificial intelligence, machine learning, and large language models that underpin modern prompt engineering." >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="AI and Machine Learning Foundations - Prompt Engineering Class" >
+        <meta  name="twitter:title"  content="AI and Machine Learning Foundations - Agent Orchestration" >
       
         <meta  name="twitter:description"  content="An introduction to the fundamental concepts of artificial intelligence, machine learning, and large language models that underpin modern prompt engineering." >
       
@@ -132,7 +132,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Prompt Engineering Class" class="md-header__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href="../.." title="Agent Orchestration" class="md-header__button md-logo" aria-label="Agent Orchestration" data-md-component="logo">
       
   <img src="../../img/mascot/neutral.png" alt="logo">
 
@@ -145,7 +145,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Prompt Engineering Class
+            Agent Orchestration
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -238,12 +238,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Prompt Engineering Class" class="md-nav__button md-logo" aria-label="Prompt Engineering Class" data-md-component="logo">
+    <a href="../.." title="Agent Orchestration" class="md-nav__button md-logo" aria-label="Agent Orchestration" data-md-component="logo">
       
   <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
-    Prompt Engineering Class
+    Agent Orchestration
   </label>
   
     <div class="md-nav__source">
@@ -693,6 +693,48 @@
       Model Parameters: The Dials and Knobs
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-the-lineup-model-families-and-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meeting the Lineup: Model Families and Tiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meeting the Lineup: Model Families and Tiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-tier-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Tier Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-current-anthropic-lineup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Current Anthropic Lineup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-your-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Your Prompts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1669,6 +1711,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#meeting-the-lineup-model-families-and-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meeting the Lineup: Model Families and Tiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meeting the Lineup: Model Families and Tiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-tier-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Tier Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-current-anthropic-lineup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Current Anthropic Lineup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-your-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Your Prompts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inference-when-the-model-thinks" class="md-nav__link">
     <span class="md-ellipsis">
       Inference: When the Model Thinks
@@ -1944,7 +2028,103 @@ Words matter - let's get them right! When someone says a model has "175 billion 
 <li>More data needed for training</li>
 <li>Slower response times</li>
 </ul>
-<p>This is why AI providers offer models at different sizes. A smaller model might be faster and cheaper for simple tasks, while a larger model handles complex reasoning better. As a prompt engineer, knowing this helps you choose the right model for the job — you don't always need the biggest, most powerful option.</p>
+<p>This is why AI providers offer models at different sizes. A smaller model might be faster and cheaper for simple tasks, while a larger model handles complex reasoning better. As a prompt engineer, knowing this helps you choose the right model for the job — you don't always need the biggest, most powerful option. Which raises the obvious question: what <em>are</em> the options? Let's go meet them.</p>
+<h2 id="meeting-the-lineup-model-families-and-tiers">Meeting the Lineup: Model Families and Tiers</h2>
+<p>Open Claude, ChatGPT, or Gemini on your desktop and look at the small dropdown near the message box. That menu is where the abstract idea of "model size" turns into a decision you actually make. Most people click it once, shrug, and never touch it again.</p>
+<p>That's a shame, because it might be the most consequential setting in the entire app.</p>
+<p>Here's the reframe: <strong>choosing the model is a prompt engineering decision.</strong> You can spend twenty minutes polishing your wording, or you can spend three seconds picking a model better suited to the job. Sometimes the second one wins.</p>
+<h3 id="the-three-tier-pattern">The Three-Tier Pattern</h3>
+<p>Every major AI provider offers roughly the same lineup, because they are all solving the same problem: intelligence costs money and time, and not every task needs maximum intelligence.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Optimized For</th>
+<th>Shines At</th>
+<th>Overkill For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast / Small</strong></td>
+<td>Speed and low cost</td>
+<td>Classification, extraction, routing, simple Q&amp;A, anything high-volume</td>
+<td>Nuanced writing, multi-step reasoning</td>
+</tr>
+<tr>
+<td><strong>Balanced / Mid</strong></td>
+<td>The sweet spot</td>
+<td>Everyday writing, summarizing, coding, analysis — the workhorse</td>
+<td>Honestly, not much. Start here.</td>
+</tr>
+<tr>
+<td><strong>Frontier / Large</strong></td>
+<td>The hardest thinking</td>
+<td>Complex code, research synthesis, multi-step planning, long autonomous tasks</td>
+<td>Rewriting a two-sentence email</td>
+</tr>
+</tbody>
+</table>
+<p>The names change constantly. The pattern doesn't. <strong>That's the part worth memorizing.</strong></p>
+<h3 id="the-current-anthropic-lineup">The Current Anthropic Lineup</h3>
+<p>Anthropic named its models after forms of writing, which is a delightful choice for a course about writing prompts. The names encode the tiers, so once you see the joke you never forget the order.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Tier</th>
+<th>Context Window</th>
+<th>Relative Cost</th>
+<th>Reach For It When…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claude Haiku</strong></td>
+<td>Fast / small</td>
+<td>200K tokens</td>
+<td>$</td>
+<td>Volume is high, speed matters, and the task is well-defined</td>
+</tr>
+<tr>
+<td><strong>Claude Sonnet</strong></td>
+<td>Balanced</td>
+<td>1M tokens</td>
+<td>$$</td>
+<td>It's your default. Writing, analysis, everyday coding</td>
+</tr>
+<tr>
+<td><strong>Claude Opus</strong></td>
+<td>Frontier</td>
+<td>1M tokens</td>
+<td>$$$</td>
+<td>Hard reasoning, complex code, long agent runs</td>
+</tr>
+<tr>
+<td><strong>Claude Fable</strong></td>
+<td>Most capable</td>
+<td>1M tokens</td>
+<td>$$$$</td>
+<td>The genuinely difficult problems — deep research, long-horizon work</td>
+</tr>
+</tbody>
+</table>
+<p><em>Model names, context windows, and pricing as of this writing (2026). The lineup refreshes every few months; the tier structure has held steady for years. Check your provider's documentation for current specifics — and see <a href="../14-usage-limits-token-economics/">Chapter 14</a> for what those dollar signs actually cost.</em></p>
+<p>A haiku is seventeen syllables. A sonnet is a structured fourteen-line form. An opus is a major work. A fable is a whole story with a moral at the end. Short to long, simple to elaborate — the naming <em>is</em> the tier chart.</p>
+<p>Other vendors use different vocabulary. OpenAI appends "mini" to its smaller models; Google uses "Flash" for fast and "Pro" for capable. Different words, same three tiers. Learn the pattern once and you can read any provider's menu on sight.</p>
+<p>Notice that context window varies by tier too. The fast models often carry a smaller working memory — which makes sense, since holding a million tokens in mind is itself expensive. If you're feeding in a 400-page document, that alone may make your choice for you.</p>
+<h3 id="why-this-matters-for-your-prompts">Why This Matters for Your Prompts</h3>
+<p>Three practical consequences, and the third one surprises almost everyone.</p>
+<p><strong>1. Bigger isn't automatically better.</strong> Running a frontier model on a simple extraction task gets you the identical answer, slower and more expensively. It's like taking a Formula 1 car through the drive-thru. Technically it works. Everyone stares.</p>
+<p><strong>2. A great prompt on a mid-tier model routinely beats a lazy prompt on a frontier model.</strong> This may be the single most encouraging fact in this book. You do not need access to the biggest model to get excellent results — you need to ask well. (We'll put numbers on this claim in <a href="../13-evaluation-optimization/">Chapter 13</a>.)</p>
+<p><strong>3. The tier changes how much you need to spell out.</strong> Smaller models need more explicit instructions, more examples, and more structure. Larger models fill in gaps on their own and infer what you meant.</p>
+<p>That third point is the one people miss. A prompt that works beautifully on a frontier model can fall apart on a fast one — not because the small model is bad, but because your prompt was quietly leaning on the big model to read between the lines. Moving <em>down</em> a tier is a fantastic way to discover which parts of your prompt were doing real work and which parts were wishful thinking.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Polly's Tip</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly giving a tip">
+Words matter - let's get them right! Here's my favorite habit: run your prompt on the <em>cheap, fast</em> model first. If it nails the answer, congratulations — you just got your result faster and cheaper. If it flubs it, you've learned exactly which part of your prompt needed more scaffolding. Either way you win. That's not a hack, fellow prompt crafters, that's just good engineering.</p>
+</div>
+<p>We'll come back to this decision from two other angles later: <a href="../13-evaluation-optimization/">Chapter 13</a> covers how to <em>test</em> whether a cheaper model is good enough for your task, and <a href="../14-usage-limits-token-economics/">Chapter 14</a> covers what these tiers actually cost when you're running thousands of requests. For now, just know that the dropdown is there — and that clicking it is a legitimate prompt engineering move.</p>
 <h2 id="inference-when-the-model-thinks">Inference: When the Model Thinks</h2>
 <p><strong>Inference</strong> is the process of a trained model generating a response to your input. When you type a prompt and hit enter, inference is what happens next. The model takes your tokens, runs them through its billions of parameters, and produces output tokens one at a time.</p>
 <p>Here's something that surprises many people: language models generate text <strong>one token at a time</strong>, from left to right. Each time the model produces a token, it considers everything that came before (your prompt plus all the tokens it has generated so far) and predicts the most likely next token. This is why you sometimes see the text appearing word by word in chat interfaces — you're literally watching inference happen in real time.</p>
@@ -2138,6 +2318,7 @@ Learning Objective: Classify the foundational AI concepts into their hierarchica
 <li>API</li>
 <li>Chatbot Interface</li>
 <li>Human-AI Interaction</li>
+<li>Model Families and Tiers</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>None. This is the first chapter and requires no prior knowledge of AI or prompt engineering.</p>

@@ -135,1527 +135,1832 @@
       "id": 1,
       "label": "Artificial Intelligence",
       "group": "FOUND",
-      "shape": "box"
+      "shape": "box",
+      "cis": 70418
     },
     {
       "id": 2,
       "label": "Machine Learning",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 53025
     },
     {
       "id": 3,
       "label": "Natural Language Processing",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 17365
     },
     {
       "id": 4,
       "label": "Large Language Model",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 17326
     },
     {
       "id": 5,
       "label": "Neural Network Basics",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 35148
     },
     {
       "id": 6,
       "label": "Transformer Architecture",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 17327
     },
     {
       "id": 7,
       "label": "Token",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 8975
     },
     {
       "id": 8,
       "label": "Tokenization",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 738
     },
     {
       "id": 9,
       "label": "Context Window",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 454
     },
     {
       "id": 10,
       "label": "Training Data",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 510
     },
     {
       "id": 11,
       "label": "Model Parameters",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 494
     },
     {
       "id": 12,
       "label": "Inference",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 485
     },
     {
       "id": 13,
       "label": "Generative AI",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 85
     },
     {
       "id": 14,
       "label": "Foundation Model",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 5
     },
     {
       "id": 15,
       "label": "Pre-Training",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 3
     },
     {
       "id": 16,
       "label": "Fine-Tuning",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 2
     },
     {
       "id": 17,
       "label": "Transfer Learning",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 1
     },
     {
       "id": 18,
       "label": "API",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 74
     },
     {
       "id": 19,
       "label": "Chatbot Interface",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 4
     },
     {
       "id": 20,
       "label": "Human-AI Interaction",
-      "group": "FOUND"
+      "group": "FOUND",
+      "cis": 1
     },
     {
       "id": 21,
       "label": "Prompt",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 7440
     },
     {
       "id": 22,
       "label": "Prompt Engineering",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 4
     },
     {
       "id": 23,
       "label": "Input-Output Paradigm",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 314
     },
     {
       "id": 24,
       "label": "Prompt Structure",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 1418
     },
     {
       "id": 25,
       "label": "Instruction Clarity",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 3217
     },
     {
       "id": 26,
       "label": "Specificity",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 1775
     },
     {
       "id": 27,
       "label": "Ambiguity Avoidance",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 2
     },
     {
       "id": 28,
       "label": "Task Decomposition",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 354
     },
     {
       "id": 29,
       "label": "Prompt Length",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 38
     },
     {
       "id": 30,
       "label": "Prompt Iteration",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 24
     },
     {
       "id": 31,
       "label": "Prompt Testing",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 52
     },
     {
       "id": 32,
       "label": "Response Quality",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 38
     },
     {
       "id": 33,
       "label": "Response Evaluation",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 115
     },
     {
       "id": 34,
       "label": "Relevance",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 100
     },
     {
       "id": 35,
       "label": "Accuracy",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 59
     },
     {
       "id": 36,
       "label": "Completeness",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 1
     },
     {
       "id": 37,
       "label": "Conciseness",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 26
     },
     {
       "id": 38,
       "label": "Tone Control",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 23
     },
     {
       "id": 39,
       "label": "Audience Adaptation",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 6
     },
     {
       "id": 40,
       "label": "Natural Language Command",
-      "group": "PFUND"
+      "group": "PFUND",
+      "cis": 20
     },
     {
       "id": 41,
       "label": "Directive Prompts",
-      "group": "PTYPE"
+      "group": "PTYPE",
+      "cis": 1
     },
     {
       "id": 42,
       "label": "Interrogative Prompts",
-      "group": "PTYPE"
+      "group": "PTYPE",
+      "cis": 18
     },
     {
       "id": 43,
       "label": "Open-Ended Prompts",
-      "group": "PTYPE"
+      "group": "PTYPE",
+      "cis": 3
     },
     {
       "id": 44,
       "label": "Closed-Ended Prompts",
-      "group": "PTYPE"
+      "group": "PTYPE",
+      "cis": 9
     },
     {
       "id": 45,
       "label": "Conversational Prompts",
-      "group": "PTYPE"
+      "group": "PTYPE",
+      "cis": 1
     },
     {
       "id": 46,
       "label": "Zero-Shot Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 135
     },
     {
       "id": 47,
       "label": "One-Shot Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 13
     },
     {
       "id": 48,
       "label": "Few-Shot Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 12
     },
     {
       "id": 49,
       "label": "Example Selection",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 26
     },
     {
       "id": 50,
       "label": "Chain-of-Thought Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 45
     },
     {
       "id": 51,
       "label": "Step-by-Step Reasoning",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 46
     },
     {
       "id": 52,
       "label": "Self-Consistency",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 2
     },
     {
       "id": 53,
       "label": "Tree of Thoughts",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 54,
       "label": "Prompt Chaining",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 11
     },
     {
       "id": 55,
       "label": "Prompt Templates",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 5
     },
     {
       "id": 56,
       "label": "Reusable Prompts",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 2
     },
     {
       "id": 57,
       "label": "Role Assignment",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 110
     },
     {
       "id": 58,
       "label": "Persona Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 123
     },
     {
       "id": 59,
       "label": "System Prompt",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 86
     },
     {
       "id": 60,
       "label": "User Prompt",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 2
     },
     {
       "id": 61,
       "label": "Assistant Response",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 62,
       "label": "Instruction Following",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 63,
       "label": "Constraint Setting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 254
     },
     {
       "id": 64,
       "label": "Negative Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 65,
       "label": "Delimiter Usage",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 66,
       "label": "Contextual Priming",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 2
     },
     {
       "id": 67,
       "label": "Socratic Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 5
     },
     {
       "id": 68,
       "label": "Analogical Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 4
     },
     {
       "id": 69,
       "label": "Reflective Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 2
     },
     {
       "id": 70,
       "label": "Meta-Prompting",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 71,
       "label": "Prompt Compression",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 3
     },
     {
       "id": 72,
       "label": "Prompt Expansion",
-      "group": "PTECH"
+      "group": "PTECH",
+      "cis": 1
     },
     {
       "id": 73,
       "label": "Temperature Setting",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 10
     },
     {
       "id": 74,
       "label": "Top-P Sampling",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 1
     },
     {
       "id": 75,
       "label": "Frequency Penalty",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 2
     },
     {
       "id": 76,
       "label": "Presence Penalty",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 1
     },
     {
       "id": 77,
       "label": "Max Tokens Setting",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 2
     },
     {
       "id": 78,
       "label": "Stop Sequences",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 1
     },
     {
       "id": 79,
       "label": "Seed Parameter",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 1
     },
     {
       "id": 80,
       "label": "Reproducibility",
-      "group": "PARAM"
+      "group": "PARAM",
+      "cis": 2
     },
     {
       "id": 81,
       "label": "Output Format Specification",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 165
     },
     {
       "id": 82,
       "label": "Markdown Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 30
     },
     {
       "id": 83,
       "label": "JSON Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 5
     },
     {
       "id": 84,
       "label": "CSV Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 8
     },
     {
       "id": 85,
       "label": "Table Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 20
     },
     {
       "id": 86,
       "label": "List Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 8
     },
     {
       "id": 87,
       "label": "Code Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 4
     },
     {
       "id": 88,
       "label": "Structured Data Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 4
     },
     {
       "id": 89,
       "label": "Schema-Guided Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 1
     },
     {
       "id": 90,
       "label": "XML Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 1
     },
     {
       "id": 91,
       "label": "YAML Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 1
     },
     {
       "id": 92,
       "label": "HTML Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 1
     },
     {
       "id": 93,
       "label": "Bullet Points",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 3
     },
     {
       "id": 94,
       "label": "Numbered Lists",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 2
     },
     {
       "id": 95,
       "label": "Hierarchical Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 1
     },
     {
       "id": 96,
       "label": "Summary Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 20
     },
     {
       "id": 97,
       "label": "Report Generation",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 10
     },
     {
       "id": 98,
       "label": "Narrative Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 13
     },
     {
       "id": 99,
       "label": "Technical Writing",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 4
     },
     {
       "id": 100,
       "label": "Plain Language Output",
-      "group": "OUTFMT"
+      "group": "OUTFMT",
+      "cis": 1
     },
     {
       "id": 101,
       "label": "Context Management",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 108
     },
     {
       "id": 102,
       "label": "Context Window Limits",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 202
     },
     {
       "id": 103,
       "label": "Token Counting",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 283
     },
     {
       "id": 104,
       "label": "Conversation History",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 10
     },
     {
       "id": 105,
       "label": "Memory in AI Systems",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 7
     },
     {
       "id": 106,
       "label": "Stateless Interaction",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 1
     },
     {
       "id": 107,
       "label": "Session Persistence",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 1
     },
     {
       "id": 108,
       "label": "Long-Form Context",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 93
     },
     {
       "id": 109,
       "label": "Document Summarization",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 4
     },
     {
       "id": 110,
       "label": "Information Extraction",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 85
     },
     {
       "id": 111,
       "label": "Key Point Identification",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 1
     },
     {
       "id": 112,
       "label": "Relevance Filtering",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 2
     },
     {
       "id": 113,
       "label": "Context Injection",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 3
     },
     {
       "id": 114,
       "label": "Background Information",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 1
     },
     {
       "id": 115,
       "label": "Domain Knowledge Priming",
-      "group": "CTXMEM"
+      "group": "CTXMEM",
+      "cis": 1
     },
     {
       "id": 116,
       "label": "Retrieval-Augmented Gen",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 15
     },
     {
       "id": 117,
       "label": "Knowledge Base",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 33
     },
     {
       "id": 118,
       "label": "Vector Database",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 14
     },
     {
       "id": 119,
       "label": "Embedding",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 36
     },
     {
       "id": 120,
       "label": "Semantic Search",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 6
     },
     {
       "id": 121,
       "label": "Document Chunking",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 3
     },
     {
       "id": 122,
       "label": "Source Citation",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 3
     },
     {
       "id": 123,
       "label": "Grounding",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 1
     },
     {
       "id": 124,
       "label": "Hallucination",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 11
     },
     {
       "id": 125,
       "label": "Factual Accuracy",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 8
     },
     {
       "id": 126,
       "label": "Knowledge Cutoff",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 2
     },
     {
       "id": 127,
       "label": "Real-Time Information",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 1
     },
     {
       "id": 128,
       "label": "External Data Integration",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 2
     },
     {
       "id": 129,
       "label": "Search-Enhanced Prompting",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 3
     },
     {
       "id": 130,
       "label": "Evidence-Based Responses",
-      "group": "RAG"
+      "group": "RAG",
+      "cis": 1
     },
     {
       "id": 131,
       "label": "Multimodal AI",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 84
     },
     {
       "id": 132,
       "label": "Image Prompting",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 18
     },
     {
       "id": 133,
       "label": "Image Description",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 15
     },
     {
       "id": 134,
       "label": "Visual Question Answering",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 12
     },
     {
       "id": 135,
       "label": "Document Analysis",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 7
     },
     {
       "id": 136,
       "label": "PDF Processing",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 1
     },
     {
       "id": 137,
       "label": "Code Interpretation",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 2
     },
     {
       "id": 138,
       "label": "Chart Reading",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 10
     },
     {
       "id": 139,
       "label": "Diagram Understanding",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 1
     },
     {
       "id": 140,
       "label": "Screenshot Analysis",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 1
     },
     {
       "id": 141,
       "label": "Audio Transcription",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 3
     },
     {
       "id": 142,
       "label": "Video Understanding",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 1
     },
     {
       "id": 143,
       "label": "Image Generation Prompts",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 2
     },
     {
       "id": 144,
       "label": "Alt Text Generation",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 1
     },
     {
       "id": 145,
       "label": "Data Visualization Prompt",
-      "group": "MULTI"
+      "group": "MULTI",
+      "cis": 9
     },
     {
       "id": 146,
       "label": "AI Agent",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 158
     },
     {
       "id": 147,
       "label": "Agent Architecture",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 148,
       "label": "Tool Use",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 8
     },
     {
       "id": 149,
       "label": "Function Calling",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 150,
       "label": "Planning",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 92
     },
     {
       "id": 151,
       "label": "Goal Decomposition",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 45
     },
     {
       "id": 152,
       "label": "Action Selection",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 43
     },
     {
       "id": 153,
       "label": "Execution Monitoring",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 24
     },
     {
       "id": 154,
       "label": "Feedback Loop",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 23
     },
     {
       "id": 155,
       "label": "Self-Correction",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 22
     },
     {
       "id": 156,
       "label": "Autonomous Workflow",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 18
     },
     {
       "id": 157,
       "label": "Multi-Step Reasoning",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 158,
       "label": "Agent Orchestration",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 4
     },
     {
       "id": 159,
       "label": "Skill",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 3
     },
     {
       "id": 160,
       "label": "Skill Library",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 2
     },
     {
       "id": 161,
       "label": "Agent Memory",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 4
     },
     {
       "id": 162,
       "label": "Agent Context",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 163,
       "label": "Human-in-the-Loop",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 2
     },
     {
       "id": 164,
       "label": "Approval Workflow",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 165,
       "label": "Sandboxed Execution",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 166,
       "label": "Agent Evaluation",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 4
     },
     {
       "id": 167,
       "label": "Reliability",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 3
     },
     {
       "id": 168,
       "label": "Error Recovery",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 2
     },
     {
       "id": 169,
       "label": "Retry Logic",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 1
     },
     {
       "id": 170,
       "label": "Task Automation",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 4
     },
     {
       "id": 171,
       "label": "Workflow Design",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 7
     },
     {
       "id": 172,
       "label": "Pipeline Construction",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 6
     },
     {
       "id": 173,
       "label": "Agent Collaboration",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 3
     },
     {
       "id": 174,
       "label": "Multi-Agent Systems",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 2
     },
     {
       "id": 175,
       "label": "Agent Safety",
-      "group": "AGENT"
+      "group": "AGENT",
+      "cis": 2
     },
     {
       "id": 176,
       "label": "Prompt Injection",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 56
     },
     {
       "id": 177,
       "label": "Direct Injection",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 1
     },
     {
       "id": 178,
       "label": "Indirect Injection",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 1
     },
     {
       "id": 179,
       "label": "Jailbreaking",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 1
     },
     {
       "id": 180,
       "label": "Adversarial Prompts",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 7
     },
     {
       "id": 181,
       "label": "Input Validation",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 7
     },
     {
       "id": 182,
       "label": "Output Filtering",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 1
     },
     {
       "id": 183,
       "label": "Content Moderation",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 2
     },
     {
       "id": 184,
       "label": "Safety Guidelines",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 20
     },
     {
       "id": 185,
       "label": "Guardrails",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 17
     },
     {
       "id": 186,
       "label": "Red Teaming",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 5
     },
     {
       "id": 187,
       "label": "Prompt Leaking",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 2
     },
     {
       "id": 188,
       "label": "Data Exfiltration Risk",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 1
     },
     {
       "id": 189,
       "label": "Defense Strategies",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 6
     },
     {
       "id": 190,
       "label": "Responsible Disclosure",
-      "group": "SECUR"
+      "group": "SECUR",
+      "cis": 3
     },
     {
       "id": 191,
       "label": "AI Ethics",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 27
     },
     {
       "id": 192,
       "label": "Bias in AI",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 5
     },
     {
       "id": 193,
       "label": "Fairness",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 2
     },
     {
       "id": 194,
       "label": "Transparency",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 4
     },
     {
       "id": 195,
       "label": "Explainability",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 1
     },
     {
       "id": 196,
       "label": "Accountability",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 2
     },
     {
       "id": 197,
       "label": "Privacy Considerations",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 2
     },
     {
       "id": 198,
       "label": "Consent and Data Use",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 1
     },
     {
       "id": 199,
       "label": "Intellectual Property",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 3
     },
     {
       "id": 200,
       "label": "Copyright Considerations",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 2
     },
     {
       "id": 201,
       "label": "Attribution",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 1
     },
     {
       "id": 202,
       "label": "Misinformation Risk",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 2
     },
     {
       "id": 203,
       "label": "Deepfake Awareness",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 1
     },
     {
       "id": 204,
       "label": "Environmental Impact",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 1
     },
     {
       "id": 205,
       "label": "Inclusive Language",
-      "group": "ETHIC"
+      "group": "ETHIC",
+      "cis": 4
     },
     {
       "id": 206,
       "label": "Business Use Cases",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 207,
       "label": "Customer Service Chatbot",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 208,
       "label": "Content Marketing",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 11
     },
     {
       "id": 209,
       "label": "Email Drafting",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 210,
       "label": "Meeting Summarization",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 211,
       "label": "Report Automation",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 212,
       "label": "Data Analysis Prompting",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 7
     },
     {
       "id": 213,
       "label": "Market Research",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 214,
       "label": "Competitive Analysis",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 215,
       "label": "Product Description",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 216,
       "label": "Social Media Content",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 5
     },
     {
       "id": 217,
       "label": "SEO Optimization",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 218,
       "label": "Proposal Writing",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 219,
       "label": "Contract Review",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 220,
       "label": "Training Material Design",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 2
     },
     {
       "id": 221,
       "label": "Knowledge Management",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 222,
       "label": "Process Documentation",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 223,
       "label": "Decision Support",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 224,
       "label": "Brainstorming Facilitation",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 225,
       "label": "Project Planning",
-      "group": "BIZAP"
+      "group": "BIZAP",
+      "cis": 1
     },
     {
       "id": 226,
       "label": "AI-Assisted Learning",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 74
     },
     {
       "id": 227,
       "label": "Personalized Tutoring",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 7
     },
     {
       "id": 228,
       "label": "Quiz Generation",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 7
     },
     {
       "id": 229,
       "label": "Rubric Creation",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 2
     },
     {
       "id": 230,
       "label": "Lesson Plan Design",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 13
     },
     {
       "id": 231,
       "label": "Differentiated Instruction",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 3
     },
     {
       "id": 232,
       "label": "Formative Assessment",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 2
     },
     {
       "id": 233,
       "label": "Feedback Generation",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 4
     },
     {
       "id": 234,
       "label": "Study Guide Creation",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 1
     },
     {
       "id": 235,
       "label": "Concept Explanation",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 2
     },
     {
       "id": 236,
       "label": "Analogy Generation",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 1
     },
     {
       "id": 237,
       "label": "Bloom Taxonomy Alignment",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 34
     },
     {
       "id": 238,
       "label": "Learning Objective Design",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 18
     },
     {
       "id": 239,
       "label": "Curriculum Development",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 4
     },
     {
       "id": 240,
       "label": "Accessibility in Education",
-      "group": "EDUAP"
+      "group": "EDUAP",
+      "cis": 2
     },
     {
       "id": 241,
       "label": "Prompt Evaluation",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 24
     },
     {
       "id": 242,
       "label": "A/B Testing Prompts",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 243,
       "label": "Evaluation Metrics",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 8
     },
     {
       "id": 244,
       "label": "Human Evaluation",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 245,
       "label": "Automated Evaluation",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 3
     },
     {
       "id": 246,
       "label": "Benchmark Testing",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 247,
       "label": "Quality Rubric Design",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 2
     },
     {
       "id": 248,
       "label": "Cost Optimization",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 4
     },
     {
       "id": 249,
       "label": "Latency Optimization",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 250,
       "label": "Token Efficiency",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 7
     },
     {
       "id": 251,
       "label": "Batch Processing",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 252,
       "label": "Model Selection",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 2
     },
     {
       "id": 253,
       "label": "Model Comparison",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 254,
       "label": "Performance Monitoring",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 1
     },
     {
       "id": 255,
       "label": "API Pricing Models",
-      "group": "EVAL"
+      "group": "EVAL",
+      "cis": 3
     },
     {
       "id": 256,
       "label": "Rate Limiting",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 8
     },
     {
       "id": 257,
       "label": "Usage Quota",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 49
     },
     {
       "id": 258,
       "label": "Five-Hour Token Window",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 4
     },
     {
       "id": 259,
       "label": "Token Budget",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 34
     },
     {
       "id": 260,
       "label": "Token Cost Estimation",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 22
     },
     {
       "id": 261,
       "label": "Token Usage Monitoring",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 1
     },
     {
       "id": 262,
       "label": "Input Token Count",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 7
     },
     {
       "id": 263,
       "label": "Output Token Count",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 7
     },
     {
       "id": 264,
       "label": "Prompt Cost Calculation",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 6
     },
     {
       "id": 265,
       "label": "Usage Dashboard",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 1
     },
     {
       "id": 266,
       "label": "Throttling",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 2
     },
     {
       "id": 267,
       "label": "Cooldown Period",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 1
     },
     {
       "id": 268,
       "label": "Plan Tiers and Limits",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 2
     },
     {
       "id": 269,
       "label": "Overage Handling",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 1
     },
     {
       "id": 270,
       "label": "Cost-Effective Prompting",
-      "group": "USAGE"
+      "group": "USAGE",
+      "cis": 1
     },
     {
       "id": 271,
       "label": "Capstone Project Design",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 272,
       "label": "Customer Support Bot",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 273,
       "label": "FAQ Generator System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 274,
       "label": "Content Pipeline",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 275,
       "label": "Research Assistant",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 2
     },
     {
       "id": 276,
       "label": "Code Review Assistant",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 277,
       "label": "Technical Doc Generator",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 278,
       "label": "Meeting Notes System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 279,
       "label": "Email Triage System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 280,
       "label": "Data Dashboard Narrator",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 281,
       "label": "Personalized Tutor App",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 2
     },
     {
       "id": 282,
       "label": "Quiz and Test Generator",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 283,
       "label": "Writing Coach System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 284,
       "label": "Resume Analyzer",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 285,
       "label": "Job Description Writer",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 286,
       "label": "Interview Prep Coach",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 287,
       "label": "Social Media Manager",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 288,
       "label": "Brand Voice System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 289,
       "label": "Legal Document Analyzer",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 290,
       "label": "Compliance Checker",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 291,
       "label": "Product Review Analyzer",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 292,
       "label": "Sentiment Analysis System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 293,
       "label": "Translation Assistant",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 294,
       "label": "Accessibility Auditor",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 295,
       "label": "Onboarding Guide System",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 296,
       "label": "Knowledge Base Builder",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 297,
       "label": "Prompt Library Manager",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 298,
       "label": "AI Workflow Automator",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 299,
       "label": "Multi-Agent Task Runner",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 300,
       "label": "RAG Pipeline Builder",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 301,
       "label": "Evaluation Framework",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 302,
       "label": "Red Team Test Suite",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 303,
       "label": "AI Ethics Audit Tool",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     },
     {
       "id": 304,
       "label": "Course Content Generator",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 2
     },
     {
       "id": 305,
       "label": "Intelligent Textbook",
-      "group": "CAP"
+      "group": "CAP",
+      "cis": 1
     }
   ],
   "edges": [

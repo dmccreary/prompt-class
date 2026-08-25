@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching a class on prompt engineering. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+        <meta name="description" content="An interactive vis-network view of the course learning graph, with concept search, category filters, pan and zoom navigation, and live counts of visible nodes and edges.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -202,6 +202,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -951,6 +953,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reading-node-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Node Size
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graph-structure" class="md-nav__link">
     <span class="md-ellipsis">
       Graph Structure
@@ -1090,6 +1101,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1112,7 +1127,7 @@
         
   
   
-    <a href="../../appendices/chatgpt-millionaires/" class="md-nav__link">
+    <a href="../../appendices/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1279,7 +1294,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1310,6 +1327,15 @@
   <a href="#using-the-viewer" class="md-nav__link">
     <span class="md-ellipsis">
       Using the Viewer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-node-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Node Size
     </span>
   </a>
   
@@ -1353,6 +1379,7 @@
 <li><strong>Category Filtering</strong>: Use checkboxes to show/hide concept categories</li>
 <li><strong>Interactive Navigation</strong>: Click and drag to explore, scroll to zoom</li>
 <li><strong>Statistics</strong>: View real-time counts of visible nodes and edges</li>
+<li><strong>Concept Impact Sizing</strong>: Node size reflects how much of the course depends on each concept</li>
 </ul>
 <h2 id="using-the-viewer">Using the Viewer</h2>
 <ol>
@@ -1374,11 +1401,27 @@
 <p><strong>View Statistics</strong>: The sidebar shows counts of visible nodes, edges, and foundational concepts.</p>
 </li>
 </ol>
+<h2 id="reading-node-size">Reading Node Size</h2>
+<p>Each concept box is sized by its <strong>Concept Impact Score (CIS)</strong> — a measure of how much
+of the course's total understanding ultimately rests on that concept. CIS is computed
+recursively: a concept's score is 1 plus the scores of every concept that directly
+depends on it, so it counts indirect dependents too, not just immediate ones.</p>
+<ul>
+<li><strong>Large boxes</strong> are high-impact hub concepts. Nearly everything downstream needs them,
+  so they are worth mastering first. In this course, <em>Artificial Intelligence</em>,
+  <em>Machine Learning</em>, and <em>Neural Network Basics</em> are the largest.</li>
+<li><strong>Small boxes</strong> are terminal or specialized concepts. Nothing (or very little) depends
+  on them, which makes them safe to learn late — or to skip if they fall outside your goals.</li>
+</ul>
+<p>Because CIS is heavily skewed (107 of the 305 concepts have the minimum score of 1, while
+the top concept reaches 70,418), sizing uses a logarithmic scale. Without it, a handful of
+hubs would dwarf everything else and the entire lower half of the graph would look identical.</p>
 <h2 id="graph-structure">Graph Structure</h2>
 <ul>
 <li><strong>Foundational Concepts</strong> (left side): Prerequisites with no dependencies</li>
 <li><strong>Advanced Concepts</strong> (right side): Topics that build on multiple prerequisites</li>
 <li><strong>Edges</strong>: Arrows point from a concept to its prerequisites</li>
+<li><strong>Node Size</strong>: Larger boxes have a higher Concept Impact Score (see above)</li>
 </ul>
 
 
@@ -1387,10 +1430,15 @@
 
 
 
+  
+  
+
 
 
   
 
+
+  
 
 
 
@@ -1413,6 +1461,8 @@
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         

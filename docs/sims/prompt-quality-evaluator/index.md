@@ -1,6 +1,6 @@
 ---
-title: Prompt Quality Evaluator
-description: A calibration exercise where students rate five prompt and response pairs on relevance, accuracy, completeness, and conciseness, then compare their ratings against expert scores.
+title: "Prompt Quality Evaluator"
+description: "A calibration exercise where students rate five prompt and response pairs on relevance, accuracy, completeness, and conciseness, then compare their ratings against expert scores."
 image: /sims/prompt-quality-evaluator/prompt-quality-evaluator.png
 og:image: /sims/prompt-quality-evaluator/prompt-quality-evaluator.png
 twitter:image: /sims/prompt-quality-evaluator/prompt-quality-evaluator.png

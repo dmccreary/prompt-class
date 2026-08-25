@@ -1,3 +1,10 @@
+---
+title: "Embedding Space Explorer"
+description: "A two-dimensional map of text embeddings where semantically similar phrases cluster together, with a search box that plots your own query and draws dashed lines to its three nearest neighbors."
+hide:
+  - toc
+---
+
 # Embedding Space Explorer
 
 [Open Embedding Space Explorer Fullscreen](./main.html){ .md-button .md-button--primary }

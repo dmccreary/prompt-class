@@ -1,6 +1,6 @@
 ---
-title: AI Concepts Hierarchy
-description: A nested infographic of the twenty foundational AI concepts, from Artificial Intelligence at the outside down to Human-AI Interaction at the centre, with hover definitions and click-to-highlight dependencies.
+title: "AI Concepts Hierarchy"
+description: "A nested infographic of the twenty foundational AI concepts, from Artificial Intelligence at the outside down to Human-AI Interaction at the centre, with hover definitions and click-to-highlight dependencies."
 image: /sims/ai-concepts-hierarchy/ai-concepts-hierarchy.png
 og:image: /sims/ai-concepts-hierarchy/ai-concepts-hierarchy.png
 twitter:image: /sims/ai-concepts-hierarchy/ai-concepts-hierarchy.png

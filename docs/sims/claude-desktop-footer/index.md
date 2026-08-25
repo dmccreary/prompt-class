@@ -1,6 +1,6 @@
 ---
-title: Claude Desktop Footer Regions
-description: An interactive, labeled tour of the Claude Desktop footer bar — file context, Git status, permissions, model, effort, and account controls.
+title: "Claude Desktop Footer Regions"
+description: "An interactive, labeled tour of the Claude Desktop footer bar — file context, Git status, permissions, model, effort, and account controls."
 hide:
   - toc
 ---

@@ -1,6 +1,6 @@
 ---
-title: Foundation Model Training Pipeline
-description: A three-stage walkthrough of how raw text becomes a useful AI assistant - pre-training, fine-tuning, and inference - with a toggle that swaps plain-language explanations for concrete sample data.
+title: "Foundation Model Training Pipeline"
+description: "A three-stage walkthrough of how raw text becomes a useful AI assistant - pre-training, fine-tuning, and inference - with a toggle that swaps plain-language explanations for concrete sample data."
 image: /sims/foundation-model-pipeline/foundation-model-pipeline.png
 og:image: /sims/foundation-model-pipeline/foundation-model-pipeline.png
 twitter:image: /sims/foundation-model-pipeline/foundation-model-pipeline.png

@@ -1,6 +1,6 @@
 ---
-title: Long-Form Document Processing Strategies
-description: An interactive decision flowchart for processing documents that do not fit in the context window, branching on document size and task type, with hover details for every step.
+title: "Long-Form Document Processing Strategies"
+description: "An interactive decision flowchart for processing documents that do not fit in the context window, branching on document size and task type, with hover details for every step."
 image: /sims/long-form-document-processing-strategies/long-form-document-processing-strategies.png
 og:image: /sims/long-form-document-processing-strategies/long-form-document-processing-strategies.png
 twitter:image: /sims/long-form-document-processing-strategies/long-form-document-processing-strategies.png

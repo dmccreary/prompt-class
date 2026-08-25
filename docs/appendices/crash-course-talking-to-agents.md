@@ -49,6 +49,8 @@ By the end of the hour, every student has:
 
 Click any circle or arrow below to see exactly how Claude Desktop, GitHub, VS Code, and the Unix shell work together — and why GitHub earns a required spot on the list: it's what gives Claude an undo button.
 
+#### Diagram: Claude Code Setup
+
 <iframe src="../../sims/claude-code-setup/main.html" height="642px" width="100%" scrolling="no" style="border: none;"></iframe>
 
 [Open the Claude Code Setup Diagram Fullscreen](../sims/claude-code-setup/main.html){ .md-button }

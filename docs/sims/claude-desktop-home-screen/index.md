@@ -1,6 +1,6 @@
 ---
-title: Claude Desktop Home Screen
-description: An interactive, labeled tour of the Claude Desktop Home screen — sidebar, prompt box, mode toggles, and model controls.
+title: "Claude Desktop Home Screen"
+description: "An interactive, labeled tour of the Claude Desktop Home screen — sidebar, prompt box, mode toggles, and model controls."
 hide:
   - toc
 ---

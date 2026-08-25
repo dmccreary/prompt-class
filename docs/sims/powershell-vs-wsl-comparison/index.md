@@ -1,6 +1,6 @@
 ---
-title: PowerShell vs. WSL Comparison Infographic
-description: Three-column comparison infographic contrasting PowerShell and WSL for AI-agent automation on Windows, with hoverable cells revealing detailed command examples.
+title: "PowerShell vs. WSL Comparison Infographic"
+description: "Three-column comparison infographic contrasting PowerShell and WSL for AI-agent automation on Windows, with hoverable cells revealing detailed command examples."
 image: /sims/powershell-vs-wsl-comparison/powershell-vs-wsl-comparison.png
 og:image: /sims/powershell-vs-wsl-comparison/powershell-vs-wsl-comparison.png
 twitter:image: /sims/powershell-vs-wsl-comparison/powershell-vs-wsl-comparison.png

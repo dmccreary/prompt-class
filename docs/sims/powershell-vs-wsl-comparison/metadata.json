@@ -1,0 +1,54 @@
+{
+  "title": "PowerShell vs. WSL Comparison Infographic",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering / AI Agent Tooling",
+  "description": "Three-column comparison infographic contrasting PowerShell and WSL as the shell an AI agent uses to automate daily tasks on Windows, with hoverable cells revealing detailed command examples.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "Higher Ed",
+      "Professional"
+    ],
+    "subjectArea": "Computer Science",
+    "topic": "PowerShell vs. WSL Comparison Infographic",
+    "learningObjectives": [
+      "Compare PowerShell and WSL across factors relevant to AI-agent automation on Windows",
+      "Explain why AI-generated shell commands run more reliably in WSL than in PowerShell",
+      "Identify which shell to reach for depending on the task (general automation vs. Windows-native administration)"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "5-10 minutes",
+    "prerequisites": [
+      "Basic familiarity with a command-line shell"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Custom HTML/CSS/JS",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 820
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration",
+    "keyQuestions": [
+      "Which shell would produce fewer errors if an AI agent ran these commands unsupervised?",
+      "When is PowerShell's Windows-native access actually the deciding factor?"
+    ],
+    "commonMisconceptions": [
+      "PowerShell and bash are just two spellings of the same commands — in practice quoting, aliases, and pipe semantics differ enough to break copy-pasted commands."
+    ],
+    "assessmentOpportunities": [
+      "Ask students to predict, before hovering, which shell will have the higher error rate for AI-generated commands and why."
+    ]
+  },
+  "chapter": ""
+}

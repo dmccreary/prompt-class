@@ -1,0 +1,76 @@
+{
+  "title": "Embedding Space Explorer",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "A two-dimensional map of text embeddings where semantically similar phrases cluster together, with a search box that plots your own query and draws dashed lines to its three nearest neighbors.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Embeddings and Semantic Similarity",
+    "learningObjectives": [
+      "Explain how text embeddings represent semantic meaning as positions in a vector space",
+      "Predict which phrases will be retrieved for a given query based on distance in embedding space"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Token",
+      "Basic idea of a coordinate plane"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Spatial analogy - learners see meaning as distance, then test it by placing their own query into the space",
+    "keyQuestions": [
+      "Why do 'neural networks' and 'deep learning algorithms' sit close together when they share no words?",
+      "What happens to retrieval when a query lands between two clusters?"
+    ],
+    "commonMisconceptions": [
+      "Believing embedding similarity is keyword matching",
+      "Believing real embeddings have only two dimensions rather than hundreds or thousands",
+      "Believing the nearest neighbor is always a correct or useful answer"
+    ],
+    "assessmentOpportunities": [
+      "Predict the cluster a new query will land in before searching",
+      "Explain why a deliberately ambiguous query produces poor neighbors"
+    ]
+  },
+  "chapter": "08-retrieval-augmented-generation",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/embedding-space/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Embeddings",
+    "Vector Similarity",
+    "Semantic Search",
+    "Nearest Neighbor Retrieval",
+    "Vector Database"
+  ],
+  "canvasHeight": 580,
+  "library": "p5.js"
+}

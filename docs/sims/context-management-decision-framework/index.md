@@ -1,6 +1,6 @@
 ---
-title: Context Management Decision Framework
-description: An interactive decision tree for choosing a context management strategy, from prompt compression through chunking to conversation history management, with hover details for every step.
+title: "Context Management Decision Framework"
+description: "An interactive decision tree for choosing a context management strategy, from prompt compression through chunking to conversation history management, with hover details for every step."
 image: /sims/context-management-decision-framework/context-management-decision-framework.png
 og:image: /sims/context-management-decision-framework/context-management-decision-framework.png
 twitter:image: /sims/context-management-decision-framework/context-management-decision-framework.png

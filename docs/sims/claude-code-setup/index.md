@@ -1,6 +1,6 @@
 ---
-title: Claude Code Setup
-description: Interactive vis-network diagram of the four Week 1 tools — Claude Desktop, GitHub, VS Code, and the Unix shell — and the labeled relationships that connect them.
+title: "Claude Code Setup"
+description: "Interactive vis-network diagram of the four Week 1 tools — Claude Desktop, GitHub, VS Code, and the Unix shell — and the labeled relationships that connect them."
 image: /sims/claude-code-setup/claude-code-setup.png
 og:image: /sims/claude-code-setup/claude-code-setup.png
 twitter:image: /sims/claude-code-setup/claude-code-setup.png

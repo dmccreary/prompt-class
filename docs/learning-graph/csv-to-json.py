@@ -9,12 +9,75 @@ human-readable classifierName values in the output. Without this file,
 taxonomy IDs will be used as fallback (which is usually wrong).
 """
 
-VERSION = "0.03"
+VERSION = "1.05"
 
 import csv
 import json
+from collections import defaultdict, deque
 from typing import Dict, List
 from datetime import datetime
+
+
+def calculate_cis(nodes: List[dict], edges: List[dict]) -> Dict[int, int]:
+    """
+    Compute the Concept Impact Score (CIS) for every node: a PageRank-style
+    recursive importance measure over the concept dependency DAG.
+
+        CIS(x) = 1 + sum(CIS(d) for d in direct_dependents(x))
+
+    A concept's impact is itself (1) plus the combined impact of every
+    concept that depends on it, computed transitively. This captures how
+    much of the book's total understanding ultimately rests on a concept,
+    which plain in-degree (direct dependents only) undercounts for concepts
+    that are foundational only transitively (few direct dependents but many
+    indirect ones -- e.g. "Constant" or "Coefficient" in a typical algebra
+    course).
+
+    Because a learning graph is a DAG (never contains a cycle), CIS has an
+    exact closed-form solution computable in a single topological-order
+    pass -- no PageRank damping factor or iteration is required. See the
+    "Predicting Concept Content Size" paper (Definition 3, Proposition 1)
+    for the full derivation.
+
+    Edge convention (matches every other skill in this project): edge['from']
+    is the DEPENDENT concept, edge['to'] is its PREREQUISITE. Edge
+    {from: 5, to: 1} means concept 5 depends on concept 1. NEVER invert this
+    -- see the "CRITICAL: Edge Direction" warnings in book-chapter-generator
+    and chapter-content-generator.
+    """
+    node_ids = [n['id'] for n in nodes]
+
+    dependents_of = defaultdict(list)  # prereq_id -> [dependent_id, ...]
+    prereqs_of = defaultdict(list)     # dependent_id -> [prereq_id, ...]
+    for e in edges:
+        dependents_of[e['to']].append(e['from'])
+        prereqs_of[e['from']].append(e['to'])
+
+    # Process nodes in an order where every node is scored only after all of
+    # its dependents are already scored -- terminal concepts (nothing
+    # depends on them) first, foundational hub concepts last.
+    remaining = {nid: len(dependents_of[nid]) for nid in node_ids}
+    cis: Dict[int, int] = {}
+    queue = deque([nid for nid in node_ids if remaining[nid] == 0])
+
+    while queue:
+        nid = queue.popleft()
+        cis[nid] = 1 + sum(cis[d] for d in dependents_of[nid])
+        for prereq in prereqs_of[nid]:
+            remaining[prereq] -= 1
+            if remaining[prereq] == 0:
+                queue.append(prereq)
+
+    if len(cis) != len(node_ids):
+        unscored = [nid for nid in node_ids if nid not in cis]
+        raise ValueError(
+            f"CIS computation only scored {len(cis)}/{len(node_ids)} nodes -- "
+            f"the graph likely contains a cycle (unscored IDs: {unscored[:10]}"
+            f"{'...' if len(unscored) > 10 else ''}). Run analyze-graph.py or "
+            f"validate-learning-graph.sh to verify DAG structure before retrying."
+        )
+
+    return cis
 
 
 def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
@@ -32,33 +95,68 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
         taxonomy_names: Dictionary mapping taxonomy IDs to human-readable names.
                        STRONGLY RECOMMENDED for custom taxonomies.
     """
-    # Default taxonomy group colors for visualization
-    # Uses web-safe pastel color names (no hex codes)
-    # This is designed to work with up to 17 classifiers in a taxonomy
-    # The goal is to make the colors distinct
-    # Since the background is AliceBlue, do not use that color
-    default_colors = {
-        # Numeric IDs (same mapping)
-        '1': 'MistyRose',
-        '2': 'PeachPuff',
-        '3': 'LightYellow',
-        '4': 'Honeydew',
-        '5': 'PaleTurquoise',
-        '6': 'SteelBlue',
-        '7': 'Lavender',
-        '8': 'LavenderBlush',
-        '9': 'Thistle',
-        '10': 'MintCream',
-        '11': 'LightCoral',
-        '12': 'Plum',
-        '13': 'Gainsboro',
-        '14': 'PowderBlue',
-        '15': 'PaleGreen',
-        '16': 'Aquamarine',
-        '17': 'LightPink'
-    }
+    # Default 24-color palette designed for distinct, accessible category coloring.
+    # Hues progress through subject-family groupings (cool blues for foundations,
+    # greens for architecture/dev, yellows/golds for data, blues for network/cloud,
+    # reds for security/privacy, purples for project/process/analysis, oranges
+    # and browns for the AI cluster, an accent for knowledge graphs, neutral
+    # for emerging topics) with alternating lightness so adjacent legend rows
+    # never collide. Dark backgrounds automatically get white font for contrast;
+    # light backgrounds get black. The previous all-pastel palette caused legend
+    # collisions when a project had >12 categories — this palette supports up
+    # to 24 distinct categories without color reuse.
+    # Since the background is AliceBlue, do not use that color.
+    DEFAULT_PALETTE = [
+        'SteelBlue',       # 1  cool foundations
+        'DarkSlateBlue',   # 2
+        'DarkGreen',       # 3  architecture / build
+        'LimeGreen',       # 4
+        'Gold',            # 5  data band
+        'DarkGoldenrod',   # 6
+        'Khaki',           # 7
+        'Teal',            # 8  enterprise
+        'DodgerBlue',      # 9  network / cloud
+        'LightSkyBlue',    # 10
+        'Crimson',         # 11 security / privacy
+        'DarkRed',         # 12
+        'MediumPurple',    # 13 project / process / analysis
+        'Indigo',          # 14
+        'DarkOrchid',      # 15
+        'HotPink',         # 16 user-facing
+        'OliveDrab',       # 17 service management
+        'Orange',          # 18 AI cluster
+        'Coral',           # 19
+        'Peru',            # 20
+        'SaddleBrown',     # 21
+        'Tomato',          # 22
+        'DeepPink',        # 23 accent — knowledge graphs / connective concepts
+        'DimGray',         # 24 neutral — emerging / miscellaneous
+    ]
+    default_colors = {str(i + 1): color for i, color in enumerate(DEFAULT_PALETTE)}
 
-    taxonomy_colors = color_config if color_config is not None else default_colors
+    # color_config may be the legacy flat format {tax_id: "ColorName"} or a
+    # richer format {tax_id: {"color": "ColorName", "classifierName": "..."}}
+    # (used by some existing projects' color-config.json). Normalize to a
+    # flat tax_id -> color-string map, and harvest any embedded
+    # classifierName values as a taxonomy-names source -- lower priority
+    # than an explicitly-provided taxonomy_names.json, so that file can
+    # still override. Passing the raw nested dict straight through as a
+    # "color" (the previous behavior) produces an invalid learning-graph.json
+    # that violates the schema and silently breaks group coloring in the
+    # viewer -- this was found and fixed while regenerating an existing
+    # project's learning-graph.json.
+    color_config_names = {}
+    if color_config is not None:
+        taxonomy_colors = {}
+        for tax_id, value in color_config.items():
+            if isinstance(value, dict):
+                taxonomy_colors[tax_id] = value.get('color', 'DimGray')
+                if value.get('classifierName'):
+                    color_config_names[tax_id] = value['classifierName']
+            else:
+                taxonomy_colors[tax_id] = value
+    else:
+        taxonomy_colors = default_colors
 
     # Default taxonomy ID to classifier name mapping
     # Supports both text codes (FOUND, DEF, etc.) and numeric IDs (1, 2, etc.)
@@ -100,8 +198,12 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
         '10': 'Extended Topics',
     }
 
-    # Merge user-provided taxonomy names with defaults (user names take precedence)
+    # Merge taxonomy names: built-in defaults, then names embedded in
+    # color_config (if any), then an explicit taxonomy_names.json -- each
+    # source overrides the previous, so an explicitly-provided file always
+    # wins if both it and color_config supply a name for the same tax_id.
     all_taxonomy_names = default_taxonomy_names.copy()
+    all_taxonomy_names.update(color_config_names)
     if taxonomy_names:
         all_taxonomy_names.update(taxonomy_names)
 
@@ -147,6 +249,11 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
                     }
                     edges.append(edge)
 
+    # Compute and attach the Concept Impact Score to every node
+    cis_scores = calculate_cis(nodes, edges)
+    for node in nodes:
+        node['cis'] = cis_scores[node['id']]
+
     # Create metadata section
     default_metadata = {
         'title': 'Learning Graph',
@@ -172,6 +279,62 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
     # Track taxonomies with missing human-readable names
     missing_names = []
 
+    # Dark backgrounds need white text for contrast; everything else uses black.
+    # Includes the new distinct palette plus a few legacy pastel colors retained
+    # for back-compat with older color-config.json files. Checked first (exact,
+    # hand-tuned) before falling back to computed luminance for any other named
+    # color or hex code -- see font_color_for() below.
+    DARK_BACKGROUND_COLORS = {
+        'SteelBlue', 'DarkSlateBlue', 'DarkGreen', 'DarkGoldenrod', 'Teal',
+        'DodgerBlue', 'Crimson', 'DarkRed', 'MediumPurple', 'Indigo',
+        'DarkOrchid', 'OliveDrab', 'SaddleBrown', 'Tomato', 'DeepPink',
+        'DimGray',
+        # Legacy darks retained for back-compat with older color-config files
+        'Plum', 'LightCoral',
+    }
+
+    # Hex values for common CSS color names NOT in the curated 24-color
+    # palette above (e.g. plain "red", "purple", "indigo" as used directly
+    # in a project's color-config.json). Used only as a luminance-lookup
+    # fallback -- not exhaustive, just the common simple names a project is
+    # likely to use directly rather than through the curated palette.
+    NAMED_COLOR_HEX = {
+        'red': '#FF0000', 'orange': '#FFA500', 'gold': '#FFD700',
+        'green': '#008000', 'cyan': '#00FFFF', 'blue': '#0000FF',
+        'indigo': '#4B0082', 'violet': '#EE82EE', 'purple': '#800080',
+        'brown': '#A52A2A', 'teal': '#008080', 'olive': '#808000',
+        'yellow': '#FFFF00', 'pink': '#FFC0CB', 'magenta': '#FF00FF',
+        'navy': '#000080', 'maroon': '#800000', 'lime': '#00FF00',
+        'silver': '#C0C0C0', 'tan': '#D2B48C', 'khaki': '#F0E68C',
+        'coral': '#FF7F50', 'salmon': '#FA8072', 'turquoise': '#40E0D0',
+        'plum': '#DDA0DD', 'orchid': '#DA70D6', 'beige': '#F5F5DC',
+        'gray': '#808080', 'grey': '#808080', 'black': '#000000',
+        'white': '#FFFFFF',
+    }
+
+    def luminance_font_color(hex_color: str) -> str:
+        """Perceptual luminance (ITU-R BT.601) -> black or white text."""
+        h = hex_color.lstrip('#')
+        if len(h) == 3:
+            h = ''.join(c * 2 for c in h)
+        if len(h) != 6:
+            return 'black'
+        try:
+            r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+        except ValueError:
+            return 'black'
+        luminance = 0.299 * r + 0.587 * g + 0.114 * b
+        return 'white' if luminance < 128 else 'black'
+
+    def font_color_for(color: str) -> str:
+        if color in DARK_BACKGROUND_COLORS:
+            return 'white'
+        if color.startswith('#'):
+            return luminance_font_color(color)
+        if color.lower() in NAMED_COLOR_HEX:
+            return luminance_font_color(NAMED_COLOR_HEX[color.lower()])
+        return 'black'
+
     for tax_id, color in taxonomy_colors.items():
         # Only include groups that are actually used
         if tax_id in used_taxonomies:
@@ -182,17 +345,11 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
             if classifier_name == tax_id:
                 missing_names.append(tax_id)
 
-            # Determine font color based on background color
-            # All pastel colors are light backgrounds, so use black text
-            # Only Plum and LightCoral might benefit from white text
-            dark_pastel_colors = ['Plum', 'LightCoral']
-            font_color = 'white' if color in dark_pastel_colors else 'black'
-
             groups[tax_id] = {
                 'classifierName': classifier_name,
                 'color': color,
                 'font': {
-                    'color': font_color
+                    'color': font_color_for(color)
                 }
             }
 
@@ -211,7 +368,7 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
                 'classifierName': classifier_name,
                 'color': color,
                 'font': {
-                    'color': 'black'
+                    'color': font_color_for(color)
                 }
             }
 
@@ -235,6 +392,11 @@ def csv_to_json(csv_path: str, json_path: str, color_config: dict = None,
     print(f"   - {len(foundational_ids)} foundational concepts")
     print(f"\nFoundational concept IDs: {foundational_ids}")
     print(f"Groups: {list(groups.keys())}")
+
+    top_cis = sorted(nodes, key=lambda n: -n['cis'])[:10]
+    print(f"\nTop 10 concepts by Concept Impact Score (CIS):")
+    for n in top_cis:
+        print(f"   - {n['label']} (id {n['id']}): CIS={n['cis']}")
 
     # IMPORTANT: Warn about missing human-readable names
     if missing_names:

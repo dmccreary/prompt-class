@@ -1,6 +1,6 @@
 ---
-title: Prompt Iteration Cycle
-description: A five-step refinement loop - write, send, evaluate, diagnose, refine - with a quality gauge in the centre that climbs as the learner works around the cycle.
+title: "Prompt Iteration Cycle"
+description: "A five-step refinement loop - write, send, evaluate, diagnose, refine - with a quality gauge in the centre that climbs as the learner works around the cycle."
 image: /sims/prompt-iteration-cycle/prompt-iteration-cycle.png
 og:image: /sims/prompt-iteration-cycle/prompt-iteration-cycle.png
 twitter:image: /sims/prompt-iteration-cycle/prompt-iteration-cycle.png

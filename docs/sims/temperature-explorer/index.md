@@ -1,6 +1,6 @@
 ---
-title: Temperature Explorer
-description: An interactive bar chart of candidate next tokens showing how the temperature parameter reshapes the probability distribution, with live sampling that builds a sentence one token at a time.
+title: "Temperature Explorer"
+description: "An interactive bar chart of candidate next tokens showing how the temperature parameter reshapes the probability distribution, with live sampling that builds a sentence one token at a time."
 image: /sims/temperature-explorer/temperature-explorer.png
 og:image: /sims/temperature-explorer/temperature-explorer.png
 twitter:image: /sims/temperature-explorer/temperature-explorer.png

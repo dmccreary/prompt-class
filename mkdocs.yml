@@ -89,6 +89,7 @@ nav:
     - Temperature Explorer: sims/temperature-explorer/index.md
 
   - Appendices:
+    - List of Appendices: appendices/index.md
     - The ChatGPT Millionaire Boom: appendices/chatgpt-millionaires.md
     - Crash Course in Talking to Agents: appendices/crash-course-talking-to-agents.md
     - AI Mentorship Certification: appendices/ai-mentorship-certification.md

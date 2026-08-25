@@ -31,6 +31,7 @@ Whether you are a business professional looking to streamline operations, an edu
 - Iterative prompt refinement and A/B testing
 - System prompts, context windows, and token management
 - Token budgets, rate limits, and usage monitoring: understanding five-hour usage windows, estimating token costs, and working within platform limits
+- Model families and capability tiers: choosing among fast, balanced, and frontier models, and understanding how model tier changes what a prompt must specify
 - Retrieval-augmented generation (RAG), GraphRAG, and grounding prompts in data using knowledge graphs
 - Multimodal prompting: working with images, documents, and code
 - Agentic AI: tool use, skills, and multi-step autonomous workflows
@@ -62,6 +63,7 @@ After completing this course, students will be able to:
 - Name common prompt engineering pitfalls such as ambiguity, leading questions, and overcomplication
 - Recognize the differences between system prompts, user prompts, and assistant responses
 - Recall common platform usage limits such as rate limits, token budgets, and five-hour usage windows
+- Recall the capability tiers offered by major AI providers (fast/small, balanced, and frontier) and the tradeoffs each represents
 
 ### Understand
 *Constructing meaning from instructional messages, including oral, written, and graphic communication.*
@@ -69,6 +71,7 @@ After completing this course, students will be able to:
 - Explain why prompt structure and specificity affect the quality of AI responses
 - Describe how context windows and token limits influence prompt design decisions
 - Explain how token budgets, rate limits, and five-hour usage windows affect prompt strategy
+- Explain how a model's capability tier changes how much a prompt must state explicitly
 - Summarize the differences between zero-shot, few-shot, and chain-of-thought prompting strategies
 - Interpret how role assignment and persona prompts shape model behavior and output tone
 - Explain the concept of retrieval-augmented generation (RAG) and GraphRAG, and why grounding matters
@@ -107,6 +110,7 @@ After completing this course, students will be able to:
 - Evaluate the ethical implications of prompt design choices, including bias and fairness
 - Rate the effectiveness of different prompt engineering approaches for business use cases
 - Appraise when to use simple prompting versus agentic multi-step workflows
+- Determine whether a smaller, less expensive model tier is sufficient for a given task
 
 ### Create
 *Putting elements together to form a coherent or functional whole; reorganizing elements into a new pattern or structure.*

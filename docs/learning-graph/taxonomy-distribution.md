@@ -2,21 +2,21 @@
 
 ## Overview
 
-- **Total Concepts**: 305
+- **Total Concepts**: 306
 - **Number of Taxonomies**: 17
-- **Average Concepts per Taxonomy**: 17.9
+- **Average Concepts per Taxonomy**: 18.0
 
 ## Distribution Summary
 
 | Category | TaxonomyID | Count | Percentage | Status |
 |----------|-----------|-------|------------|--------|
-| Capstone Projects | CAP | 35 | 11.5% | ✅ |
+| Capstone Projects | CAP | 35 | 11.4% | ✅ |
 | Agentic AI | AGENT | 30 | 9.8% | ✅ |
-| Prompt Techniques | PTECH | 27 | 8.9% | ✅ |
-| Foundation Concepts | FOUND | 20 | 6.6% | ✅ |
-| Prompt Fundamentals | PFUND | 20 | 6.6% | ✅ |
-| Output Format Control | OUTFMT | 20 | 6.6% | ✅ |
-| Business Applications | BIZAP | 20 | 6.6% | ✅ |
+| Prompt Techniques | PTECH | 27 | 8.8% | ✅ |
+| Foundation Concepts | FOUND | 21 | 6.9% | ✅ |
+| Prompt Fundamentals | PFUND | 20 | 6.5% | ✅ |
+| Output Format Control | OUTFMT | 20 | 6.5% | ✅ |
+| Business Applications | BIZAP | 20 | 6.5% | ✅ |
 | Context and Memory | CTXMEM | 15 | 4.9% | ✅ |
 | Retrieval-Augmented Generation | RAG | 15 | 4.9% | ✅ |
 | Multimodal Prompting | MULTI | 15 | 4.9% | ✅ |
@@ -31,13 +31,13 @@
 ## Visual Distribution
 
 ```
-Capstone Projects         █████  35 ( 11.5%)
+Capstone Projects         █████  35 ( 11.4%)
 Agentic AI                ████  30 (  9.8%)
-Prompt Techniques         ████  27 (  8.9%)
-Foundation Concepts       ███  20 (  6.6%)
-Prompt Fundamentals       ███  20 (  6.6%)
-Output Format Control     ███  20 (  6.6%)
-Business Applications     ███  20 (  6.6%)
+Prompt Techniques         ████  27 (  8.8%)
+Foundation Concepts       ███  21 (  6.9%)
+Prompt Fundamentals       ███  20 (  6.5%)
+Output Format Control     ███  20 (  6.5%)
+Business Applications     ███  20 (  6.5%)
 Context and Memory        ██  15 (  4.9%)
 Retrieval-Augmented Gener ██  15 (  4.9%)
 Multimodal Prompting      ██  15 (  4.9%)
@@ -67,7 +67,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Capstone Projects (CAP)
 
-**Count**: 35 concepts (11.5%)
+**Count**: 35 concepts (11.4%)
 
 **Concepts**:
 
@@ -113,7 +113,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Prompt Techniques (PTECH)
 
-**Count**: 27 concepts (8.9%)
+**Count**: 27 concepts (8.8%)
 
 **Concepts**:
 
@@ -136,7 +136,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Foundation Concepts (FOUND)
 
-**Count**: 20 concepts (6.6%)
+**Count**: 21 concepts (6.9%)
 
 **Concepts**:
 
@@ -155,11 +155,11 @@ All categories are under the 30% threshold. Good balance!
 - 13. Generative AI
 - 14. Foundation Model
 - 15. Pre-Training
-- *...and 5 more*
+- *...and 6 more*
 
 ### Prompt Fundamentals (PFUND)
 
-**Count**: 20 concepts (6.6%)
+**Count**: 20 concepts (6.5%)
 
 **Concepts**:
 
@@ -182,7 +182,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Output Format Control (OUTFMT)
 
-**Count**: 20 concepts (6.6%)
+**Count**: 20 concepts (6.5%)
 
 **Concepts**:
 
@@ -205,7 +205,7 @@ All categories are under the 30% threshold. Good balance!
 
 ### Business Applications (BIZAP)
 
-**Count**: 20 concepts (6.6%)
+**Count**: 20 concepts (6.5%)
 
 **Concepts**:
 

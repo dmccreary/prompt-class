@@ -2,8 +2,8 @@
 title: AI and Machine Learning Foundations
 description: An introduction to the fundamental concepts of artificial intelligence, machine learning, and large language models that underpin modern prompt engineering.
 generated_by: claude skill chapter-content-generator
-date: 2026-04-08 21:06:17
-version: 0.07
+date: 2026-08-25
+version: 0.08
 ---
 
 # AI and Machine Learning Foundations
@@ -157,7 +157,64 @@ More parameters generally means more capacity to learn complex patterns, but it 
 - More data needed for training
 - Slower response times
 
-This is why AI providers offer models at different sizes. A smaller model might be faster and cheaper for simple tasks, while a larger model handles complex reasoning better. As a prompt engineer, knowing this helps you choose the right model for the job — you don't always need the biggest, most powerful option.
+This is why AI providers offer models at different sizes. A smaller model might be faster and cheaper for simple tasks, while a larger model handles complex reasoning better. As a prompt engineer, knowing this helps you choose the right model for the job — you don't always need the biggest, most powerful option. Which raises the obvious question: what *are* the options? Let's go meet them.
+
+## Meeting the Lineup: Model Families and Tiers
+
+Open Claude, ChatGPT, or Gemini on your desktop and look at the small dropdown near the message box. That menu is where the abstract idea of "model size" turns into a decision you actually make. Most people click it once, shrug, and never touch it again.
+
+That's a shame, because it might be the most consequential setting in the entire app.
+
+Here's the reframe: **choosing the model is a prompt engineering decision.** You can spend twenty minutes polishing your wording, or you can spend three seconds picking a model better suited to the job. Sometimes the second one wins.
+
+### The Three-Tier Pattern
+
+Every major AI provider offers roughly the same lineup, because they are all solving the same problem: intelligence costs money and time, and not every task needs maximum intelligence.
+
+| Tier | Optimized For | Shines At | Overkill For |
+|---|---|---|---|
+| **Fast / Small** | Speed and low cost | Classification, extraction, routing, simple Q&A, anything high-volume | Nuanced writing, multi-step reasoning |
+| **Balanced / Mid** | The sweet spot | Everyday writing, summarizing, coding, analysis — the workhorse | Honestly, not much. Start here. |
+| **Frontier / Large** | The hardest thinking | Complex code, research synthesis, multi-step planning, long autonomous tasks | Rewriting a two-sentence email |
+
+The names change constantly. The pattern doesn't. **That's the part worth memorizing.**
+
+### The Current Anthropic Lineup
+
+Anthropic named its models after forms of writing, which is a delightful choice for a course about writing prompts. The names encode the tiers, so once you see the joke you never forget the order.
+
+| Model | Tier | Context Window | Relative Cost | Reach For It When… |
+|---|---|---|---|---|
+| **Claude Haiku** | Fast / small | 200K tokens | $ | Volume is high, speed matters, and the task is well-defined |
+| **Claude Sonnet** | Balanced | 1M tokens | $$ | It's your default. Writing, analysis, everyday coding |
+| **Claude Opus** | Frontier | 1M tokens | $$$ | Hard reasoning, complex code, long agent runs |
+| **Claude Fable** | Most capable | 1M tokens | $$$$ | The genuinely difficult problems — deep research, long-horizon work |
+
+*Model names, context windows, and pricing as of this writing (2026). The lineup refreshes every few months; the tier structure has held steady for years. Check your provider's documentation for current specifics — and see [Chapter 14](../14-usage-limits-token-economics/index.md) for what those dollar signs actually cost.*
+
+A haiku is seventeen syllables. A sonnet is a structured fourteen-line form. An opus is a major work. A fable is a whole story with a moral at the end. Short to long, simple to elaborate — the naming *is* the tier chart.
+
+Other vendors use different vocabulary. OpenAI appends "mini" to its smaller models; Google uses "Flash" for fast and "Pro" for capable. Different words, same three tiers. Learn the pattern once and you can read any provider's menu on sight.
+
+Notice that context window varies by tier too. The fast models often carry a smaller working memory — which makes sense, since holding a million tokens in mind is itself expensive. If you're feeding in a 400-page document, that alone may make your choice for you.
+
+### Why This Matters for Your Prompts
+
+Three practical consequences, and the third one surprises almost everyone.
+
+**1. Bigger isn't automatically better.** Running a frontier model on a simple extraction task gets you the identical answer, slower and more expensively. It's like taking a Formula 1 car through the drive-thru. Technically it works. Everyone stares.
+
+**2. A great prompt on a mid-tier model routinely beats a lazy prompt on a frontier model.** This may be the single most encouraging fact in this book. You do not need access to the biggest model to get excellent results — you need to ask well. (We'll put numbers on this claim in [Chapter 13](../13-evaluation-optimization/index.md).)
+
+**3. The tier changes how much you need to spell out.** Smaller models need more explicit instructions, more examples, and more structure. Larger models fill in gaps on their own and infer what you meant.
+
+That third point is the one people miss. A prompt that works beautifully on a frontier model can fall apart on a fast one — not because the small model is bad, but because your prompt was quietly leaning on the big model to read between the lines. Moving *down* a tier is a fantastic way to discover which parts of your prompt were doing real work and which parts were wishful thinking.
+
+!!! mascot-tip "Polly's Tip"
+    <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly giving a tip">
+    Words matter - let's get them right! Here's my favorite habit: run your prompt on the *cheap, fast* model first. If it nails the answer, congratulations — you just got your result faster and cheaper. If it flubs it, you've learned exactly which part of your prompt needed more scaffolding. Either way you win. That's not a hack, fellow prompt crafters, that's just good engineering.
+
+We'll come back to this decision from two other angles later: [Chapter 13](../13-evaluation-optimization/index.md) covers how to *test* whether a cheaper model is good enough for your task, and [Chapter 14](../14-usage-limits-token-economics/index.md) covers what these tiers actually cost when you're running thousands of requests. For now, just know that the dropdown is there — and that clicking it is a legitimate prompt engineering move.
 
 ## Inference: When the Model Thinks
 
@@ -398,6 +455,7 @@ Implementation: p5.js canvas with hover detection and click handling
 18. API
 19. Chatbot Interface
 20. Human-AI Interaction
+21. Model Families and Tiers
 
 ## Prerequisites
 

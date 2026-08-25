@@ -116,6 +116,14 @@ The **Transformer** is the neural network architecture that powers virtually eve
 
 **Inference** is the process of a trained model generating a response to your input. Language models generate text **one token at a time**, from left to right. Each time the model produces a token, it considers everything that came before and predicts the most likely next token. This is why the text appears word by word in chat interfaces. This token-by-token generation is also why chain-of-thought prompting works — it forces the model to lay out reasoning before jumping to a conclusion. See [Chapter 1](chapters/01-ai-ml-foundations/index.md).
 
+### What do the different model names like Haiku, Sonnet, and Opus mean?
+
+They are **capability tiers**. Every major AI provider offers roughly the same three: a **fast/small** tier for high-volume, well-defined work (classification, extraction, routing), a **balanced** mid tier that handles most everyday writing, analysis, and coding, and a **frontier** tier for the hardest reasoning. Anthropic names its tiers after forms of writing — Haiku, Sonnet, Opus, and Fable — which conveniently runs shortest to longest. Other providers use different vocabulary (OpenAI appends "mini"; Google uses "Flash" and "Pro") for the same underlying structure. The product names change every few months; the tier pattern has held for years, so learn the pattern rather than memorizing names. See [Chapter 1](chapters/01-ai-ml-foundations/index.md).
+
+### Does the model I pick change how I should write my prompt?
+
+Yes, and this surprises people. Smaller models need **more explicit instructions, more examples, and more structure**. Larger models infer more from less. This means a prompt that works beautifully on a frontier model can fall apart on a fast one — not because the small model is bad, but because your prompt was quietly relying on the big model to read between the lines. Deliberately testing your prompt one tier *down* is a great way to find out which parts of it are doing real work. See [Chapter 1](chapters/01-ai-ml-foundations/index.md).
+
 ### What is a prompt template?
 
 A **prompt template** is a reusable prompt structure with placeholders (often marked with curly braces) that you fill in for each new use case. Templates capture proven prompt patterns so you and your team can use them consistently. For example, a template might define the role, task structure, and output format, with variables for the specific content. Building a library of templates is one of the most practical things you can do as a prompt engineer. See [Chapter 4](chapters/04-core-prompt-techniques/index.md).
@@ -242,7 +250,7 @@ Use **task decomposition** and **prompt chaining**. Break the complex task into 
 
 ### How do I know which AI model to use for my task?
 
-Match model capability to task complexity. Simple tasks (basic Q&A, formatting, translation) work fine with smaller, cheaper models. Complex tasks (multi-step reasoning, nuanced analysis, creative writing) benefit from larger, more capable models. Consider cost, latency, context window size, and specific strengths of each model. Test your prompts across multiple models to find the best fit. See [Chapter 13](chapters/13-evaluation-optimization/index.md) and [Chapter 14](chapters/14-usage-limits-token-economics/index.md).
+Match model capability to task complexity. Simple tasks (basic Q&A, formatting, translation) work fine with smaller, cheaper models. Complex tasks (multi-step reasoning, nuanced analysis, creative writing) benefit from larger, more capable models. Consider cost, latency, context window size, and specific strengths of each model. A good default habit: try the cheap, fast tier first — if it nails the task you got your answer faster and cheaper, and if it fails you have learned exactly where your prompt needs more scaffolding. See [Chapter 1](chapters/01-ai-ml-foundations/index.md) for the tier structure, [Chapter 13](chapters/13-evaluation-optimization/index.md) for how to test whether a cheaper model is good enough, and [Chapter 14](chapters/14-usage-limits-token-economics/index.md) for what each tier costs.
 
 ## Best Practice Questions
 

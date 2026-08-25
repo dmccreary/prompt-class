@@ -1257,6 +1257,16 @@ Systematically evaluating how different AI models perform on the same tasks and 
 
 Model comparison reveals that no single model is best at everything. Different models have different strengths, and the best choice depends on your specific needs.
 
+#### Model Families and Tiers
+
+A provider's lineup of models offered at distinct capability levels — typically a fast/small tier, a balanced mid tier, and a frontier tier — that trade reasoning capability against speed and cost.
+
+Every major provider ships roughly the same three tiers, because they are all balancing the same tradeoff. The product names change frequently; the tier structure rarely does. Anthropic names its models after forms of writing (Haiku, Sonnet, Opus, Fable), which conveniently encodes the ordering from shortest to longest.
+
+Choosing a tier is a prompt engineering decision, not just a billing one: smaller models need more explicit instructions, more examples, and more structure, while larger models infer more from less. A prompt that works on a frontier model may fail on a fast one because it was quietly relying on the larger model to read between the lines.
+
+**Example:** Using Claude Haiku to classify 50,000 support tickets by category, then Claude Opus to write the executive summary of what those categories reveal — matching tier to task instead of paying frontier prices for classification.
+
 #### Model Parameters
 
 The internal numerical values (weights) within a neural network that are adjusted during training and determine how the model responds to inputs.
@@ -1267,7 +1277,7 @@ When people say a model has "70 billion parameters," they're describing its size
 
 The process of choosing the most appropriate AI model for a specific task, considering factors like capability, cost, speed, context window size, and specialized features.
 
-Model selection is a key decision in prompt engineering. The best prompt in the world won't help if you're using the wrong model for the job.
+Model selection is a key decision in prompt engineering. The best prompt in the world won't help if you're using the wrong model for the job. See also Model Families and Tiers for the structure of the options you are selecting among.
 
 **Example:** Using a small, fast model for simple classification tasks and reserving the expensive frontier model for complex reasoning — matching model capability to task difficulty.
 

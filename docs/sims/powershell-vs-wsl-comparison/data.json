@@ -1,0 +1,141 @@
+{
+  "title": "PowerShell vs. WSL",
+  "subtitle": "Which shell should drive your AI agent's daily automation on Windows?",
+  "columns": [
+    {
+      "key": "powershell",
+      "name": "PowerShell",
+      "logo": "logos/powershell.svg",
+      "tagline": "Native Windows shell"
+    },
+    {
+      "key": "wsl",
+      "name": "WSL",
+      "logo": "logos/tux.svg",
+      "tagline": "Real Linux, inside Windows"
+    }
+  ],
+  "rows": [
+    {
+      "factor": "Ease of Installation",
+      "cells": {
+        "powershell": {
+          "value": "Already installed",
+          "detail": "PowerShell ships with every modern Windows install. There is nothing to set up before an agent can start running commands.",
+          "example": null
+        },
+        "wsl": {
+          "value": "One-time setup",
+          "detail": "A single admin command installs WSL2 plus a default Ubuntu distribution. Requires one restart, then it behaves like a permanent Linux machine.",
+          "example": "wsl --install\n# restart Windows when prompted\n# launch it any time with: wsl"
+        }
+      }
+    },
+    {
+      "factor": "Matches AI Tooling Defaults",
+      "cells": {
+        "powershell": {
+          "value": "Rarely",
+          "detail": "Most agent skills, install scripts, and copy-pasted tutorial commands assume a POSIX shell. An agent has to translate bash idioms into PowerShell on the fly, and translations don't always land cleanly.",
+          "example": null
+        },
+        "wsl": {
+          "value": "Yes \u2014 it IS bash",
+          "detail": "Commands an agent generates from training data or from a README almost always assume bash. In WSL those commands can be pasted in and run exactly as written.",
+          "example": null
+        }
+      }
+    },
+    {
+      "factor": "Package Managers",
+      "cells": {
+        "powershell": {
+          "value": "winget / choco",
+          "detail": "Windows-native package managers exist, but their command syntax and package names rarely match what a tutorial written for Mac/Linux shows.",
+          "example": "winget install Python.Python.3.12\nwinget install Git.Git"
+        },
+        "wsl": {
+          "value": "apt / pip / npm / conda",
+          "detail": "The exact package managers most tutorials reference \u2014 installs behave identically to a Mac or a Linux server.",
+          "example": "sudo apt update && sudo apt install -y python3-pip\npip install mkdocs mkdocs-material"
+        }
+      }
+    },
+    {
+      "factor": "File Paths",
+      "cells": {
+        "powershell": {
+          "value": "Backslash, case-insensitive",
+          "detail": "Windows-style paths use backslashes and ignore case, which matches every other Windows tool \u2014 but breaks scripts written with forward-slash paths.",
+          "example": "C:\\Users\\Dan\\projects\\prompt-class"
+        },
+        "wsl": {
+          "value": "Forward slash, case-sensitive",
+          "detail": "POSIX-style paths, exactly like on Mac or Linux. Case matters, so 'Projects' and 'projects' are different directories.",
+          "example": "/home/dan/projects/prompt-class"
+        }
+      }
+    },
+    {
+      "factor": "Access to Windows-Native Features",
+      "cells": {
+        "powershell": {
+          "value": "Full access",
+          "detail": "Direct access to the registry, COM objects, Active Directory, IIS, and Office automation. If the task is genuinely about managing Windows itself, PowerShell is the only real option.",
+          "example": "Get-Service | Where-Object Status -eq 'Running'\nGet-ItemProperty 'HKLM:\\SOFTWARE\\...'"
+        },
+        "wsl": {
+          "value": "Limited",
+          "detail": "WSL cannot directly touch the Windows registry, COM objects, or Windows services. It's a Linux environment first \u2014 great for cross-platform dev work, not for Windows administration.",
+          "example": null
+        }
+      }
+    },
+    {
+      "factor": "Speed on Windows Files",
+      "cells": {
+        "powershell": {
+          "value": "Native \u2014 no penalty",
+          "detail": "PowerShell reads and writes the Windows filesystem directly, with no translation layer to slow it down.",
+          "example": null
+        },
+        "wsl": {
+          "value": "Slower across the boundary",
+          "detail": "Working on files under the Windows drive from inside WSL (/mnt/c/...) crosses a filesystem boundary and is noticeably slower. Keep project repos inside WSL's own filesystem (~/) instead.",
+          "example": "# Slow: crosses the WSL/Windows boundary\ncd /mnt/c/Users/Dan/projects\n\n# Fast: lives natively inside WSL\ncd ~/projects"
+        }
+      }
+    },
+    {
+      "factor": "Error Rate with AI-Generated Commands",
+      "cells": {
+        "powershell": {
+          "value": "Higher",
+          "detail": "Quoting rules, aliases that only look like their bash namesakes (ls, cat), and object-based pipes cause AI-generated commands to fail or behave unexpectedly more often.",
+          "example": "# Looks like bash, behaves differently:\nls -la\n# PowerShell's 'ls' is an alias for Get-ChildItem\n# and doesn't support the -la flag combo at all"
+        },
+        "wsl": {
+          "value": "Lower",
+          "detail": "Commands generated by an AI agent, copied from a tutorial, or pulled from a skill's script almost always run correctly on the first try, since they were written with bash in mind.",
+          "example": null
+        }
+      }
+    },
+    {
+      "factor": "Publishing with mkdocs gh-deploy",
+      "cells": {
+        "powershell": {
+          "value": "Works, with friction",
+          "detail": "The mkdocs command itself runs fine once the environment is active, but getting there can involve execution-policy prompts and PATH troubleshooting that look nothing like the Mac/Linux instructions most guides give.",
+          "example": "conda activate mkdocs\nmkdocs gh-deploy\n# common snag: Set-ExecutionPolicy\n# needed before scripts are allowed to run"
+        },
+        "wsl": {
+          "value": "Two lines, done",
+          "detail": "Identical to publishing from a Mac. No execution-policy prompts, no PATH archaeology \u2014 just activate the environment and deploy.",
+          "example": "conda activate mkdocs\nmkdocs gh-deploy"
+        }
+      }
+    }
+  ],
+  "source": "See the \"PowerShell vs. WSL\" appendix for the full write-up and reasoning behind this comparison."
+}

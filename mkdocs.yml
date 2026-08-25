@@ -73,16 +73,21 @@ nav:
     - Mascot Style Guide: learning-graph/mascot-test.md
   
   - MicroSims:
-    - Learning Graph Viewer: sims/graph-viewer/index.md
-    - Embedding Space Explorer: sims/embedding-space/index.md
-    - Claude Desktop Home Screen: sims/claude-desktop-home-screen/index.md
+    - List of MicroSims: sims/index.md
     - Claude Desktop Footer Regions: sims/claude-desktop-footer/index.md
+    - Claude Desktop Home Screen: sims/claude-desktop-home-screen/index.md
+    - Embedding Space Explorer: sims/embedding-space/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+    - PowerShell vs. WSL Comparison Infographic: sims/powershell-vs-wsl-comparison/index.md
+
+
 
   - Appendices:
     - The ChatGPT Millionaire Boom: appendices/chatgpt-millionaires.md
     - Crash Course in Talking to Agents: appendices/crash-course-talking-to-agents.md
     - AI Mentorship Certification: appendices/ai-mentorship-certification.md
     - Claude Desktop UI Guide: appendices/claude-desktop-ui-guide.md
+    - PowerShell vs. WSL: appendices/powershell-vs-wsl.md
   - Slides: slides.md
   - Instructor Notes: instructor-notes.md
   - FAQ: faq.md
@@ -128,6 +133,8 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
 extra_css:
   - css/extra.css
   - css/mascot.css

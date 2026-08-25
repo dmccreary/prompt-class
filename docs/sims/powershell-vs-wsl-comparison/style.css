@@ -1,0 +1,286 @@
+/*
+ * PowerShell vs. WSL Comparison Infographic
+ * Designed for iframe embedding with minimal padding/margins.
+ * Target: <iframe src="main.html" height="820px" width="100%" scrolling="no"></iframe>
+ *
+ * Lessons learned:
+ * - Pure-CSS attr() tooltips can't hold multi-line <pre><code> content, so
+ *   this sim uses a single floating #infobox positioned in JS instead.
+ * - Hover shows the infobox; a click/tap pins it open (touch devices have
+ *   no hover), and clicking the (i) again, the close button, outside the
+ *   box, or Escape all dismiss it.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: aliceblue;
+    color: #333;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 14px 14px 8px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+.table-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.compare-table tr:last-child td {
+    border-bottom: none;
+}
+
+.factor-header {
+    width: 24%;
+    background: #f1f5f9;
+    color: #1a1a2e;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 8px 0 0 0;
+    vertical-align: middle;
+}
+
+.col-header {
+    width: 38%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.col-header.powershell { background: rgba(1, 36, 86, 0.06); }
+.col-header.wsl { background: rgba(245, 166, 35, 0.08); }
+
+.col-header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 0;
+}
+
+.col-header-inner img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+}
+
+.col-header-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.col-header-tagline {
+    font-size: 0.72rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.factor-cell {
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 0.85rem;
+    background: #fafbfc;
+}
+
+.data-cell {
+    cursor: default;
+    position: relative;
+}
+
+.data-cell.has-detail {
+    cursor: help;
+}
+
+.cell-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+    border-radius: 6px;
+    padding: 6px 8px;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.data-cell.powershell .cell-inner { background: rgba(1, 36, 86, 0.05); }
+.data-cell.wsl .cell-inner { background: rgba(245, 166, 35, 0.06); }
+
+.data-cell.has-detail:hover .cell-inner,
+.data-cell.pinned .cell-inner {
+    box-shadow: 0 0 0 2px rgba(38, 113, 190, 0.45) inset;
+    background: rgba(38, 113, 190, 0.1);
+}
+
+.cell-value {
+    font-size: 0.82rem;
+    color: #222;
+    font-weight: 500;
+}
+
+.info-icon {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2671BE;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    font-style: normal;
+}
+
+.instructions {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.source {
+    text-align: center;
+    font-size: 0.72rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Floating infobox */
+.infobox {
+    display: none;
+    position: absolute;
+    max-width: 320px;
+    background: #1a1a2e;
+    color: #f4f6fb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    z-index: 100;
+    font-size: 0.8rem;
+}
+
+.infobox.visible {
+    display: block;
+}
+
+.infobox-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background: none;
+    border: none;
+    color: #cfd6e6;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+
+.infobox-close:hover {
+    color: #ffffff;
+}
+
+.infobox-heading {
+    font-weight: 700;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+    padding-right: 16px;
+    color: #9ec3f0;
+}
+
+.infobox-detail {
+    color: #e7ebf5;
+    margin-bottom: 6px;
+}
+
+.infobox-example {
+    display: block;
+    background: #0d0d1a;
+
+    color: #b6f2c1;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.74rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+}
+
+.infobox-example[hidden] {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .compare-table th,
+    .compare-table td {
+        padding: 6px 6px;
+    }
+
+    .col-header-inner img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cell-value {
+        font-size: 0.74rem;
+    }
+
+    .infobox {
+        max-width: 240px;
+        font-size: 0.74rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .factor-header,
+    .col-header-name {
+        font-size: 0.78rem;
+    }
+}

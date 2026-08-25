@@ -229,7 +229,7 @@ That 30 seconds is the best investment in quality you'll ever make.
 
 #### Diagram: Prompt Iteration Cycle
 
-<iframe src="../../sims/prompt-iteration-cycle/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/prompt-iteration-cycle/main.html" width="100%" height="567px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Prompt Iteration Cycle</summary>
@@ -273,7 +273,7 @@ Implementation: p5.js canvas with interactive nodes and animated center gauge
 
 #### Diagram: Prompt Quality Evaluator
 
-<iframe src="../../sims/prompt-quality-evaluator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/prompt-quality-evaluator/main.html" width="100%" height="617px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Prompt Quality Evaluator</summary>

@@ -1,0 +1,75 @@
+{
+  "title": "Temperature Explorer",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "An interactive bar chart of candidate next tokens showing how the temperature parameter reshapes the probability distribution, with live sampling that builds a sentence one token at a time.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Temperature and Token Sampling",
+    "learningObjectives": [
+      "Demonstrate how the temperature parameter changes the probability distribution of token selection",
+      "Predict the effect of temperature on output creativity"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Token",
+      "Models generate one token at a time"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 565
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Live parameter manipulation with raw and adjusted values shown side by side",
+    "keyQuestions": [
+      "Why is temperature 0 right for extraction and wrong for creative writing?",
+      "If a model gives a different answer each time, is that a bug?"
+    ],
+    "commonMisconceptions": [
+      "Believing temperature makes the model smarter or more knowledgeable",
+      "Believing high temperature adds new information rather than reweighting existing candidates"
+    ],
+    "assessmentOpportunities": [
+      "Predict the output at temperature 0 before running it",
+      "Recommend a temperature for an unfamiliar task and justify it"
+    ]
+  },
+  "chapter": "03-prompt-types-parameters",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/temperature-explorer/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Temperature",
+    "Softmax",
+    "Token Sampling",
+    "Probability Distribution",
+    "Determinism"
+  ],
+  "canvasHeight": 565,
+  "library": "p5.js"
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Foundation Model Training Pipeline",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "A three-stage walkthrough of how raw text becomes a useful AI assistant - pre-training, fine-tuning, and inference - with a toggle that swaps plain-language explanations for concrete sample data.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Foundation Model Training Pipeline",
+    "learningObjectives": [
+      "Explain how pre-training, fine-tuning, and transfer learning work together to create a useful language model"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Token",
+      "Training Data",
+      "Inference"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 565
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Step-through pipeline with progressive disclosure of concrete example data",
+    "keyQuestions": [
+      "Which stage can a prompt engineer actually influence?",
+      "Where does a model's willingness to refuse harmful requests come from?"
+    ],
+    "commonMisconceptions": [
+      "Believing the model learns from your prompts during a conversation",
+      "Confusing pre-training with fine-tuning"
+    ],
+    "assessmentOpportunities": [
+      "Name the three stages in order and what each produces",
+      "Explain the difference between pre-training and fine-tuning in one sentence"
+    ]
+  },
+  "chapter": "01-ai-ml-foundations",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/foundation-model-pipeline/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Pre-Training",
+    "Fine-Tuning",
+    "Transfer Learning",
+    "Foundation Model",
+    "Inference",
+    "API"
+  ],
+  "canvasHeight": 565,
+  "library": "p5.js"
+}

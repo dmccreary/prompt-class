@@ -1,0 +1,78 @@
+{
+  "title": "Context Management Decision Framework",
+  "creator": "Dan McCreary",
+  "subject": "Prompt Engineering",
+  "description": "An interactive decision tree for choosing a context management strategy, from prompt compression through chunking to conversation history management, with hover details for every step.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "Undergraduate",
+      "Adult"
+    ],
+    "subjectArea": "Prompt Engineering",
+    "topic": "Context Management Strategy Selection",
+    "learningObjectives": [
+      "Select and justify an appropriate context management strategy for a given prompting task",
+      "Decide when to reset a long conversation"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Prompt compression",
+      "Relevance filtering",
+      "Context injection",
+      "Conversation history"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "mermaid.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 880
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Decision tree with hover-revealed diagnostic criteria at each fork",
+    "keyQuestions": [
+      "Why is compression worth doing even with plenty of window to spare?",
+      "What does a context reset preserve, and what does it lose?"
+    ],
+    "commonMisconceptions": [
+      "Treating context management techniques as a checklist rather than alternatives",
+      "Believing the model remembers prior turns on its own"
+    ],
+    "assessmentOpportunities": [
+      "Route an unfamiliar task to a leaf and name the technique",
+      "State the symptom that triggers a context reset"
+    ]
+  },
+  "chapter": "07-context-memory-management",
+  "rights": "CC BY-NC-SA 4.0",
+  "language": "en-US",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "identifier": "https://dmccreary.github.io/prompt-class/sims/context-management-decision-framework/",
+  "publisher": "Prompt Engineering Class",
+  "concepts": [
+    "Prompt Compression",
+    "Relevance Filtering",
+    "Context Injection",
+    "Domain Priming",
+    "Chunking",
+    "Conversation History"
+  ],
+  "canvasHeight": 880,
+  "library": "mermaid.js"
+}

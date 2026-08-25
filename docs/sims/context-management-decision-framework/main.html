@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Context Management Decision Framework</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="diagram-panel">
+            <div class="mermaid">
+flowchart TD
+    A["New Prompt Task"] --> B{"How much<br/>context needed?"}
+    B -->|Minimal| C["Prompt Compression"]
+    B -->|Moderate| D["Relevance Filtering<br/>+ Context Injection"]
+    B -->|Extensive| E{"Does it fit in<br/>context window?"}
+    E -->|Yes| F["Background Info<br/>+ Domain Priming"]
+    E -->|No| G["Document Summarization<br/>+ Chunking"]
+    C --> H["Submit Prompt"]
+    D --> H
+    F --> H
+    G --> I["Process in Stages"]
+    I --> H
+    H --> J{"Multi-turn<br/>conversation?"}
+    J -->|No| L["Done"]
+    J -->|Yes| K["Manage<br/>Conversation History"]
+    K --> M{"History<br/>getting long?"}
+    M -->|No| L
+    M -->|Yes| N["Summarize<br/>+ Reset Context"]
+    N --> L
+
+    classDef startNode fill:#4a7fb5,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef decisionNode fill:#f0a04b,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef techniqueNode fill:#a3c4dc,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef actionNode fill:#7ec4a7,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef endNode fill:#2e6b4f,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+
+    class A startNode
+    class B,E,J,M decisionNode
+    class C,D,F,G techniqueNode
+    class H,I,K,N actionNode
+    class L endNode
+
+    linkStyle default font-size:16px
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>Details</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Hover over a node to see details</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const nodeInfo = {
+            'A': {
+                title: 'New Prompt Task',
+                description: 'Every context decision starts here. Before choosing a technique, be clear about what you are asking for and what the model would need to know to answer it well.'
+            },
+            'B': {
+                title: 'How much context needed?',
+                description: 'The first fork. Minimal means the task is self-contained. Moderate means the model needs a few specific facts. Extensive means it needs a document, a dataset, or a body of background material.'
+            },
+            'C': {
+                title: 'Prompt Compression',
+                description: 'Say more with fewer tokens. Cut throat-clearing, redundant instructions, and polite filler. A tight prompt is not a terse one - it is one where every token is doing work.'
+            },
+            'D': {
+                title: 'Relevance Filtering + Context Injection',
+                description: 'Decide what actually bears on the task, then include exactly that. Filtering removes what does not help; injection deliberately adds the facts, constraints, and definitions that do.'
+            },
+            'E': {
+                title: 'Does it fit in context window?',
+                description: 'Count the tokens, including your instructions and the expected response. If the material would fill most of the window, treat it as not fitting - crowding the window degrades quality well before you hit the hard limit.'
+            },
+            'F': {
+                title: 'Background Info + Domain Priming',
+                description: 'It fits, so use the room well. Supply the background the model needs and prime it with the vocabulary of your domain, so internal jargon is not guessed at.'
+            },
+            'G': {
+                title: 'Document Summarization + Chunking',
+                description: 'It does not fit, so reduce it first. Split the material into manageable pieces and summarize them, trading some detail for the ability to reason over the whole.'
+            },
+            'H': {
+                title: 'Submit Prompt',
+                description: 'Every technique path converges here. At this point the prompt should carry the instruction, the necessary context, and nothing that is merely nice to have.'
+            },
+            'I': {
+                title: 'Process in Stages',
+                description: 'Chunked material needs more than one pass: process each piece, then combine the intermediate results. Keep the original task statement in every stage so nothing drifts.'
+            },
+            'J': {
+                title: 'Multi-turn conversation?',
+                description: 'A one-shot task ends here. A conversation does not, because every following turn re-sends the history and the window keeps filling up.'
+            },
+            'K': {
+                title: 'Manage Conversation History',
+                description: 'The model is stateless. What feels like memory is the application resending prior turns. Managing that history - what stays, what goes - is now your job.'
+            },
+            'M': {
+                title: 'History getting long?',
+                description: 'Watch for the symptoms: the model forgetting earlier instructions, responses slowing down, or costs climbing. Those mean the history is crowding out the task.'
+            },
+            'N': {
+                title: 'Summarize + Reset Context',
+                description: 'Ask for a summary of what matters so far, start a fresh conversation, and paste the summary in as the opening context. You keep the thread and reclaim the window.'
+            },
+            'L': {
+                title: 'Done',
+                description: 'The task is complete and the context stayed under control. In practice you will loop back through this framework many times in a single project.'
+            }
+        };
+    </script>
+    <script src="context-management-decision-framework.js"></script>
+</body>
+</html>

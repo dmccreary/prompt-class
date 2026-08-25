@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Long-Form Document Processing Strategies</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="diagram-panel">
+            <div class="mermaid">
+flowchart TD
+    A["Long Document"] --> B{"Fits in<br/>context window?"}
+    B -->|Yes| C["Process directly"]
+    B -->|No| D{"Task type?"}
+    D -->|Summarization| E["Chunk and summarize<br/>each piece"]
+    D -->|Question answering| F["Extract relevant<br/>sections only"]
+    D -->|Analysis| G["Hierarchical: outline first,<br/>then drill down"]
+    E --> H["Combine chunk summaries<br/>into final summary"]
+    F --> I["Process focused excerpt<br/>with question"]
+    G --> J["Process relevant<br/>sections in detail"]
+    C --> K["Final Output"]
+    H --> K
+    I --> K
+    J --> K
+
+    classDef startNode fill:#4a7fb5,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef decisionNode fill:#f0a04b,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef processNode fill:#a3c4dc,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef combineNode fill:#7ec4a7,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef endNode fill:#2e6b4f,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+
+    class A startNode
+    class B,D decisionNode
+    class C,E,F,G processNode
+    class H,I,J combineNode
+    class K endNode
+
+    linkStyle default font-size:16px
+            </div>
+        </div>
+        <div class="info-panel">
+            <h3>Details</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Hover over a node to see details</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const nodeInfo = {
+            'A': {
+                title: 'Long Document',
+                description: 'Anything too big to skim: a contract, a research paper, a quarter of meeting notes. Before you do anything else, estimate its size in tokens. A rough rule is 750 words per 1,000 tokens.'
+            },
+            'B': {
+                title: 'Fits in context window?',
+                description: 'Compare the document size against your model\'s context window, and remember the window has to hold your instructions and the response too. If the document uses most of the window, treat it as "does not fit".'
+            },
+            'C': {
+                title: 'Process directly',
+                description: 'The simplest path. Paste the whole document with a clear instruction. Nothing is lost to chunking, and the model can reason across the entire text at once.'
+            },
+            'D': {
+                title: 'Task type?',
+                description: 'When the document will not fit, the right strategy depends on what you are trying to get out of it. Summarizing, answering a question, and analyzing structure each call for a different approach.'
+            },
+            'E': {
+                title: 'Chunk and summarize each piece',
+                description: 'Split the document into sections that fit comfortably, summarize each one independently, then summarize the summaries. Overlap the chunks slightly so ideas that straddle a boundary are not lost.'
+            },
+            'F': {
+                title: 'Extract relevant sections only',
+                description: 'For a specific question, most of the document is noise. Find the sections that actually bear on the question and send only those. Cheaper, faster, and usually more accurate than sending everything.'
+            },
+            'G': {
+                title: 'Hierarchical: outline first, then drill down',
+                description: 'Ask for a structural outline first, decide which branches matter, then process those branches in detail. This preserves the shape of the argument, which flat chunking tends to destroy.'
+            },
+            'H': {
+                title: 'Combine chunk summaries into final summary',
+                description: 'The second pass. Feed the chunk summaries back in and ask for one coherent summary. Watch for repetition, since each chunk may restate shared background.'
+            },
+            'I': {
+                title: 'Process focused excerpt with question',
+                description: 'Send the extracted sections together with the original question. Ask the model to say so explicitly if the excerpt does not contain the answer, rather than guessing.'
+            },
+            'J': {
+                title: 'Process relevant sections in detail',
+                description: 'Work through the branches the outline identified as important, at full depth. The outline stays in the prompt as a map so the model knows where each section sits.'
+            },
+            'K': {
+                title: 'Final Output',
+                description: 'All four paths converge here. Whichever route you took, verify the result against the source. Chunked pipelines in particular can drop details that only appear once.'
+            }
+        };
+    </script>
+    <script src="long-form-document-processing-strategies.js"></script>
+</body>
+</html>

@@ -210,7 +210,7 @@ This is why the same base model can be fine-tuned into a coding assistant, a med
 
 #### Diagram: Foundation Model Training Pipeline
 
-<iframe src="../../sims/foundation-model-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/foundation-model-pipeline/main.html" width="100%" height="527px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Foundation Model Training Pipeline</summary>
@@ -321,7 +321,7 @@ Now that you know what's happening behind the scenes, you're ready to start craf
 
 #### Diagram: AI Concepts Hierarchy
 
-<iframe src="../../sims/ai-concepts-hierarchy/main.html" width="100%" height="550px" scrolling="no"></iframe>
+<iframe src="../../sims/ai-concepts-hierarchy/main.html" width="100%" height="607px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>AI Concepts Hierarchy</summary>

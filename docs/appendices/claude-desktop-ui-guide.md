@@ -24,7 +24,7 @@ When you open Claude Desktop in Home mode, this is your launchpad. The left **si
 
 The interactive diagram below labels every region. Switch to **Quiz** mode to test yourself once you've explored.
 
-<iframe src="../../sims/claude-desktop-home-screen/main.html" width="100%" height="640px" frameborder="0" scrolling="no"></iframe>
+<iframe src="../../sims/claude-desktop-home-screen/main.html" width="100%" height="902px" frameborder="0" scrolling="no"></iframe>
 
 [Open the Home Screen diagram fullscreen](../sims/claude-desktop-home-screen/index.md){ .md-button }
 
@@ -160,7 +160,7 @@ The footer is small but mighty. It's where you set your file context (local or c
 
 Hover over each numbered marker in the diagram below to learn what it does. It's a wide strip, so labels sit above and below the image.
 
-<iframe src="../../sims/claude-desktop-footer/main.html" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+<iframe src="../../sims/claude-desktop-footer/main.html" width="100%" height="522px" frameborder="0" scrolling="no"></iframe>
 
 [Open the Footer Regions diagram fullscreen](../sims/claude-desktop-footer/index.md){ .md-button }
 

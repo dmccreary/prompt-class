@@ -1,4 +1,4 @@
-# Prompt Engineering Class Slides
+# Agent Orchestration Slides
 
 ## One-Hour Class for Applied AI
 

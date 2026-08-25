@@ -77,14 +77,14 @@ He is the co-author of *Making Sense of NoSQL* (Manning Publications), the found
 
 If you reference this course in academic work, presentations, or other publications, please use the following citation:
 
-> McCreary, D. (2026). *Prompt Engineering: A Hands-On Course for Writing Effective AI Prompts*. Retrieved from [https://dmccreary.github.io/prompt-class](https://dmccreary.github.io/prompt-class)
+> McCreary, D. (2026). *Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams*. Retrieved from [https://dmccreary.github.io/prompt-class](https://dmccreary.github.io/prompt-class)
 
 **BibTeX:**
 
 ```bibtex
 @misc{mccreary2026prompt,
   author       = {McCreary, Dan},
-  title        = {Prompt Engineering: A Hands-On Course for Writing Effective AI Prompts},
+  title        = {Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams},
   year         = {2026},
   url          = {https://dmccreary.github.io/prompt-class},
   note         = {Open educational resource, licensed under CC BY-NC-SA 4.0}

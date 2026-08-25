@@ -1,6 +1,11 @@
 ---
 title: "Claude Desktop Home Screen"
 description: "An interactive, labeled tour of the Claude Desktop Home screen — sidebar, prompt box, mode toggles, and model controls."
+image: /sims/claude-desktop-home-screen/claude-desktop-home-screen.png
+og:image: /sims/claude-desktop-home-screen/claude-desktop-home-screen.png
+twitter:image: /sims/claude-desktop-home-screen/claude-desktop-home-screen.png
+social:
+   cards: false
 hide:
   - toc
 ---

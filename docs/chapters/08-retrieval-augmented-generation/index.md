@@ -102,7 +102,7 @@ Embedding Space (simplified to 2D):
            ●                                   ●
 -->
 
-<iframe src="../../sims/embedding-space/main.html" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+<iframe src="../../sims/embedding-space/main.html" width="100%" height="582px" frameborder="0" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Expand to see diagram specification</summary>

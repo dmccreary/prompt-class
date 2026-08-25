@@ -1,12 +1,12 @@
 ---
-title: Course Description for Prompt Engineering
-description: A detailed course description for Prompt Engineering including overview, topics covered and learning objectives in the format of the 2001 Bloom Taxonomy
+title: Course Description for Agent Orchestration
+description: A detailed course description for Agent Orchestration including overview, topics covered and learning objectives in the format of the 2001 Bloom Taxonomy
 quality_score: 97
 ---
 
-# Prompt Engineering
+# Agent Orchestration
 
-**Title:** Prompt Engineering: From Fundamentals to Agentic AI
+**Title:** Agent Orchestration: From Prompt Engineering to Managing AI Agent Teams
 
 **Target Audience:** General audience with at least a high school education, including business professionals, educators, students, and anyone seeking to effectively communicate with large language models (LLMs). No prior programming or AI experience is required.
 

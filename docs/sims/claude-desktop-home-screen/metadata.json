@@ -3,7 +3,7 @@
   "description": "An interactive infographic overlay that labels the sixteen key regions of the Claude Desktop Home screen: the sidebar toggle, search, Home/Code tabs, prompt box, the Chat/Cowork toggle, model selector, approval mode, and more.",
   "type": "MicroSim",
   "subject": "Prompt Engineering",
-  "creator": "Prompt Engineering Class",
+  "creator": "Agent Orchestration",
   "license": "CC BY-NC-SA 4.0",
   "format": "text/html",
   "educationalUse": "instruction",

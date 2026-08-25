@@ -1,6 +1,6 @@
 # Concept Taxonomy
 
-This taxonomy organizes the 305 concepts in the Prompt Engineering learning graph into 14 categories.
+This taxonomy organizes the 305 concepts in the Agent Orchestration learning graph into 14 categories.
 
 ## Categories
 

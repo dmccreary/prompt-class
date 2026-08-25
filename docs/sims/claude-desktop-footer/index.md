@@ -1,6 +1,11 @@
 ---
 title: "Claude Desktop Footer Regions"
 description: "An interactive, labeled tour of the Claude Desktop footer bar — file context, Git status, permissions, model, effort, and account controls."
+image: /sims/claude-desktop-footer/claude-desktop-footer.png
+og:image: /sims/claude-desktop-footer/claude-desktop-footer.png
+twitter:image: /sims/claude-desktop-footer/claude-desktop-footer.png
+social:
+   cards: false
 hide:
   - toc
 ---

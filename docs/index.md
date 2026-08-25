@@ -1,12 +1,12 @@
 ---
-title: Prompt Engineering
-description: An interactive intelligent textbook on prompt engineering with embedded simulations.
+title: Agent Orchestration
+description: An interactive intelligent textbook on agent orchestration and prompt engineering with embedded simulations.
 image: img/cover-landscape.png
 og:image: img/cover-landscape.png
 hide:
     toc
 ---
-# Prompt Engineering Course
+# Agent Orchestration
 
 ![](./img/cover.png)
 <!--

@@ -62,7 +62,7 @@
   "type": "Interactive Simulation",
   "format": "text/html",
   "identifier": "https://dmccreary.github.io/prompt-class/sims/long-form-document-processing-strategies/",
-  "publisher": "Prompt Engineering Class",
+  "publisher": "Agent Orchestration",
   "concepts": [
     "Chunking",
     "Summarization",

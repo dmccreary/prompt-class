@@ -1,6 +1,6 @@
-# Prompt Engineering: Intelligent Textbook
+# Agent Orchestration: Intelligent Textbook
 
-Welcome to the Prompt Engineering Intelligent Textbook. This course provides a comprehensive journey through the art and science of communicating effectively with large language models. From foundational AI concepts through advanced agentic systems and real-world applications, each chapter builds on the previous ones to develop your prompt engineering expertise.
+Welcome to the Agent Orchestration Intelligent Textbook. This course provides a comprehensive journey through the art and science of communicating effectively with large language models. From foundational AI concepts through advanced agentic systems and real-world applications, each chapter builds on the previous ones to develop your prompt engineering expertise.
 
 ## Chapters
 

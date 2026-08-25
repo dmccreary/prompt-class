@@ -1,0 +1,54 @@
+{
+  "title": "Claude Code Setup",
+  "creator": "Dan McCreary",
+  "subject": "AI Agent Tooling",
+  "description": "Interactive vis-network diagram of the four Week 1 tools (Claude Desktop, GitHub, VS Code, Unix shell) and the labeled relationships that connect them.",
+  "date": "2026-08-25",
+  "educational": {
+    "gradeLevel": [
+      "Adult Education",
+      "Professional Training"
+    ],
+    "subjectArea": "Prompt Engineering / Agent Tooling",
+    "topic": "Claude Code Setup",
+    "learningObjectives": [
+      "Identify the four core tools used to set up an AI agent workflow: Claude Desktop, GitHub, VS Code, and the Unix shell.",
+      "Explain how each tool controls or communicates with the others.",
+      "Explain why a per-project GitHub repository gives Claude the ability to undo its own actions."
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 640
+    },
+    "responsive": true,
+    "dependencies": [
+      "vis-network@9.1.9"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration",
+    "keyQuestions": [
+      "Which tool does Claude Desktop use to control GitHub?",
+      "Why does every project need its own GitHub repository before Claude starts working?"
+    ],
+    "commonMisconceptions": [
+      "Students may assume Claude Desktop edits GitHub directly, when it actually goes through the Unix shell and the gh command-line tool."
+    ],
+    "assessmentOpportunities": [
+      "Ask students to trace the path a code change takes from Claude Desktop to GitHub and back into VS Code."
+    ]
+  },
+  "chapter": "appendices/crash-course-talking-to-agents"
+}

@@ -45,6 +45,14 @@ By the end of the hour, every student has:
 - Knows the difference between Chat, Claude Cowork, and Claude Code
 - Have a basic understanding that you can teach claude to create rules that it will remember in future projects
 
+### How the Pieces Talk to Each Other
+
+Click any circle or arrow below to see exactly how Claude Desktop, GitHub, VS Code, and the Unix shell work together — and why GitHub earns a required spot on the list: it's what gives Claude an undo button.
+
+<iframe src="../../sims/claude-code-setup/main.html" height="642px" width="100%" scrolling="no" style="border: none;"></iframe>
+
+[Open the Claude Code Setup Diagram Fullscreen](../sims/claude-code-setup/main.html){ .md-button }
+
 !!! mascot-tip "Polly's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Polly sharing a tip">
     Words matter — let's get them right! Insist on a fresh GitHub repo per project from day one. It feels like overkill for a five-minute experiment, but six weeks from now your capstone project needs a clean history, and nobody wants to untangle three unrelated projects living in one folder.

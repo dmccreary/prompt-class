@@ -74,11 +74,14 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - Claude Code Setup: sims/claude-code-setup/index.md
     - Claude Desktop Footer Regions: sims/claude-desktop-footer/index.md
     - Claude Desktop Home Screen: sims/claude-desktop-home-screen/index.md
     - Embedding Space Explorer: sims/embedding-space/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - PowerShell vs. WSL Comparison Infographic: sims/powershell-vs-wsl-comparison/index.md
+
+
 
 
 

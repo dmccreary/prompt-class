@@ -250,7 +250,7 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 249,Latency Optimization,248|250,EVAL
 250,Token Efficiency,7|29|103,EVAL
 251,Batch Processing,170|250,EVAL
-252,Model Selection,4|14,EVAL
+252,Model Selection,4|14|306,EVAL
 253,Model Comparison,241|252,EVAL
 254,Performance Monitoring,241|245,EVAL
 255,API Pricing Models,18|259|264,EVAL
@@ -304,3 +304,4 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 303,AI Ethics Audit Tool,191|192|193|196,CAP
 304,Course Content Generator,226|230|239,CAP
 305,Intelligent Textbook,226|239|275|304,CAP
+306,Model Families and Tiers,9|11,FOUND

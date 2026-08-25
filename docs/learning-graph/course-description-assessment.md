@@ -1,5 +1,7 @@
 # Course Description Assessment Report
 
+*Counts last verified against `course-description.md` on 2026-08-25. The 97/100 score is unchanged: every category affected by recent edits was already at full marks, and the sole gap (Descriptive Context) is untouched. Re-run the `course-description-analyzer` skill for a fresh independent score.*
+
 ## Overall Score: 97/100
 
 ## Quality Rating: Excellent - Ready for learning graph generation
@@ -11,14 +13,14 @@
 | **Title** | 5 | 5 | Clear, descriptive title present |
 | **Target Audience** | 5 | 5 | General audience with high school minimum clearly specified |
 | **Prerequisites** | 5 | 5 | Explicitly stated as None with helpful context |
-| **Main Topics Covered** | 10 | 10 | 16 comprehensive topics spanning fundamentals to advanced |
+| **Main Topics Covered** | 10 | 10 | 18 comprehensive topics spanning fundamentals to advanced |
 | **Topics Excluded** | 5 | 5 | 6 clear exclusions setting appropriate boundaries |
 | **Learning Outcomes Header** | 5 | 5 | Clear statement with proper framing |
-| **Remember Level** | 10 | 10 | 5 specific, measurable outcomes |
-| **Understand Level** | 10 | 10 | 6 specific outcomes with good depth |
-| **Apply Level** | 10 | 10 | 7 actionable outcomes with practical focus |
-| **Analyze Level** | 10 | 10 | 6 outcomes covering comparison, root cause, and tradeoffs |
-| **Evaluate Level** | 10 | 10 | 6 outcomes with judgment-oriented verbs |
+| **Remember Level** | 10 | 10 | 7 specific, measurable outcomes |
+| **Understand Level** | 10 | 10 | 9 specific outcomes with good depth |
+| **Apply Level** | 10 | 10 | 8 actionable outcomes with practical focus |
+| **Analyze Level** | 10 | 10 | 7 outcomes covering comparison, root cause, and tradeoffs |
+| **Evaluate Level** | 10 | 10 | 7 outcomes with judgment-oriented verbs |
 | **Create Level** | 10 | 10 | 7 outcomes including capstone project |
 | **Descriptive Context** | 2 | 5 | Good overview but could include more on course format and duration |
 
@@ -38,8 +40,8 @@
 
 The course description is well-positioned for generating 200+ concepts:
 
-- **Topic breadth**: 16 main topics provide excellent coverage across fundamentals, intermediate, and advanced prompt engineering
-- **Bloom's Taxonomy depth**: 43 specific learning outcomes across all 6 levels suggest diverse concept types
+- **Topic breadth**: 18 main topics provide excellent coverage across fundamentals, intermediate, and advanced prompt engineering
+- **Bloom's Taxonomy depth**: 45 specific learning outcomes across all 6 levels suggest diverse concept types
 - **Modern coverage**: Includes agentic AI, RAG, multimodal prompting, and prompt security - all current topics that expand the concept space significantly
 - **Estimated concept potential**: 220-260 concepts based on topic decomposition and outcome analysis
 

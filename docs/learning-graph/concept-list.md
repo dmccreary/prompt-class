@@ -1,6 +1,6 @@
 # Concept List for Prompt Engineering
 
-## Foundation Concepts (1-20)
+## Foundation Concepts (1-20, 306)
 
 1. Artificial Intelligence
 2. Machine Learning
@@ -22,6 +22,10 @@
 18. API
 19. Chatbot Interface
 20. Human-AI Interaction
+
+**306. Model Families and Tiers** — added 2026-08-25; appended at the end of the ID
+space rather than inserted at position 12, so that the existing 305 concept IDs and all
+dependency edges referencing them stay stable.
 
 ## Prompt Fundamentals (21-45)
 

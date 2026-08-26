@@ -4,7 +4,7 @@
 // "embedding space" so that semantically related phrases sit near one another.
 // A learner-supplied query is scored against the phrase vocabulary, placed at
 // the similarity-weighted centroid of its best matches, and connected by dashed
-// lines to its three nearest neighbours with Euclidean distances shown.
+// lines to its three nearest neighbors with Euclidean distances shown.
 
 let canvasWidth = 400;
 let drawHeight = 500;
@@ -35,7 +35,7 @@ const plotBottomInset = 42;
 const plotRightInset = 24;
 
 // Phrases are hand-placed so that each category forms a visible cluster.
-// x and y are normalised to [0, 1] within the plot area.
+// x and y are normalized to [0, 1] within the plot area.
 const phrases = [
   { text: 'machine learning models',      x: 0.22, y: 0.22, category: 'AI/ML' },
   { text: 'neural networks',              x: 0.15, y: 0.30, category: 'AI/ML' },
@@ -74,7 +74,7 @@ const categoryColors = {
   'Medicine': [198, 40, 40]
 };
 
-// A small topic lexicon so that a query can land in the right neighbourhood
+// A small topic lexicon so that a query can land in the right neighborhood
 // even when it shares no literal words with any plotted phrase. This stands in
 // for what a real embedding model learns from its training corpus.
 const categoryLexicon = {
@@ -555,13 +555,13 @@ function runSearch() {
     queryPoint = { x: 0.5, y: 0.12, text: raw, category: null };
     nearestIndices = nearestTo(queryPoint, 3);
     statusMessage = 'No familiar topic words - the query lands in empty space. ' +
-      'Note that it still has 3 "nearest" neighbours.';
+      'Note that it still has 3 "nearest" neighbors.';
     return;
   }
 
   // Place the query at the similarity-weighted centroid of its strongest
   // matches only. Averaging over *every* match drags an ambiguous query into
-  // the empty middle of the space, where its neighbours are a meaningless
+  // the empty middle of the space, where its neighbors are a meaningless
   // blend of two topics; restricting to the top few keeps it inside the
   // cluster it actually belongs to.
   matches.sort((a, b) => b.score - a.score);
